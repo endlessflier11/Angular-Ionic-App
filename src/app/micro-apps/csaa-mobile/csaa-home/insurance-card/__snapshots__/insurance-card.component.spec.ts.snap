@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InsuranceCardComponent should match snapshot 1`] = `
+<csaa-insurance-card
+  PolicyType={[Function Object]}
+  __loadingPolicies$__selector={[Function Observable]}
+  __ngContext__={[Function LRootView]}
+  __policiesNeedsFetching$__selector={[Function Observable]}
+  analyticsService={[Function AnalyticsMockService]}
+  loading="undefined"
+  policies={[Function Array]}
+  policyDocumentHelper={[Function Object]}
+  routerService={[Function RouterMockService]}
+  subsink={[Function SubSink]}
+>
+  <ion-card
+    class="csaa-card"
+  >
+    <ion-card-header>
+      <ion-card-title>
+         Proof of Insurance 
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-list>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</csaa-insurance-card>
+`;

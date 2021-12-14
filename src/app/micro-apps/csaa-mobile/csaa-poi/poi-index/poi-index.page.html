@@ -1,0 +1,108 @@
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <csaa-back-button (back)="backButtonClick()"></csaa-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="hoursPopup.show()">Call Service</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Proof of Insurance</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="['csaa', currentTheme]">
+  <ion-refresher (ionRefresh)="doRefresh($event)" slot="fixed">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <csaa-skeleton-card *ngIf="loading"></csaa-skeleton-card>
+  <ng-container *ngIf="!loading && (policy$ | async) as policy">
+    <ion-card class="csaa-card policy-detail">
+      <ion-card-content>
+        <ion-grid class="ion-no-padding">
+          <ion-row>
+            <ion-col>
+              <ion-item lines="none">
+                <div class="policy-meta-content">
+                  <h2 class="ion-color-dark">{{ policy.number }}</h2>
+                </div>
+                <div slot="end" class="policy-meta-icon">
+                  <csaa-theme-icon slot="end" [type]="policy.type" [size]="40"></csaa-theme-icon>
+                </div>
+              </ion-item>
+              <ion-item lines="none">
+                <csaa-policy-subtitles [policySubtitle]="policy.subtitle"></csaa-policy-subtitles>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ng-container *ngIf="policy.type === PolicyType.Auto && vehiclesWithPoi.length">
+            <ion-row class="ion-padding-top">
+              <ion-col>
+                <ion-item lines="none">
+                  <h3 class="ion-color-dark">Vehicle ID Card</h3>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <ion-row *ngFor="let vehicle of vehiclesWithPoi; let idx = index; let isLast = last;">
+              <ion-col>
+                <ng-container>
+                  <ion-item
+                    (click)="toggleIdCard(idx)"
+                    [lines]="isLast ? 'none' : undefined"
+                    detail
+                    [detailIcon]="selectedIdCardIndex === idx ? 'chevron-down' : 'chevron-forward'"
+                  >
+                    <ion-text color="primary">
+                      <h4>{{ vehicle.name }}</h4>
+                    </ion-text>
+                  </ion-item>
+                </ng-container>
+                <ng-container *ngIf="selectedIdCardIndex === idx">
+                  <ion-item [lines]="isLast ? 'none' : undefined" class="id-card-item">
+                    <div class="id-card-wrapper">
+                      <csaa-auto-id-card
+                        [policyNumber]="policy.number"
+                        [termEffectiveDate]="policy.termEffectiveDate"
+                        [termExpirationDate]="policy.termExpirationDate"
+                        [vehicle]="vehicle"
+                        [insureds]="policy.insureds"
+                        [riskState]="policy.riskState"
+                        [drivers]="policy.drivers"
+                        [customerSearch]="customerSearch$ | async"
+                      ></csaa-auto-id-card>
+                    </div>
+                  </ion-item>
+                </ng-container>
+              </ion-col>
+            </ion-row>
+          </ng-container>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="csaa-card">
+      <ion-card-content>
+        <ion-button (click)="saveIdCardsToDevice()" expand="full"
+          >Save ID Cards to Device</ion-button
+        >
+      </ion-card-content>
+    </ion-card>
+    <csaa-apple-wallet-button (clickBtn)="downloadWalletPass()"></csaa-apple-wallet-button>
+  </ng-container>
+
+  <csaa-drivers-coverages-card
+    [loading]="loading"
+    [drivers]="(policy$ | async)?.drivers"
+    [version]="2"
+  >
+  </csaa-drivers-coverages-card>
+</ion-content>
+<csaa-working-hours
+  #hoursPopup
+  [ngClass]="['csaa', currentTheme]"
+  [riskState]="(policy$ | async)?.riskState"
+  serviceType="CUSTOMER"
+>
+</csaa-working-hours>

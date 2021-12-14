@@ -1,0 +1,13 @@
+<div class="error-card-component">
+  <ion-card class="csaa-card error-card">
+    <div class="error-img">
+      <img src="/assets/csaa-mobile/imgs/{{ type }}-error-card.jpeg" />
+    </div>
+    <ion-card-content class="main-body-card">
+      <p class="error-card-title">{{ cardTitle }}</p>
+      <p class="error-card-message">Oops! Something went wrong.</p>
+      <p class="error-card-message-sub">Try again later.</p>
+      <ion-button expand="full" (click)="handleRetry()"> Retry </ion-button>
+    </ion-card-content>
+  </ion-card>
+</div>

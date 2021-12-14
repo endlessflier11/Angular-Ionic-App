@@ -1,0 +1,149 @@
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <csaa-back-button (back)="backButtonClick()"></csaa-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="callClaims()">Call Claims</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content
+  [ngClass]="['csaa', currentTheme, (isPolicyTypeAuto ? 'auto-what-do-i-do' : 'home-what-do-i-do') ]"
+>
+  <ng-container *ngIf="isPolicyTypeAuto">
+    <csaa-what-to-do-card
+      cardTitle="Call 911 and request an ambulance if needed"
+      cardSubtitle="Stay Safe"
+      cardClass="call-911"
+      footerButtonText="Call 911"
+      (footerButtonOnClick)="call911()"
+      (toggleStateEvent)="trackCardToggle($event, 'Call 911')"
+    >
+      <p class="show-card-opened">
+        Turn on your hazard lights and move your car away from traffic if it is safe to do so.
+      </p>
+      <p class="smaller show-card-opened">
+        Depending on your state, it may be required by law to notify law enforcement and submit a
+        report after a crash.
+      </p>
+    </csaa-what-to-do-card>
+
+    <csaa-claims-info-card title="Take Notes">
+      <p>Record accident details including the date, time of day and location.</p>
+      <br />
+      Also note these items:
+      <ul>
+        <li>Other driver’s contact information</li>
+        <li>Vehicle make and model</li>
+        <li>Insurance company and policy number</li>
+        <li>Get driver’s license numbers if proof of insurance isn’t provided.</li>
+      </ul>
+    </csaa-claims-info-card>
+
+    <csaa-what-to-do-card
+      cardTitle="Take photos of vehicle damage"
+      cardSubtitle="Capture Images"
+      footerLabel="View More"
+      cardClass="take-photos"
+      footerButtonText="Open Camera"
+      (footerButtonOnClick)="openCamera()"
+      (toggleStateEvent)="trackCardToggle($event,'Camera')"
+    >
+      <p class="show-card-opened">If possible, take photos for all vehicles involved of:</p>
+      <ul class="show-card-opened">
+        <li>Vehicle damage</li>
+        <li>License plate</li>
+        <li>Location of accident</li>
+      </ul>
+      <br class="show-card-opened" />
+      <p class="show-card-opened">
+        Give only your name and insurance provider and policy number, do not give out your address
+        or allow your driver’s license to be photographed.
+      </p>
+    </csaa-what-to-do-card>
+
+    <csaa-claims-info-card title="The Don'ts">
+      <ul>
+        <li>Don't give out your address.</li>
+        <li>Don't allow your driver’s license to be photographed.</li>
+        <li>Don't show your policy or share your policy limits.</li>
+        <li>Don't accept blame or blame others.</li>
+      </ul>
+    </csaa-claims-info-card>
+
+    <csaa-what-to-do-card
+      cardTitle="Report A Claim"
+      cardSubtitle="Call Us"
+      footerLabel="View More"
+      cardClass="call-us"
+      footerButtonText="Call Claims"
+      (footerButtonOnClick)="callClaims()"
+      (toggleStateEvent)="trackCardToggle($event,'Call Us')"
+    >
+      <p>Call the number on your AAA Insurance card to report your claim as soon as possible.</p>
+    </csaa-what-to-do-card>
+  </ng-container>
+  <ng-container *ngIf="isPolicyTypeHome" class="home-what-to-do">
+    <csaa-what-to-do-card
+      cardTitle="Call the police<br />if needed"
+      cardSubtitle="Stay Safe"
+      footerLabel="View More"
+      cardClass="call-911"
+      footerButtonText="Call 911"
+      (footerButtonOnClick)="call911()"
+      (toggleStateEvent)="trackCardToggle($event,'Call 911')"
+    >
+      <p>
+        Call the police if you suspect any laws have been broken, as in the case of burglary or
+        vandalism.
+      </p>
+    </csaa-what-to-do-card>
+
+    <csaa-claims-info-card title="Home Inventory">
+      Before you have a claim, creating a home inventory of your most valuable possessions
+      (including date, purchase price and location of purchase) may also help with the claims
+      process in the future. Keep the list or video in a safe or a separate location.
+    </csaa-claims-info-card>
+
+    <csaa-what-to-do-card
+      cardTitle="Take photos and<br />videos of<br />damages"
+      cardSubtitle="Capture Images"
+      footerLabel="View More"
+      cardClass="take-photos"
+      footerButtonText="Open Camera"
+      (footerButtonOnClick)="openCamera()"
+      (toggleStateEvent)="trackCardToggle($event,'Camera')"
+    >
+      <p>
+        Make a list of what was damaged or stolen. If property or items are damaged, take photos or
+        videos.
+      </p>
+    </csaa-what-to-do-card>
+
+    <csaa-claims-info-card title="Take Notes">
+      Keep notes and receipts for any out-of-pocket services and expenses for repairs, or for living
+      expenses such as hotel bills. Depending on your policy, costs may be covered.
+    </csaa-claims-info-card>
+
+    <csaa-what-to-do-card
+      cardTitle="Report a claim"
+      cardSubtitle="Call Us"
+      footerLabel="View More"
+      cardClass="call-us"
+      footerButtonText="Call Claims"
+      (footerButtonOnClick)="callClaims()"
+      (toggleStateEvent)="trackCardToggle($event,'Call Us')"
+    >
+      <p>Call to report your claim as soon as possible.</p>
+    </csaa-what-to-do-card>
+
+    <csaa-claims-info-card title="Minor Repairs">
+      Make minor repairs. After taking photos or videos, make minor repairs to prevent further
+      destruction and to keep you and your possessions safe.
+    </csaa-claims-info-card>
+  </ng-container>
+</ion-content>

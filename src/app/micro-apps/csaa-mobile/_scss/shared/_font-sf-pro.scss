@@ -1,0 +1,43 @@
+$sf-font-path: $csaa-font-path !default;
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 300;
+  src: url('#{$sf-font-path}/SF-Pro-Display-Light.otf');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 500;
+  src: url('#{$sf-font-path}/SF-Pro-Display-Medium.otf');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 600;
+  src: url('#{$sf-font-path}/SF-Pro-Display-Bold.otf');
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$sf-font-path}/SF-Pro-Text-Regular.otf');
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 500;
+  src: url('#{$sf-font-path}/SF-Pro-Text-Medium.otf');
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 600;
+  src: url('#{$sf-font-path}/SF-Pro-Text-Bold.otf');
+}

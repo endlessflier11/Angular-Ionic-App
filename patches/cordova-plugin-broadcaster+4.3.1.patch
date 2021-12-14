@@ -1,0 +1,34 @@
+diff --git a/node_modules/cordova-plugin-broadcaster/plugin.xml b/node_modules/cordova-plugin-broadcaster/plugin.xml
+index 47820e5..2d66be0 100644
+--- a/node_modules/cordova-plugin-broadcaster/plugin.xml
++++ b/node_modules/cordova-plugin-broadcaster/plugin.xml
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <plugin id="cordova-plugin-broadcaster"
+-        version="4.3.1"
++        version="4.3.0"
+         xmlns="http://apache.org/cordova/ns/plugins/1.0"
+         xmlns:android="http://schemas.android.com/apk/res/android">
+    <engines>
+@@ -32,7 +32,7 @@
+     </config-file>
+     <config-file parent="/*" target="AndroidManifest.xml" />
+     <source-file src="src/android/CDVBroadcaster.java" target-dir="src/org/bsc/cordova" />
+-    <framework src="com.android.support:support-v4:26+" />
++    <framework src="com.android.support:support-v4:28.0.0" />
+   </platform>
+   <platform name="ios">
+     <config-file parent="/*" target="config.xml">
+diff --git a/node_modules/cordova-plugin-broadcaster/src/android/CDVBroadcaster.java b/node_modules/cordova-plugin-broadcaster/src/android/CDVBroadcaster.java
+index 1b541a8..0c0f0ed 100644
+--- a/node_modules/cordova-plugin-broadcaster/src/android/CDVBroadcaster.java
++++ b/node_modules/cordova-plugin-broadcaster/src/android/CDVBroadcaster.java
+@@ -5,7 +5,7 @@ import android.content.Context;
+ import android.content.Intent;
+ import android.content.IntentFilter;
+ import android.os.Bundle;
+-import android.support.v4.content.LocalBroadcastManager;
++import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+ import android.util.Log;
+ 
+ import org.apache.cordova.CallbackContext;

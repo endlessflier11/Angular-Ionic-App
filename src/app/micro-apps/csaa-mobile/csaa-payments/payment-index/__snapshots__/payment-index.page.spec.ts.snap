@@ -1,0 +1,2848 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaymentIndexPage Exactly One Policy should match snapshot 1`] = `
+<app-csaa-payment-index
+  __customerSearch$__selector={[Function Observable]}
+  __history$__selector={[Function Observable]}
+  __isPaymentsLoading$__selector={[Function Observable]}
+  __latestBills$__selector={[Function Observable]}
+  __ngContext__={[Function LRootView]}
+  __payments$__selector={[Function Observable]}
+  __policies$__selector={[Function Observable]}
+  alertCtrl={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  autoPayEnrollmentStatusMap={[Function Object]}
+  availableDocumentsMap={[Function Object]}
+  backButtonSubscription={[Function Observable]}
+  currentTheme=""
+  hoursPopup={[Function WorkingHoursComponent]}
+  isPaidInFullStatusMap={[Function Object]}
+  loading="false"
+  makePaymentService={[Function MakePaymentService]}
+  payAllCardComponent="undefined"
+  payAllPaymentsSuccessful="false"
+  payallTransactionUnderway="false"
+  paymentResults={[Function Object]}
+  paymentService={[Function PaymentService]}
+  pdfDisplayService={[Function PdfDisplayService]}
+  platform={[Function PlatformMock]}
+  routerService={[Function RouterMockService]}
+  selectedPaymentAccount="undefined"
+  store={[Function Store]}
+  subsink={[Function SubSink]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Call Service
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Payment
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <csaa-make-payment-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            WYSS910014303
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row
+              class="item"
+            >
+              <ion-col>
+                <div
+                  class="policy-meta-content"
+                >
+                  <h3>
+                    Due:
+                     Jul 26, 2020 
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        2018 Volkswagen Atlas
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </div>
+              </ion-col>
+              <ion-col
+                size="auto"
+              >
+                <div
+                  class="policy-meta-icon"
+                >
+                  <csaa-theme-icon
+                    slot="end"
+                  >
+                    <img
+                      src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                      style="width: 40px; height: 40px;"
+                    />
+                  </csaa-theme-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-list>
+            <ion-item
+              class="csaa-payment-amount-list-item ion-no-padding"
+              detail=""
+            >
+              <ion-label>
+                Amount 
+              </ion-label>
+              <span
+                slot="end"
+              >
+                $0.00
+              </span>
+            </ion-item>
+            <ion-item
+              class="csaa-payment-method-list-item ion-no-padding"
+              detail=""
+              lines="none"
+            >
+              <ion-avatar
+                slot="start"
+              >
+                <span>
+                  <img
+                    src="/assets/csaa-mobile/vectors/bank.svg"
+                  />
+                </span>
+              </ion-avatar>
+              <ion-label
+                class="ion-text-nowrap"
+              >
+                <span>
+                  Check
+                </span>
+              </ion-label>
+              <span
+                slot="end"
+              >
+                Checking
+              </span>
+            </ion-item>
+            <ion-item
+              class="csaa-payment-autopay-item ion-no-padding"
+              detail=""
+            >
+              <ion-label>
+                <label>
+                  AutoPay
+                </label>
+              </ion-label>
+              <span
+                slot="end"
+              >
+                 Off
+              </span>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            class="ion-no-margin"
+            expand="full"
+          >
+             Make a Payment 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-make-payment-card>
+    <csaa-csaa-bills-card>
+    </csaa-csaa-bills-card>
+    <csaa-payment-history-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header
+          class="policy-number-container"
+        >
+          <ion-item
+            class="ion-text-wrap ion-no-padding csaa-policy-item"
+          >
+            <ion-label>
+              <h3>
+                WYSS910014303
+              </h3>
+              <p
+                class="subtitle"
+              >
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    2018 Volkswagen Atlas
+                  </span>
+                </csaa-policy-subtitles>
+              </p>
+            </ion-label>
+            <csaa-theme-icon
+              slot="end"
+            >
+              <img
+                src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                style="width: 40px; height: 40px;"
+              />
+            </csaa-theme-icon>
+          </ion-item>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <p
+                  class="payment-date ion-text-left"
+                >
+                   Sep 25, 2020 
+                </p>
+                <p
+                  class="status ion-text-left"
+                >
+                   Paid 
+                </p>
+                <p
+                  class="status ion-text-left"
+                >
+                   Electronic Funds Transfer 
+                </p>
+              </ion-label>
+              <span
+                class="amount ion-text-right"
+                slot="end"
+              >
+                 $7.00 
+              </span>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <p
+                  class="payment-date ion-text-left"
+                >
+                   Sep 25, 2020 
+                </p>
+                <p
+                  class="status ion-text-left"
+                >
+                   Paid 
+                </p>
+                <p
+                  class="status ion-text-left"
+                >
+                   Credit Card 
+                </p>
+              </ion-label>
+              <span
+                class="amount ion-text-right"
+                slot="end"
+              >
+                 $260.88 
+              </span>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <p
+                  class="payment-date ion-text-left"
+                >
+                   Jul 29, 2020 
+                </p>
+                <p
+                  class="status ion-text-left"
+                >
+                   Paid 
+                </p>
+                <p
+                  class="status ion-text-left"
+                >
+                   Credit Card 
+                </p>
+              </ion-label>
+              <span
+                class="amount ion-text-right"
+                slot="end"
+              >
+                 $4.00 
+              </span>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <p
+                  class="payment-date ion-text-left"
+                >
+                   Jul 29, 2020 
+                </p>
+                <p
+                  class="status ion-text-left"
+                >
+                   Paid 
+                </p>
+                <p
+                  class="status ion-text-left"
+                >
+                   Credit Card 
+                </p>
+              </ion-label>
+              <span
+                class="amount ion-text-right"
+                slot="end"
+              >
+                 $1.00 
+              </span>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </csaa-payment-history-card>
+  </ion-content><csaa-working-hours
+    class="csaa"
+    servicetype="CUSTOMER"
+  >
+    <div
+      class="csaa-working-hours hidden"
+    >
+      <ion-card
+        class="card card-md"
+      >
+        <ion-card-header>
+          Service Hours
+        </ion-card-header>
+        <ion-card-content
+          class="card-content card-content-md"
+        >
+          <ion-list>
+            <ion-item>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+             Call Service 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </csaa-working-hours>
+</app-csaa-payment-index>
+`;
+
+exports[`PaymentIndexPage Multiple Policies : Autopay, Payment due, Remaining premium should match snapshot 1`] = `
+<app-csaa-payment-index
+  __customerSearch$__selector={[Function Observable]}
+  __history$__selector={[Function Observable]}
+  __isPaymentsLoading$__selector={[Function Observable]}
+  __latestBills$__selector={[Function Observable]}
+  __ngContext__={[Function LRootView]}
+  __payments$__selector={[Function Observable]}
+  __policies$__selector={[Function Observable]}
+  alertCtrl={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  autoPayEnrollmentStatusMap={[Function Object]}
+  availableDocumentsMap={[Function Object]}
+  backButtonSubscription={[Function Observable]}
+  currentTheme=""
+  hoursPopup={[Function WorkingHoursComponent]}
+  isPaidInFullStatusMap={[Function Object]}
+  loading="false"
+  makePaymentService={[Function MakePaymentService]}
+  payAllCardComponent={[Function CsaaPayAllPoliciesCardComponent]}
+  payAllPaymentsSuccessful="false"
+  payallTransactionUnderway="false"
+  paymentResults={[Function Object]}
+  paymentService={[Function PaymentService]}
+  pdfDisplayService={[Function PdfDisplayService]}
+  platform={[Function PlatformMock]}
+  routerService={[Function RouterMockService]}
+  selectedPaymentAccount="undefined"
+  store={[Function Store]}
+  subsink={[Function SubSink]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Call Service
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Payment
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <csaa-pay-all-policies-card>
+      <ion-card
+        class="csaa-card overdue"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            Pay All Policies
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item
+              class="csaa-payment-amount-list-item"
+              detail=""
+            >
+              <ion-label>
+                Amount
+              </ion-label>
+              <span
+                slot="end"
+              >
+                $123.00
+              </span>
+            </ion-item>
+            <ion-item
+              class="csaa-payment-method-list-item"
+              detail=""
+              lines="none"
+            >
+              <ion-avatar
+                slot="start"
+              >
+                <span>
+                  <img
+                    src="/assets/csaa-mobile/vectors/bank.svg"
+                  />
+                </span>
+              </ion-avatar>
+              <ion-label
+                class="ion-text-nowrap"
+              >
+                <span>
+                  Check
+                </span>
+              </ion-label>
+              <span
+                slot="end"
+              >
+                Checking
+              </span>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            class="ion-no-margin"
+            expand="full"
+          >
+             Make a Payment 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-pay-all-policies-card>
+    <csaa-make-payment-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            WYSS910014303
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row
+              class="item"
+            >
+              <ion-col>
+                <div
+                  class="policy-meta-content"
+                >
+                  <h3>
+                    Due:
+                     Jul 26, 2020 
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        2018 Volkswagen Atlas
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </div>
+              </ion-col>
+              <ion-col
+                size="auto"
+              >
+                <div
+                  class="policy-meta-icon"
+                >
+                  <csaa-theme-icon
+                    slot="end"
+                  >
+                    <img
+                      src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                      style="width: 40px; height: 40px;"
+                    />
+                  </csaa-theme-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-list>
+            <ion-item
+              class="csaa-payment-amount-list-item ion-no-padding"
+              detail=""
+            >
+              <ion-label>
+                Amount 
+              </ion-label>
+              <span
+                slot="end"
+              >
+                $0.00
+              </span>
+            </ion-item>
+            <ion-item
+              class="csaa-payment-method-list-item ion-no-padding"
+              detail=""
+              lines="none"
+            >
+              <ion-avatar
+                slot="start"
+              >
+                <span>
+                  <img
+                    src="/assets/csaa-mobile/vectors/bank.svg"
+                  />
+                </span>
+              </ion-avatar>
+              <ion-label
+                class="ion-text-nowrap"
+              >
+                <span>
+                  Check
+                </span>
+              </ion-label>
+              <span
+                slot="end"
+              >
+                Checking
+              </span>
+            </ion-item>
+            <ion-item
+              class="csaa-payment-autopay-item ion-no-padding"
+              detail=""
+            >
+              <ion-label>
+                <label>
+                  AutoPay
+                </label>
+              </ion-label>
+              <span
+                slot="end"
+              >
+                 Off
+              </span>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            class="ion-no-margin"
+            expand="full"
+          >
+             Make a Payment 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-make-payment-card>
+    <csaa-make-payment-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            AZPU910018917
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row
+              class="item"
+            >
+              <ion-col>
+                <div
+                  class="policy-meta-content"
+                >
+                  <h3>
+                    Due:
+                     Dec 9, 2020 
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        Personal Umbrella Policy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </div>
+              </ion-col>
+              <ion-col
+                size="auto"
+              >
+                <div
+                  class="policy-meta-icon"
+                >
+                  <csaa-theme-icon
+                    slot="end"
+                  >
+                    <img
+                      src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                      style="width: 40px; height: 40px;"
+                    />
+                  </csaa-theme-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-list>
+            <ion-item
+              class="csaa-payment-amount-list-item ion-no-padding"
+              detail=""
+            >
+              <ion-label>
+                Amount 
+              </ion-label>
+              <span
+                slot="end"
+              >
+                $0.00
+              </span>
+            </ion-item>
+            <ion-item
+              class="csaa-payment-autopay-item ion-no-padding"
+              detail=""
+            >
+              <ion-label>
+                <label>
+                  AutoPay
+                </label>
+                <small>
+                   Card ending in 5454 
+                </small>
+              </ion-label>
+              <span
+                slot="end"
+              >
+                 On
+              </span>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            class="ion-no-margin"
+            expand="full"
+          >
+             Make a Payment 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-make-payment-card>
+    <csaa-make-payment-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            AZH3910018916
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row
+              class="item"
+            >
+              <ion-col>
+                <div
+                  class="policy-meta-content"
+                >
+                  <h3>
+                    Due:
+                     Jan 9, 2021 
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        28425 N Black Canyon Hwy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </div>
+              </ion-col>
+              <ion-col
+                size="auto"
+              >
+                <div
+                  class="policy-meta-icon"
+                >
+                  <csaa-theme-icon
+                    slot="end"
+                  >
+                    <img
+                      src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                      style="width: 40px; height: 40px;"
+                    />
+                  </csaa-theme-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-list>
+            <ion-item
+              class="csaa-payment-amount-list-item ion-no-padding"
+              detail=""
+            >
+              <ion-label>
+                Amount 
+              </ion-label>
+              <span
+                slot="end"
+              >
+                $0.00
+              </span>
+            </ion-item>
+            <ion-item
+              class="csaa-payment-method-list-item ion-no-padding"
+              detail=""
+              lines="none"
+            >
+              <ion-avatar
+                slot="start"
+              >
+                <span>
+                  <img
+                    src="/assets/csaa-mobile/vectors/bank.svg"
+                  />
+                </span>
+              </ion-avatar>
+              <ion-label
+                class="ion-text-nowrap"
+              >
+                <span>
+                  Check
+                </span>
+              </ion-label>
+              <span
+                slot="end"
+              >
+                Checking
+              </span>
+            </ion-item>
+            <ion-item
+              class="csaa-payment-autopay-item ion-no-padding"
+              detail=""
+            >
+              <ion-label>
+                <label>
+                  AutoPay
+                </label>
+              </ion-label>
+              <span
+                slot="end"
+              >
+                 Off
+              </span>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            class="ion-no-margin"
+            expand="full"
+          >
+             Make a Payment 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-make-payment-card>
+    <csaa-make-payment-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            AZAC910018915
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row
+              class="item"
+            >
+              <ion-col>
+                <div
+                  class="policy-meta-content"
+                >
+                  <h3>
+                    Due:
+                     Jan 10, 2021 
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        2011 Ford Econoline Van,
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        2019 Audi A8
+                      </span>
+                      <a
+                        class="csaa-link"
+                        href="#"
+                      >
+                        <small>
+                          Show more
+                        </small>
+                      </a>
+                    </csaa-policy-subtitles>
+                  </span>
+                </div>
+              </ion-col>
+              <ion-col
+                size="auto"
+              >
+                <div
+                  class="policy-meta-icon"
+                >
+                  <csaa-theme-icon
+                    slot="end"
+                  >
+                    <img
+                      src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                      style="width: 40px; height: 40px;"
+                    />
+                  </csaa-theme-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-list>
+            <ion-item
+              class="csaa-payment-amount-list-item ion-no-padding"
+              detail=""
+            >
+              <ion-label>
+                Amount 
+              </ion-label>
+              <span
+                slot="end"
+              >
+                $123.00
+              </span>
+            </ion-item>
+            <ion-item
+              class="csaa-payment-autopay-item ion-no-padding"
+              detail=""
+            >
+              <ion-label>
+                <label>
+                  AutoPay
+                </label>
+                <small>
+                   Card ending in 7156 
+                </small>
+              </ion-label>
+              <span
+                slot="end"
+              >
+                 On
+              </span>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            class="ion-no-margin"
+            expand="full"
+          >
+             Make a Payment 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-make-payment-card>
+    <csaa-select-policy-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            History
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item
+              class="ion-text-wrap"
+              detail=""
+            >
+              <ion-label>
+                <h3>
+                  WYSS910014303
+                </h3>
+                <span
+                  class="subtitle"
+                >
+                  <csaa-policy-subtitles>
+                    <span
+                      class="subtitle"
+                    >
+                      2018 Volkswagen Atlas
+                    </span>
+                  </csaa-policy-subtitles>
+                </span>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <ion-item
+              class="ion-text-wrap"
+              detail=""
+            >
+              <ion-label>
+                <h3>
+                  AZAC910018915
+                </h3>
+                <span
+                  class="subtitle"
+                >
+                  <csaa-policy-subtitles>
+                    <span
+                      class="subtitle"
+                    >
+                      2011 Ford Econoline Van,
+                    </span>
+                    <span
+                      class="subtitle"
+                    >
+                      2019 Audi A8
+                    </span>
+                    <a
+                      class="csaa-link"
+                      href="#"
+                    >
+                      <small>
+                        Show more
+                      </small>
+                    </a>
+                  </csaa-policy-subtitles>
+                </span>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <ion-item
+              class="ion-text-wrap"
+              detail=""
+            >
+              <ion-label>
+                <h3>
+                  AZH3910018916
+                </h3>
+                <span
+                  class="subtitle"
+                >
+                  <csaa-policy-subtitles>
+                    <span
+                      class="subtitle"
+                    >
+                      28425 N Black Canyon Hwy
+                    </span>
+                  </csaa-policy-subtitles>
+                </span>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <ion-item
+              class="ion-text-wrap"
+              detail=""
+            >
+              <ion-label>
+                <h3>
+                  AZPU910018917
+                </h3>
+                <span
+                  class="subtitle"
+                >
+                  <csaa-policy-subtitles>
+                    <span
+                      class="subtitle"
+                    >
+                      Personal Umbrella Policy
+                    </span>
+                  </csaa-policy-subtitles>
+                </span>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </csaa-select-policy-card>
+    <csaa-csaa-bills-card>
+    </csaa-csaa-bills-card>
+  </ion-content><csaa-working-hours
+    class="csaa"
+    servicetype="CUSTOMER"
+  >
+    <div
+      class="csaa-working-hours hidden"
+    >
+      <ion-card
+        class="card card-md"
+      >
+        <ion-card-header>
+          Service Hours
+        </ion-card-header>
+        <ion-card-content
+          class="card-content card-content-md"
+        >
+          <ion-list>
+            <ion-item>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+             Call Service 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </csaa-working-hours>
+</app-csaa-payment-index>
+`;
+
+exports[`PaymentIndexPage Multiple Policies : Autopay, Payment due, Remaining premium should match snapshot when all minimum ammounts are paid 1`] = `
+<app-csaa-payment-index
+  __customerSearch$__selector={[Function Observable]}
+  __history$__selector={[Function Observable]}
+  __isPaymentsLoading$__selector={[Function Observable]}
+  __latestBills$__selector={[Function Observable]}
+  __ngContext__={[Function LRootView]}
+  __payments$__selector={[Function Observable]}
+  __policies$__selector={[Function Observable]}
+  alertCtrl={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  autoPayEnrollmentStatusMap={[Function Object]}
+  availableDocumentsMap={[Function Object]}
+  backButtonSubscription={[Function Observable]}
+  currentTheme=""
+  hoursPopup={[Function WorkingHoursComponent]}
+  isPaidInFullStatusMap={[Function Object]}
+  loading="false"
+  makePaymentService={[Function MakePaymentService]}
+  payAllCardComponent={[Function CsaaPayAllPoliciesCardComponent]}
+  payAllPaymentsSuccessful={[Function Boolean]}
+  payallTransactionUnderway="false"
+  paymentResults={[Function Object]}
+  paymentService={[Function PaymentService]}
+  pdfDisplayService={[Function PdfDisplayService]}
+  platform={[Function PlatformMock]}
+  routerService={[Function RouterMockService]}
+  selectedPaymentAccount="undefined"
+  store={[Function Store]}
+  subsink={[Function SubSink]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Call Service
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Payment
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <csaa-payment-succeeded-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <img
+            src="/assets/csaa-mobile/vectors/success.svg"
+          />
+          <ion-card-title>
+            Payment Successful
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <h2>
+              AZAC910018915
+            </h2>
+            <ion-row
+              class="item"
+            >
+              <ion-col>
+                <div
+                  class="policy-meta-content"
+                >
+                  <h3>
+                     Paid on Nov 15, 2020 
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        2011 Ford Econoline Van,
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        2019 Audi A8
+                      </span>
+                      <a
+                        class="csaa-link"
+                        href="#"
+                      >
+                        <small>
+                          Show more
+                        </small>
+                      </a>
+                    </csaa-policy-subtitles>
+                  </span>
+                </div>
+              </ion-col>
+              <ion-col
+                size="auto"
+              >
+                <div
+                  class="policy-meta-icon"
+                >
+                  <csaa-theme-icon
+                    slot="end"
+                  >
+                    <img
+                      src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                      style="width: 40px; height: 40px;"
+                    />
+                  </csaa-theme-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-list>
+            <ion-item
+              class="csaa-payment-amount-list-item ion-no-padding"
+            >
+              <ion-label>
+                Amount paid 
+              </ion-label>
+              <span
+                slot="end"
+              >
+                $123.00
+              </span>
+            </ion-item>
+            <ion-item
+              class="csaa-payment-method-list-item ion-no-padding"
+              lines="none"
+            >
+              <ion-avatar
+                slot="start"
+              >
+                <span>
+                  <img
+                    src="/assets/csaa-mobile/vectors/bank.svg"
+                  />
+                </span>
+              </ion-avatar>
+              <ion-label
+                class="ion-text-nowrap"
+              >
+                <span>
+                  Check
+                </span>
+              </ion-label>
+              <span
+                slot="end"
+              >
+                Checking
+              </span>
+            </ion-item>
+            <ion-item
+              class="ion-no-padding"
+            >
+              <ion-label>
+                Receipt number 
+              </ion-label>
+              <span
+                slot="end"
+              >
+                1610722
+              </span>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </csaa-payment-succeeded-card>
+    <csaa-pay-all-policies-card>
+    </csaa-pay-all-policies-card>
+    <csaa-make-payment-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            WYSS910014303
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row
+              class="item"
+            >
+              <ion-col>
+                <div
+                  class="policy-meta-content"
+                >
+                  <h3>
+                    Due:
+                     Jul 26, 2020 
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        2018 Volkswagen Atlas
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </div>
+              </ion-col>
+              <ion-col
+                size="auto"
+              >
+                <div
+                  class="policy-meta-icon"
+                >
+                  <csaa-theme-icon
+                    slot="end"
+                  >
+                    <img
+                      src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                      style="width: 40px; height: 40px;"
+                    />
+                  </csaa-theme-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-list>
+            <ion-item
+              class="csaa-payment-amount-list-item ion-no-padding"
+              detail=""
+            >
+              <ion-label>
+                Amount 
+              </ion-label>
+              <span
+                slot="end"
+              >
+                $0.00
+              </span>
+            </ion-item>
+            <ion-item
+              class="csaa-payment-method-list-item ion-no-padding"
+              detail=""
+              lines="none"
+            >
+              <ion-avatar
+                slot="start"
+              >
+                <span>
+                  <img
+                    src="/assets/csaa-mobile/vectors/bank.svg"
+                  />
+                </span>
+              </ion-avatar>
+              <ion-label
+                class="ion-text-nowrap"
+              >
+                <span>
+                  Check
+                </span>
+              </ion-label>
+              <span
+                slot="end"
+              >
+                Checking
+              </span>
+            </ion-item>
+            <ion-item
+              class="csaa-payment-autopay-item ion-no-padding"
+              detail=""
+            >
+              <ion-label>
+                <label>
+                  AutoPay
+                </label>
+              </ion-label>
+              <span
+                slot="end"
+              >
+                 Off
+              </span>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            class="ion-no-margin"
+            expand="full"
+          >
+             Make a Payment 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-make-payment-card>
+    <csaa-make-payment-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            AZPU910018917
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row
+              class="item"
+            >
+              <ion-col>
+                <div
+                  class="policy-meta-content"
+                >
+                  <h3>
+                    Due:
+                     Dec 9, 2020 
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        Personal Umbrella Policy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </div>
+              </ion-col>
+              <ion-col
+                size="auto"
+              >
+                <div
+                  class="policy-meta-icon"
+                >
+                  <csaa-theme-icon
+                    slot="end"
+                  >
+                    <img
+                      src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                      style="width: 40px; height: 40px;"
+                    />
+                  </csaa-theme-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-list>
+            <ion-item
+              class="csaa-payment-amount-list-item ion-no-padding"
+              detail=""
+            >
+              <ion-label>
+                Amount 
+              </ion-label>
+              <span
+                slot="end"
+              >
+                $0.00
+              </span>
+            </ion-item>
+            <ion-item
+              class="csaa-payment-autopay-item ion-no-padding"
+              detail=""
+            >
+              <ion-label>
+                <label>
+                  AutoPay
+                </label>
+                <small>
+                   Card ending in 5454 
+                </small>
+              </ion-label>
+              <span
+                slot="end"
+              >
+                 On
+              </span>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            class="ion-no-margin"
+            expand="full"
+          >
+             Make a Payment 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-make-payment-card>
+    <csaa-make-payment-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            AZH3910018916
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row
+              class="item"
+            >
+              <ion-col>
+                <div
+                  class="policy-meta-content"
+                >
+                  <h3>
+                    Due:
+                     Jan 9, 2021 
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        28425 N Black Canyon Hwy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </div>
+              </ion-col>
+              <ion-col
+                size="auto"
+              >
+                <div
+                  class="policy-meta-icon"
+                >
+                  <csaa-theme-icon
+                    slot="end"
+                  >
+                    <img
+                      src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                      style="width: 40px; height: 40px;"
+                    />
+                  </csaa-theme-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-list>
+            <ion-item
+              class="csaa-payment-amount-list-item ion-no-padding"
+              detail=""
+            >
+              <ion-label>
+                Amount 
+              </ion-label>
+              <span
+                slot="end"
+              >
+                $0.00
+              </span>
+            </ion-item>
+            <ion-item
+              class="csaa-payment-method-list-item ion-no-padding"
+              detail=""
+              lines="none"
+            >
+              <ion-avatar
+                slot="start"
+              >
+                <span>
+                  <img
+                    src="/assets/csaa-mobile/vectors/bank.svg"
+                  />
+                </span>
+              </ion-avatar>
+              <ion-label
+                class="ion-text-nowrap"
+              >
+                <span>
+                  Check
+                </span>
+              </ion-label>
+              <span
+                slot="end"
+              >
+                Checking
+              </span>
+            </ion-item>
+            <ion-item
+              class="csaa-payment-autopay-item ion-no-padding"
+              detail=""
+            >
+              <ion-label>
+                <label>
+                  AutoPay
+                </label>
+              </ion-label>
+              <span
+                slot="end"
+              >
+                 Off
+              </span>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            class="ion-no-margin"
+            expand="full"
+          >
+             Make a Payment 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-make-payment-card>
+    <csaa-select-policy-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            History
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item
+              class="ion-text-wrap"
+              detail=""
+            >
+              <ion-label>
+                <h3>
+                  WYSS910014303
+                </h3>
+                <span
+                  class="subtitle"
+                >
+                  <csaa-policy-subtitles>
+                    <span
+                      class="subtitle"
+                    >
+                      2018 Volkswagen Atlas
+                    </span>
+                  </csaa-policy-subtitles>
+                </span>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <ion-item
+              class="ion-text-wrap"
+              detail=""
+            >
+              <ion-label>
+                <h3>
+                  AZAC910018915
+                </h3>
+                <span
+                  class="subtitle"
+                >
+                  <csaa-policy-subtitles>
+                    <span
+                      class="subtitle"
+                    >
+                      2011 Ford Econoline Van,
+                    </span>
+                    <span
+                      class="subtitle"
+                    >
+                      2019 Audi A8
+                    </span>
+                    <a
+                      class="csaa-link"
+                      href="#"
+                    >
+                      <small>
+                        Show more
+                      </small>
+                    </a>
+                  </csaa-policy-subtitles>
+                </span>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <ion-item
+              class="ion-text-wrap"
+              detail=""
+            >
+              <ion-label>
+                <h3>
+                  AZH3910018916
+                </h3>
+                <span
+                  class="subtitle"
+                >
+                  <csaa-policy-subtitles>
+                    <span
+                      class="subtitle"
+                    >
+                      28425 N Black Canyon Hwy
+                    </span>
+                  </csaa-policy-subtitles>
+                </span>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <ion-item
+              class="ion-text-wrap"
+              detail=""
+            >
+              <ion-label>
+                <h3>
+                  AZPU910018917
+                </h3>
+                <span
+                  class="subtitle"
+                >
+                  <csaa-policy-subtitles>
+                    <span
+                      class="subtitle"
+                    >
+                      Personal Umbrella Policy
+                    </span>
+                  </csaa-policy-subtitles>
+                </span>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </csaa-select-policy-card>
+    <csaa-csaa-bills-card>
+    </csaa-csaa-bills-card>
+  </ion-content><csaa-working-hours
+    class="csaa"
+    servicetype="CUSTOMER"
+  >
+    <div
+      class="csaa-working-hours hidden"
+    >
+      <ion-card
+        class="card card-md"
+      >
+        <ion-card-header>
+          Service Hours
+        </ion-card-header>
+        <ion-card-content
+          class="card-content card-content-md"
+        >
+          <ion-list>
+            <ion-item>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+             Call Service 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </csaa-working-hours>
+</app-csaa-payment-index>
+`;
+
+exports[`PaymentIndexPage Multiple Policies : Autopay, Payment due, Remaining premium should match snapshot when all remaining premimum are paid 1`] = `
+<app-csaa-payment-index
+  __customerSearch$__selector={[Function Observable]}
+  __history$__selector={[Function Observable]}
+  __isPaymentsLoading$__selector={[Function Observable]}
+  __latestBills$__selector={[Function Observable]}
+  __ngContext__={[Function LRootView]}
+  __payments$__selector={[Function Observable]}
+  __policies$__selector={[Function Observable]}
+  alertCtrl={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  autoPayEnrollmentStatusMap={[Function Object]}
+  availableDocumentsMap={[Function Object]}
+  backButtonSubscription={[Function Observable]}
+  currentTheme=""
+  hoursPopup={[Function WorkingHoursComponent]}
+  isPaidInFullStatusMap={[Function Object]}
+  loading="false"
+  makePaymentService={[Function MakePaymentService]}
+  payAllCardComponent={[Function CsaaPayAllPoliciesCardComponent]}
+  payAllPaymentsSuccessful={[Function Boolean]}
+  payallTransactionUnderway="false"
+  paymentResults={[Function Object]}
+  paymentService={[Function PaymentService]}
+  pdfDisplayService={[Function PdfDisplayService]}
+  platform={[Function PlatformMock]}
+  routerService={[Function RouterMockService]}
+  selectedPaymentAccount="undefined"
+  store={[Function Store]}
+  subsink={[Function SubSink]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Call Service
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Payment
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <csaa-payment-succeeded-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <img
+            src="/assets/csaa-mobile/vectors/success.svg"
+          />
+          <ion-card-title>
+            Payment Successful
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <h2>
+              WYSS910014303
+            </h2>
+            <ion-row
+              class="item"
+            >
+              <ion-col>
+                <div
+                  class="policy-meta-content"
+                >
+                  <h3>
+                     Paid on Nov 15, 2020 
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        2018 Volkswagen Atlas
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </div>
+              </ion-col>
+              <ion-col
+                size="auto"
+              >
+                <div
+                  class="policy-meta-icon"
+                >
+                  <csaa-theme-icon
+                    slot="end"
+                  >
+                    <img
+                      src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                      style="width: 40px; height: 40px;"
+                    />
+                  </csaa-theme-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-list>
+            <ion-item
+              class="csaa-payment-amount-list-item ion-no-padding"
+            >
+              <ion-label>
+                Amount paid 
+              </ion-label>
+              <span
+                slot="end"
+              >
+                $2,107.12
+              </span>
+            </ion-item>
+            <ion-item
+              class="csaa-payment-method-list-item ion-no-padding"
+              lines="none"
+            >
+              <ion-avatar
+                slot="start"
+              >
+                <span>
+                  <img
+                    src="/assets/csaa-mobile/vectors/bank.svg"
+                  />
+                </span>
+              </ion-avatar>
+              <ion-label
+                class="ion-text-nowrap"
+              >
+                <span>
+                  Check
+                </span>
+              </ion-label>
+              <span
+                slot="end"
+              >
+                Checking
+              </span>
+            </ion-item>
+            <ion-item
+              class="ion-no-padding ion-margin-bottom"
+            >
+              <ion-label>
+                Receipt number 
+              </ion-label>
+              <span
+                slot="end"
+              >
+                1610722
+              </span>
+            </ion-item>
+            <csaa-autopay-discount-card>
+              <ion-item
+                class="ion-no-padding"
+                detail=""
+                lines="none"
+              >
+                <ion-label>
+                  <h3>
+                    Save money with AutoPay
+                  </h3>
+                  <ion-text
+                    color="dark"
+                  >
+                    <p
+                      class="ion-text-wrap"
+                    >
+                       Save up to $4 per payment with 
+                      <br />
+                      AutoPay. Tap to view fees 
+                    </p>
+                  </ion-text>
+                </ion-label>
+              </ion-item>
+              <div
+                class="discount"
+              >
+                <table>
+                  <thead>
+                    <tr>
+                      <th>
+                        <h3>
+                          Auto Payment Method Installment Fees
+                        </h3>
+                      </th>
+                      <th />
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Checking or Savings Account
+                      </td>
+                      <td>
+                         $3.00 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Debit Card
+                      </td>
+                      <td>
+                         $3.00 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Credit Card
+                      </td>
+                      <td>
+                         $3.00 
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>
+                        <h3>
+                          One-Time Payment Method Installment Fees
+                        </h3>
+                      </th>
+                      <th />
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Checking or Savings Account
+                      </td>
+                      <td>
+                         $7.00 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Debit Card
+                      </td>
+                      <td>
+                         $7.00 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Credit Card
+                      </td>
+                      <td>
+                         $7.00 
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </csaa-autopay-discount-card>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </csaa-payment-succeeded-card>
+    <csaa-payment-succeeded-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <img
+            src="/assets/csaa-mobile/vectors/success.svg"
+          />
+          <ion-card-title>
+            Payment Successful
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <h2>
+              AZH3910018916
+            </h2>
+            <ion-row
+              class="item"
+            >
+              <ion-col>
+                <div
+                  class="policy-meta-content"
+                >
+                  <h3>
+                     Paid on Nov 15, 2020 
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        28425 N Black Canyon Hwy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </div>
+              </ion-col>
+              <ion-col
+                size="auto"
+              >
+                <div
+                  class="policy-meta-icon"
+                >
+                  <csaa-theme-icon
+                    slot="end"
+                  >
+                    <img
+                      src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                      style="width: 40px; height: 40px;"
+                    />
+                  </csaa-theme-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-list>
+            <ion-item
+              class="csaa-payment-amount-list-item ion-no-padding"
+            >
+              <ion-label>
+                Amount paid 
+              </ion-label>
+              <span
+                slot="end"
+              >
+                $1,225.00
+              </span>
+            </ion-item>
+            <ion-item
+              class="csaa-payment-method-list-item ion-no-padding"
+              lines="none"
+            >
+              <ion-avatar
+                slot="start"
+              >
+                <span>
+                  <img
+                    src="/assets/csaa-mobile/vectors/bank.svg"
+                  />
+                </span>
+              </ion-avatar>
+              <ion-label
+                class="ion-text-nowrap"
+              >
+                <span>
+                  Check
+                </span>
+              </ion-label>
+              <span
+                slot="end"
+              >
+                Checking
+              </span>
+            </ion-item>
+            <ion-item
+              class="ion-no-padding ion-margin-bottom"
+            >
+              <ion-label>
+                Receipt number 
+              </ion-label>
+              <span
+                slot="end"
+              >
+                1610722
+              </span>
+            </ion-item>
+            <csaa-autopay-discount-card>
+              <ion-item
+                class="ion-no-padding"
+                detail=""
+                lines="none"
+              >
+                <ion-label>
+                  <h3>
+                    Save money with AutoPay
+                  </h3>
+                  <ion-text
+                    color="dark"
+                  >
+                    <p
+                      class="ion-text-wrap"
+                    >
+                       Save up to $4 per payment with 
+                      <br />
+                      AutoPay. Tap to view fees 
+                    </p>
+                  </ion-text>
+                </ion-label>
+              </ion-item>
+              <div
+                class="discount"
+              >
+                <table>
+                  <thead>
+                    <tr>
+                      <th>
+                        <h3>
+                          Auto Payment Method Installment Fees
+                        </h3>
+                      </th>
+                      <th />
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Checking or Savings Account
+                      </td>
+                      <td>
+                         $3.00 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Debit Card
+                      </td>
+                      <td>
+                         $3.00 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Credit Card
+                      </td>
+                      <td>
+                         $3.00 
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>
+                        <h3>
+                          One-Time Payment Method Installment Fees
+                        </h3>
+                      </th>
+                      <th />
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Checking or Savings Account
+                      </td>
+                      <td>
+                         $7.00 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Debit Card
+                      </td>
+                      <td>
+                         $7.00 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Credit Card
+                      </td>
+                      <td>
+                         $7.00 
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </csaa-autopay-discount-card>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </csaa-payment-succeeded-card>
+    <csaa-payment-succeeded-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <img
+            src="/assets/csaa-mobile/vectors/success.svg"
+          />
+          <ion-card-title>
+            Payment Successful
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <h2>
+              AZAC910018915
+            </h2>
+            <ion-row
+              class="item"
+            >
+              <ion-col>
+                <div
+                  class="policy-meta-content"
+                >
+                  <h3>
+                     Paid on Nov 15, 2020 
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        2011 Ford Econoline Van,
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        2019 Audi A8
+                      </span>
+                      <a
+                        class="csaa-link"
+                        href="#"
+                      >
+                        <small>
+                          Show more
+                        </small>
+                      </a>
+                    </csaa-policy-subtitles>
+                  </span>
+                </div>
+              </ion-col>
+              <ion-col
+                size="auto"
+              >
+                <div
+                  class="policy-meta-icon"
+                >
+                  <csaa-theme-icon
+                    slot="end"
+                  >
+                    <img
+                      src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                      style="width: 40px; height: 40px;"
+                    />
+                  </csaa-theme-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-list>
+            <ion-item
+              class="csaa-payment-amount-list-item ion-no-padding"
+            >
+              <ion-label>
+                Amount paid 
+              </ion-label>
+              <span
+                slot="end"
+              >
+                $560.00
+              </span>
+            </ion-item>
+            <ion-item
+              class="csaa-payment-method-list-item ion-no-padding"
+              lines="none"
+            >
+              <ion-avatar
+                slot="start"
+              >
+                <span>
+                  <img
+                    src="/assets/csaa-mobile/vectors/bank.svg"
+                  />
+                </span>
+              </ion-avatar>
+              <ion-label
+                class="ion-text-nowrap"
+              >
+                <span>
+                  Check
+                </span>
+              </ion-label>
+              <span
+                slot="end"
+              >
+                Checking
+              </span>
+            </ion-item>
+            <ion-item
+              class="ion-no-padding"
+            >
+              <ion-label>
+                Receipt number 
+              </ion-label>
+              <span
+                slot="end"
+              >
+                1610722
+              </span>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </csaa-payment-succeeded-card>
+    <csaa-pay-all-policies-card>
+    </csaa-pay-all-policies-card>
+    <csaa-make-payment-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            AZPU910018917
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row
+              class="item"
+            >
+              <ion-col>
+                <div
+                  class="policy-meta-content"
+                >
+                  <h3>
+                    Due:
+                     Dec 9, 2020 
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        Personal Umbrella Policy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </div>
+              </ion-col>
+              <ion-col
+                size="auto"
+              >
+                <div
+                  class="policy-meta-icon"
+                >
+                  <csaa-theme-icon
+                    slot="end"
+                  >
+                    <img
+                      src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                      style="width: 40px; height: 40px;"
+                    />
+                  </csaa-theme-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-list>
+            <ion-item
+              class="csaa-payment-amount-list-item ion-no-padding"
+              detail=""
+            >
+              <ion-label>
+                Amount 
+              </ion-label>
+              <span
+                slot="end"
+              >
+                $0.00
+              </span>
+            </ion-item>
+            <ion-item
+              class="csaa-payment-autopay-item ion-no-padding"
+              detail=""
+            >
+              <ion-label>
+                <label>
+                  AutoPay
+                </label>
+                <small>
+                   Card ending in 5454 
+                </small>
+              </ion-label>
+              <span
+                slot="end"
+              >
+                 On
+              </span>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            class="ion-no-margin"
+            expand="full"
+          >
+             Make a Payment 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-make-payment-card>
+    <csaa-select-policy-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            History
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item
+              class="ion-text-wrap"
+              detail=""
+            >
+              <ion-label>
+                <h3>
+                  WYSS910014303
+                </h3>
+                <span
+                  class="subtitle"
+                >
+                  <csaa-policy-subtitles>
+                    <span
+                      class="subtitle"
+                    >
+                      2018 Volkswagen Atlas
+                    </span>
+                  </csaa-policy-subtitles>
+                </span>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <ion-item
+              class="ion-text-wrap"
+              detail=""
+            >
+              <ion-label>
+                <h3>
+                  AZAC910018915
+                </h3>
+                <span
+                  class="subtitle"
+                >
+                  <csaa-policy-subtitles>
+                    <span
+                      class="subtitle"
+                    >
+                      2011 Ford Econoline Van,
+                    </span>
+                    <span
+                      class="subtitle"
+                    >
+                      2019 Audi A8
+                    </span>
+                    <a
+                      class="csaa-link"
+                      href="#"
+                    >
+                      <small>
+                        Show more
+                      </small>
+                    </a>
+                  </csaa-policy-subtitles>
+                </span>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <ion-item
+              class="ion-text-wrap"
+              detail=""
+            >
+              <ion-label>
+                <h3>
+                  AZH3910018916
+                </h3>
+                <span
+                  class="subtitle"
+                >
+                  <csaa-policy-subtitles>
+                    <span
+                      class="subtitle"
+                    >
+                      28425 N Black Canyon Hwy
+                    </span>
+                  </csaa-policy-subtitles>
+                </span>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <ion-item
+              class="ion-text-wrap"
+              detail=""
+            >
+              <ion-label>
+                <h3>
+                  AZPU910018917
+                </h3>
+                <span
+                  class="subtitle"
+                >
+                  <csaa-policy-subtitles>
+                    <span
+                      class="subtitle"
+                    >
+                      Personal Umbrella Policy
+                    </span>
+                  </csaa-policy-subtitles>
+                </span>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </csaa-select-policy-card>
+    <csaa-csaa-bills-card>
+    </csaa-csaa-bills-card>
+  </ion-content><csaa-working-hours
+    class="csaa"
+    servicetype="CUSTOMER"
+  >
+    <div
+      class="csaa-working-hours hidden"
+    >
+      <ion-card
+        class="card card-md"
+      >
+        <ion-card-header>
+          Service Hours
+        </ion-card-header>
+        <ion-card-content
+          class="card-content card-content-md"
+        >
+          <ion-list>
+            <ion-item>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+             Call Service 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </csaa-working-hours>
+</app-csaa-payment-index>
+`;

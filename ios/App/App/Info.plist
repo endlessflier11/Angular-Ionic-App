@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>AAA</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>23.0.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.getcapacitor.capacitor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>capacitor</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>BUNDLE_ID</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.aaa.iphone.discounts</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>aaamobile</string>
+				<string>fb233809633391516</string>
+				<string>fb610507212321633</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>111.2108022140</string>
+	<key>FIREBASE_ANALYTICS_COLLECTION_ENABLED</key>
+	<string>true</string>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
+	<key>FirebaseAutomaticScreenReportingEnabled</key>
+	<string>true</string>
+	<key>FirebaseDynamicLinksCustomDomains</key>
+	<array>
+		<string>http://mobiledynamiclink.aaa.com/</string>
+		<string>https://mobiledynamiclink.aaa.com/</string>
+	</array>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>IonApi</key>
+	<string>https://api.ionicjs.com</string>
+	<key>IonAppId</key>
+	<string>5fc6b2fe</string>
+	<key>IonChannelName</key>
+	<string>C5-Development</string>
+	<key>IonMaxVersions</key>
+	<string>2</string>
+	<key>IonMinBackgroundDuration</key>
+	<string>21600</string>
+	<key>IonUpdateMethod</key>
+	<string>none</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>mailto</string>
+		<string>aaamobileace</string>
+		<string>comgooglemaps</string>
+		<string>waze</string>
+		<string>uber</string>
+		<string>com.sygic.aura</string>
+		<string>lyft</string>
+		<string>iosamap</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>app</key>
+			<dict/>
+			<key>localhost</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+			<key>ready</key>
+			<dict/>
+			<key>www.aaa.com</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+			<key>youtube.com/*</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Bluetooth functionality is used by the AAA Mobile app to send marketing offers to members.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>AAA requires enabling Bluetooth to support the OnBoard feature.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>AAA requests access to your calendar for picking travel dates</string>
+	<key>NSCameraUsageDescription</key>
+	<string>AAA requires access to your camera.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>AAA requests access to your contacts.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>AAA uses face ID for easy authentication.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>AAA Mobile uses Location Services for Roadside assistance, Discounts, finding AAA offices and Gas stations.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>AAA Mobile uses Location Services for Roadside assistance, Discounts, finding AAA offices and Gas stations.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>AAA Mobile uses Location Services for Roadside assistance, Discounts, finding AAA offices and Gas stations.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>To Record Audio With Video</string>
+	<key>NSMotionUsageDescription</key>
+	<string>AAA Drive requires this to determine if you are walking or driving. AAA does not access your fitness data.</string>
+	<key>NSMotionUsageDescription - 2</key>
+	<string>AAA Drive requires this to determine if you are walking or driving. AAA does not access your fitness data.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>AAA requests access to the Photo Library on your device to capture and store images of auto or property damage to use in your claim</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>AAA requests access to your Photo Library to support the Here2There feature</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>location</string>
+		<string>remote-notification</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
+	<key>environment</key>
+	<string>DEV</string>
+</dict>
+</plist>

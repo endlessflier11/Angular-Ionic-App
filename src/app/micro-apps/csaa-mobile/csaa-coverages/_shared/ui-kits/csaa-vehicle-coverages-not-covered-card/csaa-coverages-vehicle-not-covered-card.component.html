@@ -1,0 +1,21 @@
+<csaa-skeleton-card *ngIf="loading"></csaa-skeleton-card>
+<ion-card
+  *ngIf="!loading && coverages && coverages.length"
+  class="csaa-card coverage-list csaa-item-list"
+>
+  <ion-card-header>
+    <ion-card-title>Not Covered</ion-card-title>
+  </ion-card-header>
+  <ion-card-content class="csaa-item-list">
+    <ion-list>
+      <ion-item *ngFor="let coverage of coverages; let ix = index">
+        <csaa-coverage-card-item
+          [coverage]="coverage"
+          (itemClick)="onItemClick(coverage, ix)"
+          [isOpen]="isItemOpen(ix)"
+        >
+        </csaa-coverage-card-item>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>

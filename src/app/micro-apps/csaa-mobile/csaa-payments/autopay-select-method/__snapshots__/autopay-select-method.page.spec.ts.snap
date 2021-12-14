@@ -1,0 +1,546 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AutopaySelectMethodPage should click on the cancel button 1`] = `
+<app-csaa-payment-select-method
+  __ngContext__={[Function LRootView]}
+  activatedRoute={[Function Object]}
+  autopayLabel={[Function Function]}
+  configService={[Function ConfigMockService]}
+  currentTheme=""
+  makePaymentService={[Function MakePaymentService]}
+  newPaymentAccountMenu={[Function Array]}
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  routerService={[Function RouterMockService]}
+  store={[Function Store]}
+  tearDown$={[Function Subject]}
+  upcomingPayments="undefined"
+  wallet={[Function Object]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button
+          text="Cancel"
+        >
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Cancel
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <h2
+      class="ion-text-center"
+    >
+      Wallet
+    </h2>
+    <ion-list>
+      <ion-item
+        class="wallet-item item"
+      >
+        <ion-avatar
+          slot="start"
+        >
+          <span>
+            <img
+              alt="undefined"
+              src="/assets/csaa-mobile/vectors/Debit.svg"
+            />
+          </span>
+        </ion-avatar>
+        <ion-label>
+          <h3>
+            test
+          </h3>
+          <p>
+             1111 Debit 
+          </p>
+          <p>
+             12345 Checking 
+          </p>
+        </ion-label>
+        <ion-button
+          fill="none"
+          slot="end"
+        >
+           EDIT 
+        </ion-button>
+      </ion-item>
+    </ion-list>
+    <h2
+      class="ion-text-center"
+    >
+      Payment Method
+    </h2>
+    <ion-list
+      class="ion-margin-bottom"
+    >
+      <ion-item
+        detail=""
+        tabindex="0"
+      >
+        Credit or Debit Card
+      </ion-item>
+      <ion-item
+        detail=""
+        tabindex="0"
+      >
+        Checking Account
+      </ion-item>
+      <ion-item
+        detail=""
+        tabindex="0"
+      >
+        Savings Account
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</app-csaa-payment-select-method>
+`;
+
+exports[`AutopaySelectMethodPage should create a snapshot 1`] = `
+<app-csaa-payment-select-method
+  __ngContext__={[Function LRootView]}
+  activatedRoute={[Function Object]}
+  autopayLabel={[Function Function]}
+  configService={[Function ConfigMockService]}
+  currentTheme=""
+  makePaymentService={[Function MakePaymentService]}
+  newPaymentAccountMenu={[Function Array]}
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  routerService={[Function RouterMockService]}
+  store={[Function Store]}
+  tearDown$={[Function Subject]}
+  upcomingPayments="undefined"
+  wallet={[Function Object]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button
+          text="Cancel"
+        >
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Cancel
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <h2
+      class="ion-text-center"
+    >
+      Wallet
+    </h2>
+    <ion-list>
+      <ion-item
+        class="wallet-item item"
+      >
+        <ion-avatar
+          slot="start"
+        >
+          <span>
+            <img
+              alt="undefined"
+              src="/assets/csaa-mobile/vectors/Debit.svg"
+            />
+          </span>
+        </ion-avatar>
+        <ion-label>
+          <h3>
+            test
+          </h3>
+          <p>
+             1111 Debit 
+          </p>
+          <p>
+             12345 Checking 
+          </p>
+        </ion-label>
+        <ion-button
+          fill="none"
+          slot="end"
+        >
+           EDIT 
+        </ion-button>
+      </ion-item>
+    </ion-list>
+    <h2
+      class="ion-text-center"
+    >
+      Payment Method
+    </h2>
+    <ion-list
+      class="ion-margin-bottom"
+    >
+      <ion-item
+        detail=""
+        tabindex="0"
+      >
+        Credit or Debit Card
+      </ion-item>
+      <ion-item
+        detail=""
+        tabindex="0"
+      >
+        Checking Account
+      </ion-item>
+      <ion-item
+        detail=""
+        tabindex="0"
+      >
+        Savings Account
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</app-csaa-payment-select-method>
+`;
+
+exports[`AutopaySelectMethodPage should display the Checking Account method 1`] = `
+<app-csaa-payment-select-method
+  __ngContext__={[Function LRootView]}
+  activatedRoute={[Function Object]}
+  autopayLabel={[Function Function]}
+  configService={[Function ConfigMockService]}
+  currentTheme=""
+  makePaymentService={[Function MakePaymentService]}
+  newPaymentAccountMenu={[Function Array]}
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  routerService={[Function RouterMockService]}
+  store={[Function Store]}
+  tearDown$={[Function Subject]}
+  upcomingPayments="undefined"
+  wallet={[Function Object]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button
+          text="Cancel"
+        >
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Cancel
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <h2
+      class="ion-text-center"
+    >
+      Wallet
+    </h2>
+    <ion-list>
+      <ion-item
+        class="wallet-item item"
+      >
+        <ion-avatar
+          slot="start"
+        >
+          <span>
+            <img
+              alt="undefined"
+              src="/assets/csaa-mobile/vectors/Debit.svg"
+            />
+          </span>
+        </ion-avatar>
+        <ion-label>
+          <h3>
+            test
+          </h3>
+          <p>
+             1111 Debit 
+          </p>
+          <p>
+             12345 Checking 
+          </p>
+        </ion-label>
+        <ion-button
+          fill="none"
+          slot="end"
+        >
+           EDIT 
+        </ion-button>
+      </ion-item>
+    </ion-list>
+    <h2
+      class="ion-text-center"
+    >
+      Payment Method
+    </h2>
+    <ion-list
+      class="ion-margin-bottom"
+    >
+      <ion-item
+        detail=""
+        tabindex="0"
+      >
+        Credit or Debit Card
+      </ion-item>
+      <ion-item
+        detail=""
+        tabindex="0"
+      >
+        Checking Account
+      </ion-item>
+      <ion-item
+        detail=""
+        tabindex="0"
+      >
+        Savings Account
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</app-csaa-payment-select-method>
+`;
+
+exports[`AutopaySelectMethodPage should display the Credit or Debit Card payment method 1`] = `
+<app-csaa-payment-select-method
+  __ngContext__={[Function LRootView]}
+  activatedRoute={[Function Object]}
+  autopayLabel={[Function Function]}
+  configService={[Function ConfigMockService]}
+  currentTheme=""
+  makePaymentService={[Function MakePaymentService]}
+  newPaymentAccountMenu={[Function Array]}
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  routerService={[Function RouterMockService]}
+  store={[Function Store]}
+  tearDown$={[Function Subject]}
+  upcomingPayments="undefined"
+  wallet={[Function Object]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button
+          text="Cancel"
+        >
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Cancel
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <h2
+      class="ion-text-center"
+    >
+      Wallet
+    </h2>
+    <ion-list>
+      <ion-item
+        class="wallet-item item"
+      >
+        <ion-avatar
+          slot="start"
+        >
+          <span>
+            <img
+              alt="undefined"
+              src="/assets/csaa-mobile/vectors/Debit.svg"
+            />
+          </span>
+        </ion-avatar>
+        <ion-label>
+          <h3>
+            test
+          </h3>
+          <p>
+             1111 Debit 
+          </p>
+          <p>
+             12345 Checking 
+          </p>
+        </ion-label>
+        <ion-button
+          fill="none"
+          slot="end"
+        >
+           EDIT 
+        </ion-button>
+      </ion-item>
+    </ion-list>
+    <h2
+      class="ion-text-center"
+    >
+      Payment Method
+    </h2>
+    <ion-list
+      class="ion-margin-bottom"
+    >
+      <ion-item
+        detail=""
+        tabindex="0"
+      >
+        Credit or Debit Card
+      </ion-item>
+      <ion-item
+        detail=""
+        tabindex="0"
+      >
+        Checking Account
+      </ion-item>
+      <ion-item
+        detail=""
+        tabindex="0"
+      >
+        Savings Account
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</app-csaa-payment-select-method>
+`;
+
+exports[`AutopaySelectMethodPage should display the Savings Account method 1`] = `
+<app-csaa-payment-select-method
+  __ngContext__={[Function LRootView]}
+  activatedRoute={[Function Object]}
+  autopayLabel={[Function Function]}
+  configService={[Function ConfigMockService]}
+  currentTheme=""
+  makePaymentService={[Function MakePaymentService]}
+  newPaymentAccountMenu={[Function Array]}
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  routerService={[Function RouterMockService]}
+  store={[Function Store]}
+  tearDown$={[Function Subject]}
+  upcomingPayments="undefined"
+  wallet={[Function Object]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button
+          text="Cancel"
+        >
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Cancel
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <h2
+      class="ion-text-center"
+    >
+      Wallet
+    </h2>
+    <ion-list>
+      <ion-item
+        class="wallet-item item"
+      >
+        <ion-avatar
+          slot="start"
+        >
+          <span>
+            <img
+              alt="undefined"
+              src="/assets/csaa-mobile/vectors/Debit.svg"
+            />
+          </span>
+        </ion-avatar>
+        <ion-label>
+          <h3>
+            test
+          </h3>
+          <p>
+             1111 Debit 
+          </p>
+          <p>
+             12345 Checking 
+          </p>
+        </ion-label>
+        <ion-button
+          fill="none"
+          slot="end"
+        >
+           EDIT 
+        </ion-button>
+      </ion-item>
+    </ion-list>
+    <h2
+      class="ion-text-center"
+    >
+      Payment Method
+    </h2>
+    <ion-list
+      class="ion-margin-bottom"
+    >
+      <ion-item
+        detail=""
+        tabindex="0"
+      >
+        Credit or Debit Card
+      </ion-item>
+      <ion-item
+        detail=""
+        tabindex="0"
+      >
+        Checking Account
+      </ion-item>
+      <ion-item
+        detail=""
+        tabindex="0"
+      >
+        Savings Account
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</app-csaa-payment-select-method>
+`;

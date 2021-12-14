@@ -1,0 +1,27 @@
+<csaa-skeleton-card *ngIf="loading"></csaa-skeleton-card>
+<ion-card class="csaa-card" *ngIf="!loading">
+  <ion-card-header>
+    <ion-card-title> {{ header }} </ion-card-title>
+  </ion-card-header>
+  <ion-card-content class="csaa-item-list">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p class="agent-data">{{ subHeader }}</p>
+          <p *ngIf="phoneNumber" class="agent-data">{{ phoneNumber | phone }}</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="card-buttons-col ion-text-end" *ngIf="phoneNumber || emailAddress">
+          <ion-button fill="clear" (click)="onCall()" *ngIf="phoneNumber">
+            <ion-icon slot="icon-only" name="call-outline"></ion-icon>
+          </ion-button>
+
+          <ion-button fill="clear" (click)="onEmail()" *ngIf="emailAddress">
+            <ion-icon slot="icon-only" name="mail-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>

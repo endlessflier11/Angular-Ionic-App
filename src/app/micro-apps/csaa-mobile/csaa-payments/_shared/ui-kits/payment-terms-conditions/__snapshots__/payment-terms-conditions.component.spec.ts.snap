@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaymentTermsConditionsComponent should match snapshot 1`] = `
+<csaa-payment-terms-conditions
+  __ngContext__={[Function LRootView]}
+  currentTheme=""
+  legalService={[Function Object]}
+  modalCtrl={[Function AlertControllerMock]}
+  source$={[Function Observable]}
+  store={[Function Store]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar
+      no-border=""
+    >
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-title>
+        Terms & Conditions
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <csaa-content-renderer>
+      <div
+        class="legal"
+      >
+        <h1>
+          Terms and conditions
+        </h1>
+         Lore ipsum ...
+      </div>
+    </csaa-content-renderer>
+  </ion-content>
+</csaa-payment-terms-conditions>
+`;

@@ -1,0 +1,11 @@
+ion-card-header {
+  ion-item {
+    --padding-start: 0;
+    --inner-padding-end: 0;
+    --inner-border-width: 0 0 0 0;
+    .button-clear {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}

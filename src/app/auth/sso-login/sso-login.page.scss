@@ -1,0 +1,32 @@
+ion-content {
+  > div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    h2 {
+      text-align: center;
+    }
+  }
+
+  ion-grid {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  ion-button {
+    margin-top: 20px;
+    text-transform: unset;
+    font-weight: bold;
+  }
+  ion-toggle {
+    margin-right: 10px;
+  }
+  .ion-color-danger {
+    max-height: 142px;
+    display: block;
+    overflow: auto;
+  }
+}

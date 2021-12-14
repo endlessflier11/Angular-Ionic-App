@@ -1,0 +1,19 @@
+:host {
+  .policy-info {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    .policy-info-text {
+      display: flex;
+      flex-flow: column nowrap;
+      flex-grow: 1;
+    }
+
+    .policy-number {
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 28px;
+    }
+  }
+}

@@ -1,0 +1,325 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CsaaPaymentHistoryCardComponent should match snapshot 1`] = `
+<csaa-payment-history-card
+  __ngContext__={[Function LRootView]}
+  headerLine={[Function String]}
+  history={[Function Object]}
+  loading="false"
+  paymentHistory={[Function Array]}
+  policy={[Function Object]}
+  status={[Function Object]}
+  timezone="undefined"
+>
+  <ion-card
+    class="csaa-card"
+  >
+    <ion-card-header
+      class="policy-number-container"
+    >
+      <ion-item
+        class="ion-text-wrap ion-no-padding csaa-policy-item"
+      >
+        <ion-label>
+          <h3>
+            12345
+          </h3>
+          <p
+            class="subtitle"
+          >
+            <csaa-policy-subtitles>
+              <span
+                class="subtitle"
+              >
+                2018 Porsche 911
+              </span>
+            </csaa-policy-subtitles>
+          </p>
+        </ion-label>
+        <csaa-theme-icon
+          slot="end"
+        >
+          <img
+            src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+            style="width: 40px; height: 40px;"
+          />
+        </csaa-theme-icon>
+      </ion-item>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-list>
+        <ion-item
+          class="failed"
+        >
+          <ion-label>
+            <p
+              class="payment-date ion-text-left"
+            >
+               Aug 10, 2018 
+            </p>
+            <p
+              class="status ion-text-left"
+            >
+               Failed 
+            </p>
+            <p
+              class="status ion-text-left"
+            >
+               Credit Card 
+            </p>
+          </ion-label>
+          <span
+            class="amount ion-text-right"
+            slot="end"
+          >
+             $148.10 
+          </span>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <p
+              class="payment-date ion-text-left"
+            >
+               Aug 10, 2018 
+            </p>
+            <p
+              class="status ion-text-left"
+            >
+               Pending 
+            </p>
+            <p
+              class="status ion-text-left"
+            >
+               Credit Card 
+            </p>
+          </ion-label>
+          <span
+            class="amount ion-text-right"
+            slot="end"
+          >
+             $148.10 
+          </span>
+        </ion-item>
+        <ion-item
+          class="failed"
+        >
+          <ion-label>
+            <p
+              class="payment-date ion-text-left"
+            >
+               Aug 10, 2018 
+            </p>
+            <p
+              class="status ion-text-left"
+            >
+               Failed 
+            </p>
+            <p
+              class="status ion-text-left"
+            >
+               Credit Card 
+            </p>
+          </ion-label>
+          <span
+            class="amount ion-text-right"
+            slot="end"
+          >
+             $148.10 
+          </span>
+        </ion-item>
+        <ion-item
+          class="failed"
+        >
+          <ion-label>
+            <p
+              class="payment-date ion-text-left"
+            >
+               Aug 10, 2018 
+            </p>
+            <p
+              class="status ion-text-left"
+            >
+               Failed 
+            </p>
+            <p
+              class="status ion-text-left"
+            >
+               Credit Card 
+            </p>
+          </ion-label>
+          <span
+            class="amount ion-text-right"
+            slot="end"
+          >
+             $148.10 
+          </span>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</csaa-payment-history-card>
+`;
+
+exports[`CsaaPaymentHistoryCardComponent should match snapshot when loading and no payments 1`] = `
+<csaa-payment-history-card
+  __ngContext__={[Function LRootView]}
+  headerLine={[Function String]}
+  history={[Function Object]}
+  loading={[Function Boolean]}
+  paymentHistory={[Function Array]}
+  policy={[Function Object]}
+  status={[Function Object]}
+  timezone="undefined"
+>
+  <ion-card
+    class="csaa-card"
+  >
+    <ion-card-header
+      class="policy-number-container"
+    >
+      <ion-item
+        class="ion-text-wrap ion-no-padding csaa-policy-item"
+      >
+        <ion-label>
+          <h3>
+            12345
+          </h3>
+          <p
+            class="subtitle"
+          >
+            <csaa-policy-subtitles>
+              <span
+                class="subtitle"
+              >
+                2018 Porsche 911
+              </span>
+            </csaa-policy-subtitles>
+          </p>
+        </ion-label>
+        <csaa-theme-icon
+          slot="end"
+        >
+          <img
+            src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+            style="width: 40px; height: 40px;"
+          />
+        </csaa-theme-icon>
+      </ion-item>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-list>
+        <ion-item
+          class="failed"
+        >
+          <ion-label>
+            <p
+              class="payment-date ion-text-left"
+            >
+               Aug 10, 2018 
+            </p>
+            <p
+              class="status ion-text-left"
+            >
+               Failed 
+            </p>
+            <p
+              class="status ion-text-left"
+            >
+               Credit Card 
+            </p>
+          </ion-label>
+          <span
+            class="amount ion-text-right"
+            slot="end"
+          >
+             $148.10 
+          </span>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <p
+              class="payment-date ion-text-left"
+            >
+               Aug 10, 2018 
+            </p>
+            <p
+              class="status ion-text-left"
+            >
+               Pending 
+            </p>
+            <p
+              class="status ion-text-left"
+            >
+               Credit Card 
+            </p>
+          </ion-label>
+          <span
+            class="amount ion-text-right"
+            slot="end"
+          >
+             $148.10 
+          </span>
+        </ion-item>
+        <ion-item
+          class="failed"
+        >
+          <ion-label>
+            <p
+              class="payment-date ion-text-left"
+            >
+               Aug 10, 2018 
+            </p>
+            <p
+              class="status ion-text-left"
+            >
+               Failed 
+            </p>
+            <p
+              class="status ion-text-left"
+            >
+               Credit Card 
+            </p>
+          </ion-label>
+          <span
+            class="amount ion-text-right"
+            slot="end"
+          >
+             $148.10 
+          </span>
+        </ion-item>
+        <ion-item
+          class="failed"
+        >
+          <ion-label>
+            <p
+              class="payment-date ion-text-left"
+            >
+               Aug 10, 2018 
+            </p>
+            <p
+              class="status ion-text-left"
+            >
+               Failed 
+            </p>
+            <p
+              class="status ion-text-left"
+            >
+               Credit Card 
+            </p>
+          </ion-label>
+          <span
+            class="amount ion-text-right"
+            slot="end"
+          >
+             $148.10 
+          </span>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</csaa-payment-history-card>
+`;

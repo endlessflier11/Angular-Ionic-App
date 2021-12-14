@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaperlessTermsModalComponent should match snapshot 1`] = `
+<csaa-paperless-terms-modal
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  currentTheme=""
+  email={[Function String]}
+  loading="false"
+  modalCtrl={[Function ModalController]}
+  store={[Function Store]}
+  webviewService={[Function Function]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar
+      no-border=""
+    >
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-card
+      class="csaa-card"
+    >
+      <ion-card-header>
+        <ion-card-title>
+          Terms & Conditions
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>
+           By tapping "Accept", you are accepting the 
+          <span
+            class="csaa-link"
+          >
+            paperless preferences terms and conditions
+          </span>
+           and choosing to receive your policy documents and bills via email at A151@TESTUSER.EXAMPLE.COM. Policy documents include information about your policy, as well as privacy and other notices. Bill notifications include bills for insurance premiums and related fees. You may opt out of paperless preferences at any time, or update your email address by: 
+        </p>
+        <br />
+        <ul>
+          <li>
+            Editing your Paperless Settings in MyPolicy
+          </li>
+          <li>
+            Calling Insurance Service at 
+            <a
+              href="tel:+18883401817"
+            >
+              888.340.1817
+            </a>
+          </li>
+          <li>
+            Visiting your local AAA branch
+          </li>
+        </ul>
+        <ion-button
+          class="ion-margin"
+          expand="block"
+        >
+          Accept 
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</csaa-paperless-terms-modal>
+`;

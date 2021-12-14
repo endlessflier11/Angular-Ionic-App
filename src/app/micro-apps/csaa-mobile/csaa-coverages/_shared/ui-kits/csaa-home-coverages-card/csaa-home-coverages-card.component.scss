@@ -1,0 +1,24 @@
+@import '../../../../_scss/variables';
+@import '../../../../_scss/mixins';
+
+.endorsements {
+  h2 {
+    color: $csaa-lighter-color;
+    font-weight: $csaa-medium-font-weight;
+  }
+  .twitter-pitch {
+    font-family: $csaa-subtitle-font-family-ios;
+    font-weight: $csaa-light-font-weight;
+    color: var(--ion-color-primary);
+  }
+}
+ion-card-header {
+  padding-bottom: 3px;
+}
+ion-card-title {
+  display: flex;
+  flex-flow: row wrap;
+  div {
+    flex-grow: 1;
+  }
+}

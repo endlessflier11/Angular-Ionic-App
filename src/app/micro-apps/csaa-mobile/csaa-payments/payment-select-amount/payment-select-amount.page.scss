@@ -1,0 +1,32 @@
+ion-list {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+h3 {
+  margin-bottom: 20px;
+}
+ion-content {
+  --background: white;
+}
+ion-item {
+  --highlight-color-valid: var(--ion-color-primary);
+  &:first-child {
+    border-top: 1px solid #c8c7cc;
+  }
+
+  ion-input {
+    visibility: hidden;
+  }
+
+  &.active {
+    --border-width: 2px;
+    --border-color: var(--ion-color-primary);
+    span {
+      color: var(--ion-color-primary);
+    }
+
+    ion-input {
+      visibility: initial;
+    }
+  }
+}

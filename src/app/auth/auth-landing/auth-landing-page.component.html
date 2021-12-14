@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+  <div class="wrapper">
+    <ion-row>
+      <ion-col>
+        <ion-grid>
+          <ion-item-group>
+            <ion-button expand="block">Sign Up</ion-button>
+          </ion-item-group>
+          <ion-item-group>
+            <ion-text>OR</ion-text>
+          </ion-item-group>
+          <ion-item-group>
+            <ion-button
+              expand="block"
+              color="primary"
+              fill="outline"
+              routerLink="sso"
+              >Log In (SSO)</ion-button
+            >
+          </ion-item-group>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-button fill="none" (click)="goBack()">Back</ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

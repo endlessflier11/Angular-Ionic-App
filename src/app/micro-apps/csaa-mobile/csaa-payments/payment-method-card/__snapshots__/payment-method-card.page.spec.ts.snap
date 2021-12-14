@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaymentMethodCardPage should match snapshots when clean 1`] = `
+<app-csaa-payment-method-card
+  __hasRegId$__selector={[Function Observable]}
+  __ngContext__={[Function LRootView]}
+  alertCtrl={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  callService={[Function Object]}
+  cardDetailsData={[Function Object]}
+  cardDetailsForm={[Function FormGroup]}
+  cardDetailsMaskConfig={[Function Object]}
+  cardIO={[Function CardIO]}
+  configService={[Function ConfigMockService]}
+  currentTheme=""
+  deleteConfirmDirective="undefined"
+  editingPaymentMethod="undefined"
+  formBuilder={[Function FormBuilder]}
+  highlightCardExpired="false"
+  isAutoPayFlow="false"
+  isEditing="false"
+  loading="false"
+  loadingCtrl={[Function Object]}
+  makePaymentService={[Function Object]}
+  modalCtrl={[Function AlertControllerMock]}
+  notInitialized={[Function Boolean]}
+  onDeleteConfirmed={[Function Function]}
+  paymentService={[Function Object]}
+  route={[Function Object]}
+  routerService={[Function RouterMockService]}
+  store={[Function Store]}
+  tearDown$={[Function Subject]}
+  wallet={[Function Object]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-title>
+        Pay with
+      </ion-title>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Done
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="ion-text-center csaa"
+  >
+    <h1
+      class="ion-text-center"
+    >
+      Credit or Debit Card
+    </h1>
+    <h2
+      class="ion-text-center"
+    >
+      Enter Card Information
+    </h2>
+    <ion-button
+      fill="clear"
+      id="scan-card-button"
+    >
+      <b>
+        SCAN CARD
+      </b>
+    </ion-button>
+    <form
+      class="ng-untouched ng-pristine ng-invalid"
+      novalidate=""
+    >
+      <ion-item
+        class="ion-untouched ion-pristine ion-invalid"
+        lines="full"
+      >
+        <ion-label
+          position="fixed"
+        >
+          Name
+        </ion-label>
+        <ion-input
+          class="ng-untouched ng-pristine ng-invalid ion-untouched ion-pristine ion-invalid"
+          formcontrolname="cardHolderName"
+          placeholder="Required"
+          required=""
+          type="text"
+        />
+      </ion-item>
+      <ion-item
+        class="ion-untouched ion-pristine ion-invalid"
+        lines="full"
+      >
+        <ion-label
+          position="fixed"
+        >
+          Card Number
+        </ion-label>
+        <ion-input
+          class="ng-untouched ng-pristine ng-invalid ion-untouched ion-pristine ion-invalid"
+          formcontrolname="cardNumber"
+          maxlength="23"
+          placeholder="Required"
+          type="text"
+        />
+      </ion-item>
+      <ion-item
+        class="ion-untouched ion-pristine ion-invalid"
+        lines="full"
+      >
+        <ion-label
+          position="fixed"
+        >
+          Expiration
+        </ion-label>
+        <ion-input
+          class="ng-untouched ng-pristine ng-invalid ion-untouched ion-pristine ion-invalid"
+          formcontrolname="expiration"
+          maxlength="5"
+          placeholder="MM/YY"
+          type="text"
+        />
+      </ion-item>
+      <ion-item
+        class="ion-untouched ion-pristine ion-invalid"
+        lines="full"
+      >
+        <ion-label
+          position="fixed"
+        >
+          Zip Code
+        </ion-label>
+        <ion-input
+          class="ng-untouched ng-pristine ng-invalid ion-untouched ion-pristine ion-invalid"
+          formcontrolname="zipCode"
+          maxlength="5"
+          placeholder="Required"
+          type="text"
+        />
+      </ion-item>
+      <ion-item
+        class="ion-untouched ion-pristine ion-valid"
+        id="save-card-toggle"
+        lines="full"
+      >
+        <ion-label
+          position="fixed"
+        >
+          Save Card
+        </ion-label>
+        <ion-toggle
+          class="ng-untouched ng-pristine ng-valid ion-untouched ion-pristine ion-valid"
+          formcontrolname="saveCard"
+          item-end=""
+        />
+      </ion-item>
+      <ion-item
+        class="ion-untouched ion-pristine ion-valid"
+        lines="full"
+      >
+        <ion-label
+          position="fixed"
+        >
+          Nickname
+        </ion-label>
+        <ion-input
+          class="ng-untouched ng-pristine ng-valid ion-untouched ion-pristine ion-valid"
+          formcontrolname="nickname"
+          placeholder="Name your card"
+          type="text"
+        />
+      </ion-item>
+    </form>
+    <p
+      class="ion-padding"
+    >
+       By selecting done you agree to the 
+      <span
+        class="csaa-link"
+      >
+        payment terms and conditions
+      </span>
+      . 
+    </p>
+  </ion-content>
+</app-csaa-payment-method-card>
+`;

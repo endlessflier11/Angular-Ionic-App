@@ -1,0 +1,24 @@
+<csaa-skeleton-card [showHeader]="false" [showList]="false" *ngIf="loading"></csaa-skeleton-card>
+
+<ng-container *ngIf="!loading">
+  <ng-container *ngIf="isDiscountAvailable; else discountUnavailable">
+    <ion-card class="csaa-card">
+      <ion-card-content>
+        <p class="ion-padding-bottom text-lighter">
+          Save Big at AAA When You Bundle Home & Auto Insurance.
+        </p>
+        <ion-button expand="full" (click)="openQuoterInBrowser()">Get Your Free Quote </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
+</ng-container>
+
+<ng-template #discountUnavailable>
+  <ng-container *ngIf="(hasAutoPolicy$ | async) === false">
+    <ion-card class="csaa-card">
+      <ion-card-content>
+        <ion-button expand="full" (click)="openQuoterInBrowser()">Get a Quote</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
+</ng-template>

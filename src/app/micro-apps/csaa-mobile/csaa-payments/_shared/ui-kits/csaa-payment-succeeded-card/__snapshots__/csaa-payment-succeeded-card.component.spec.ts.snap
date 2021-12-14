@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CsaaPaymentSelectModal should match snapshots 1`] = `
+<csaa-payment-succeeded-card
+  __ngContext__={[Function LRootView]}
+  loading="false"
+  payment={[Function Object]}
+  result={[Function Object]}
+>
+  <ion-card
+    class="csaa-card"
+  >
+    <ion-card-header>
+      <img
+        src="/assets/csaa-mobile/vectors/success.svg"
+      />
+      <ion-card-title>
+        Payment Successful
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <h2>
+          AZSS294857564
+        </h2>
+        <ion-row
+          class="item"
+        >
+          <ion-col>
+            <div
+              class="policy-meta-content"
+            >
+              <h3>
+                 Paid on Apr 9, 2021 
+              </h3>
+              <span
+                class="subtitle"
+              >
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    test
+                  </span>
+                </csaa-policy-subtitles>
+              </span>
+            </div>
+          </ion-col>
+          <ion-col
+            size="auto"
+          >
+            <div
+              class="policy-meta-icon"
+            >
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-list>
+        <ion-item
+          class="csaa-payment-amount-list-item ion-no-padding"
+        >
+          <ion-label>
+            Amount paid 
+          </ion-label>
+          <span
+            slot="end"
+          >
+            $1,023.45
+          </span>
+        </ion-item>
+        <ion-item
+          class="csaa-payment-method-list-item ion-no-padding"
+          lines="none"
+        >
+          <ion-avatar
+            slot="start"
+          >
+            <span>
+              <img
+                src="/assets/csaa-mobile/vectors/mastercard.svg"
+              />
+            </span>
+          </ion-avatar>
+          <ion-label
+            class="ion-text-nowrap"
+          >
+            <span>
+              Tt 5454 5454
+            </span>
+          </ion-label>
+          <span
+            slot="end"
+          >
+             Credit 
+          </span>
+        </ion-item>
+        <ion-item
+          class="ion-no-padding ion-margin-bottom"
+        >
+          <ion-label>
+            Receipt number 
+          </ion-label>
+          <span
+            slot="end"
+          >
+            1668324
+          </span>
+        </ion-item>
+        <csaa-autopay-discount-card>
+          <ion-item
+            class="ion-no-padding"
+            detail=""
+            lines="none"
+          >
+            <ion-label>
+              <h3>
+                Save money with AutoPay
+              </h3>
+              <ion-text
+                color="dark"
+              >
+                <p
+                  class="ion-text-wrap"
+                >
+                   Save up to  per payment with 
+                  <br />
+                  AutoPay. Tap to view fees 
+                </p>
+              </ion-text>
+            </ion-label>
+          </ion-item>
+          <div
+            class="discount"
+          >
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <h3>
+                      Auto Payment Method Installment Fees
+                    </h3>
+                  </th>
+                  <th />
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Checking or Savings Account
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Debit Card
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Credit Card
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <h3>
+                      One-Time Payment Method Installment Fees
+                    </h3>
+                  </th>
+                  <th />
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Checking or Savings Account
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Debit Card
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Credit Card
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </csaa-autopay-discount-card>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</csaa-payment-succeeded-card>
+`;

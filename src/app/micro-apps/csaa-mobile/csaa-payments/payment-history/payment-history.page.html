@@ -1,0 +1,32 @@
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <csaa-back-button (back)="onClickBackBtn()"></csaa-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="hoursPopup.show()">Call Service</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Payment History</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="['csaa', currentTheme]">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event.target)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <csaa-payment-history-card
+    [history]="(history$ | async)"
+    [policy]="(policy$ | async)"
+    [loading]="loading"
+    headerLine="none"
+  >
+  </csaa-payment-history-card>
+</ion-content>
+<csaa-working-hours
+  #hoursPopup
+  [ngClass]="['csaa', currentTheme]"
+  [riskState]="(policy$ | async)?.riskState"
+  serviceType="CUSTOMER"
+>
+</csaa-working-hours>

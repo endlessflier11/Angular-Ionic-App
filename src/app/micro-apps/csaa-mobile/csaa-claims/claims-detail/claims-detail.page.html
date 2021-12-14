@@ -1,0 +1,31 @@
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <csaa-back-button (back)="backButtonClick()"></csaa-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="callClaims()">Call Claims</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Claim : {{ (claim$ | async)?.status }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="['csaa', currentTheme]">
+  <ion-refresher (ionRefresh)="doRefresh($event.target)" slot="fixed">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <csaa-agent-card
+    [loading]="loading"
+    header="Claims Representative"
+    [subHeader]="claimsRepresentativeName"
+    [phoneNumber]="claimsPhoneNumber"
+    [emailAddress]="claimsEmailAddress"
+    [emailSubject]="emailSubjectText"
+  >
+  </csaa-agent-card>
+  <ng-container>
+    <csaa-claims-history-card [loading]="loading" [claim]="claim$ | async" [policy]="policy">
+    </csaa-claims-history-card>
+  </ng-container>
+</ion-content>

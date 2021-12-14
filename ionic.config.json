@@ -1,0 +1,8 @@
+{
+  "name": "csaa-ionic",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

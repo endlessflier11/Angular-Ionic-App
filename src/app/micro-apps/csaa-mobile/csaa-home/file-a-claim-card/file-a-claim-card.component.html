@@ -1,0 +1,6 @@
+<csaa-skeleton-card [showHeader]="false" [showList]="false" *ngIf="loading"></csaa-skeleton-card>
+<ion-card *ngIf="!loading" class="csaa-card">
+  <ion-card-content>
+    <ion-button expand="full" (click)="openFileAClaimPageInBrowser()">Start a Claim</ion-button>
+  </ion-card-content>
+</ion-card>

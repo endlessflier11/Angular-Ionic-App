@@ -1,0 +1,90 @@
+<ion-item
+  detail
+  lines="none"
+  (click)="clickHandler()"
+  [detailIcon]="navigate ? 'chevron-forward' : isOpen ? 'chevron-up' : 'chevron-down'"
+  [class.ion-no-padding]="navigate"
+>
+  <ion-label>
+    <h3>Save money with AutoPay</h3>
+    <ion-text color="dark">
+      <p class="ion-text-wrap">
+        Save up to {{ discountDataDiff | currency: 'USD':'symbol':'1.0-0' }} per payment with
+        <br />AutoPay. Tap to view fees
+      </p>
+    </ion-text>
+  </ion-label>
+</ion-item>
+<div class="discount" [class.active]="isOpen">
+  <table>
+    <thead>
+      <tr>
+        <th>
+          <h3>Auto Payment Method Installment Fees</h3>
+        </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Checking or Savings Account</td>
+        <td>
+          {{ payment?.autopayInstallmentFee?.autoPayFees?.eft | currency: 'USD':'symbol':'1.2-2' }}
+        </td>
+      </tr>
+      <tr>
+        <td>Debit Card</td>
+        <td>
+          {{
+            payment?.autopayInstallmentFee?.autoPayFees?.pciDebitCard
+              | currency: 'USD':'symbol':'1.2-2'
+          }}
+        </td>
+      </tr>
+      <tr>
+        <td>Credit Card</td>
+        <td>
+          {{
+            payment?.autopayInstallmentFee?.autoPayFees?.pciCreditCard
+              | currency: 'USD':'symbol':'1.2-2'
+          }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          <h3>One-Time Payment Method Installment Fees</h3>
+        </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Checking or Savings Account</td>
+        <td>
+          {{ payment?.autopayInstallmentFee?.otpFees?.eft | currency: 'USD':'symbol':'1.2-2' }}
+        </td>
+      </tr>
+      <tr>
+        <td>Debit Card</td>
+        <td>
+          {{
+            payment?.autopayInstallmentFee?.otpFees?.pciDebitCard | currency: 'USD':'symbol':'1.2-2'
+          }}
+        </td>
+      </tr>
+      <tr>
+        <td>Credit Card</td>
+        <td>
+          {{
+            payment?.autopayInstallmentFee?.otpFees?.pciCreditCard
+              | currency: 'USD':'symbol':'1.2-2'
+          }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

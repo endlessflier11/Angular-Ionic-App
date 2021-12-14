@@ -1,0 +1,725 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		078E3CA12614D7190036C0E9 /* container in Resources */ = {isa = PBXBuildFile; fileRef = 078E3CA02614D7190036C0E9 /* container */; };
+		0B71378CB5E687FC1FFD4BCB /* Pods_AAA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A58A8912B1BEC6F9107FF6 /* Pods_AAA.framework */; };
+		2FAD9763203C412B000D30F8 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD9762203C412B000D30F8 /* config.xml */; };
+		50379B232058CBB4000EE86E /* capacitor.config.json in Resources */ = {isa = PBXBuildFile; fileRef = 50379B222058CBB4000EE86E /* capacitor.config.json */; };
+		504EC3081FED79650016851F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504EC3071FED79650016851F /* AppDelegate.swift */; };
+		504EC30D1FED79650016851F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 504EC30B1FED79650016851F /* Main.storyboard */; };
+		504EC30F1FED79650016851F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 504EC30E1FED79650016851F /* Assets.xcassets */; };
+		504EC3121FED79650016851F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 504EC3101FED79650016851F /* LaunchScreen.storyboard */; };
+		D3085903261F5734006F8CCE /* Entitlements-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3085901261F5733006F8CCE /* Entitlements-Debug.plist */; };
+		D3085904261F5734006F8CCE /* Entitlements-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3085902261F5733006F8CCE /* Entitlements-Release.plist */; };
+		D3085908261F59F8006F8CCE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085907261F59F8006F8CCE /* CoreTelephony.framework */; };
+		D308590A261F5A07006F8CCE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085909261F5A07006F8CCE /* SystemConfiguration.framework */; };
+		D308590E261F5CF4006F8CCE /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D308590D261F5CF4006F8CCE /* Accelerate.framework */; };
+		D3085911261F5D00006F8CCE /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D308590F261F5D00006F8CCE /* AddressBookUI.framework */; };
+		D3085912261F5D00006F8CCE /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085910261F5D00006F8CCE /* AddressBook.framework */; };
+		D3085914261F5D08006F8CCE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085913261F5D08006F8CCE /* AudioToolbox.framework */; };
+		D3085916261F5D14006F8CCE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085915261F5D14006F8CCE /* AVFoundation.framework */; };
+		D3085918261F5D1A006F8CCE /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085917261F5D1A006F8CCE /* CoreBluetooth.framework */; };
+		D308591A261F5D6D006F8CCE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085919261F5D6D006F8CCE /* CoreLocation.framework */; };
+		D308591C261F5D7A006F8CCE /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D308591B261F5D7A006F8CCE /* CoreMedia.framework */; };
+		D308591E261F5D88006F8CCE /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D308591D261F5D88006F8CCE /* CoreVideo.framework */; };
+		D3085920261F5D91006F8CCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D308591F261F5D91006F8CCE /* Foundation.framework */; };
+		D3085922261F5D9B006F8CCE /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085921261F5D9B006F8CCE /* ImageIO.framework */; };
+		D3085924261F5DA8006F8CCE /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085923261F5DA8006F8CCE /* LocalAuthentication.framework */; };
+		D3085926261F5DB4006F8CCE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085925261F5DB4006F8CCE /* MapKit.framework */; };
+		D3085928261F5DC1006F8CCE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085927261F5DC1006F8CCE /* MessageUI.framework */; };
+		D308592A261F5DCC006F8CCE /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085929261F5DCC006F8CCE /* OpenGLES.framework */; };
+		D308592C261F5DD5006F8CCE /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D308592B261F5DD5006F8CCE /* PassKit.framework */; };
+		D308592E261F5DDE006F8CCE /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D308592D261F5DDE006F8CCE /* Photos.framework */; };
+		D3085930261F5DE9006F8CCE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D308592F261F5DE9006F8CCE /* QuartzCore.framework */; };
+		D3085932261F5DF2006F8CCE /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085931261F5DF2006F8CCE /* SafariServices.framework */; };
+		D3085934261F5DFB006F8CCE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085933261F5DFB006F8CCE /* Security.framework */; };
+		D3085936261F5E08006F8CCE /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085935261F5E08006F8CCE /* Social.framework */; };
+		D3085938261F5E1F006F8CCE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085937261F5E1F006F8CCE /* UIKit.framework */; };
+		D308593A261F5E2B006F8CCE /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085939261F5E2B006F8CCE /* UserNotifications.framework */; };
+		D308593C261F5E30006F8CCE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D308593B261F5E30006F8CCE /* WebKit.framework */; };
+		D308594B261F6286006F8CCE /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085947261F616D006F8CCE /* libc++.tbd */; };
+		D308594D261F62A5006F8CCE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D308594C261F6299006F8CCE /* libz.tbd */; };
+		D308594F261F62BD006F8CCE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D308594E261F62B1006F8CCE /* libsqlite3.tbd */; };
+		D3085950261F62EB006F8CCE /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D308594A261F61D4006F8CCE /* libCardIO.a */; };
+		D3085951261F62EB006F8CCE /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085948261F61D4006F8CCE /* libopencv_core.a */; };
+		D3085952261F62EB006F8CCE /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3085949261F61D4006F8CCE /* libopencv_imgproc.a */; };
+		D32B5A73268612AD00CBD19C /* AAAFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B5A72268612AD00CBD19C /* AAAFirebase.swift */; };
+		D32B5A752686206200CBD19C /* AAACheckVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B5A742686206200CBD19C /* AAACheckVersion.swift */; };
+		D32B5A77268620FC00CBD19C /* AAAVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B5A76268620FC00CBD19C /* AAAVersion.swift */; };
+		D32B5A79268621A800CBD19C /* AAAPushNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B5A78268621A800CBD19C /* AAAPushNotificationHelper.swift */; };
+		D32B5A7D2686405400CBD19C /* AAAConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B5A7C2686405400CBD19C /* AAAConstants.swift */; };
+		D32B5A7F2686410A00CBD19C /* AAAPushNotificationReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B5A7E2686410A00CBD19C /* AAAPushNotificationReceiver.swift */; };
+		D32B5A812686576E00CBD19C /* AAAUserNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B5A802686576E00CBD19C /* AAAUserNotification.swift */; };
+		D39FFD31261F403D00FBD11C /* public in Resources */ = {isa = PBXBuildFile; fileRef = D39FFD30261F403D00FBD11C /* public */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		078E3CA02614D7190036C0E9 /* container */ = {isa = PBXFileReference; lastKnownFileType = folder; path = container; sourceTree = "<group>"; };
+		2FAD9762203C412B000D30F8 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = config.xml; sourceTree = "<group>"; };
+		46B0C984A5E6A7E1970C57B1 /* Pods-AAA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AAA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AAA/Pods-AAA.debug.xcconfig"; sourceTree = "<group>"; };
+		50379B222058CBB4000EE86E /* capacitor.config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = capacitor.config.json; sourceTree = "<group>"; };
+		504EC3041FED79650016851F /* AAA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AAA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		504EC3071FED79650016851F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		504EC30C1FED79650016851F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		504EC30E1FED79650016851F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		504EC3111FED79650016851F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		504EC3131FED79650016851F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF51FD2D460BCFE21FA515B2 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
+		D3085901261F5733006F8CCE /* Entitlements-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Entitlements-Debug.plist"; sourceTree = "<group>"; };
+		D3085902261F5733006F8CCE /* Entitlements-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Entitlements-Release.plist"; sourceTree = "<group>"; };
+		D3085907261F59F8006F8CCE /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		D3085909261F5A07006F8CCE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D308590D261F5CF4006F8CCE /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		D308590F261F5D00006F8CCE /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		D3085910261F5D00006F8CCE /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		D3085913261F5D08006F8CCE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D3085915261F5D14006F8CCE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D3085917261F5D1A006F8CCE /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		D3085919261F5D6D006F8CCE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D308591B261F5D7A006F8CCE /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		D308591D261F5D88006F8CCE /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		D308591F261F5D91006F8CCE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D3085921261F5D9B006F8CCE /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		D3085923261F5DA8006F8CCE /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		D3085925261F5DB4006F8CCE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D3085927261F5DC1006F8CCE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		D3085929261F5DCC006F8CCE /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		D308592B261F5DD5006F8CCE /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		D308592D261F5DDE006F8CCE /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		D308592F261F5DE9006F8CCE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D3085931261F5DF2006F8CCE /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		D3085933261F5DFB006F8CCE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D3085935261F5E08006F8CCE /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		D3085937261F5E1F006F8CCE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D3085939261F5E2B006F8CCE /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		D308593B261F5E30006F8CCE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		D3085947261F616D006F8CCE /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		D3085948261F61D4006F8CCE /* libopencv_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_core.a; path = ../../node_modules/card.io.cordova.mobilesdk/src/ios/CardIO/libopencv_core.a; sourceTree = "<group>"; };
+		D3085949261F61D4006F8CCE /* libopencv_imgproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_imgproc.a; path = ../../node_modules/card.io.cordova.mobilesdk/src/ios/CardIO/libopencv_imgproc.a; sourceTree = "<group>"; };
+		D308594A261F61D4006F8CCE /* libCardIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCardIO.a; path = ../../node_modules/card.io.cordova.mobilesdk/src/ios/CardIO/libCardIO.a; sourceTree = "<group>"; };
+		D308594C261F6299006F8CCE /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		D308594E261F62B1006F8CCE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		D32B5A72268612AD00CBD19C /* AAAFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAAFirebase.swift; sourceTree = "<group>"; };
+		D32B5A742686206200CBD19C /* AAACheckVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAACheckVersion.swift; sourceTree = "<group>"; };
+		D32B5A76268620FC00CBD19C /* AAAVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAAVersion.swift; sourceTree = "<group>"; };
+		D32B5A78268621A800CBD19C /* AAAPushNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAAPushNotificationHelper.swift; sourceTree = "<group>"; };
+		D32B5A7C2686405400CBD19C /* AAAConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAAConstants.swift; sourceTree = "<group>"; };
+		D32B5A7E2686410A00CBD19C /* AAAPushNotificationReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAAPushNotificationReceiver.swift; sourceTree = "<group>"; };
+		D32B5A802686576E00CBD19C /* AAAUserNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAAUserNotification.swift; sourceTree = "<group>"; };
+		D39DB4142698E4C5000DEA81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D39DB4162698E4C5000DEA81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D39FFD30261F403D00FBD11C /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = public; sourceTree = "<group>"; };
+		DFCC576C7FF3BF23C986E64D /* Pods-AAA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AAA.release.xcconfig"; path = "Pods/Target Support Files/Pods-AAA/Pods-AAA.release.xcconfig"; sourceTree = "<group>"; };
+		E5A58A8912B1BEC6F9107FF6 /* Pods_AAA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AAA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC68EB0AF532CFC21C3344DD /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		504EC3011FED79650016851F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3085916261F5D14006F8CCE /* AVFoundation.framework in Frameworks */,
+				D308594D261F62A5006F8CCE /* libz.tbd in Frameworks */,
+				D308592E261F5DDE006F8CCE /* Photos.framework in Frameworks */,
+				D3085930261F5DE9006F8CCE /* QuartzCore.framework in Frameworks */,
+				D308591C261F5D7A006F8CCE /* CoreMedia.framework in Frameworks */,
+				D3085938261F5E1F006F8CCE /* UIKit.framework in Frameworks */,
+				D308593C261F5E30006F8CCE /* WebKit.framework in Frameworks */,
+				D3085928261F5DC1006F8CCE /* MessageUI.framework in Frameworks */,
+				D308594F261F62BD006F8CCE /* libsqlite3.tbd in Frameworks */,
+				D3085926261F5DB4006F8CCE /* MapKit.framework in Frameworks */,
+				D3085922261F5D9B006F8CCE /* ImageIO.framework in Frameworks */,
+				D3085918261F5D1A006F8CCE /* CoreBluetooth.framework in Frameworks */,
+				D3085912261F5D00006F8CCE /* AddressBook.framework in Frameworks */,
+				D3085908261F59F8006F8CCE /* CoreTelephony.framework in Frameworks */,
+				D3085932261F5DF2006F8CCE /* SafariServices.framework in Frameworks */,
+				D308593A261F5E2B006F8CCE /* UserNotifications.framework in Frameworks */,
+				D308590E261F5CF4006F8CCE /* Accelerate.framework in Frameworks */,
+				D3085951261F62EB006F8CCE /* libopencv_core.a in Frameworks */,
+				D308590A261F5A07006F8CCE /* SystemConfiguration.framework in Frameworks */,
+				D3085952261F62EB006F8CCE /* libopencv_imgproc.a in Frameworks */,
+				D308591A261F5D6D006F8CCE /* CoreLocation.framework in Frameworks */,
+				D3085920261F5D91006F8CCE /* Foundation.framework in Frameworks */,
+				D3085936261F5E08006F8CCE /* Social.framework in Frameworks */,
+				D308594B261F6286006F8CCE /* libc++.tbd in Frameworks */,
+				D3085914261F5D08006F8CCE /* AudioToolbox.framework in Frameworks */,
+				D3085950261F62EB006F8CCE /* libCardIO.a in Frameworks */,
+				D308592C261F5DD5006F8CCE /* PassKit.framework in Frameworks */,
+				D3085911261F5D00006F8CCE /* AddressBookUI.framework in Frameworks */,
+				D3085924261F5DA8006F8CCE /* LocalAuthentication.framework in Frameworks */,
+				D3085934261F5DFB006F8CCE /* Security.framework in Frameworks */,
+				D308591E261F5D88006F8CCE /* CoreVideo.framework in Frameworks */,
+				D308592A261F5DCC006F8CCE /* OpenGLES.framework in Frameworks */,
+				0B71378CB5E687FC1FFD4BCB /* Pods_AAA.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27E2DDA53C4D2A4D1A88CE4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D308594E261F62B1006F8CCE /* libsqlite3.tbd */,
+				D308594C261F6299006F8CCE /* libz.tbd */,
+				D308594A261F61D4006F8CCE /* libCardIO.a */,
+				D3085948261F61D4006F8CCE /* libopencv_core.a */,
+				D3085949261F61D4006F8CCE /* libopencv_imgproc.a */,
+				D3085947261F616D006F8CCE /* libc++.tbd */,
+				D308593B261F5E30006F8CCE /* WebKit.framework */,
+				D3085939261F5E2B006F8CCE /* UserNotifications.framework */,
+				D3085937261F5E1F006F8CCE /* UIKit.framework */,
+				D3085935261F5E08006F8CCE /* Social.framework */,
+				D3085933261F5DFB006F8CCE /* Security.framework */,
+				D3085931261F5DF2006F8CCE /* SafariServices.framework */,
+				D308592F261F5DE9006F8CCE /* QuartzCore.framework */,
+				D308592D261F5DDE006F8CCE /* Photos.framework */,
+				D308592B261F5DD5006F8CCE /* PassKit.framework */,
+				D3085929261F5DCC006F8CCE /* OpenGLES.framework */,
+				D3085927261F5DC1006F8CCE /* MessageUI.framework */,
+				D3085925261F5DB4006F8CCE /* MapKit.framework */,
+				D3085923261F5DA8006F8CCE /* LocalAuthentication.framework */,
+				D3085921261F5D9B006F8CCE /* ImageIO.framework */,
+				D308591F261F5D91006F8CCE /* Foundation.framework */,
+				D308591D261F5D88006F8CCE /* CoreVideo.framework */,
+				D308591B261F5D7A006F8CCE /* CoreMedia.framework */,
+				D3085919261F5D6D006F8CCE /* CoreLocation.framework */,
+				D3085917261F5D1A006F8CCE /* CoreBluetooth.framework */,
+				D3085915261F5D14006F8CCE /* AVFoundation.framework */,
+				D3085913261F5D08006F8CCE /* AudioToolbox.framework */,
+				D3085910261F5D00006F8CCE /* AddressBook.framework */,
+				D308590F261F5D00006F8CCE /* AddressBookUI.framework */,
+				D308590D261F5CF4006F8CCE /* Accelerate.framework */,
+				D3085909261F5A07006F8CCE /* SystemConfiguration.framework */,
+				D3085907261F59F8006F8CCE /* CoreTelephony.framework */,
+				E5A58A8912B1BEC6F9107FF6 /* Pods_AAA.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		504EC2FB1FED79650016851F = {
+			isa = PBXGroup;
+			children = (
+				504EC3061FED79650016851F /* App */,
+				504EC3051FED79650016851F /* Products */,
+				7F8756D8B27F46E3366F6CEA /* Pods */,
+				27E2DDA53C4D2A4D1A88CE4A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		504EC3051FED79650016851F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				504EC3041FED79650016851F /* AAA.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		504EC3061FED79650016851F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				504EC30E1FED79650016851F /* Assets.xcassets */,
+				078E3CA02614D7190036C0E9 /* container */,
+				D39DB4122698E4C5000DEA81 /* Firebase */,
+				50379B222058CBB4000EE86E /* capacitor.config.json */,
+				2FAD9762203C412B000D30F8 /* config.xml */,
+				504EC3131FED79650016851F /* Info.plist */,
+				D3085901261F5733006F8CCE /* Entitlements-Debug.plist */,
+				D3085902261F5733006F8CCE /* Entitlements-Release.plist */,
+				504EC3101FED79650016851F /* LaunchScreen.storyboard */,
+				504EC30B1FED79650016851F /* Main.storyboard */,
+				504EC3071FED79650016851F /* AppDelegate.swift */,
+				D32B5A7C2686405400CBD19C /* AAAConstants.swift */,
+				D32B5A72268612AD00CBD19C /* AAAFirebase.swift */,
+				D32B5A742686206200CBD19C /* AAACheckVersion.swift */,
+				D32B5A76268620FC00CBD19C /* AAAVersion.swift */,
+				D32B5A78268621A800CBD19C /* AAAPushNotificationHelper.swift */,
+				D32B5A7E2686410A00CBD19C /* AAAPushNotificationReceiver.swift */,
+				D32B5A802686576E00CBD19C /* AAAUserNotification.swift */,
+				D39FFD30261F403D00FBD11C /* public */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7F8756D8B27F46E3366F6CEA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC68EB0AF532CFC21C3344DD /* Pods-App.debug.xcconfig */,
+				AF51FD2D460BCFE21FA515B2 /* Pods-App.release.xcconfig */,
+				46B0C984A5E6A7E1970C57B1 /* Pods-AAA.debug.xcconfig */,
+				DFCC576C7FF3BF23C986E64D /* Pods-AAA.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D39DB4122698E4C5000DEA81 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				D39DB4132698E4C5000DEA81 /* PROD */,
+				D39DB4152698E4C5000DEA81 /* DEV */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		D39DB4132698E4C5000DEA81 /* PROD */ = {
+			isa = PBXGroup;
+			children = (
+				D39DB4142698E4C5000DEA81 /* GoogleService-Info.plist */,
+			);
+			path = PROD;
+			sourceTree = "<group>";
+		};
+		D39DB4152698E4C5000DEA81 /* DEV */ = {
+			isa = PBXGroup;
+			children = (
+				D39DB4162698E4C5000DEA81 /* GoogleService-Info.plist */,
+			);
+			path = DEV;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		504EC3031FED79650016851F /* AAA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 504EC3161FED79650016851F /* Build configuration list for PBXNativeTarget "AAA" */;
+			buildPhases = (
+				6634F4EFEBD30273BCE97C65 /* [CP] Check Pods Manifest.lock */,
+				D30C18222697251600E1E9CC /* Create and set CFBundleVersion */,
+				504EC3001FED79650016851F /* Sources */,
+				504EC3011FED79650016851F /* Frameworks */,
+				D30C37CC268F0B3E0054B3C0 /* Setup Firebase Environment GoogleService-Info.plist */,
+				504EC3021FED79650016851F /* Resources */,
+				9592DBEFFC6D2A0C8D5DEB22 /* [CP] Embed Pods Frameworks */,
+				81C2C364386358F0C48A052C /* [CP] Copy Pods Resources */,
+				D30C37C6268F08340054B3C0 /* Firebase Crashlytics DSYM Upload */,
+				D30C181F2694FB8D00E1E9CC /* Remove Unused Architectures */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AAA;
+			productName = App;
+			productReference = 504EC3041FED79650016851F /* AAA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		504EC2FC1FED79650016851F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				TargetAttributes = {
+					504EC3031FED79650016851F = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1250;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 504EC2FF1FED79650016851F /* Build configuration list for PBXProject "App" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 504EC2FB1FED79650016851F;
+			productRefGroup = 504EC3051FED79650016851F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				504EC3031FED79650016851F /* AAA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		504EC3021FED79650016851F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				504EC3121FED79650016851F /* LaunchScreen.storyboard in Resources */,
+				504EC30F1FED79650016851F /* Assets.xcassets in Resources */,
+				D3085904261F5734006F8CCE /* Entitlements-Release.plist in Resources */,
+				50379B232058CBB4000EE86E /* capacitor.config.json in Resources */,
+				078E3CA12614D7190036C0E9 /* container in Resources */,
+				D3085903261F5734006F8CCE /* Entitlements-Debug.plist in Resources */,
+				504EC30D1FED79650016851F /* Main.storyboard in Resources */,
+				D39FFD31261F403D00FBD11C /* public in Resources */,
+				2FAD9763203C412B000D30F8 /* config.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6634F4EFEBD30273BCE97C65 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AAA-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81C2C364386358F0C48A052C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AAA/Pods-AAA-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9592DBEFFC6D2A0C8D5DEB22 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AAA/Pods-AAA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D30C181F2694FB8D00E1E9CC /* Remove Unused Architectures */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "Remove Unused Architectures";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n# Set working directory to product’s embedded frameworks \ncd \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\nif [ \"$ACTION\" = \"install\" ]; then\n  echo \"Copy .bcsymbolmap files to .xcarchive\"\n  find . -name '*.bcsymbolmap' -type f -exec mv {} \"${CONFIGURATION_BUILD_DIR}\" ;\nelse\n  # Delete *.bcsymbolmap files from framework bundle unless archiving\n  find . -name '*.bcsymbolmap' -type f -exec rm -rf \"{}\" +;\nfi\n\necho \"Stripping frameworks\"\n\nfor file in $(find . -type f -perm +111); do\n  # Skip non-dynamic libraries\n  if ! [[ \"$(file \"$file\")\" == *\"dynamically linked shared library\"* ]]; then\n    continue\n  fi\n  \n  # Get architectures for current file\n  archs=\"$(lipo -info \"${file}\" | rev | cut -d ':' -f1 | rev)\"\n  stripped=\"\"\n  for arch in $archs; do\n    if ! [[ \"${VALID_ARCHS}\" == *\"$arch\"* ]]; then\n      # Strip non-valid architectures in-place\n      lipo -remove \"$arch\" -output \"$file\" \"$file\" || exit 1\n      stripped=\"$stripped $arch\"\n    fi\n  done\n  if [[ \"$stripped\" != \"\" ]]; then\n    echo \"Stripped $file of architectures:$stripped\"\n    if [ \"${CODE_SIGNING_REQUIRED}\" == \"YES\" ]; then\n      code_sign \"${file}\"\n    fi\n  fi\ndone\n";
+		};
+		D30C18222697251600E1E9CC /* Create and set CFBundleVersion */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Create and set CFBundleVersion";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "ionicChannelName=$(/usr/libexec/PlistBuddy -c \"Print IonChannelName\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildPrefix=\"\"\n\nif [[ $ionicChannelName = *Production* ]]\nthen\n    buildPrefix=\"999.\"\nelif [[ $ionicChannelName = *Development* ]]\nthen\n    buildPrefix=\"111.\"    \nelif [[ $ionicChannelName = *Feature* ]]\nthen\n    buildPrefix=\"111.\"    \nfi\n\nbuildDate=$(date '+%y%m%d%H%M')\nbuildNumber=\"$buildPrefix$buildDate\"\n\necho \"New CFBundleVersion: $buildNumber\"\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
+		};
+		D30C37C6268F08340054B3C0 /* Firebase Crashlytics DSYM Upload */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "Firebase Crashlytics DSYM Upload";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		D30C37CC268F0B3E0054B3C0 /* Setup Firebase Environment GoogleService-Info.plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Setup Firebase Environment GoogleService-Info.plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Name of the resource we're selectively copying\nGOOGLESERVICE_INFO_PLIST=GoogleService-Info.plist\n\n# Get references to dev and prod versions of the GoogleService-Info.plist\n# NOTE: These should only live on the file system and should NOT be part of the target (since we'll be adding them to the target manually)\nGOOGLESERVICE_INFO_PROD=${PROJECT_DIR}/App/Firebase/PROD/${GOOGLESERVICE_INFO_PLIST}\nGOOGLESERVICE_INFO_DEV=${PROJECT_DIR}/App/Firebase/DEV/${GOOGLESERVICE_INFO_PLIST}\n\n# Make sure the dev version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_DEV}\"\nif [ ! -f $GOOGLESERVICE_INFO_DEV ]\nthen\n    echo \"No Development GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Make sure the prod version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_PROD}\"\nif [ ! -f $GOOGLESERVICE_INFO_PROD ]\nthen\n    echo \"No Production GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Get a reference to the destination location for the GoogleService-Info.plist\nPLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\necho \"Will copy ${GOOGLESERVICE_INFO_PLIST} to final destination: ${PLIST_DESTINATION}\"\n\ncfBundleVersion=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\n\n# Copy over the prod GoogleService-Info.plist for Release builds\necho \"Bundle version ${cfBundleVersion}\"\n\nif [[ $cfBundleVersion = 111* ]]\nthen\n    echo \"Using ${GOOGLESERVICE_INFO_DEV}\"\n    cp \"${GOOGLESERVICE_INFO_DEV}\" \"${PLIST_DESTINATION}\"\nelse\n    echo \"Using ${GOOGLESERVICE_INFO_PROD}\"\n    cp \"${GOOGLESERVICE_INFO_PROD}\" \"${PLIST_DESTINATION}\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		504EC3001FED79650016851F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D32B5A77268620FC00CBD19C /* AAAVersion.swift in Sources */,
+				D32B5A73268612AD00CBD19C /* AAAFirebase.swift in Sources */,
+				D32B5A7F2686410A00CBD19C /* AAAPushNotificationReceiver.swift in Sources */,
+				D32B5A812686576E00CBD19C /* AAAUserNotification.swift in Sources */,
+				D32B5A752686206200CBD19C /* AAACheckVersion.swift in Sources */,
+				D32B5A7D2686405400CBD19C /* AAAConstants.swift in Sources */,
+				504EC3081FED79650016851F /* AppDelegate.swift in Sources */,
+				D32B5A79268621A800CBD19C /* AAAPushNotificationHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		504EC30B1FED79650016851F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				504EC30C1FED79650016851F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		504EC3101FED79650016851F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				504EC3111FED79650016851F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		504EC3141FED79650016851F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		504EC3151FED79650016851F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		504EC3171FED79650016851F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46B0C984A5E6A7E1970C57B1 /* Pods-AAA.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = "App/Entitlements-Debug.plist";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2107082057;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = SHDJ6Q99N7;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 21.9.0;
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEBUG\"";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaa.iphone.discounts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG USE_PUSH";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		504EC3181FED79650016851F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFCC576C7FF3BF23C986E64D /* Pods-AAA.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = "App/Entitlements-Release.plist";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2107082057;
+				DEVELOPMENT_TEAM = SHDJ6Q99N7;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 21.9.0;
+				"OTHER_LDFLAGS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"-Wl,-sectcreate,__RESTRICT,__restrict,/dev/null",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaa.iphone.discounts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = USE_PUSH;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		504EC2FF1FED79650016851F /* Build configuration list for PBXProject "App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				504EC3141FED79650016851F /* Debug */,
+				504EC3151FED79650016851F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		504EC3161FED79650016851F /* Build configuration list for PBXNativeTarget "AAA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				504EC3171FED79650016851F /* Debug */,
+				504EC3181FED79650016851F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 504EC2FC1FED79650016851F /* Project object */;
+}

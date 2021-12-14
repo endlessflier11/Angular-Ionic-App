@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SsoLoginPage should match snapshot 1`] = `
+<app-csaa-sso-login
+  authService={[Function AuthMockService]}
+  form={[Function FormGroup]}
+  formBuilder={[Function FormBuilder]}
+  navController={[Function NavController]}
+  route={[Function Function]}
+  ssoService={[Function SsoMockService]}
+>
+  <ion-content>
+    <div>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <form
+              class="ng-untouched ng-pristine ng-invalid"
+              novalidate=""
+            >
+              <ion-label
+                position="fixed"
+              >
+                Email
+              </ion-label>
+              <ion-input
+                class="ng-untouched ng-pristine ng-invalid ion-untouched ion-pristine ion-invalid"
+                formcontrolname="email"
+                name="email"
+                placeholder="example@email.com"
+                type="email"
+              />
+              <ion-label
+                position="fixed"
+              >
+                Password
+              </ion-label>
+              <ion-input
+                class="ng-untouched ng-pristine ng-invalid ion-untouched ion-pristine ion-invalid"
+                formcontrolname="password"
+                name="password"
+                placeholder="password"
+                type="password"
+              />
+              <ion-button
+                expand="block"
+                type="submit"
+              >
+                Log In
+              </ion-button>
+            </form>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col
+            class="ion-text-center"
+          >
+            <ion-button
+              fill="none"
+            >
+              Back
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-content>
+</app-csaa-sso-login>
+`;

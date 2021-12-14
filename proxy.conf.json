@@ -1,0 +1,58 @@
+{
+  "/api/v1": {
+    "target": "https://mobile.api.dev.digital.pncie.com/ent/okta-qa/da/api/v1",
+    "changeOrigin": true,
+    "secure": false,
+    "pathRewrite": {
+      "^/api/v1": ""
+    }
+  },
+  "/translator": {
+    "target": "https://mobile-translator-service-qa.digital.csaa-insurance.aaa.com",
+    "changeOrigin": true,
+    "secure": false,
+    "pathRewrite": {
+      "^/translator": ""
+    }
+  },
+  "/SERVICE_LOCATOR_PRODUCTION": {
+    "target": "https://www.mobile-mypolicy.digital.p01.csaa-insurance.aaa.com/servicelocator/v1",
+    "changeOrigin": true,
+    "secure": false,
+    "pathRewrite": {
+      "^/SERVICE_LOCATOR_PRODUCTION": ""
+    }
+  },
+  "/SERVICE_LOCATOR_QA": {
+    "target": "https://www-qa.mobile-mypolicy.digital.n01.csaa-insurance.aaa.com/servicelocator/v2",
+    "changeOrigin": true,
+    "secure": false,
+    "pathRewrite": {
+      "^/SERVICE_LOCATOR_QA": ""
+    }
+  },
+  "/SERVICE_LOCATOR_DEV": {
+    "target": "https://www-dev.mobile-mypolicy.digital.n01.csaa-insurance.aaa.com/servicelocator/v2",
+    "changeOrigin": true,
+    "secure": false,
+    "pathRewrite": {
+      "^/SERVICE_LOCATOR_DEV": ""
+    }
+  },
+  "/SERVICE_LOCATOR_PERF": {
+    "target": "https://www-perf.mobile-mypolicy.digital.n01.csaa-insurance.aaa.com/servicelocator/v1",
+    "changeOrigin": true,
+    "secure": false,
+    "pathRewrite": {
+      "^/SERVICE_LOCATOR_PERF": ""
+    }
+  },
+  "/SERVICE_LOCATOR_BFIX": {
+    "target": "https://www-bfix.mobile-mypolicy.digital.n01.csaa-insurance.aaa.com/servicelocator/v1",
+    "changeOrigin": true,
+    "secure": false,
+    "pathRewrite": {
+      "^/SERVICE_LOCATOR_BFIX": ""
+    }
+  }
+}

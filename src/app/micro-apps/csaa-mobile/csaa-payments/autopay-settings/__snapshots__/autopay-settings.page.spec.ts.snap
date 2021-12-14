@@ -1,0 +1,1804 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Autopay Settings page Show eValue Discount Alert when activating Autopay with Credit Card while enrolled in eValue should alert when enrollment status is ACTIVE 1`] = `
+<app-csaa-autopay-settings
+  __ngContext__={[Function LRootView]}
+  activatedRoute={[Function Object]}
+  alertController={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  autoPayData={[Function Object]}
+  canceling="false"
+  configService={[Function ConfigMockService]}
+  currentTheme=""
+  initialToggleValue={[Function Boolean]}
+  makePaymentService={[Function MakePaymentService]}
+  modalCtrl={[Function AlertControllerMock]}
+  paymentService={[Function PaymentService]}
+  platform={[Function PlatformMock]}
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  policySubtitlesExpanded="false"
+  routerService={[Function RouterMockService]}
+  selectedPaymentAccount={[Function Object]}
+  store={[Function Store]}
+  tearDown$={[Function Subject]}
+  toggleControlValue={[Function Boolean]}
+  upcomingPayment={[Function Object]}
+  walletData={[Function Object]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button
+          text="Cancel"
+        >
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Cancel
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Save
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Manage AutoPay
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-grid
+      class="ion-no-padding"
+    >
+      <ion-row
+        class="ion-padding-top ion-padding-bottom"
+      >
+        <ion-col>
+          <ion-item
+            lines="none"
+          >
+            <div
+              class="policy-meta-content"
+            >
+              <h3>
+                CAAC910026006
+              </h3>
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  2009 Acura Tsx,
+                </span>
+                <span
+                  class="subtitle"
+                >
+                  2007 Jeep Grand Cherokee
+                </span>
+                <a
+                  class="csaa-link"
+                  href="#"
+                >
+                  <small>
+                    Show more
+                  </small>
+                </a>
+              </csaa-policy-subtitles>
+            </div>
+            <div
+              class="policy-meta-icon"
+              slot="end"
+            >
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </div>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row
+        class="ion-margin-bottom"
+      >
+        <ion-col>
+          <ion-item
+            lines="none"
+          >
+            <h3>
+              AutoPay is On
+            </h3>
+            <ion-toggle
+              class="ng-untouched ng-pristine ng-valid"
+              slot="end"
+            />
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <h2
+      class="ion-text-center"
+    >
+      Update Payment Method
+    </h2>
+    <ion-list>
+      <ion-item
+        detail=""
+        lines="full"
+      >
+        Payment Method 
+        <span
+          slot="end"
+        >
+          <ion-text
+            color="medium"
+          >
+            Card  ****5454
+          </ion-text>
+        </span>
+      </ion-item>
+      <ion-item
+        lines="full"
+      >
+        Amount 
+        <span
+          slot="end"
+        >
+        </span>
+      </ion-item>
+      <ion-item
+        lines="full"
+      >
+        Due Date 
+        <span
+          slot="end"
+        >
+          01/11/2021
+        </span>
+      </ion-item>
+    </ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p
+            class="ion-padding ion-text-center"
+          >
+             By selecting Save you agree to the 
+            <span
+              class="csaa-link"
+            >
+              AutoPay terms and conditions
+            </span>
+            . 
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</app-csaa-autopay-settings>
+`;
+
+exports[`Autopay Settings page Show eValue Discount Alert when activating Autopay with Credit Card while enrolled in eValue should alert when enrollment status is PENDING 1`] = `
+<app-csaa-autopay-settings
+  __ngContext__={[Function LRootView]}
+  activatedRoute={[Function Object]}
+  alertController={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  autoPayData={[Function Object]}
+  canceling="false"
+  configService={[Function ConfigMockService]}
+  currentTheme=""
+  initialToggleValue={[Function Boolean]}
+  makePaymentService={[Function MakePaymentService]}
+  modalCtrl={[Function AlertControllerMock]}
+  paymentService={[Function PaymentService]}
+  platform={[Function PlatformMock]}
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  policySubtitlesExpanded="false"
+  routerService={[Function RouterMockService]}
+  selectedPaymentAccount={[Function Object]}
+  store={[Function Store]}
+  tearDown$={[Function Subject]}
+  toggleControlValue={[Function Boolean]}
+  upcomingPayment={[Function Object]}
+  walletData={[Function Object]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button
+          text="Cancel"
+        >
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Cancel
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Save
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Manage AutoPay
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-grid
+      class="ion-no-padding"
+    >
+      <ion-row
+        class="ion-padding-top ion-padding-bottom"
+      >
+        <ion-col>
+          <ion-item
+            lines="none"
+          >
+            <div
+              class="policy-meta-content"
+            >
+              <h3>
+                CAAC910026006
+              </h3>
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  2009 Acura Tsx,
+                </span>
+                <span
+                  class="subtitle"
+                >
+                  2007 Jeep Grand Cherokee
+                </span>
+                <a
+                  class="csaa-link"
+                  href="#"
+                >
+                  <small>
+                    Show more
+                  </small>
+                </a>
+              </csaa-policy-subtitles>
+            </div>
+            <div
+              class="policy-meta-icon"
+              slot="end"
+            >
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </div>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row
+        class="ion-margin-bottom"
+      >
+        <ion-col>
+          <ion-item
+            lines="none"
+          >
+            <h3>
+              AutoPay is On
+            </h3>
+            <ion-toggle
+              class="ng-untouched ng-pristine ng-valid"
+              slot="end"
+            />
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <h2
+      class="ion-text-center"
+    >
+      Update Payment Method
+    </h2>
+    <ion-list>
+      <ion-item
+        detail=""
+        lines="full"
+      >
+        Payment Method 
+        <span
+          slot="end"
+        >
+          <ion-text
+            color="medium"
+          >
+            Card  ****5454
+          </ion-text>
+        </span>
+      </ion-item>
+      <ion-item
+        lines="full"
+      >
+        Amount 
+        <span
+          slot="end"
+        >
+        </span>
+      </ion-item>
+      <ion-item
+        lines="full"
+      >
+        Due Date 
+        <span
+          slot="end"
+        >
+          01/11/2021
+        </span>
+      </ion-item>
+    </ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p
+            class="ion-padding ion-text-center"
+          >
+             By selecting Save you agree to the 
+            <span
+              class="csaa-link"
+            >
+              AutoPay terms and conditions
+            </span>
+            . 
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</app-csaa-autopay-settings>
+`;
+
+exports[`Autopay Settings page Show eValue Discount Alert when activating Autopay with Credit Card while enrolled in eValue should proceed if selected payment account is not Credit Card when enrollment status is ACTIVE 1`] = `
+<app-csaa-autopay-settings
+  __ngContext__={[Function LRootView]}
+  activatedRoute={[Function Object]}
+  alertController={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  autoPayData={[Function Object]}
+  canceling="false"
+  configService={[Function ConfigMockService]}
+  currentTheme=""
+  initialToggleValue={[Function Boolean]}
+  makePaymentService={[Function MakePaymentService]}
+  modalCtrl={[Function AlertControllerMock]}
+  paymentService={[Function PaymentService]}
+  platform={[Function PlatformMock]}
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  policySubtitlesExpanded="false"
+  routerService={[Function RouterMockService]}
+  selectedPaymentAccount={[Function Object]}
+  store={[Function Store]}
+  tearDown$={[Function Subject]}
+  toggleControlValue={[Function Boolean]}
+  upcomingPayment={[Function Object]}
+  walletData={[Function Object]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button
+          text="Cancel"
+        >
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Cancel
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Save
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Manage AutoPay
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-grid
+      class="ion-no-padding"
+    >
+      <ion-row
+        class="ion-padding-top ion-padding-bottom"
+      >
+        <ion-col>
+          <ion-item
+            lines="none"
+          >
+            <div
+              class="policy-meta-content"
+            >
+              <h3>
+                CAAC910026006
+              </h3>
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  2009 Acura Tsx,
+                </span>
+                <span
+                  class="subtitle"
+                >
+                  2007 Jeep Grand Cherokee
+                </span>
+                <a
+                  class="csaa-link"
+                  href="#"
+                >
+                  <small>
+                    Show more
+                  </small>
+                </a>
+              </csaa-policy-subtitles>
+            </div>
+            <div
+              class="policy-meta-icon"
+              slot="end"
+            >
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </div>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row
+        class="ion-margin-bottom"
+      >
+        <ion-col>
+          <ion-item
+            lines="none"
+          >
+            <h3>
+              AutoPay is On
+            </h3>
+            <ion-toggle
+              class="ng-untouched ng-pristine ng-valid"
+              slot="end"
+            />
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <h2
+      class="ion-text-center"
+    >
+      Update Payment Method
+    </h2>
+    <ion-list>
+      <ion-item
+        detail=""
+        lines="full"
+      >
+        Payment Method 
+        <span
+          slot="end"
+        >
+          <ion-text
+            color="medium"
+          >
+            Card  ****5454
+          </ion-text>
+        </span>
+      </ion-item>
+      <ion-item
+        lines="full"
+      >
+        Amount 
+        <span
+          slot="end"
+        >
+        </span>
+      </ion-item>
+      <ion-item
+        lines="full"
+      >
+        Due Date 
+        <span
+          slot="end"
+        >
+          01/11/2021
+        </span>
+      </ion-item>
+    </ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p
+            class="ion-padding ion-text-center"
+          >
+             By selecting Save you agree to the 
+            <span
+              class="csaa-link"
+            >
+              AutoPay terms and conditions
+            </span>
+            . 
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</app-csaa-autopay-settings>
+`;
+
+exports[`Autopay Settings page Show eValue Discount Alert when activating Autopay with Credit Card while enrolled in eValue should proceed if selected payment account is not Credit Card when enrollment status is PENDING 1`] = `
+<app-csaa-autopay-settings
+  __ngContext__={[Function LRootView]}
+  activatedRoute={[Function Object]}
+  alertController={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  autoPayData={[Function Object]}
+  canceling="false"
+  configService={[Function ConfigMockService]}
+  currentTheme=""
+  initialToggleValue={[Function Boolean]}
+  makePaymentService={[Function MakePaymentService]}
+  modalCtrl={[Function AlertControllerMock]}
+  paymentService={[Function PaymentService]}
+  platform={[Function PlatformMock]}
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  policySubtitlesExpanded="false"
+  routerService={[Function RouterMockService]}
+  selectedPaymentAccount={[Function Object]}
+  store={[Function Store]}
+  tearDown$={[Function Subject]}
+  toggleControlValue={[Function Boolean]}
+  upcomingPayment={[Function Object]}
+  walletData={[Function Object]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button
+          text="Cancel"
+        >
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Cancel
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Save
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Manage AutoPay
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-grid
+      class="ion-no-padding"
+    >
+      <ion-row
+        class="ion-padding-top ion-padding-bottom"
+      >
+        <ion-col>
+          <ion-item
+            lines="none"
+          >
+            <div
+              class="policy-meta-content"
+            >
+              <h3>
+                CAAC910026006
+              </h3>
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  2009 Acura Tsx,
+                </span>
+                <span
+                  class="subtitle"
+                >
+                  2007 Jeep Grand Cherokee
+                </span>
+                <a
+                  class="csaa-link"
+                  href="#"
+                >
+                  <small>
+                    Show more
+                  </small>
+                </a>
+              </csaa-policy-subtitles>
+            </div>
+            <div
+              class="policy-meta-icon"
+              slot="end"
+            >
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </div>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row
+        class="ion-margin-bottom"
+      >
+        <ion-col>
+          <ion-item
+            lines="none"
+          >
+            <h3>
+              AutoPay is On
+            </h3>
+            <ion-toggle
+              class="ng-untouched ng-pristine ng-valid"
+              slot="end"
+            />
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <h2
+      class="ion-text-center"
+    >
+      Update Payment Method
+    </h2>
+    <ion-list>
+      <ion-item
+        detail=""
+        lines="full"
+      >
+        Payment Method 
+        <span
+          slot="end"
+        >
+          <ion-text
+            color="medium"
+          >
+            Card  ****5454
+          </ion-text>
+        </span>
+      </ion-item>
+      <ion-item
+        lines="full"
+      >
+        Amount 
+        <span
+          slot="end"
+        >
+        </span>
+      </ion-item>
+      <ion-item
+        lines="full"
+      >
+        Due Date 
+        <span
+          slot="end"
+        >
+          01/11/2021
+        </span>
+      </ion-item>
+    </ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p
+            class="ion-padding ion-text-center"
+          >
+             By selecting Save you agree to the 
+            <span
+              class="csaa-link"
+            >
+              AutoPay terms and conditions
+            </span>
+            . 
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</app-csaa-autopay-settings>
+`;
+
+exports[`Autopay Settings page Show eValue Discount Alert when deactivating Autopay while enrolled in eValue should alert when enrollment status is ACTIVE 1`] = `
+<app-csaa-autopay-settings
+  __ngContext__={[Function LRootView]}
+  activatedRoute={[Function Object]}
+  alertController={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  autoPayData={[Function Object]}
+  canceling="false"
+  configService={[Function ConfigMockService]}
+  currentTheme=""
+  initialToggleValue={[Function Boolean]}
+  makePaymentService={[Function MakePaymentService]}
+  modalCtrl={[Function AlertControllerMock]}
+  paymentService={[Function PaymentService]}
+  platform={[Function PlatformMock]}
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  policySubtitlesExpanded="false"
+  routerService={[Function RouterMockService]}
+  store={[Function Store]}
+  tearDown$={[Function Subject]}
+  toggleControlValue={[Function Boolean]}
+  upcomingPayment={[Function Object]}
+  walletData={[Function Object]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button
+          text="Cancel"
+        >
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Cancel
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Save
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Manage AutoPay
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-grid
+      class="ion-no-padding"
+    >
+      <ion-row
+        class="ion-padding-top ion-padding-bottom"
+      >
+        <ion-col>
+          <ion-item
+            lines="none"
+          >
+            <div
+              class="policy-meta-content"
+            >
+              <h3>
+                CAAC910026006
+              </h3>
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  2009 Acura Tsx,
+                </span>
+                <span
+                  class="subtitle"
+                >
+                  2007 Jeep Grand Cherokee
+                </span>
+                <a
+                  class="csaa-link"
+                  href="#"
+                >
+                  <small>
+                    Show more
+                  </small>
+                </a>
+              </csaa-policy-subtitles>
+            </div>
+            <div
+              class="policy-meta-icon"
+              slot="end"
+            >
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </div>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row
+        class="ion-margin-bottom"
+      >
+        <ion-col>
+          <ion-item
+            lines="none"
+          >
+            <h3>
+              AutoPay is On
+            </h3>
+            <ion-toggle
+              class="ng-untouched ng-pristine ng-valid"
+              slot="end"
+            />
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <h2
+      class="ion-text-center"
+    >
+      Update Payment Method
+    </h2>
+    <ion-list>
+      <ion-item
+        detail=""
+        lines="full"
+      >
+        Payment Method 
+        <span
+          slot="end"
+        >
+          <ion-text
+            color="medium"
+          >
+            Card  ****1347
+          </ion-text>
+        </span>
+      </ion-item>
+      <ion-item
+        lines="full"
+      >
+        Amount 
+        <span
+          slot="end"
+        >
+        </span>
+      </ion-item>
+      <ion-item
+        lines="full"
+      >
+        Due Date 
+        <span
+          slot="end"
+        >
+          01/11/2021
+        </span>
+      </ion-item>
+    </ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p
+            class="ion-padding ion-text-center"
+          >
+             By selecting Save you agree to the 
+            <span
+              class="csaa-link"
+            >
+              AutoPay terms and conditions
+            </span>
+            . 
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</app-csaa-autopay-settings>
+`;
+
+exports[`Autopay Settings page Show eValue Discount Alert when deactivating Autopay while enrolled in eValue should alert when enrollment status is PENDING 1`] = `
+<app-csaa-autopay-settings
+  __ngContext__={[Function LRootView]}
+  activatedRoute={[Function Object]}
+  alertController={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  autoPayData={[Function Object]}
+  canceling="false"
+  configService={[Function ConfigMockService]}
+  currentTheme=""
+  initialToggleValue={[Function Boolean]}
+  makePaymentService={[Function MakePaymentService]}
+  modalCtrl={[Function AlertControllerMock]}
+  paymentService={[Function PaymentService]}
+  platform={[Function PlatformMock]}
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  policySubtitlesExpanded="false"
+  routerService={[Function RouterMockService]}
+  store={[Function Store]}
+  tearDown$={[Function Subject]}
+  toggleControlValue={[Function Boolean]}
+  upcomingPayment={[Function Object]}
+  walletData={[Function Object]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button
+          text="Cancel"
+        >
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Cancel
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Save
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Manage AutoPay
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-grid
+      class="ion-no-padding"
+    >
+      <ion-row
+        class="ion-padding-top ion-padding-bottom"
+      >
+        <ion-col>
+          <ion-item
+            lines="none"
+          >
+            <div
+              class="policy-meta-content"
+            >
+              <h3>
+                CAAC910026006
+              </h3>
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  2009 Acura Tsx,
+                </span>
+                <span
+                  class="subtitle"
+                >
+                  2007 Jeep Grand Cherokee
+                </span>
+                <a
+                  class="csaa-link"
+                  href="#"
+                >
+                  <small>
+                    Show more
+                  </small>
+                </a>
+              </csaa-policy-subtitles>
+            </div>
+            <div
+              class="policy-meta-icon"
+              slot="end"
+            >
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </div>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row
+        class="ion-margin-bottom"
+      >
+        <ion-col>
+          <ion-item
+            lines="none"
+          >
+            <h3>
+              AutoPay is On
+            </h3>
+            <ion-toggle
+              class="ng-untouched ng-pristine ng-valid"
+              slot="end"
+            />
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <h2
+      class="ion-text-center"
+    >
+      Update Payment Method
+    </h2>
+    <ion-list>
+      <ion-item
+        detail=""
+        lines="full"
+      >
+        Payment Method 
+        <span
+          slot="end"
+        >
+          <ion-text
+            color="medium"
+          >
+            Card  ****1347
+          </ion-text>
+        </span>
+      </ion-item>
+      <ion-item
+        lines="full"
+      >
+        Amount 
+        <span
+          slot="end"
+        >
+        </span>
+      </ion-item>
+      <ion-item
+        lines="full"
+      >
+        Due Date 
+        <span
+          slot="end"
+        >
+          01/11/2021
+        </span>
+      </ion-item>
+    </ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p
+            class="ion-padding ion-text-center"
+          >
+             By selecting Save you agree to the 
+            <span
+              class="csaa-link"
+            >
+              AutoPay terms and conditions
+            </span>
+            . 
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</app-csaa-autopay-settings>
+`;
+
+exports[`Autopay Settings page Show eValue Discount Alert when deactivating Autopay while enrolled in eValue should proceed when enrollment status is not ACTIVE nor PENDING 1`] = `
+<app-csaa-autopay-settings
+  __ngContext__={[Function LRootView]}
+  activatedRoute={[Function Object]}
+  alertController={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  autoPayData="null"
+  canceling="false"
+  configService={[Function ConfigMockService]}
+  currentTheme=""
+  initialToggleValue={[Function Boolean]}
+  makePaymentService={[Function MakePaymentService]}
+  modalCtrl={[Function AlertControllerMock]}
+  paymentService={[Function PaymentService]}
+  platform={[Function PlatformMock]}
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  policySubtitlesExpanded="false"
+  routerService={[Function RouterMockService]}
+  store={[Function Store]}
+  tearDown$={[Function Subject]}
+  toggleControlValue={[Function Boolean]}
+  upcomingPayment={[Function Object]}
+  walletData={[Function Object]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button
+          text="Cancel"
+        >
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Cancel
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Save
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Manage AutoPay
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-grid
+      class="ion-no-padding"
+    >
+      <ion-row
+        class="ion-padding-top ion-padding-bottom"
+      >
+        <ion-col>
+          <ion-item
+            lines="none"
+          >
+            <div
+              class="policy-meta-content"
+            >
+              <h3>
+                CAAC910026006
+              </h3>
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  2009 Acura Tsx,
+                </span>
+                <span
+                  class="subtitle"
+                >
+                  2007 Jeep Grand Cherokee
+                </span>
+                <a
+                  class="csaa-link"
+                  href="#"
+                >
+                  <small>
+                    Show more
+                  </small>
+                </a>
+              </csaa-policy-subtitles>
+            </div>
+            <div
+              class="policy-meta-icon"
+              slot="end"
+            >
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </div>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row
+        class="ion-margin-bottom"
+      >
+        <ion-col>
+          <ion-item
+            lines="none"
+          >
+            <h3>
+              AutoPay is On
+            </h3>
+            <ion-toggle
+              class="ng-untouched ng-pristine ng-valid"
+              slot="end"
+            />
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <h2
+      class="ion-text-center"
+    >
+      Update Payment Method
+    </h2>
+    <ion-list>
+      <ion-item
+        detail=""
+        lines="full"
+      >
+        Payment Method 
+        <span
+          slot="end"
+        >
+          <ion-text
+            color="medium"
+          >
+            Select Account
+          </ion-text>
+        </span>
+      </ion-item>
+      <ion-item
+        lines="full"
+      >
+        Amount 
+        <span
+          slot="end"
+        >
+        </span>
+      </ion-item>
+      <ion-item
+        lines="full"
+      >
+        Due Date 
+        <span
+          slot="end"
+        >
+          01/11/2021
+        </span>
+      </ion-item>
+    </ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p
+            class="ion-padding ion-text-center"
+          >
+             By selecting Save you agree to the 
+            <span
+              class="csaa-link"
+            >
+              AutoPay terms and conditions
+            </span>
+            . 
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</app-csaa-autopay-settings>
+`;
+
+exports[`Autopay Settings page should match snapshot with Autopay off 1`] = `
+<app-csaa-autopay-settings
+  __ngContext__={[Function LRootView]}
+  activatedRoute={[Function Object]}
+  alertController={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  autoPayData="null"
+  canceling="false"
+  configService={[Function ConfigMockService]}
+  currentTheme=""
+  initialToggleValue="false"
+  makePaymentService={[Function MakePaymentService]}
+  modalCtrl={[Function AlertControllerMock]}
+  paymentService={[Function PaymentService]}
+  platform={[Function PlatformMock]}
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  policySubtitlesExpanded="false"
+  routerService={[Function RouterMockService]}
+  store={[Function Store]}
+  tearDown$={[Function Subject]}
+  toggleControlValue="false"
+  upcomingPayment={[Function Object]}
+  walletData={[Function Object]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button
+          text="Cancel"
+        >
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Cancel
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Save
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Manage AutoPay
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-grid
+      class="ion-no-padding"
+    >
+      <ion-row
+        class="ion-padding-top ion-padding-bottom"
+      >
+        <ion-col>
+          <ion-item
+            lines="none"
+          >
+            <div
+              class="policy-meta-content"
+            >
+              <h3>
+                CAAC910026006
+              </h3>
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  2009 Acura Tsx,
+                </span>
+                <span
+                  class="subtitle"
+                >
+                  2007 Jeep Grand Cherokee
+                </span>
+                <a
+                  class="csaa-link"
+                  href="#"
+                >
+                  <small>
+                    Show more
+                  </small>
+                </a>
+              </csaa-policy-subtitles>
+            </div>
+            <div
+              class="policy-meta-icon"
+              slot="end"
+            >
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </div>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row
+        class="ion-margin-bottom"
+      >
+        <ion-col>
+          <ion-item
+            lines="none"
+          >
+            <h3>
+              AutoPay is Off
+            </h3>
+            <ion-toggle
+              class="ng-untouched ng-pristine ng-valid"
+              slot="end"
+            />
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <csaa-autopay-discount-card>
+      <ion-item
+        detail=""
+        lines="none"
+      >
+        <ion-label>
+          <h3>
+            Save money with AutoPay
+          </h3>
+          <ion-text
+            color="dark"
+          >
+            <p
+              class="ion-text-wrap"
+            >
+               Save up to $3 per payment with 
+              <br />
+              AutoPay. Tap to view fees 
+            </p>
+          </ion-text>
+        </ion-label>
+      </ion-item>
+      <div
+        class="discount"
+      >
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <h3>
+                  Auto Payment Method Installment Fees
+                </h3>
+              </th>
+              <th />
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Checking or Savings Account
+              </td>
+              <td>
+                 $2.00 
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Debit Card
+              </td>
+              <td>
+                 $2.00 
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Credit Card
+              </td>
+              <td>
+                 $2.00 
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <h3>
+                  One-Time Payment Method Installment Fees
+                </h3>
+              </th>
+              <th />
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Checking or Savings Account
+              </td>
+              <td>
+                 $5.00 
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Debit Card
+              </td>
+              <td>
+                 $5.00 
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Credit Card
+              </td>
+              <td>
+                 $5.00 
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </csaa-autopay-discount-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p
+            class="ion-padding ion-text-center"
+          >
+             By selecting Save you agree to the 
+            <span
+              class="csaa-link"
+            >
+              AutoPay terms and conditions
+            </span>
+            . 
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</app-csaa-autopay-settings>
+`;
+
+exports[`Autopay Settings page should match snapshot with Autopay on 1`] = `
+<app-csaa-autopay-settings
+  __ngContext__={[Function LRootView]}
+  activatedRoute={[Function Object]}
+  alertController={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  autoPayData={[Function Object]}
+  canceling="false"
+  configService={[Function ConfigMockService]}
+  currentTheme=""
+  initialToggleValue={[Function Boolean]}
+  makePaymentService={[Function MakePaymentService]}
+  modalCtrl={[Function AlertControllerMock]}
+  paymentService={[Function PaymentService]}
+  platform={[Function PlatformMock]}
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  policySubtitlesExpanded="false"
+  routerService={[Function RouterMockService]}
+  store={[Function Store]}
+  tearDown$={[Function Subject]}
+  toggleControlValue={[Function Boolean]}
+  upcomingPayment={[Function Object]}
+  walletData={[Function Object]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button
+          text="Cancel"
+        >
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Cancel
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Save
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Manage AutoPay
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-grid
+      class="ion-no-padding"
+    >
+      <ion-row
+        class="ion-padding-top ion-padding-bottom"
+      >
+        <ion-col>
+          <ion-item
+            lines="none"
+          >
+            <div
+              class="policy-meta-content"
+            >
+              <h3>
+                CAAC910026006
+              </h3>
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  2009 Acura Tsx,
+                </span>
+                <span
+                  class="subtitle"
+                >
+                  2007 Jeep Grand Cherokee
+                </span>
+                <a
+                  class="csaa-link"
+                  href="#"
+                >
+                  <small>
+                    Show more
+                  </small>
+                </a>
+              </csaa-policy-subtitles>
+            </div>
+            <div
+              class="policy-meta-icon"
+              slot="end"
+            >
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </div>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row
+        class="ion-margin-bottom"
+      >
+        <ion-col>
+          <ion-item
+            lines="none"
+          >
+            <h3>
+              AutoPay is On
+            </h3>
+            <ion-toggle
+              class="ng-untouched ng-pristine ng-valid"
+              slot="end"
+            />
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <h2
+      class="ion-text-center"
+    >
+      Update Payment Method
+    </h2>
+    <ion-list>
+      <ion-item
+        detail=""
+        lines="full"
+      >
+        Payment Method 
+        <span
+          slot="end"
+        >
+          <ion-text
+            color="medium"
+          >
+            Card  ****1347
+          </ion-text>
+        </span>
+      </ion-item>
+      <ion-item
+        lines="full"
+      >
+        Amount 
+        <span
+          slot="end"
+        >
+        </span>
+      </ion-item>
+      <ion-item
+        lines="full"
+      >
+        Due Date 
+        <span
+          slot="end"
+        >
+          01/11/2021
+        </span>
+      </ion-item>
+    </ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p
+            class="ion-padding ion-text-center"
+          >
+             By selecting Save you agree to the 
+            <span
+              class="csaa-link"
+            >
+              AutoPay terms and conditions
+            </span>
+            . 
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</app-csaa-autopay-settings>
+`;

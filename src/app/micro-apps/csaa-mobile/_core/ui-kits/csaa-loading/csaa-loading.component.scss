@@ -1,0 +1,21 @@
+.csaa-loading {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .csaa-loading-inner {
+    background-color: white;
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../../../_scss/variables';
+.property-type {
+  display: inline-block;
+}
+
+ion-card-content {
+  ion-list {
+    ion-item {
+      &:first-child {
+        --inner-border-width: 0.55px 0px 0.55px 0px;
+        &:last-child {
+          --inner-border-width: 0.55px 0px 0px 0px;
+        }
+      }
+      p.date-text:after {
+        content: '●';
+        color: $csaa-active-color;
+        vertical-align: center;
+        position: absolute;
+        padding-left: 5px;
+        top: 15px;
+        font-size: 10px;
+      }
+    }
+  }
+}
+ion-card-title {
+  display: flex;
+  flex-flow: row wrap;
+  div {
+    flex-grow: 1;
+  }
+}

@@ -1,0 +1,387 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClaimsDeatilPage should create 1`] = `
+<csaa-claims-detail
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  callService={[Function Object]}
+  claim$={[Function Observable]}
+  claimNumber={[Function String]}
+  claimsEmailAddress={[Function String]}
+  claimsPhoneNumber={[Function String]}
+  claimsRepresentativeName={[Function String]}
+  configService={[Function ConfigMockService]}
+  currentTheme=""
+  emailSubjectText={[Function String]}
+  loading="false"
+  platform={[Function PlatformMock]}
+  policy={[Function Object]}
+  route={[Function Object]}
+  routerService={[Function RouterMockService]}
+  store={[Function Store]}
+  subsink={[Function SubSink]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Call Claims
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Claim : Closed
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <csaa-agent-card
+      header="Claims Representative"
+    >
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             Claims Representative 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <p
+                  class="agent-data"
+                >
+                  Jacob Dart
+                </p>
+                <p
+                  class="agent-data"
+                >
+                  216-881-6747
+                </p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col
+                class="card-buttons-col ion-text-end"
+              >
+                <ion-button
+                  fill="clear"
+                >
+                  <ion-icon
+                    name="call-outline"
+                    slot="icon-only"
+                  />
+                </ion-button>
+                <ion-button
+                  fill="clear"
+                >
+                  <ion-icon
+                    name="mail-outline"
+                    slot="icon-only"
+                  />
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </csaa-agent-card>
+    <csaa-claims-history-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            <div
+              class="display-flex ion-align-items-center"
+            >
+               CAAC910026006 
+            </div>
+            <csaa-theme-icon>
+              <img
+                src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                style="width: 40px; height: 40px;"
+              />
+            </csaa-theme-icon>
+          </ion-card-title>
+          <ion-card-subtitle>
+             Ford Lgt Convtnl F 
+            <br />
+             Claim #: 
+            <strong>
+              1003-91-0166
+            </strong>
+          </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <p
+                  class="date-text"
+                  text-small=""
+                >
+                   Apr 15, 2021 
+                </p>
+                <h2
+                  class="full-bullet"
+                >
+                   Your Claim was Closed 
+                </h2>
+                <p
+                  text-small=""
+                  text-wrap=""
+                >
+                  If you have any questions, contact your claims representative
+                </p>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <p
+                  class="date-text"
+                  text-small=""
+                >
+                   Apr 15, 2021 
+                </p>
+                <h2>
+                   Your Claim was Opened 
+                </h2>
+                <p
+                  text-small=""
+                  text-wrap=""
+                >
+                  Cause: Collision Hit and Run
+                </p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </csaa-claims-history-card>
+  </ion-content>
+</csaa-claims-detail>
+`;
+
+exports[`ClaimsDeatilPage should not fail if state is null 1`] = `
+<csaa-claims-detail
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  callService={[Function Object]}
+  claim$={[Function Observable]}
+  claimNumber={[Function String]}
+  claimsEmailAddress={[Function String]}
+  claimsPhoneNumber={[Function String]}
+  claimsRepresentativeName=""
+  configService={[Function ConfigMockService]}
+  currentTheme=""
+  emailSubjectText=""
+  loading="false"
+  platform={[Function PlatformMock]}
+  policy="null"
+  route={[Function Object]}
+  routerService={[Function RouterMockService]}
+  store={[Function Store]}
+  subsink={[Function SubSink]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Call Claims
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Claim : Closed
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <csaa-agent-card
+      header="Claims Representative"
+    >
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             Claims Representative 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <p
+                  class="agent-data"
+                >
+                  Jacob Dart
+                </p>
+                <p
+                  class="agent-data"
+                >
+                  216-881-6747
+                </p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col
+                class="card-buttons-col ion-text-end"
+              >
+                <ion-button
+                  fill="clear"
+                >
+                  <ion-icon
+                    name="call-outline"
+                    slot="icon-only"
+                  />
+                </ion-button>
+                <ion-button
+                  fill="clear"
+                >
+                  <ion-icon
+                    name="mail-outline"
+                    slot="icon-only"
+                  />
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </csaa-agent-card>
+    <csaa-claims-history-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            <div
+              class="display-flex ion-align-items-center"
+            >
+               CAAC910026006 
+            </div>
+            <csaa-theme-icon>
+              <img
+                src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                style="width: 40px; height: 40px;"
+              />
+            </csaa-theme-icon>
+          </ion-card-title>
+          <ion-card-subtitle>
+             Ford Lgt Convtnl F 
+            <br />
+             Claim #: 
+            <strong>
+              1003-91-0166
+            </strong>
+          </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <p
+                  class="date-text"
+                  text-small=""
+                >
+                   Apr 15, 2021 
+                </p>
+                <h2
+                  class="full-bullet"
+                >
+                   Your Claim was Closed 
+                </h2>
+                <p
+                  text-small=""
+                  text-wrap=""
+                >
+                  If you have any questions, contact your claims representative
+                </p>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <p
+                  class="date-text"
+                  text-small=""
+                >
+                   Apr 15, 2021 
+                </p>
+                <h2>
+                   Your Claim was Opened 
+                </h2>
+                <p
+                  text-small=""
+                  text-wrap=""
+                >
+                  Cause: Collision Hit and Run
+                </p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </csaa-claims-history-card>
+  </ion-content>
+</csaa-claims-detail>
+`;

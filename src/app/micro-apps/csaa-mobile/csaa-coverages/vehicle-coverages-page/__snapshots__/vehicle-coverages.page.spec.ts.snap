@@ -1,0 +1,371 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CsaaVehicleCoveragesPage should match snapshot 1`] = `
+<csaa-vehicle-coverages
+  __ngContext__={[Function LRootView]}
+  activatedRoute={[Function Object]}
+  backButtonSubscription={[Function Observable]}
+  coverages={[Function Array]}
+  currentTheme=""
+  errorHandler={[Function Object]}
+  isAndroidPlatform="false"
+  isPbeEligible$={[Function Observable]}
+  loading="false"
+  notCoverages={[Function Array]}
+  platform={[Function PlatformMock]}
+  policy$={[Function Observable]}
+  policyDocumentHelper={[Function Object]}
+  policyNumber={[Function String]}
+  routerService={[Function RouterMockService]}
+  store={[Function Store]}
+  subsink={[Function SubSink]}
+  title={[Function String]}
+  vehicleId={[Function String]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button
+          text="Back"
+        >
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Call Service
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa-item-list csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <h1
+      class="csaa-content-title"
+    >
+      2018 Volkswagen Atlas
+    </h1>
+    <csaa-vehicle-coverages-covered-card>
+      <ion-card
+        class="csaa-card coverage-list"
+      >
+        <ion-card-header>
+          <ion-item>
+            <ion-card-title>
+              Covered
+            </ion-card-title>
+          </ion-item>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <csaa-coverage-card-item>
+                <div
+                  class="csaa-coverage-card-item"
+                >
+                  <h4
+                    class="title"
+                  >
+                    Comprehensive
+                  </h4>
+                  <div
+                    class="unopened-card"
+                  >
+                    <p
+                      class="limit-info"
+                    >
+                      <span>
+                        $500
+                      </span>
+                       Deductible 
+                    </p>
+                  </div>
+                </div>
+              </csaa-coverage-card-item>
+            </ion-item>
+            <ion-item>
+              <csaa-coverage-card-item>
+                <div
+                  class="csaa-coverage-card-item"
+                >
+                  <h4
+                    class="title"
+                  >
+                    Collision
+                  </h4>
+                  <div
+                    class="unopened-card"
+                  >
+                    <p
+                      class="limit-info"
+                    >
+                      <span>
+                        $500
+                      </span>
+                       Deductible 
+                    </p>
+                  </div>
+                </div>
+              </csaa-coverage-card-item>
+            </ion-item>
+            <ion-item>
+              <csaa-coverage-card-item>
+                <div
+                  class="csaa-coverage-card-item"
+                >
+                  <h4
+                    class="title"
+                  >
+                    Special Equipment
+                  </h4>
+                  <div
+                    class="unopened-card"
+                  >
+                    <p
+                      class="limit-info"
+                    >
+                      <span>
+                        $1,500
+                      </span>
+                       Per Disablement 
+                    </p>
+                  </div>
+                </div>
+              </csaa-coverage-card-item>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+            View Declarations
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-vehicle-coverages-covered-card>
+    <csaa-vehicle-coverages-not-covered-card>
+      <ion-card
+        class="csaa-card coverage-list csaa-item-list"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            Not Covered
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <csaa-coverage-card-item>
+                <div
+                  class="csaa-coverage-card-item"
+                >
+                  <h4
+                    class="title"
+                  >
+                    Medical Payments
+                  </h4>
+                  <div
+                    class="unopened-card"
+                  >
+                    <p
+                      class="limit-info"
+                    >
+                       Covers medical expenses 
+                    </p>
+                  </div>
+                </div>
+              </csaa-coverage-card-item>
+            </ion-item>
+            <ion-item>
+              <csaa-coverage-card-item>
+                <div
+                  class="csaa-coverage-card-item"
+                >
+                  <h4
+                    class="title"
+                  >
+                    Loan/Lease Protection
+                  </h4>
+                  <div
+                    class="unopened-card"
+                  >
+                    <p
+                      class="limit-info"
+                    >
+                       Covers your car 
+                    </p>
+                  </div>
+                </div>
+              </csaa-coverage-card-item>
+            </ion-item>
+            <ion-item>
+              <csaa-coverage-card-item>
+                <div
+                  class="csaa-coverage-card-item"
+                >
+                  <h4
+                    class="title"
+                  >
+                    Rental Reimbursement
+                  </h4>
+                  <div
+                    class="unopened-card"
+                  >
+                    <p
+                      class="limit-info"
+                    >
+                       Covers rental costs 
+                    </p>
+                  </div>
+                </div>
+              </csaa-coverage-card-item>
+            </ion-item>
+            <ion-item>
+              <csaa-coverage-card-item>
+                <div
+                  class="csaa-coverage-card-item"
+                >
+                  <h4
+                    class="title"
+                  >
+                    Towing & Labor
+                  </h4>
+                  <div
+                    class="unopened-card"
+                  >
+                    <p
+                      class="limit-info"
+                    >
+                       Covers your car 
+                    </p>
+                  </div>
+                </div>
+              </csaa-coverage-card-item>
+            </ion-item>
+            <ion-item>
+              <csaa-coverage-card-item>
+                <div
+                  class="csaa-coverage-card-item"
+                >
+                  <h4
+                    class="title"
+                  >
+                    New Car Added Protection
+                  </h4>
+                  <div
+                    class="unopened-card"
+                  >
+                    <p
+                      class="limit-info"
+                    >
+                       Covers your car 
+                    </p>
+                  </div>
+                </div>
+              </csaa-coverage-card-item>
+            </ion-item>
+            <ion-item>
+              <csaa-coverage-card-item>
+                <div
+                  class="csaa-coverage-card-item"
+                >
+                  <h4
+                    class="title"
+                  >
+                    Ride-sharing (TNC)
+                  </h4>
+                  <div
+                    class="unopened-card"
+                  >
+                    <p
+                      class="limit-info"
+                    >
+                       Covers specified driver and vehicle 
+                    </p>
+                  </div>
+                </div>
+              </csaa-coverage-card-item>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </csaa-vehicle-coverages-not-covered-card>
+  </ion-content><csaa-working-hours
+    class="csaa"
+    servicetype="CUSTOMER"
+  >
+    <div
+      class="csaa-working-hours hidden"
+    >
+      <ion-card
+        class="card card-md"
+      >
+        <ion-card-header>
+          Service Hours
+        </ion-card-header>
+        <ion-card-content
+          class="card-content card-content-md"
+        >
+          <ion-list>
+            <ion-item>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+             Call Service 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </csaa-working-hours>
+</csaa-vehicle-coverages>
+`;

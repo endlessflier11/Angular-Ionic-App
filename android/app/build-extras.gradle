@@ -1,0 +1,7 @@
+ext.aaaApplicationId="com.aaa.android.discounts"
+ext.aaaMinSdkVersion=24
+ext.aaaTargetSdkVersion=30
+ext.aaaCompileSdkVersion=30
+ext.aaaBuildToolsVersion="30.0.3"
+ext.aaaVersionName="5.8.1"
+ext.aaaVersionCode=2012021779

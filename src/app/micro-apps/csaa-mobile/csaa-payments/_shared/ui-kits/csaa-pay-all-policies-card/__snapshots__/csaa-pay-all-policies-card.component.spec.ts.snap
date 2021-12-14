@@ -1,0 +1,229 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CsaaPayAllPoliciesCardComponent it should display selectAmountClick when clicking on card details 1`] = `
+<csaa-pay-all-policies-card
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  combinedPayment={[Function UpcomingPaymentModel]}
+  disabled="false"
+  hasOverDuePayment="false"
+  loading="false"
+  makePaymentClick={[Function EventEmitter_]}
+  paymentSucceeded="false"
+  payments={[Function Array]}
+  selectAmountClick={[Function EventEmitter_]}
+  selectPaymentClick={[Function EventEmitter_]}
+  timezone={[Function String]}
+>
+  <ion-card
+    class="csaa-card"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        Pay All Policies
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-list>
+        <ion-item
+          class="csaa-payment-amount-list-item"
+          detail=""
+        >
+          <ion-label>
+            Amount
+          </ion-label>
+          <span
+            slot="end"
+          >
+            $20.00
+          </span>
+        </ion-item>
+        <ion-item
+          class="csaa-payment-method-list-item"
+          detail=""
+          lines="none"
+        >
+          <ion-label
+            class="ion-text-nowrap"
+          >
+            <span>
+              Pay With
+            </span>
+          </ion-label>
+          <span
+            slot="end"
+          >
+            Payment Method
+          </span>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        class="ion-no-margin"
+        expand="full"
+      >
+         Make a Payment 
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-pay-all-policies-card>
+`;
+
+exports[`CsaaPayAllPoliciesCardComponent it should display selectPaymentClick when clicking on card details 1`] = `
+<csaa-pay-all-policies-card
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  combinedPayment={[Function UpcomingPaymentModel]}
+  disabled="false"
+  hasOverDuePayment="false"
+  loading="false"
+  makePaymentClick={[Function EventEmitter_]}
+  paymentSucceeded="false"
+  payments={[Function Array]}
+  selectAmountClick={[Function EventEmitter_]}
+  selectPaymentClick={[Function EventEmitter_]}
+  timezone={[Function String]}
+>
+  <ion-card
+    class="csaa-card"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        Pay All Policies
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-list>
+        <ion-item
+          class="csaa-payment-amount-list-item"
+          detail=""
+        >
+          <ion-label>
+            Amount
+          </ion-label>
+          <span
+            slot="end"
+          >
+            $20.00
+          </span>
+        </ion-item>
+        <ion-item
+          class="csaa-payment-method-list-item"
+          detail=""
+          lines="none"
+        >
+          <ion-label
+            class="ion-text-nowrap"
+          >
+            <span>
+              Pay With
+            </span>
+          </ion-label>
+          <span
+            slot="end"
+          >
+            Payment Method
+          </span>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        class="ion-no-margin"
+        expand="full"
+      >
+         Make a Payment 
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-pay-all-policies-card>
+`;
+
+exports[`CsaaPayAllPoliciesCardComponent it should match snapshots right after submitting a successful payment 1`] = `
+<csaa-pay-all-policies-card
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  combinedPayment={[Function UpcomingPaymentModel]}
+  disabled="false"
+  hasOverDuePayment="false"
+  loading="false"
+  makePaymentClick={[Function EventEmitter_]}
+  paymentSucceeded={[Function Boolean]}
+  payments={[Function Array]}
+  selectAmountClick={[Function EventEmitter_]}
+  selectPaymentClick={[Function EventEmitter_]}
+  timezone={[Function String]}
+>
+</csaa-pay-all-policies-card>
+`;
+
+exports[`CsaaPayAllPoliciesCardComponent should match snapshots when payment is autoPay and there are overdue payments 1`] = `
+<csaa-pay-all-policies-card
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  combinedPayment={[Function UpcomingPaymentModel]}
+  disabled="false"
+  hasOverDuePayment={[Function Boolean]}
+  loading="false"
+  makePaymentClick={[Function EventEmitter_]}
+  paymentSucceeded="false"
+  payments={[Function Array]}
+  selectAmountClick={[Function EventEmitter_]}
+  selectPaymentClick={[Function EventEmitter_]}
+  timezone={[Function String]}
+>
+  <ion-card
+    class="csaa-card overdue"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        Pay All Policies
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-list>
+        <ion-item
+          class="csaa-payment-amount-list-item"
+          detail=""
+        >
+          <ion-label>
+            Amount
+          </ion-label>
+          <span
+            slot="end"
+          >
+            $20.00
+          </span>
+        </ion-item>
+        <ion-item
+          class="csaa-payment-method-list-item"
+          detail=""
+          lines="none"
+        >
+          <ion-label
+            class="ion-text-nowrap"
+          >
+            <span>
+              Pay With
+            </span>
+          </ion-label>
+          <span
+            slot="end"
+          >
+            Payment Method
+          </span>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        class="ion-no-margin"
+        expand="full"
+      >
+         Make a Payment 
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-pay-all-policies-card>
+`;

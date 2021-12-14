@@ -1,0 +1,428 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CsaaBillsCardComponent AutoPay Enrolled should match screenshot if payment plan is mortgageeHO 1`] = `
+<csaa-csaa-bills-card
+  PolicyType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  autoPayEnrollmentStatusMap={[Function Object]}
+  availableDocumentsMap={[Function Object]}
+  billClick={[Function EventEmitter_]}
+  bills={[Function Array]}
+  isPaidInFullStatusMap={[Function Object]}
+  loading="false"
+  timezone="undefined"
+>
+  <ion-card
+    class="csaa-card"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        Bills
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-list>
+        <ion-item
+          class="ion-text-wrap"
+          detail=""
+        >
+          <ion-label>
+            <h3>
+              CAAC910026006
+            </h3>
+            <span
+              class="subtitle"
+            >
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  610 N 1st St
+                </span>
+              </csaa-policy-subtitles>
+            </span>
+            <label
+              class="bill-data"
+            >
+               Bill $23.50
+              <br />
+               AutoPay 
+              <ion-text
+                class="bold"
+                color="success"
+              >
+                ON
+              </ion-text>
+              <br />
+               Sent Oct 9, 2020 
+            </label>
+          </ion-label>
+          <csaa-theme-icon
+            slot="end"
+          >
+            <img
+              src="/assets/csaa-mobile/vectors/icn-Home.svg"
+              style="width: 40px; height: 40px;"
+            />
+          </csaa-theme-icon>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</csaa-csaa-bills-card>
+`;
+
+exports[`CsaaBillsCardComponent AutoPay Enrolled should match snapshot >> after one calendar month of transaction and paid in full 1`] = `
+<csaa-csaa-bills-card
+  PolicyType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  autoPayEnrollmentStatusMap={[Function Object]}
+  availableDocumentsMap={[Function Object]}
+  billClick={[Function EventEmitter_]}
+  bills={[Function Array]}
+  isPaidInFullStatusMap={[Function Object]}
+  loading="false"
+  timezone="undefined"
+>
+  <ion-card
+    class="csaa-card"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        Bills
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-list>
+        <ion-item
+          class="ion-text-wrap"
+          detail=""
+        >
+          <ion-label>
+            <h3>
+              CAAC910026006
+            </h3>
+            <span
+              class="subtitle"
+            >
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  610 N 1st St
+                </span>
+              </csaa-policy-subtitles>
+            </span>
+            <label
+              class="bill-data"
+            >
+               Bill $23.50
+              <br />
+               AutoPay 
+              <ion-text
+                class="bold"
+                color="success"
+              >
+                ON
+              </ion-text>
+              <br />
+               Sent Oct 9, 2020 
+            </label>
+          </ion-label>
+          <csaa-theme-icon
+            slot="end"
+          >
+            <img
+              src="/assets/csaa-mobile/vectors/icn-Home.svg"
+              style="width: 40px; height: 40px;"
+            />
+          </csaa-theme-icon>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</csaa-csaa-bills-card>
+`;
+
+exports[`CsaaBillsCardComponent AutoPay Not Enrolled should match snapshot >> after one calendar month of transaction and not paid in full 1`] = `
+<csaa-csaa-bills-card
+  PolicyType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  autoPayEnrollmentStatusMap={[Function Object]}
+  availableDocumentsMap={[Function Object]}
+  billClick={[Function EventEmitter_]}
+  bills={[Function Array]}
+  isPaidInFullStatusMap={[Function Object]}
+  loading="false"
+  timezone="undefined"
+>
+  <ion-card
+    class="csaa-card"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        Bills
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-list>
+        <ion-item
+          class="ion-text-wrap"
+          detail=""
+        >
+          <ion-label>
+            <h3>
+              CAAC910026006
+            </h3>
+            <span
+              class="subtitle"
+            >
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  610 N 1st St
+                </span>
+              </csaa-policy-subtitles>
+            </span>
+            <label
+              class="bill-data"
+            >
+               Bill $23.50
+              <br />
+               Sent Jan 27, 2021 
+            </label>
+          </ion-label>
+          <csaa-theme-icon
+            slot="end"
+          >
+            <img
+              src="/assets/csaa-mobile/vectors/icn-Home.svg"
+              style="width: 40px; height: 40px;"
+            />
+          </csaa-theme-icon>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</csaa-csaa-bills-card>
+`;
+
+exports[`CsaaBillsCardComponent AutoPay Not Enrolled should match snapshot >> after one calendar month of transaction and paid in full 1`] = `
+<csaa-csaa-bills-card
+  PolicyType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  autoPayEnrollmentStatusMap={[Function Object]}
+  availableDocumentsMap={[Function Object]}
+  billClick={[Function EventEmitter_]}
+  bills={[Function Array]}
+  isPaidInFullStatusMap={[Function Object]}
+  loading="false"
+  timezone="undefined"
+>
+</csaa-csaa-bills-card>
+`;
+
+exports[`CsaaBillsCardComponent AutoPay Not Enrolled should match snapshot >> before one calendar month of transaction and paid in full 1`] = `
+<csaa-csaa-bills-card
+  PolicyType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  autoPayEnrollmentStatusMap={[Function Object]}
+  availableDocumentsMap={[Function Object]}
+  billClick={[Function EventEmitter_]}
+  bills={[Function Array]}
+  isPaidInFullStatusMap={[Function Object]}
+  loading="false"
+  timezone="undefined"
+>
+  <ion-card
+    class="csaa-card"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        Bills
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-list>
+        <ion-item
+          class="ion-text-wrap"
+          detail=""
+        >
+          <ion-label>
+            <h3>
+              CAAC910026006
+            </h3>
+            <span
+              class="subtitle"
+            >
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  610 N 1st St
+                </span>
+              </csaa-policy-subtitles>
+            </span>
+            <label
+              class="bill-data"
+            >
+               Bill $23.50
+              <br />
+               Sent Jan 27, 2021 
+            </label>
+          </ion-label>
+          <csaa-theme-icon
+            slot="end"
+          >
+            <img
+              src="/assets/csaa-mobile/vectors/icn-Home.svg"
+              style="width: 40px; height: 40px;"
+            />
+          </csaa-theme-icon>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</csaa-csaa-bills-card>
+`;
+
+exports[`CsaaBillsCardComponent AutoPay Not Enrolled should match snapshot >> before one calendar month of transaction not paid in full 1`] = `
+<csaa-csaa-bills-card
+  PolicyType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  autoPayEnrollmentStatusMap={[Function Object]}
+  availableDocumentsMap={[Function Object]}
+  billClick={[Function EventEmitter_]}
+  bills={[Function Array]}
+  isPaidInFullStatusMap={[Function Object]}
+  loading="false"
+  timezone="undefined"
+>
+  <ion-card
+    class="csaa-card"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        Bills
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-list>
+        <ion-item
+          class="ion-text-wrap"
+          detail=""
+        >
+          <ion-label>
+            <h3>
+              CAAC910026006
+            </h3>
+            <span
+              class="subtitle"
+            >
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  610 N 1st St
+                </span>
+              </csaa-policy-subtitles>
+            </span>
+            <label
+              class="bill-data"
+            >
+               Bill $23.50
+              <br />
+               Sent Jan 27, 2021 
+            </label>
+          </ion-label>
+          <csaa-theme-icon
+            slot="end"
+          >
+            <img
+              src="/assets/csaa-mobile/vectors/icn-Home.svg"
+              style="width: 40px; height: 40px;"
+            />
+          </csaa-theme-icon>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</csaa-csaa-bills-card>
+`;
+
+exports[`CsaaBillsCardComponent should match snapshot 1`] = `
+<csaa-csaa-bills-card
+  PolicyType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  autoPayEnrollmentStatusMap={[Function Object]}
+  availableDocumentsMap={[Function Object]}
+  billClick={[Function EventEmitter_]}
+  bills={[Function Array]}
+  isPaidInFullStatusMap={[Function Object]}
+  loading="false"
+  timezone="undefined"
+>
+  <ion-card
+    class="csaa-card"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        Bills
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-list>
+        <ion-item
+          class="ion-text-wrap"
+          detail=""
+        >
+          <ion-label>
+            <h3>
+              CAAC910026006
+            </h3>
+            <span
+              class="subtitle"
+            >
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  610 N 1st St
+                </span>
+              </csaa-policy-subtitles>
+            </span>
+            <label
+              class="bill-data"
+            >
+               Bill $23.50
+              <br />
+               Sent Jan 27, 2021 
+            </label>
+          </ion-label>
+          <csaa-theme-icon
+            slot="end"
+          >
+            <img
+              src="/assets/csaa-mobile/vectors/icn-Home.svg"
+              style="width: 40px; height: 40px;"
+            />
+          </csaa-theme-icon>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</csaa-csaa-bills-card>
+`;

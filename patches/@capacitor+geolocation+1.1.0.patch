@@ -1,0 +1,62 @@
+diff --git a/node_modules/@capacitor/geolocation/android/src/main/java/com/capacitorjs/plugins/geolocation/GeolocationPlugin.java b/node_modules/@capacitor/geolocation/android/src/main/java/com/capacitorjs/plugins/geolocation/GeolocationPlugin.java
+index ca96676..2f8d8b3 100644
+--- a/node_modules/@capacitor/geolocation/android/src/main/java/com/capacitorjs/plugins/geolocation/GeolocationPlugin.java
++++ b/node_modules/@capacitor/geolocation/android/src/main/java/com/capacitorjs/plugins/geolocation/GeolocationPlugin.java
+@@ -177,10 +177,23 @@ public class GeolocationPlugin extends Plugin {
+ 
+             call.resolve();
+         } else {
+-            call.reject("Watch call id must be provided");
++            clearAllWatches(call);
+         }
+     }
+ 
++    private void clearAllWatches(PluginCall call) {
++        for (String callbackId : watchingCalls.keySet()) {
++            PluginCall removed = watchingCalls.get(callbackId);
++            if (removed != null) {
++                removed.release(bridge);
++            }
++        }
++
++        watchingCalls.clear();
++        implementation.clearLocationUpdates();
++        call.resolve();
++    }
++
+     private JSObject getJSObjectForLocation(Location location) {
+         JSObject ret = new JSObject();
+         JSObject coords = new JSObject();
+diff --git a/node_modules/@capacitor/geolocation/ios/Plugin/GeolocationPlugin.swift b/node_modules/@capacitor/geolocation/ios/Plugin/GeolocationPlugin.swift
+index 2088162..4254d0a 100644
+--- a/node_modules/@capacitor/geolocation/ios/Plugin/GeolocationPlugin.swift
++++ b/node_modules/@capacitor/geolocation/ios/Plugin/GeolocationPlugin.swift
+@@ -61,7 +61,7 @@ public class GeolocationPlugin: CAPPlugin, CLLocationManagerDelegate {
+ 
+     @objc func clearWatch(_ call: CAPPluginCall) {
+         guard let callbackId = call.getString("id") else {
+-            call.reject("Watch call id must be provided")
++            clearAllWatches(call)
+             return
+         }
+ 
+@@ -76,6 +76,19 @@ public class GeolocationPlugin: CAPPlugin, CLLocationManagerDelegate {
+         call.resolve()
+     }
+ 
++    @objc func clearAllWatches(_ call: CAPPluginCall) {
++        for (id, _) in callQueue {
++            if let call = bridge?.savedCall(withID: id) {
++                bridge?.releaseCall(call)
++            }
++        }
++        
++        self.stopUpdating()
++        self.callQueue.removeAll()
++        
++        call.resolve()
++    }
++
+     public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+         let removalQueue = callQueue.filter { $0.value == .permissions || $0.value == .singleUpdate }
+         callQueue = callQueue.filter { $0.value == .watch }

@@ -1,0 +1,80 @@
+<ion-card class="csaa-card">
+  <ion-card-header>
+    <img [src]="'/assets/csaa-mobile/vectors/success.svg'" />
+    <ion-card-title>Payment Successful</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-grid>
+      <h2>{{ payment.policyNumber }}</h2>
+      <ion-row class="item">
+        <ion-col>
+          <div class="policy-meta-content">
+            <h3>
+              Paid on
+              {{ result?.date | date: 'mediumDate' }}
+            </h3>
+            <span class="subtitle">
+              <csaa-policy-subtitles [policySubtitle]="payment.subtitle"></csaa-policy-subtitles>
+            </span>
+          </div>
+        </ion-col>
+        <ion-col size="auto">
+          <div class="policy-meta-icon">
+            <csaa-theme-icon slot="end" [type]="payment.policyType" [size]="40"></csaa-theme-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-list>
+      <ion-item class="csaa-payment-amount-list-item ion-no-padding">
+        <ion-label>Amount paid </ion-label>
+        <span slot="end">{{ result?.amount | currency: 'USD':'symbol':'1.2-2' }}</span>
+      </ion-item>
+      <ion-item lines="none" class="csaa-payment-method-list-item ion-no-padding">
+        <ion-avatar slot="start" *ngIf="result?.paymentAccount">
+          <span>
+            <img
+              *ngIf="result?.paymentAccount?.card?.type"
+              [src]="'/assets/csaa-mobile/vectors/' + result?.paymentAccount.card.type + '.svg'"
+            />
+            <img
+              *ngIf="result?.paymentAccount?.account"
+              [src]="'/assets/csaa-mobile/vectors/bank.svg'"
+            />
+          </span>
+        </ion-avatar>
+        <ion-label
+          [ngClass]="{
+            'card-expired': result?.paymentAccount?.card && result?.paymentAccount?.card.expired
+          }"
+          class="ion-text-nowrap"
+        >
+          <span>{{ result?.paymentAccount ? result?.paymentAccount.shortName : 'Paid With' }}</span>
+        </ion-label>
+        <span
+          slot="end"
+          *ngIf="result?.paymentAccount?.card && result?.paymentAccount?.card?.isDebitCard !== true"
+        >
+          {{ 'Credit' }}
+        </span>
+        <span slot="end" *ngIf="result?.paymentAccount?.card?.isDebitCard">{{ 'Debit' }}</span>
+        <span slot="end" *ngIf="result?.paymentAccount?.account">{{
+          result?.paymentAccount?.account?.type | titlecase
+        }}</span>
+      </ion-item>
+      <ion-item class="ion-no-padding" [class.ion-margin-bottom]="!payment?.autopayEnrollment">
+        <ion-label>Receipt number </ion-label>
+        <span slot="end">{{ result?.receiptNumber }}</span>
+      </ion-item>
+      <ng-container *ngIf="!payment?.autopayEnrollment">
+        <csaa-autopay-discount-card
+          [policy]="policy"
+          [payment]="payment"
+          [navigate]="true"
+          [paymentAccount]="result?.paymentAccount"
+        ></csaa-autopay-discount-card>
+      </ng-container>
+    </ion-list>
+  </ion-card-content>
+</ion-card>

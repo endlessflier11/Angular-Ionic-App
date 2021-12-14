@@ -1,0 +1,48 @@
+csaa-payments-card {
+  ion-card {
+    ion-card-content {
+      .item {
+        h3 {
+          color: inherit !important;
+        }
+
+        ion-col {
+          --ion-grid-column-padding: 0;
+        }
+      }
+    }
+  }
+}
+
+csaa-my-policy-card {
+  ion-card {
+    border-bottom: none;
+  }
+}
+
+csaa-what-to-do-card {
+  ion-card {
+    padding: 0;
+    ion-card-content {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: $mwg-shrink-small-breakpoint) {
+  csaa-what-to-do-card {
+    ion-card {
+      ion-card-content {
+        padding-left: 15px;
+        padding-right: 15px;
+        &.card-body {
+          padding-bottom: 5px;
+        }
+        &.card-footer {
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+}

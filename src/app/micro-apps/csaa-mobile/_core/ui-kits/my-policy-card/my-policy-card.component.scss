@@ -1,0 +1,22 @@
+@import '../../../_scss/variables';
+.my-policy {
+  .picture-card {
+    --background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+      url(/assets/csaa-mobile/imgs/web-card-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: top right;
+    padding: 14px;
+    border: none;
+
+    --color: white;
+    color: white;
+
+    .mypolicy-body-card {
+      height: 250px;
+      padding-top: 80px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+  }
+}

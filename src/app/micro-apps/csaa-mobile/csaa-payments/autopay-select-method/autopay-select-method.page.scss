@@ -1,0 +1,89 @@
+@import '../../_scss/variables';
+
+ion-header {
+  ion-toolbar {
+    --border-width: 0;
+  }
+}
+ion-content {
+  --background: var(--ion-color-primary-contrast);
+  --padding-start: 0;
+  --padding-end: 0;
+
+  h2 {
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  ion-list {
+    margin-bottom: 32px;
+
+    ion-item {
+      --detail-icon-opacity: 1;
+
+      &.wallet-item {
+        &:first-child {
+          border-top: 0.55px solid #c8c7cc;
+        }
+
+        ion-avatar {
+          --border-radius: 0;
+
+          > span {
+            display: flex;
+            height: 100%;
+          }
+        }
+
+        h3 {
+          font-weight: 400;
+          font-size: 17px;
+          white-space: nowrap;
+          margin: 0;
+        }
+
+        p {
+          color: $csaa-lighter-color;
+
+          &.card-expired {
+            color: $csaa-emergency-color;
+          }
+        }
+
+        ion-button {
+          font-size: 15px;
+          font-weight: 400;
+          color: var(--ion-color-primary);
+        }
+      }
+    }
+  }
+
+  ion-grid {
+    ion-row {
+      ion-col {
+        ion-item {
+          --detail-icon-color: var(--ion-color-primary);
+          --detail-icon-opacity: 1;
+
+          &:nth-child(1) {
+            margin-bottom: 4px;
+          }
+          &:nth-child(2) {
+            --min-height: 0;
+          }
+
+          h3 {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          span {
+            font-size: 14px;
+            color: var(--ion-color-medium);
+          }
+        }
+      }
+    }
+  }
+}

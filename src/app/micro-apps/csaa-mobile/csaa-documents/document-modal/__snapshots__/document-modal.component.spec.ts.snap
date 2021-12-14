@@ -1,0 +1,215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DocumentModalComponent should dismiss with selected filter 1`] = `
+<csaa-document-modal
+  PolicyDocumentType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  configService={[Function ConfigMockService]}
+  currentFilter={[Function Array]}
+  currentTheme=""
+  hasBillingPaymentTypes={[Function Boolean]}
+  hasPolicyTypes={[Function Boolean]}
+  modalCtrl={[Function AlertControllerMock]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-title>
+        Filter
+      </ion-title>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Done
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-list>
+      <ion-radio-group>
+        <ion-item>
+          <ion-label>
+            All Documents
+          </ion-label>
+          <ion-radio
+            mode="md"
+            slot="end"
+            value="all_documents"
+          />
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            Policy Documents
+          </ion-label>
+          <ion-radio
+            mode="md"
+            slot="end"
+            value="policy_documents"
+          />
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            Billing & Payments
+          </ion-label>
+          <ion-radio
+            mode="md"
+            slot="end"
+            value="billing_&_payments"
+          />
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            Billing Documents
+          </ion-label>
+          <ion-radio
+            mode="md"
+            slot="end"
+          />
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            New Business
+          </ion-label>
+          <ion-radio
+            mode="md"
+            slot="end"
+          />
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            Endorsements
+          </ion-label>
+          <ion-radio
+            mode="md"
+            slot="end"
+          />
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  </ion-content>
+</csaa-document-modal>
+`;
+
+exports[`DocumentModalComponent should display the filter buttons 1`] = `
+<csaa-document-modal
+  PolicyDocumentType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  configService={[Function ConfigMockService]}
+  currentFilter={[Function Array]}
+  currentTheme=""
+  hasBillingPaymentTypes={[Function Boolean]}
+  hasPolicyTypes={[Function Boolean]}
+  modalCtrl={[Function AlertControllerMock]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-title>
+        Filter
+      </ion-title>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Done
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-list>
+      <ion-radio-group>
+        <ion-item>
+          <ion-label>
+            All Documents
+          </ion-label>
+          <ion-radio
+            mode="md"
+            slot="end"
+            value="all_documents"
+          />
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            Policy Documents
+          </ion-label>
+          <ion-radio
+            mode="md"
+            slot="end"
+            value="policy_documents"
+          />
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            Billing & Payments
+          </ion-label>
+          <ion-radio
+            mode="md"
+            slot="end"
+            value="billing_&_payments"
+          />
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            Billing Documents
+          </ion-label>
+          <ion-radio
+            mode="md"
+            slot="end"
+          />
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            New Business
+          </ion-label>
+          <ion-radio
+            mode="md"
+            slot="end"
+          />
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            Endorsements
+          </ion-label>
+          <ion-radio
+            mode="md"
+            slot="end"
+          />
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  </ion-content>
+</csaa-document-modal>
+`;

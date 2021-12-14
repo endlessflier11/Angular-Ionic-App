@@ -1,0 +1,64 @@
+@import '../../../../_scss/variables';
+.csaa-card {
+  ion-card-content {
+    ion-list {
+      margin-bottom: 20px;
+    }
+
+    ion-item.csaa-payment-amount-list-item {
+      font-size: 16px !important;
+      > span {
+        margin-inline-end: 5px;
+        color: $csaa-lighter-color;
+      }
+    }
+
+    ion-item.csaa-payment-method-list-item {
+      font-size: 16px !important;
+
+      ion-avatar {
+        margin-inline-end: 5px;
+        > span {
+          width: 30px;
+          display: flex;
+          align-items: center;
+          height: 100%;
+        }
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      ion-label {
+        margin-inline-end: 5px;
+        > span {
+          display: block;
+          width: 100%;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+
+      > span {
+        color: $csaa-lighter-color;
+        margin-inline-start: 10px;
+        margin-inline-end: 5px;
+      }
+    }
+  }
+
+  &.overdue {
+    ion-card-title {
+      color: $csaa-emergency-color;
+    }
+    ion-card-content {
+      ion-item.csaa-payment-amount-list-item {
+        > ion-label,
+        > span {
+          color: $csaa-emergency-color;
+        }
+      }
+    }
+  }
+}

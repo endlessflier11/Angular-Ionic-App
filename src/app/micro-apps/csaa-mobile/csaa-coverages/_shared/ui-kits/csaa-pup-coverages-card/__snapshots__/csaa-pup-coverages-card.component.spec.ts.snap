@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CsaaPupCoveragesCardComponent it should collapse the card after clicking on the expanded card 1`] = `
+<csaa-pup-coverages-card
+  PolicyType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  coverages={[Function Array]}
+  loading="false"
+  openCard="undefined"
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  viewDeclarationClick={[Function EventEmitter_]}
+>
+  <ion-card
+    class="coverage-list"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        <div
+          class="display-flex ion-align-items-center"
+        >
+           CAPU123456789 
+        </div>
+        <csaa-theme-icon>
+          <img
+            src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+            style="width: 40px; height: 40px;"
+          />
+        </csaa-theme-icon>
+      </ion-card-title>
+      <ion-card-subtitle>
+        Personal Umbrella Policy
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-list>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Personal Umbrella
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $1,000,000
+                  </span>
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        expand="full"
+      >
+         View Declarations
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-pup-coverages-card>
+`;
+
+exports[`CsaaPupCoveragesCardComponent it should expand coverage card item  1`] = `
+<csaa-pup-coverages-card
+  PolicyType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  coverages={[Function Array]}
+  loading="false"
+  openCard="0"
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  viewDeclarationClick={[Function EventEmitter_]}
+>
+  <ion-card
+    class="coverage-list"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        <div
+          class="display-flex ion-align-items-center"
+        >
+           CAPU123456789 
+        </div>
+        <csaa-theme-icon>
+          <img
+            src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+            style="width: 40px; height: 40px;"
+          />
+        </csaa-theme-icon>
+      </ion-card-title>
+      <ion-card-subtitle>
+        Personal Umbrella Policy
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-list>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item open"
+            >
+              <h4
+                class="title"
+              >
+                Personal Umbrella
+              </h4>
+              <div
+                class="description"
+              >
+                Excess Liability Coverage on Auto and Home Policies
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        expand="full"
+      >
+         View Declarations
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-pup-coverages-card>
+`;
+
+exports[`CsaaPupCoveragesCardComponent should match snapshots when no coverages 1`] = `
+<csaa-pup-coverages-card
+  PolicyType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  coverages={[Function Array]}
+  loading="false"
+  openCard="undefined"
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  viewDeclarationClick={[Function EventEmitter_]}
+>
+</csaa-pup-coverages-card>
+`;
+
+exports[`CsaaPupCoveragesCardComponent should match snapshots when there are coverages 1`] = `
+<csaa-pup-coverages-card
+  PolicyType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  coverages={[Function Array]}
+  loading="false"
+  openCard="undefined"
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  viewDeclarationClick={[Function EventEmitter_]}
+>
+  <ion-card
+    class="coverage-list"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        <div
+          class="display-flex ion-align-items-center"
+        >
+           CAPU123456789 
+        </div>
+        <csaa-theme-icon>
+          <img
+            src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+            style="width: 40px; height: 40px;"
+          />
+        </csaa-theme-icon>
+      </ion-card-title>
+      <ion-card-subtitle>
+        Personal Umbrella Policy
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-list>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Personal Umbrella
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $1,000,000
+                  </span>
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        expand="full"
+      >
+         View Declarations
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-pup-coverages-card>
+`;

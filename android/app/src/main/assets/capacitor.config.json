@@ -1,0 +1,109 @@
+{
+  "appId": "com.aaa.iphone.discounts",
+  "appName": "AAA",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "backgroundColor": "#f6f6f6",
+  "loggingBehavior": "production",
+  "android": {
+    "flavor": "dev"
+  },
+  "ios": {
+    "scheme": "AAA",
+    "contentInset": "never",
+    "scrollEnabled": false,
+    "cordovaSwiftVersion": "5.3",
+    "minVersion": 12,
+    "cordovaLinkerFlags": ["-ObjC"]
+  },
+  "server": {
+    "iosScheme": "ionic",
+    "androidScheme": "http",
+    "cleartext": true,
+    "allowNavigation": [
+      "http://localhost:8080/*",
+      "http://*:8100/*",
+      "http://www.aaa.com/*",
+      "https://www.aaa.com/*",
+      "https://*.youtube.com/*",
+      "cdvfile:*"
+    ]
+  },
+  "includePlugins": [
+    "@capacitor/app",
+    "@capacitor/haptics",
+    "@capacitor/keyboard",
+    "@capacitor/splash-screen",
+    "@capacitor/status-bar",
+    "@capacitor/device",
+    "@capacitor/local-notifications",
+    "@capacitor/network",
+    "@capacitor/camera",
+    "@capacitor/browser",
+    "@capacitor/geolocation",
+    "@capacitor/share",
+    "@ionic-enterprise/identity-vault",
+    "@sentry/capacitor",
+    "@aaa-mobile/capacitor-plugin",
+    "es6-promise-plugin",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-contacts",
+    "cordova-plugin-file",
+    "cordova-plugin-file-transfer",
+    "cordova-plugin-app-preferences",
+    "cordova-plugin-badge",
+    "cordova-plugin-dialogs",
+    "cordova-plugin-fingerprint-aio",
+    "cordova-sqlite-storage",
+    "cordova-support-android-plugin",
+    "cordova-plugin-firebase-analytics",
+    "cordova-plugin-firebase-config",
+    "cordova.plugins.diagnostic",
+    "cordova-plugin-ionic",
+    "cordova-plugin-appavailability",
+    "cordova-plugin-broadcaster",
+    "cordova-plugin-email-composer",
+    "cordova-plugin-google-analytics",
+    "cordova-plugin-passbook",
+    "cordova-plugin-app-launcher",
+    "cordova-plugin-secure-storage-echo",
+    "cordova-plugin-touch-id",
+    "tealium-cordova-plugin",
+    "cordova-plugin-safariviewcontroller",
+    "card.io.cordova.mobilesdk",
+    "cordova-plugin-file-opener2",
+    "@aaa-mobile/com-medallia-digital-cordova",
+    "cordova-plugin-advanced-http",
+    "@autoclubgroup/acg-ccm-plugin",
+    "cordova-plugin-cloud-settings",
+    "cordova-plugin-inappbrowser"
+  ],
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 500,
+      "launchAutoHide": false,
+      "backgroundColor": "#F6F6F600",
+      "androidSplashResourceName": "splash",
+      "androidScaleType": "CENTER_CROP",
+      "showSpinner": false,
+      "androidSpinnerStyle": "large",
+      "iosSpinnerStyle": "small",
+      "spinnerColor": "#999999",
+      "splashFullScreen": true,
+      "splashImmersive": false
+    },
+    "LocalNotifications": {
+      "smallIcon": "ic_notification_small",
+      "iconColor": "#F6F6F6"
+    }
+  },
+  "cordova": {
+    "preferences": {
+      "ScrollEnabled": "false",
+      "BackupWebStorage": "none",
+      "cordova.plugins.diagnostic.modules": "LOCATION BLUETOOTH WIFI CAMERA NOTIFICATIONS EXTERNAL_STORAGE",
+      "GoogleAndroidClientId": "870391904772-nbj7uf0b195qnkn3o43v8rl286ff414o.apps.googleusercontent.com"
+    }
+  }
+}

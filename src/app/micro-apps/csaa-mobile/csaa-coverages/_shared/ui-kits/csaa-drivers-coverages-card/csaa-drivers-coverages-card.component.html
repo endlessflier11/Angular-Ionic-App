@@ -1,0 +1,22 @@
+<csaa-skeleton-card *ngIf="loading"></csaa-skeleton-card>
+<ion-card *ngIf="!loading && drivers && drivers.length" class="csaa-card">
+  <ion-card-header>
+    <ion-card-title>Drivers</ion-card-title>
+  </ion-card-header>
+  <ion-card-content class="csaa-item-list">
+    <ng-container [ngSwitch]="version">
+      <ng-container *ngSwitchDefault>
+        <csaa-csaa-drivers-coverages-content-v1
+          [drivers]="filteredDrivers"
+          (expandItem)="driverExpanded($event)"
+        ></csaa-csaa-drivers-coverages-content-v1>
+      </ng-container>
+      <ng-container *ngSwitchCase="2">
+        <csaa-csaa-drivers-coverages-content-v2
+          [drivers]="filteredDrivers"
+          (expandItem)="driverExpanded($event)"
+        ></csaa-csaa-drivers-coverages-content-v2>
+      </ng-container>
+    </ng-container>
+  </ion-card-content>
+</ion-card>

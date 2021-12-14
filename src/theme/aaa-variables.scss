@@ -1,0 +1,86 @@
+:root {
+  --ion-color-secondary-alt: #44cbad;
+  --ion-color-secondary-alt-rgb: 68, 203, 173;
+  --ion-color-secondary-alt-contrast: #ffffff;
+  --ion-color-secondary-alt-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-alt-shade: #3cb398;
+  --ion-color-secondary-alt-tint: #57d0b5;
+
+  --ion-color-aaa-v3-light: #f6f6f6;
+  --ion-color-aaa-v3-light-alt: #f8f8f8;
+  --ion-color-aaa-v3-light-grey: #dddddd;
+  --ion-color-aaa-v3-primary-alt: #5ca3f7;
+  --ion-color-aaa-v3-text-dark-base: #000000;
+  --ion-color-aaa-v3-text-dark-contrast: #5b5b5b;
+  --ion-color-aaa-v3-text-light-base: #ffffff;
+  --ion-color-aaa-v3-text-light-contrast: #6ea8fb;
+
+  --ion-color-menu-top: #003156;
+  --ion-color-menu-bottom: #00435f;
+  --ion-color-menu-divider: #104772;
+  --ion-color-menu-link: #6ea8fb;
+  --ion-color-menu-no-auth: #0a3a64;
+  --ion-color-menu-avatar-start: #b8d6fb;
+  --ion-color-menu-avatar-end: #aaa6dc;
+
+  --ion-color-menu-login-button: #094d96;
+  --ion-color-menu-login-button-contast: #094d96;
+  --ion-color-menu-join-button: #305f80;
+
+  --ion-color-membershipCardStart: #0097d8;
+  --ion-color-membershipCardEnd: #00b2a6;
+  --ion-color-membershipCardValidity: #46dfba;
+
+  --ion-card-border-radius: 5px;
+
+  --ion-aaa-background: #f6f6f6;
+}
+
+.ion-color-secondary-alt {
+  --ion-color-base: var(--ion-color-secondary-alt);
+  --ion-color-base-rgb: var(--ion-color-secondary-alt-rgb);
+  --ion-color-contrast: var(--ion-color-secondary-alt-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-secondary-alt-contrast-rgb);
+  --ion-color-shade: var(--ion-color-secondary-alt-shade);
+  --ion-color-tint: var(--ion-color-secondary-alt-tint);
+  color: var(--ion-color-contrast);
+}
+
+.modal-wrapper {
+  background: transparent !important;
+}
+
+.my-tac-modal-wrapper .modal-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'SanFrancisco';
+  font-weight: 200;
+  src: url('/assets/fonts/SanFranciscoText-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SanFrancisco';
+  font-weight: 400;
+  src: url('/assets/fonts/SanFranciscoText-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SanFrancisco';
+  font-weight: 600;
+  src: url('/assets/fonts/SanFranciscoText-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SanFranciscoMono';
+  font-weight: 200;
+  src: url('/assets/fonts/SanFranciscoMono-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SanFranciscoMono';
+  font-weight: 400;
+  src: url('/assets/fonts/SanFranciscoMono-Regular.otf') format('opentype');
+}

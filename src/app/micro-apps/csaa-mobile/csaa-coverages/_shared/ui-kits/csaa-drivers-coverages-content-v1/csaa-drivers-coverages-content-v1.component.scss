@@ -1,0 +1,35 @@
+@import '../../../../_scss/variables';
+
+.description {
+  margin-top: 8px;
+  p {
+    font-size: 12px;
+    font-weight: $csaa-light-font-weight;
+    &.coverage-limit {
+      margin: 2px 0 10px;
+      color: var(--ion-color-primary);
+      font-size: 20px;
+      font-weight: $csaa-active-font-weight;
+    }
+  }
+
+  .open-card {
+    .open-label {
+      font-weight: $csaa-bold-font-weight;
+    }
+    .open-description {
+      font-size: 12px;
+      margin: 10px 0;
+    }
+  }
+}
+ion-label {
+  white-space: normal !important;
+}
+ion-item {
+  &:not(.clickable) {
+    .driver-name {
+      color: $csaa-lighter-color !important;
+    }
+  }
+}

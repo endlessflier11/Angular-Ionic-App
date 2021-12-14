@@ -1,0 +1,39 @@
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar no-border>
+    <ion-buttons slot="start">
+      <csaa-back-button (back)="dismissModal()"></csaa-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="['csaa', currentTheme]">
+  <csaa-skeleton-card *ngIf="loading"></csaa-skeleton-card>
+
+  <ion-card class="csaa-card" *ngIf="!loading">
+    <ng-container>
+      <ion-card-header>
+        <ion-card-title>Terms & Conditions</ion-card-title>
+      </ion-card-header>
+    </ng-container>
+    <ion-card-content>
+      <p>
+        By tapping "Accept", you are accepting the
+        <span class="csaa-link" (click)="openTerms()"
+          >paperless preferences terms and conditions</span
+        >
+        and choosing to receive your policy documents and bills via email at {{ email }}. Policy
+        documents include information about your policy, as well as privacy and other notices. Bill
+        notifications include bills for insurance premiums and related fees. You may opt out of
+        paperless preferences at any time, or update your email address by:
+      </p>
+      <br />
+      <ul>
+        <li>Editing your Paperless Settings in MyPolicy</li>
+        <li>Calling Insurance Service at <a href="tel:+18883401817">888.340.1817</a></li>
+        <li>Visiting your local AAA branch</li>
+      </ul>
+      <ion-button expand="block" class="ion-margin" (click)="acceptClickHandler()"
+        >Accept
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

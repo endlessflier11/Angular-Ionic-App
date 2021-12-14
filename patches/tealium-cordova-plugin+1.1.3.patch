@@ -1,0 +1,13 @@
+diff --git a/node_modules/tealium-cordova-plugin/src/android/tealium.gradle b/node_modules/tealium-cordova-plugin/src/android/tealium.gradle
+index 90de828..a411dbc 100644
+--- a/node_modules/tealium-cordova-plugin/src/android/tealium.gradle
++++ b/node_modules/tealium-cordova-plugin/src/android/tealium.gradle
+@@ -1,7 +1,7 @@
+ repositories{    
+   jcenter()
+    maven {
+-            url "http://maven.tealiumiq.com/android/releases/"
++            url "https://maven.tealiumiq.com/android/releases/"
+         }
+ }
+ 

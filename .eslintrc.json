@@ -1,0 +1,127 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "**/*.spec.ts",
+    "src/testing/**/*",
+    "dynatrace.config.js",
+    "proxy.conf.js",
+    "scripts/**/*.js",
+    "check-relative-imports.js",
+    "jest.config.js"
+  ],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["tsconfig.app.json", "e2e/tsconfig.json"],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/ng-cli-compat",
+        "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "@angular-eslint/component-class-suffix": [
+          "error",
+          {
+            "suffixes": ["Page", "Component"]
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": ["app", "csaa"],
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@typescript-eslint/explicit-member-accessibility": [
+          "off",
+          {
+            "accessibility": "explicit"
+          }
+        ],
+        "@typescript-eslint/member-delimiter-style": [
+          "off",
+          {
+            "multiline": {
+              "delimiter": "none",
+              "requireLast": true
+            },
+            "singleline": {
+              "delimiter": "semi",
+              "requireLast": false
+            }
+          }
+        ],
+        "@typescript-eslint/type-annotation-spacing": "off",
+        "arrow-parens": ["off", "always"],
+        "brace-style": ["off", "off"],
+        "eol-last": "off",
+        "import/order": "off",
+        "linebreak-style": "off",
+        "new-parens": "off",
+        "newline-per-chained-call": "off",
+        "no-bitwise": "off",
+        "no-extra-semi": "off",
+        "no-irregular-whitespace": "off",
+        "no-trailing-spaces": "off",
+        "one-var": ["off", "never"],
+        "prefer-arrow/prefer-arrow-functions": "off",
+        "space-before-function-paren": "off",
+        "space-in-parens": ["off", "never"],
+        "@typescript-eslint/member-ordering": ["warn"],
+        "id-blacklist": "off",
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": "property",
+            "format": ["camelCase"],
+            "filter": {
+              "regex": "[-]",
+              "match": false
+            }
+          },
+          {
+            "selector": ["objectLiteralProperty", "typeProperty"],
+            "format": ["snake_case"],
+            "filter": {
+              "regex": "^(event_type|event_label|process_date|link_placement|terms_accepted|vehicle_year|min_amt_paid|past_due|document_.+|policy_.+|payment_.+|autopay_status|method_type|amount_due|club_code|app_version|reg_id|mdm_(email|id)|last_name|first_name|\\w+_number|card_name)$",
+              "match": true
+            }
+          },
+          {
+            "selector": "typeProperty",
+            "format": ["snake_case"],
+            "filter": {
+              "regex": "^(csaa_|mdm_)",
+              "match": true
+            }
+          },
+          {
+            "selector": ["objectLiteralProperty", "classProperty"],
+            "format": ["UPPER_CASE"],
+            "filter": {
+              "regex": "^[A-Z0-9_]+$",
+              "match": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended"],
+      "rules": {}
+    }
+  ]
+}

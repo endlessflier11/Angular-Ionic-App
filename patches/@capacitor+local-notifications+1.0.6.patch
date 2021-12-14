@@ -1,0 +1,13 @@
+diff --git a/node_modules/@capacitor/local-notifications/ios/Plugin/LocalNotificationsPlugin.swift b/node_modules/@capacitor/local-notifications/ios/Plugin/LocalNotificationsPlugin.swift
+index 932e8fb..fb5383b 100644
+--- a/node_modules/@capacitor/local-notifications/ios/Plugin/LocalNotificationsPlugin.swift
++++ b/node_modules/@capacitor/local-notifications/ios/Plugin/LocalNotificationsPlugin.swift
+@@ -233,6 +233,8 @@ public class LocalNotificationsPlugin: CAPPlugin {
+ 
+         if let sound = notification["sound"] as? String {
+             content.sound = UNNotificationSound(named: UNNotificationSoundName(sound))
++        } else {
++            content.sound = UNNotificationSound.default
+         }
+ 
+         if let attachments = notification["attachments"] as? [JSObject] {

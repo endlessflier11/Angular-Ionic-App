@@ -1,0 +1,189 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+HOCKEY_API_TOKEN = ENV["CSAA_HOCKEY_API_TOKEN"]
+APP_CENTER_API_TOKEN = ENV["CSAA_APP_CENTER_API_TOKEN"]
+RUNNING_ON_CI = ENV['CI'].to_s.downcase == 'true'
+
+default_platform(:ios)
+
+skip_docs
+
+platform :ios do
+  private_lane :remove_old_profiles do
+    sh('fastlane sigh manage -p "com.aaa.csaa_insurance.mypolicy" --force')
+  end
+
+  lane :setup_keychain do
+    create_keychain(
+      name: "csaaKeychain",
+      default_keychain: false,
+      password: 'secretPass',
+      unlock: true,
+      timeout: 3600,
+      lock_when_sleeps: true
+    )
+  end
+
+  desc "Lane to add a new device to provisioning profiles
+If you want to add a new device run:
+
+```
+fastlane add_device
+```
+
+After the new device was added you can refresh your provisioning profile by running:
+```
+fastlane renew_profile
+```
+  "
+  lane :add_device do
+    device_name = prompt(text: "Enter the device name: ")
+    device_udid = prompt(text: "Enter the device UDID: ")
+    device_hash = {}
+    device_hash[device_name] = device_udid
+    register_devices(
+      devices: device_hash
+    )
+  end
+
+   desc "When new devices have been added you should refresh the provisioning profile with this lane."
+   lane :renew_profile do
+    sigh(
+      adhoc: true,
+      filename: "ad-hoc.mobileprovision",
+      force: true
+    )
+   end
+
+  desc "When new devices have been added you should refresh the provisioning profile with this lane."
+  lane :renew_dev_profile do
+    sigh(
+      development: true,
+      filename: "development.mobileprovision",
+      force: true
+    )
+  end
+
+  desc "Builds a QA version of the application and distributes to App Center"
+  lane :qa do
+    # first remove old and expired provisioning profiles (workaround: https://github.com/fastlane/fastlane/issues/3738)
+    remove_old_profiles
+    match(app_identifier: 'com.aaa.csaa_insurance.mypolicy', type: 'adhoc', keychain_password: 'secretPass', readonly: RUNNING_ON_CI)
+
+    ionic(
+      platform: 'ios',
+      type: 'adhoc',
+      cordova_prepare: false,
+    )
+    appcenter_upload(
+      api_token: APP_CENTER_API_TOKEN,
+      owner_name: "CSAA",
+      app_name: "MyPolicy-4",
+      ipa: ENV['CORDOVA_IOS_RELEASE_BUILD_PATH'],
+      notify_testers: true # Set to false if you don't want to notify testers of your new release (default: `false`)
+    )
+  end
+
+  desc "Build an enterprise app for distribution"
+  lane :enterprise do
+    # first remove old and expired provisioning profiles (workaround: https://github.com/fastlane/fastlane/issues/3738)
+    remove_old_profiles
+    match(app_identifier: 'com.aaa.csaa_insurance.mypolicy', type: 'enterprise', keychain_password: 'secretPass', readonly: RUNNING_ON_CI)
+
+    ionic(
+      platform: 'ios',
+      type: 'enterprise',
+      cordova_prepare: false,
+    )
+    appcenter_upload(
+      api_token: APP_CENTER_API_TOKEN,
+      owner_name: "CSAA",
+      app_name: "MyPolicy-4",
+      ipa: ENV['CORDOVA_IOS_RELEASE_BUILD_PATH'],
+      notify_testers: true, # Set to false if you don't want to notify testers of your new release (default: `false`)
+      destinations: "Mobile MyPolicy,CSAA-Team"
+    )
+  end
+
+   desc "Build an enterprise app for distribution"
+   lane :appstore do
+      # produce(
+      #   app_name: 'MyPolicy',
+      #   language: 'English',
+
+      #   # Optional
+      #   # App services can be enabled during app creation
+      #   enable_services: {
+      #     game_center: "on",             # Valid values: "on", "off"
+      #     in_app_purchase: "on",         # Valid values: "on", "off"
+      #   }
+      # )
+
+      get_certificates           # invokes cert
+      get_provisioning_profile(
+        filename: "appstore.mobileprovision"
+      )   # invokes sigh
+      ionic(
+        platform: 'ios',
+        type: 'appstore',
+        cordova_prepare: false,
+      )
+      deliver(
+        force: true,
+        skip_screenshots: true,
+        ipa: ENV['CORDOVA_IOS_RELEASE_BUILD_PATH']
+      )
+    end
+end
+
+platform :android do
+
+  desc "Builds a QA version of the application and distributes to App Center"
+  lane :qa do
+    ionic(
+      platform: 'android',
+      release: false,
+      cordova_prepare: false
+    )
+
+    appcenter_upload(
+      api_token: APP_CENTER_API_TOKEN,
+      owner_name: "CSAA",
+      app_name: "MyPolicy-3",
+      file: './platforms/android/app/build/outputs/apk/debug/app-debug.apk',
+      notify_testers: true, # Set to false if you don't want to notify testers of your new release (default: `false`)
+      destinations: "Mobile MyPolicy,CSAA-Team"
+    )
+  end
+
+  desc "Builds and signs a production release to distribute in Google Play Store"
+  lane :prod do
+    ionic(
+      platform: 'android',
+      release: true
+    )
+
+    supply(
+      json_key: 'google_play.json',
+      apk: './platforms/android/app/build/outputs/apk/release/app-release.apk',
+      track: 'internal',
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      package_name: 'com.aaa.MyPolicyIonic'
+    )
+  end
+end

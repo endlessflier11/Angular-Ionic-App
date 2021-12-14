@@ -1,0 +1,106 @@
+{
+  "/aaaLatLong": {
+    "target": "https://certservices.national.aaa.com",
+    "pathRewrite": {
+      "^/aaaLatLong": "/RESTWS/aaa/services/geo/latlong"
+    },
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/aaaLocateMe": {
+    "target": "https://certservices.national.aaa.com",
+    "pathRewrite": {
+      "^/aaaLocateMe": "/RESTWS/aaa/services/geo/locateMe"
+    },
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/aaaPostal": {
+    "target": "https://certservices.national.aaa.com",
+    "pathRewrite": {
+      "^/aaaPostal": "/RESTWS/aaa/services/geo/postal"
+    },
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/aaaSateliteApp": {
+    "target": "https://certservices.national.aaa.com",
+    "pathRewrite": {
+      "^/aaaSateliteApp": "/RESTWS/aaa/services/configuration/SatelliteApps"
+    },
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/aaaArticlesList": {
+    "target": "https://www.aaa.com",
+    "pathRewrite": {
+      "^/aaaArticlesList": "/AAA/common/aar/files/articlesummary.xml"
+    },
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/aaaBranchLocator": {
+    "target": "https://tdr.aaa.com",
+    "pathRewrite": {
+      "^/aaaBranchLocator": "/tdrl/search.jsp"
+    },
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/aaaRestApiUnsecure": {
+    "target": "https://certservices.national.aaa.com",
+    "pathRewrite": {
+      "^/aaaRestApiUnsecure": "/RESTWS/aaa/services"
+    },
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/aaaRestApi": {
+    "target": "https://certservices.national.aaa.com",
+    "pathRewrite": {
+      "^/aaaRestApi": "/RESTWS/aaa/secure/OAuth/services"
+    },
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/aaaCsiCredentials": {
+    "target": "https://csiexternal.national.aaa.com",
+    "pathRewrite": {
+      "^/aaaCsiCredentials": "csi/dev/mobile/credentials/"
+    },
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/aaaCsiPush": {
+    "target": "https://csiexternal.national.aaa.com",
+    "pathRewrite": {
+      "^/aaaCsiPush": "/csi/dev/mobile/v2/push"
+    },
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/aaaAutomotiveProxy": {
+    "target": "https://www.aaa.com",
+    "pathRewrite": {
+      "^/aaaAutomotiveProxy": "/services/automotive/proxy?"
+    },
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/aaaGisApi": {
+    "target": "https://gis.aaa.com",
+    "pathRewrite": {
+      "^/aaaGisApi": "/servlet/AAAMobile2017.Engine"
+    },
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/ccgCardUrl": {
+    "target": "https://api-dev.national.aaa.com",
+    "pathRewrite": {
+      "^/ccgCardUrl": "/dw/v1/mobile"
+    },
+    "secure": false,
+    "changeOrigin": true
+  }
+}

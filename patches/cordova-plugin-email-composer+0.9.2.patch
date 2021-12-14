@@ -1,0 +1,29 @@
+diff --git a/node_modules/cordova-plugin-email-composer/src/android/Provider.java b/node_modules/cordova-plugin-email-composer/src/android/Provider.java
+index 027350c..042c8a1 100644
+--- a/node_modules/cordova-plugin-email-composer/src/android/Provider.java
++++ b/node_modules/cordova-plugin-email-composer/src/android/Provider.java
+@@ -19,7 +19,7 @@
+ 
+ package de.appplant.cordova.emailcomposer;
+ 
+-import android.support.v4.content.FileProvider;
++import androidx.core.content.FileProvider;
+ 
+ public class Provider extends FileProvider {
+     // Nothing to do here
+diff --git a/node_modules/cordova-plugin-email-composer/src/android/xml/emailcomposer_provider_paths.xml b/node_modules/cordova-plugin-email-composer/src/android/xml/emailcomposer_provider_paths.xml
+index 77e7853..c18a3f2 100644
+--- a/node_modules/cordova-plugin-email-composer/src/android/xml/emailcomposer_provider_paths.xml
++++ b/node_modules/cordova-plugin-email-composer/src/android/xml/emailcomposer_provider_paths.xml
+@@ -24,10 +24,6 @@
+     <files-path name="files" path="." />
+     <!-- cordova.file.cacheDirectory -->
+     <cache-path name="cache" path="." />
+-    <!-- cordova.file.externalDataDirectory -->
+-    <external-files-path name="external-files" path="." />
+-    <!-- cordova.file.externalCacheDirectory -->
+-    <external-cache-path name="external-cache" path="." />
+     <!-- cordova.file.externalRootDirectory -->
+-    <external-path name="external" path="." />
++    <external-path name="external_files" path="." />
+ </paths>

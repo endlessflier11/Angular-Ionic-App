@@ -1,0 +1,29 @@
+<ion-content class="ion-padding" [ngClass]="['csaa', currentTheme]" scroll-y="false">
+  <h2 class="ion-text-center">Document Options</h2>
+  <ion-list>
+    <ion-item (click)="viewDocHandler()" detail>
+      <ion-label>View Document</ion-label>
+    </ion-item>
+    <ion-item (click)="shareDocHandler()" detail>
+      <ion-label>Share Document</ion-label>
+    </ion-item>
+    <ng-container *ngIf="canSave">
+      <ion-item lines="none" class="ion-margin-top csaa-save-as">
+        <ion-label position="stacked">Save file as</ion-label>
+        <ion-input
+          [formControl]="fileNameControl"
+          type="text"
+          placeholder="File name"
+          required
+        ></ion-input>
+        <span slot="end">.pdf</span>
+      </ion-item>
+      <ion-item (click)="saveDocHandler()" lines="none" detail>
+        <ion-label>Save Document</ion-label>
+      </ion-item>
+    </ng-container>
+  </ion-list>
+</ion-content>
+<ion-footer class="ion-padding" [ngClass]="['csaa', currentTheme]">
+  <ion-button expand="full" (click)="dismiss()">Close</ion-button>
+</ion-footer>

@@ -1,0 +1,55 @@
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <csaa-back-button (back)="backButtonClick()"></csaa-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Paperless</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [ngClass]="['csaa', currentTheme]">
+  <ion-refresher (ionRefresh)="doRefresh($event)" slot="fixed" #refresher>
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card
+    class="csaa-card"
+    id="csaa-go-paperless-card"
+    *ngIf="!loading && notUsingPaperless( paperlessPreferences$ | async )"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        <ion-row>
+          <ion-col class="ion-no-padding">
+            <span>Go Paperless</span>
+          </ion-col>
+        </ion-row>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p class="ion-padding-bottom text-lighter">
+        Receive policy documents, bills, payment reminders and confirmations via email
+      </p>
+      <ion-button expand="block" (click)="goPaperlessHandler()"> Set Preferences </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ng-container *ngIf="loading">
+    <csaa-policy-paperless-preference-card
+      *ngFor="let _ of [].constructor(3)"
+      [loading]="true"
+    ></csaa-policy-paperless-preference-card>
+  </ng-container>
+
+  <ng-container *ngIf="(paperlessPreferences$ | async) as pp">
+    <csaa-policy-paperless-preference-card
+      *ngFor="let policy of policies$ | async"
+      [policy]="policy"
+      [preference]="byPolicyNumber(pp, policy.number)"
+      (accepted)="reloadOnTermsAccepted($event)"
+      (webviewDismissed)="dispatchReloadActions()"
+    ></csaa-policy-paperless-preference-card>
+  </ng-container>
+</ion-content>

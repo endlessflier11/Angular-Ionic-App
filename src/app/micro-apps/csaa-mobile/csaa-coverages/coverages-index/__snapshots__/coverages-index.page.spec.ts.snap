@@ -1,0 +1,372 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CsaaCoveragesIndexPage should match snapshot 1`] = `
+<csaa-coverages-index
+  PolicyTypes={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  agent={[Function Object]}
+  analyticsService={[Function AnalyticsMockService]}
+  backButtonSubscription={[Function Observable]}
+  currentTheme=""
+  errorHandler={[Function Object]}
+  isAndroidPlatform="false"
+  isPbeEligible$={[Function Observable]}
+  loading="false"
+  platform={[Function PlatformMock]}
+  policy$={[Function Observable]}
+  policyDocumentHelper={[Function Object]}
+  policyNumber={[Function String]}
+  policyType={[Function Number]}
+  route={[Function Object]}
+  routerService={[Function RouterMockService]}
+  store={[Function Store]}
+  subsink={[Function SubSink]}
+  vehiclesWithLiabilityCoverage={[Function Number]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Call Service
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Coverages
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <csaa-general-coverages-card>
+      <ion-card
+        class="csaa-card coverage-list"
+      >
+        <ion-card-header>
+          <ion-item>
+            <ion-card-title>
+              General
+            </ion-card-title>
+          </ion-item>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <csaa-coverage-card-item
+                class="no-border"
+              >
+                <div
+                  class="csaa-coverage-card-item"
+                >
+                  <h4
+                    class="title"
+                  >
+                    Bodily Injury
+                  </h4>
+                  <div
+                    class="unopened-card"
+                  >
+                    <p
+                      class="limit-info"
+                    >
+                      <span>
+                        $100,000
+                      </span>
+                       Per Person 
+                      <span>
+                        / $300,000
+                      </span>
+                       Per Accident 
+                    </p>
+                  </div>
+                </div>
+              </csaa-coverage-card-item>
+            </ion-item>
+            <ion-item>
+              <csaa-coverage-card-item>
+                <div
+                  class="csaa-coverage-card-item"
+                >
+                  <h4
+                    class="title"
+                  >
+                    Property Damage
+                  </h4>
+                  <div
+                    class="unopened-card"
+                  >
+                    <p
+                      class="limit-info"
+                    >
+                      <span>
+                        $50,000
+                      </span>
+                       Per Accident 
+                    </p>
+                  </div>
+                </div>
+              </csaa-coverage-card-item>
+            </ion-item>
+            <ion-item>
+              <csaa-coverage-card-item>
+                <div
+                  class="csaa-coverage-card-item"
+                >
+                  <h4
+                    class="title"
+                  >
+                    Uninsured Motorist
+                  </h4>
+                  <div
+                    class="unopened-card"
+                  >
+                    <p
+                      class="limit-info"
+                    >
+                      <span>
+                        $100,000
+                      </span>
+                       Per Person 
+                      <span>
+                        / $300,000
+                      </span>
+                       Per Accident 
+                    </p>
+                  </div>
+                </div>
+              </csaa-coverage-card-item>
+            </ion-item>
+            <ion-item>
+              <csaa-coverage-card-item>
+                <div
+                  class="csaa-coverage-card-item"
+                >
+                  <h4
+                    class="title"
+                  >
+                    Medical Payments
+                  </h4>
+                  <div
+                    class="unopened-card"
+                  >
+                    <p
+                      class="limit-info"
+                    >
+                      <span>
+                        $2,000
+                      </span>
+                       Per Person 
+                    </p>
+                  </div>
+                </div>
+              </csaa-coverage-card-item>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+            View Declarations
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-general-coverages-card>
+    <csaa-vehicles-coverages-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            Vehicle
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item
+              detail=""
+            >
+              <h3>
+                 2009 Acura Tsx 
+              </h3>
+            </ion-item>
+            <ion-item
+              detail=""
+            >
+              <h3>
+                 2007 Jeep Grand Cherokee 
+              </h3>
+            </ion-item>
+            <ion-item
+              detail=""
+            >
+              <h3>
+                 2015 Kia Forte 
+              </h3>
+            </ion-item>
+            <ion-item
+              detail=""
+            >
+              <h3>
+                 2006 Ford Lgt Convtnl F 
+              </h3>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </csaa-vehicles-coverages-card>
+    <csaa-drivers-coverages-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            Drivers
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <csaa-csaa-drivers-coverages-content-v1>
+            <ion-list>
+              <ion-item>
+                <ion-label>
+                  <h3
+                    class="driver-name"
+                  >
+                    Haithm Alabdi
+                  </h3>
+                  <div
+                    class="description"
+                  >
+                    <p>
+                       No Extra Coverages 
+                    </p>
+                  </div>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <h3
+                    class="driver-name"
+                  >
+                    Neesa Alabdi
+                  </h3>
+                  <div
+                    class="description"
+                  >
+                    <p>
+                       No Extra Coverages 
+                    </p>
+                  </div>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <h3
+                    class="driver-name"
+                  >
+                    Nana Alabdi
+                  </h3>
+                  <div
+                    class="description"
+                  >
+                    <p>
+                       No Extra Coverages 
+                    </p>
+                  </div>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <h3
+                    class="driver-name"
+                  >
+                    Sana Alabdi
+                  </h3>
+                  <div
+                    class="description"
+                  >
+                    <p>
+                      Excluded Driver
+                    </p>
+                  </div>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <h3
+                    class="driver-name"
+                  >
+                    Lola Alabdi
+                  </h3>
+                  <div
+                    class="description"
+                  >
+                    <p>
+                       No Extra Coverages 
+                    </p>
+                  </div>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </csaa-csaa-drivers-coverages-content-v1>
+        </ion-card-content>
+      </ion-card>
+    </csaa-drivers-coverages-card>
+  </ion-content><csaa-working-hours
+    class="csaa"
+    servicetype="CUSTOMER"
+  >
+    <div
+      class="csaa-working-hours hidden"
+    >
+      <ion-card
+        class="card card-md"
+      >
+        <ion-card-header>
+          Service Hours
+        </ion-card-header>
+        <ion-card-content
+          class="card-content card-content-md"
+        >
+          <ion-list>
+            <ion-item>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+             Call Service 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </csaa-working-hours>
+</csaa-coverages-index>
+`;

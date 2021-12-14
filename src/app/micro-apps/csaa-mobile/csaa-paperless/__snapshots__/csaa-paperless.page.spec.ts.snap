@@ -1,0 +1,3955 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CsaaPaperlessPage should be loading 1`] = `
+<csaa-paperless
+  __ngContext__={[Function LRootView]}
+  __paperlessPreferences$__selector={[Function Observable]}
+  analyticsService={[Function AnalyticsMockService]}
+  byPolicyNumber={[Function Function]}
+  currentTheme=""
+  loading={[Function Boolean]}
+  routerService={[Function Object]}
+  ssoService={[Function SsoMockService]}
+  store={[Function Store]}
+  webviewService={[Function Function]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Paperless
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <csaa-policy-paperless-preference-card>
+      <csaa-skeleton-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+              <ion-skeleton-text
+                animated=""
+                style="width: 70%; height: 30px;"
+              />
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item>
+                <ion-label>
+                  <ion-skeleton-text
+                    animated=""
+                    style="width: 88%; height: 15px;"
+                  />
+                  <ion-skeleton-text
+                    animated=""
+                    style="width: 70%;"
+                  />
+                  <ion-skeleton-text
+                    animated=""
+                    style="width: 60%;"
+                  />
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <ion-skeleton-text
+                    animated=""
+                    style="width: 70%; height: 15px;"
+                  />
+                  <ion-skeleton-text
+                    animated=""
+                    style="width: 55%;"
+                  />
+                  <ion-skeleton-text
+                    animated=""
+                    style="width: 30%;"
+                  />
+                </ion-label>
+              </ion-item>
+            </ion-list>
+            <ion-skeleton-text
+              animated=""
+              style="height: 45px;"
+            />
+          </ion-card-content>
+        </ion-card>
+      </csaa-skeleton-card>
+    </csaa-policy-paperless-preference-card>
+    <csaa-policy-paperless-preference-card>
+      <csaa-skeleton-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+              <ion-skeleton-text
+                animated=""
+                style="width: 70%; height: 30px;"
+              />
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item>
+                <ion-label>
+                  <ion-skeleton-text
+                    animated=""
+                    style="width: 88%; height: 15px;"
+                  />
+                  <ion-skeleton-text
+                    animated=""
+                    style="width: 70%;"
+                  />
+                  <ion-skeleton-text
+                    animated=""
+                    style="width: 60%;"
+                  />
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <ion-skeleton-text
+                    animated=""
+                    style="width: 70%; height: 15px;"
+                  />
+                  <ion-skeleton-text
+                    animated=""
+                    style="width: 55%;"
+                  />
+                  <ion-skeleton-text
+                    animated=""
+                    style="width: 30%;"
+                  />
+                </ion-label>
+              </ion-item>
+            </ion-list>
+            <ion-skeleton-text
+              animated=""
+              style="height: 45px;"
+            />
+          </ion-card-content>
+        </ion-card>
+      </csaa-skeleton-card>
+    </csaa-policy-paperless-preference-card>
+    <csaa-policy-paperless-preference-card>
+      <csaa-skeleton-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+              <ion-skeleton-text
+                animated=""
+                style="width: 70%; height: 30px;"
+              />
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item>
+                <ion-label>
+                  <ion-skeleton-text
+                    animated=""
+                    style="width: 88%; height: 15px;"
+                  />
+                  <ion-skeleton-text
+                    animated=""
+                    style="width: 70%;"
+                  />
+                  <ion-skeleton-text
+                    animated=""
+                    style="width: 60%;"
+                  />
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <ion-skeleton-text
+                    animated=""
+                    style="width: 70%; height: 15px;"
+                  />
+                  <ion-skeleton-text
+                    animated=""
+                    style="width: 55%;"
+                  />
+                  <ion-skeleton-text
+                    animated=""
+                    style="width: 30%;"
+                  />
+                </ion-label>
+              </ion-item>
+            </ion-list>
+            <ion-skeleton-text
+              animated=""
+              style="height: 45px;"
+            />
+          </ion-card-content>
+        </ion-card>
+      </csaa-skeleton-card>
+    </csaa-policy-paperless-preference-card>
+  </ion-content>
+</csaa-paperless>
+`;
+
+exports[`CsaaPaperlessPage should not show "Go Paperless" card when already enrolled 1`] = `
+<csaa-paperless
+  __ngContext__={[Function LRootView]}
+  __paperlessPreferences$__selector={[Function Observable]}
+  __policies$__selector={[Function Observable]}
+  analyticsService={[Function AnalyticsMockService]}
+  byPolicyNumber={[Function Function]}
+  currentTheme=""
+  loading="false"
+  routerService={[Function Object]}
+  ssoService={[Function SsoMockService]}
+  store={[Function Store]}
+  webviewService={[Function Function]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Paperless
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAAC910026006 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Vehicles
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    2009 Acura Tsx,
+                  </span>
+                  <span
+                    class="subtitle"
+                  >
+                    2007 Jeep Grand Cherokee
+                  </span>
+                  <a
+                    class="csaa-link"
+                    href="#"
+                  >
+                    <small>
+                      Show more
+                    </small>
+                  </a>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Email
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <ion-item>
+                <ion-label>
+                  <h3>
+                    Email Address
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    --
+                  </span>
+                </ion-label>
+              </ion-item>
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAH3910026008 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Home Insurance
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    518 25th St
+                  </span>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAPU910026011 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Umbrella Policy
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    Personal Umbrella Policy
+                  </span>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+  </ion-content>
+</csaa-paperless>
+`;
+
+exports[`CsaaPaperlessPage should not show "Go Paperless" card when there is pending paperless enrollment 1`] = `
+<csaa-paperless
+  __ngContext__={[Function LRootView]}
+  __paperlessPreferences$__selector={[Function Observable]}
+  __policies$__selector={[Function Observable]}
+  analyticsService={[Function AnalyticsMockService]}
+  byPolicyNumber={[Function Function]}
+  currentTheme=""
+  loading="false"
+  routerService={[Function Object]}
+  ssoService={[Function SsoMockService]}
+  store={[Function Store]}
+  webviewService={[Function Function]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Paperless
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAAC910026006 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3
+                  class="csaa-pending-enrollment"
+                >
+                   Pending Enrollment 
+                </h3>
+                <h3>
+                  Vehicles
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    2009 Acura Tsx,
+                  </span>
+                  <span
+                    class="subtitle"
+                  >
+                    2007 Jeep Grand Cherokee
+                  </span>
+                  <a
+                    class="csaa-link"
+                    href="#"
+                  >
+                    <small>
+                      Show more
+                    </small>
+                  </a>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <ion-item>
+                <ion-label>
+                  <h3>
+                    Email Address
+                  </h3>
+                  <span
+                    class="subtitle csaa-pending-enrollment"
+                  >
+                    user@enrollment.email
+                  </span>
+                </ion-label>
+              </ion-item>
+            </csaa-accordion>
+          </ion-list>
+          <csaa-paperless-terms>
+            <ion-button
+              expand="block"
+            >
+               Review Terms & Conditions 
+            </ion-button>
+          </csaa-paperless-terms>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAH3910026008 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Home Insurance
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    518 25th St
+                  </span>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAPU910026011 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Umbrella Policy
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    Personal Umbrella Policy
+                  </span>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+  </ion-content>
+</csaa-paperless>
+`;
+
+exports[`CsaaPaperlessPage should render Billing & Payment : Bill Notification and Payment Confirmation enrolled by Email 1`] = `
+<csaa-paperless
+  __ngContext__={[Function LRootView]}
+  __paperlessPreferences$__selector={[Function Observable]}
+  __policies$__selector={[Function Observable]}
+  analyticsService={[Function AnalyticsMockService]}
+  byPolicyNumber={[Function Function]}
+  currentTheme=""
+  loading="false"
+  routerService={[Function Object]}
+  ssoService={[Function SsoMockService]}
+  store={[Function Store]}
+  webviewService={[Function Function]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Paperless
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAAC910026006 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Vehicles
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    2009 Acura Tsx,
+                  </span>
+                  <span
+                    class="subtitle"
+                  >
+                    2007 Jeep Grand Cherokee
+                  </span>
+                  <a
+                    class="csaa-link"
+                    href="#"
+                  >
+                    <small>
+                      Show more
+                    </small>
+                  </a>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Email
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        Payment Confirmation
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <ion-item>
+                <ion-label>
+                  <h3>
+                    Email Address
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    --
+                  </span>
+                </ion-label>
+              </ion-item>
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAH3910026008 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Home Insurance
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    518 25th St
+                  </span>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAPU910026011 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Umbrella Policy
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    Personal Umbrella Policy
+                  </span>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+  </ion-content>
+</csaa-paperless>
+`;
+
+exports[`CsaaPaperlessPage should render Billing & Payment : Bill Notification and Payment Reminder enrolled by Email 1`] = `
+<csaa-paperless
+  __ngContext__={[Function LRootView]}
+  __paperlessPreferences$__selector={[Function Observable]}
+  __policies$__selector={[Function Observable]}
+  analyticsService={[Function AnalyticsMockService]}
+  byPolicyNumber={[Function Function]}
+  currentTheme=""
+  loading="false"
+  routerService={[Function Object]}
+  ssoService={[Function SsoMockService]}
+  store={[Function Store]}
+  webviewService={[Function Function]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Paperless
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAAC910026006 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Vehicles
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    2009 Acura Tsx,
+                  </span>
+                  <span
+                    class="subtitle"
+                  >
+                    2007 Jeep Grand Cherokee
+                  </span>
+                  <a
+                    class="csaa-link"
+                    href="#"
+                  >
+                    <small>
+                      Show more
+                    </small>
+                  </a>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Email
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        Payment Reminder
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <ion-item>
+                <ion-label>
+                  <h3>
+                    Email Address
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    --
+                  </span>
+                </ion-label>
+              </ion-item>
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAH3910026008 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Home Insurance
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    518 25th St
+                  </span>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAPU910026011 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Umbrella Policy
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    Personal Umbrella Policy
+                  </span>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+  </ion-content>
+</csaa-paperless>
+`;
+
+exports[`CsaaPaperlessPage should render Billing & Payment : Bill Notification, Payment Reminder and Payment Confirmation enrolled by Email 1`] = `
+<csaa-paperless
+  __ngContext__={[Function LRootView]}
+  __paperlessPreferences$__selector={[Function Observable]}
+  __policies$__selector={[Function Observable]}
+  analyticsService={[Function AnalyticsMockService]}
+  byPolicyNumber={[Function Function]}
+  currentTheme=""
+  loading="false"
+  routerService={[Function Object]}
+  ssoService={[Function SsoMockService]}
+  store={[Function Store]}
+  webviewService={[Function Function]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Paperless
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAAC910026006 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Vehicles
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    2009 Acura Tsx,
+                  </span>
+                  <span
+                    class="subtitle"
+                  >
+                    2007 Jeep Grand Cherokee
+                  </span>
+                  <a
+                    class="csaa-link"
+                    href="#"
+                  >
+                    <small>
+                      Show more
+                    </small>
+                  </a>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Email
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        Payment Reminder
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        Payment Confirmation
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <ion-item>
+                <ion-label>
+                  <h3>
+                    Email Address
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    --
+                  </span>
+                </ion-label>
+              </ion-item>
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAH3910026008 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Home Insurance
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    518 25th St
+                  </span>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAPU910026011 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Umbrella Policy
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    Personal Umbrella Policy
+                  </span>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+  </ion-content>
+</csaa-paperless>
+`;
+
+exports[`CsaaPaperlessPage should render Policy Documents enrolled by Email 1`] = `
+<csaa-paperless
+  __ngContext__={[Function LRootView]}
+  __paperlessPreferences$__selector={[Function Observable]}
+  __policies$__selector={[Function Observable]}
+  analyticsService={[Function AnalyticsMockService]}
+  byPolicyNumber={[Function Function]}
+  currentTheme=""
+  loading="false"
+  routerService={[Function Object]}
+  ssoService={[Function SsoMockService]}
+  store={[Function Store]}
+  webviewService={[Function Function]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Paperless
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAAC910026006 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Vehicles
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    2009 Acura Tsx,
+                  </span>
+                  <span
+                    class="subtitle"
+                  >
+                    2007 Jeep Grand Cherokee
+                  </span>
+                  <a
+                    class="csaa-link"
+                    href="#"
+                  >
+                    <small>
+                      Show more
+                    </small>
+                  </a>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Email
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <ion-item>
+                <ion-label>
+                  <h3>
+                    Email Address
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    --
+                  </span>
+                </ion-label>
+              </ion-item>
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAH3910026008 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Home Insurance
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    518 25th St
+                  </span>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAPU910026011 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Umbrella Policy
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    Personal Umbrella Policy
+                  </span>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+  </ion-content>
+</csaa-paperless>
+`;
+
+exports[`CsaaPaperlessPage should render Text Alerts on 1`] = `
+<csaa-paperless
+  __ngContext__={[Function LRootView]}
+  __paperlessPreferences$__selector={[Function Observable]}
+  __policies$__selector={[Function Observable]}
+  analyticsService={[Function AnalyticsMockService]}
+  byPolicyNumber={[Function Function]}
+  currentTheme=""
+  loading="false"
+  routerService={[Function Object]}
+  ssoService={[Function SsoMockService]}
+  store={[Function Store]}
+  webviewService={[Function Function]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Paperless
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <ion-card
+      class="csaa-card"
+      id="csaa-go-paperless-card"
+    >
+      <ion-card-header>
+        <ion-card-title>
+          <ion-row>
+            <ion-col
+              class="ion-no-padding"
+            >
+              <span>
+                Go Paperless
+              </span>
+            </ion-col>
+          </ion-row>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p
+          class="ion-padding-bottom text-lighter"
+        >
+           Receive policy documents, bills, payment reminders and confirmations via email 
+        </p>
+        <ion-button
+          expand="block"
+        >
+           Set Preferences 
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAAC910026006 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Vehicles
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    2009 Acura Tsx,
+                  </span>
+                  <span
+                    class="subtitle"
+                  >
+                    2007 Jeep Grand Cherokee
+                  </span>
+                  <a
+                    class="csaa-link"
+                    href="#"
+                  >
+                    <small>
+                      Show more
+                    </small>
+                  </a>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        On
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        123-456-1234
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAH3910026008 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Home Insurance
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    518 25th St
+                  </span>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAPU910026011 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Umbrella Policy
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    Personal Umbrella Policy
+                  </span>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+  </ion-content>
+</csaa-paperless>
+`;
+
+exports[`CsaaPaperlessPage should show "Go Paperless" card when all policies are not enabled and not pending 1`] = `
+<csaa-paperless
+  __ngContext__={[Function LRootView]}
+  __paperlessPreferences$__selector={[Function Observable]}
+  __policies$__selector={[Function Observable]}
+  analyticsService={[Function AnalyticsMockService]}
+  byPolicyNumber={[Function Function]}
+  currentTheme=""
+  loading="false"
+  routerService={[Function Object]}
+  ssoService={[Function SsoMockService]}
+  store={[Function Store]}
+  webviewService={[Function Function]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Paperless
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <ion-card
+      class="csaa-card"
+      id="csaa-go-paperless-card"
+    >
+      <ion-card-header>
+        <ion-card-title>
+          <ion-row>
+            <ion-col
+              class="ion-no-padding"
+            >
+              <span>
+                Go Paperless
+              </span>
+            </ion-col>
+          </ion-row>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p
+          class="ion-padding-bottom text-lighter"
+        >
+           Receive policy documents, bills, payment reminders and confirmations via email 
+        </p>
+        <ion-button
+          expand="block"
+        >
+           Set Preferences 
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAAC910026006 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Vehicles
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    2009 Acura Tsx,
+                  </span>
+                  <span
+                    class="subtitle"
+                  >
+                    2007 Jeep Grand Cherokee
+                  </span>
+                  <a
+                    class="csaa-link"
+                    href="#"
+                  >
+                    <small>
+                      Show more
+                    </small>
+                  </a>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAH3910026008 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Home Insurance
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    518 25th St
+                  </span>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+    <csaa-policy-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+             CAPU910026011 
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>
+                  Umbrella Policy
+                </h3>
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    Personal Umbrella Policy
+                  </span>
+                </csaa-policy-subtitles>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <csaa-accordion>
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Policy Documents
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Notifications for renewals, policy changes and important policy information
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    lines="none"
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Billing & Payments
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p
+                    class="ion-margin-vertical"
+                  >
+                     Bill notifications, payment reminders, and payment confirmations or declines 
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+              <csaa-accordion-item>
+                <div>
+                  <ion-item
+                    slot="header"
+                  >
+                    <ion-label>
+                      <h3>
+                        Text Alerts
+                      </h3>
+                      <span
+                        class="subtitle"
+                      >
+                        Off
+                      </span>
+                    </ion-label>
+                  </ion-item>
+                </div>
+                <div
+                  class="accordion-body"
+                >
+                  <p>
+                    Payment reminders, payment declines and other policy notifications
+                  </p>
+                </div>
+              </csaa-accordion-item>
+              <hr />
+            </csaa-accordion>
+          </ion-list>
+          <ion-button
+            expand="block"
+          >
+             Edit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-policy-paperless-preference-card>
+  </ion-content>
+</csaa-paperless>
+`;

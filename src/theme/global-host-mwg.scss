@@ -1,0 +1,20 @@
+// This file emulate some of the host app's styles
+// that affects global components outside our module's microapp.
+// !! It wont be include in the microapp final package !!
+// For regular styles use app/micro-apps/csaa-mobile/_scss/theme/mwg
+@at-root ion-app.global-theme-mwg {
+  --ion-color-primary: #e32827;
+  --ion-color-primary-rgb: 227, 40, 39;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #c82322;
+  --ion-color-primary-tint: #e63e3d;
+
+  --ion-background-color: #f5f5f5;
+  --ion-background-color-rgb: 245, 245, 245;
+  --ion-toolbar-background: #ffffff;
+  --ion-tab-bar-background: #ffffff;
+  --ion-tab-bar-color-selected: var(--ion-color-primary, #1f1f1f);
+  --ion-text-color: #1f1f1f;
+  --ion-text-color-rgb: 31, 31, 31;
+}

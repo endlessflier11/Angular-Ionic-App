@@ -1,0 +1,56 @@
+@import '../../_scss/variables';
+
+ion-label {
+  white-space: normal !important;
+}
+
+ion-text.document-title {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  line-height: 28px;
+
+  .title {
+    flex-grow: 1;
+    color: var(--ion-color-primary, $csaa-active-color);
+    font-weight: $csaa-bolder-font-weight;
+    font-size: 16px;
+  }
+}
+
+span.subtitle {
+  display: block;
+  text-decoration: none;
+  line-height: 22px;
+}
+
+.filter-by, .filter-by-current {
+  ion-text {
+    font-size: 16px;
+  }
+  span {
+    text-decoration: none;
+    background-color: var(--ion-color-primary-contrast);
+    font-size: 16px;
+  }
+}
+
+.filter-by-current {
+  ion-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:not(.view-archive) {
+      ion-text:last-child {
+        color: $csaa-lighter-color;
+      }
+    }
+
+    &.view-archive {
+      ion-text:first-child {
+        color: $csaa-lighter-color;
+      }
+    }
+  }
+}

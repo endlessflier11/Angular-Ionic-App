@@ -1,0 +1,25 @@
+diff --git a/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPLog.swift b/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPLog.swift
+index 4c8b7d8..7642976 100644
+--- a/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPLog.swift
++++ b/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPLog.swift
+@@ -1,11 +1,19 @@
++import os
++
+ public class CAPLog {
++    private static let capLog = OSLog(subsystem: "CAPLog", category: "DebugMessages")
++    
+     public static var enableLogging: Bool = true
+ 
+     public static func print(_ items: Any..., separator: String = " ", terminator: String = "\n") {
+         if enableLogging {
++            var message = ""
++            
+             for (itemIndex, item) in items.enumerated() {
+-                Swift.print(item, terminator: itemIndex == items.count - 1 ? terminator : separator)
++                message += "\(item)\(itemIndex == items.count - 1 ? terminator : separator)"
+             }
++            
++            os_log("%@", log: capLog, message)
+         }
+     }
+ }

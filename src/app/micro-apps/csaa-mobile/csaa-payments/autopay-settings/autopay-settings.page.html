@@ -1,0 +1,83 @@
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <csaa-back-button (back)="onClickBackBtn()" text="Cancel"></csaa-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="save()" [disabled]="saveBtnDisabled">Save</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Manage AutoPay</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="['csaa', currentTheme]">
+  <ng-container *ngIf="autoPayData !== undefined">
+    <ion-grid class="ion-no-padding">
+      <ion-row class="ion-padding-top ion-padding-bottom">
+        <ion-col>
+          <ion-item lines="none">
+            <div class="policy-meta-content">
+              <h3>{{ policy?.number }}</h3>
+              <csaa-policy-subtitles [policySubtitle]="policy.subtitle"></csaa-policy-subtitles>
+            </div>
+            <div slot="end" class="policy-meta-icon">
+              <csaa-theme-icon slot="end" [type]="policy.type" [size]="40"></csaa-theme-icon>
+            </div>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-margin-bottom">
+        <ion-col>
+          <ion-item lines="none">
+            <h3>AutoPay is {{ toggleControlValue ? 'On' : 'Off' }}</h3>
+            <ion-toggle [(ngModel)]="toggleControlValue" slot="end"></ion-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ng-container>
+
+  <ng-container *ngIf="!toggleControlValue && upcomingPayment">
+    <csaa-autopay-discount-card
+      [policy]="policy"
+      [payment]="upcomingPayment"
+      [paymentAccount]="selectedPaymentAccount"
+    ></csaa-autopay-discount-card>
+  </ng-container>
+
+  <ng-container *ngIf="toggleControlValue">
+    <h2 class="ion-text-center">Update Payment Method</h2>
+    <ion-list>
+      <ion-item lines="full" detail (click)="selectPaymentMethod()"
+        >Payment Method
+        <span slot="end">
+          <ion-text color="medium">{{ autopayPaymentLabelText }}</ion-text>
+        </span>
+      </ion-item>
+      <ng-container *ngIf="upcomingPayment">
+        <ion-item lines="full"
+          >Amount
+          <span slot="end">{{ upcomingPayment.amount | currency: 'USD':'symbol':'1.2-2' }}</span>
+        </ion-item>
+        <ion-item lines="full"
+          >Due Date
+          <span slot="end">{{ upcomingPayment.dueDate | date: 'MM/dd/yyyy' }}</span>
+        </ion-item>
+      </ng-container>
+    </ion-list>
+  </ng-container>
+
+  <ng-container *ngIf="autoPayData !== undefined">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p class="ion-padding ion-text-center">
+            By selecting Save you agree to the
+            <span class="csaa-link" (click)="openTerms()">AutoPay terms and conditions</span>.
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ng-container>
+</ion-content>

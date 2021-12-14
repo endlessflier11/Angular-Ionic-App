@@ -1,0 +1,72 @@
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <csaa-back-button (back)="backButtonClick()"></csaa-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="hoursPopup.show()">Call Service</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Coverages</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="['csaa', currentTheme]">
+  <ion-refresher (ionRefresh)="doRefresh($event)" slot="fixed">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ng-container *ngIf="policyType === PolicyTypes.Auto">
+    <ng-container *ngIf="!allVehiclesWaivedLiability()">
+      <csaa-general-coverages-card
+        *ngIf="loading || (policy$ | async)?.coverages?.length > 0"
+        [policyNumber]="policyNumber"
+        [showEditPolicy]="isPbeEligible$ | async"
+        [policyType]="policyType"
+        [agent]="(policy$ | async)?.agent"
+        [loading]="loading"
+        [coverages]="(policy$ | async)?.coverages"
+        [policy]="policy$ | async"
+        (viewDeclarationClick)="viewDeclaration()"
+        (webviewDismissed)="doRefresh()"
+      >
+      </csaa-general-coverages-card>
+    </ng-container>
+    <csaa-vehicles-coverages-card
+      [loading]="loading"
+      [policy]="policy$ | async"
+      (viewDeclarationClick)="viewDeclaration()"
+      [showDeclarations]="(policy$ | async)?.coverages?.length < 1"
+    >
+    </csaa-vehicles-coverages-card>
+    <csaa-drivers-coverages-card [loading]="loading" [drivers]="(policy$ | async)?.drivers">
+    </csaa-drivers-coverages-card>
+  </ng-container>
+  <ng-container *ngIf="policyType === PolicyTypes.PUP">
+    <csaa-pup-coverages-card
+      [policyNumber]="policyNumber"
+      [policy]="policy$ | async"
+      [loading]="loading"
+      [coverages]="(policy$ | async)?.coverages"
+      (viewDeclarationClick)="viewDeclaration()"
+    >
+    </csaa-pup-coverages-card>
+  </ng-container>
+
+  <ng-container *ngIf="policyType === PolicyTypes.Home">
+    <csaa-home-coverages-card
+      [policyNumber]="policyNumber"
+      [loading]="loading"
+      [policy]="policy$ | async"
+      [coverages]="(policy$ | async)?.coverages"
+      (viewDeclarationClick)="viewDeclaration()"
+    >
+    </csaa-home-coverages-card>
+  </ng-container>
+</ion-content>
+<csaa-working-hours
+  #hoursPopup
+  [ngClass]="['csaa', currentTheme]"
+  [riskState]="(policy$ | async)?.riskState"
+  serviceType="CUSTOMER"
+>
+</csaa-working-hours>

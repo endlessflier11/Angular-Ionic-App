@@ -1,0 +1,101 @@
+<csaa-skeleton-card *ngIf="loading"></csaa-skeleton-card>
+<ion-card
+  *ngIf="!loading && payment && !paymentSucceeded"
+  [class.overdue]="isOverdue()"
+  class="csaa-card"
+>
+  <ion-card-header>
+    <ion-card-title>{{ payment.policyNumber }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-grid>
+      <ion-row class="item">
+        <ion-col>
+          <div class="policy-meta-content">
+            <h3>
+              <ng-container *ngIf="isOverdue()">Past Due</ng-container>
+              <ng-container *ngIf="!isOverdue()">Due:</ng-container>
+              {{ payment.dueDate | date: 'mediumDate':timezone }}
+            </h3>
+            <span class="subtitle">
+              <csaa-policy-subtitles [policySubtitle]="payment.subtitle"></csaa-policy-subtitles>
+            </span>
+          </div>
+        </ion-col>
+        <ion-col size="auto">
+          <div class="policy-meta-icon">
+            <csaa-theme-icon slot="end" [type]="payment.policyType" [size]="40"></csaa-theme-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-list>
+      <ion-item
+        detail
+        class="csaa-payment-amount-list-item ion-no-padding"
+        (click)="selectAmountClick.emit(payment)"
+      >
+        <ion-label>Amount </ion-label>
+        <span slot="end">{{
+          payment.otherAmount || payment.amount | currency: 'USD':'symbol':'1.2-2'
+        }}</span>
+        <!--  payment.paid is unknown
+                <span slot="end" *ngIf="!payment.paid">{{
+          payment.otherAmount || payment.amount | currency: 'USD':'symbol':'1.2-2'
+        }}</span>
+        <span slot="end" *ngIf="payment.paid">{{ 0 | currency: 'USD':'symbol':'1.2-2' }}</span> -->
+      </ion-item>
+      <ion-item
+        *ngIf="!payment.autoPay"
+        detail
+        lines="none"
+        class="csaa-payment-method-list-item ion-no-padding"
+        (click)="selectPaymentClick.emit(payment)"
+      >
+        <ion-avatar slot="start" *ngIf="paymentMethod">
+          <span>
+            <!-- Span first because ion-avatar::slotted(img) style forces image to render unexpectedly -->
+            <img
+              *ngIf="paymentMethod?.card?.type"
+              [src]="'/assets/csaa-mobile/vectors/' + paymentMethod.card.type + '.svg'"
+            />
+            <img *ngIf="paymentMethod?.account" [src]="'/assets/csaa-mobile/vectors/bank.svg'" />
+          </span>
+        </ion-avatar>
+        <ion-label
+          [ngClass]="{ 'card-expired': paymentMethod?.card && paymentMethod?.card.expired }"
+          class="ion-text-nowrap"
+        >
+          <span>{{ paymentMethod ? paymentMethod.shortName : 'Pay With' }}</span>
+        </ion-label>
+        <span slot="end" *ngIf="paymentMethod?.card && paymentMethod?.card?.isDebitCard !== true">
+          {{ 'Credit' }}
+        </span>
+        <span slot="end" *ngIf="paymentMethod?.card?.isDebitCard">{{ 'Debit' }}</span>
+        <span slot="end" *ngIf="paymentMethod?.account">{{
+          paymentMethod?.account?.type | titlecase
+        }}</span>
+        <span slot="end" *ngIf="!paymentMethod">Payment Method</span>
+      </ion-item>
+      <ion-item
+        detail
+        class="csaa-payment-autopay-item ion-no-padding"
+        *ngIf="hasRegId()"
+        (click)="goToAutopaySettings()"
+      >
+        <ion-label>
+          <label>AutoPay</label>
+          <small *ngIf="payment.autoPay">
+            {{ getAutopayInfo() }}
+          </small>
+        </ion-label>
+        <span slot="end"> {{ payment.autoPay ? 'On' : 'Off' }}</span>
+      </ion-item>
+    </ion-list>
+
+    <ion-button expand="full" (click)="makePaymentClick.emit(payment)" class="ion-no-margin">
+      Make a Payment
+    </ion-button>
+  </ion-card-content>
+</ion-card>

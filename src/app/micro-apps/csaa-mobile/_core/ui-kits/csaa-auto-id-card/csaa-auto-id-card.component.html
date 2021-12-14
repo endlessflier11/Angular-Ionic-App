@@ -1,0 +1,118 @@
+<div class="poi-card" *ngIf="!!customerSearch" (click)="toggle.emit(vehicle)">
+  <ion-grid>
+    <ion-row class="row--heading">
+      <ion-col size="auto" class="ion-text-start card-logo">
+        <img src="/assets/csaa-mobile/vectors/aaa-logo.svg" />
+      </ion-col>
+      <ion-col size="10">
+        <p>{{ cardContent.headingLine1 }}</p>
+        <p>{{ cardContent.headingLine2 }}</p>
+        <p>{{ cardContent.headingLine3 }}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="row--title">
+      <ion-col>
+        <h1>{{ cardContent.title }}</h1>
+        <ng-container *ngIf="cardContent.showSubtitle">
+          <span class="subtitle">PROOF OF INSURANCE</span>
+        </ng-container>
+      </ion-col>
+    </ion-row>
+    <ion-row class="row--content">
+      <ion-col size="8">
+        <p>
+          <span>NAMED INSURED</span>
+          <span *ngFor="let name of cardContent.namedInsureds">
+            {{ name }}
+          </span>
+        </p>
+      </ion-col>
+      <ion-col size="4">
+        <p>
+          <span>POLICY #</span>
+          <span>
+            {{ cardContent.policyNumber }}
+          </span>
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="row--content">
+      <ion-col size="8">
+        <p>
+          <span>VEHICLE YEAR / MAKE / MODEL</span>
+          <span>
+            {{ cardContent.vehicleTitle }}
+          </span>
+        </p>
+      </ion-col>
+      <ion-col size="4">
+        <p>
+          <span>EFFECTIVE DATE</span>
+          <span>
+            {{ cardContent.effectiveDate }}
+          </span>
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="row--content">
+      <ion-col size="8">
+        <p>
+          <span>VEHICLE ID#</span>
+          <span>
+            {{ cardContent.vehicleId }}
+          </span>
+        </p>
+      </ion-col>
+      <ion-col size="4">
+        <p>
+          <span>EXPIRATION DATE</span>
+          <span>
+            {{ cardContent.expirationDate }}
+          </span>
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="cardContent.showCompliance" class="row--content">
+      <ion-col size="8">
+        <p>
+          <span>
+            {{ cardContent.compliance }}
+          </span>
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="cardContent.showExcluded" class="row--content">
+      <ion-col size="8">
+        <p>
+          <span>EXCLUDED DRIVERS</span>
+          <span>
+            {{ cardContent.excludedDrivers }}
+          </span>
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="cardContent.showCustomerAddress" class="row--content">
+      <ion-col size="8">
+        <p>
+          <span>ADDRESS</span>
+        </p>
+        <ion-row>
+          <span>
+            {{ cardContent.addressForCustomer1 }}
+          </span>
+        </ion-row>
+        <ion-row>
+          <span>
+            {{ cardContent.addressForCustomer2 }}
+          </span>
+        </ion-row>
+        <ion-row>
+          <span>
+            {{ cardContent.addressForCustomerCity }}, {{ riskState }}
+            {{ cardContent.addressForCustomerZip }}
+          </span>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>

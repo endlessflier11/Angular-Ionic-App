@@ -1,0 +1,63 @@
+<ion-list>
+  <ion-item
+    *ngFor="let driver of drivers; let ix = index"
+    (click)="handleDriverClick(driver.coverageType, ix)"
+    [class.clickable]="
+      driver.coverageType === DriverCoverageType.Rated && driver.coverages.length > 0
+    "
+    [class.open]="isItemOpen(ix)"
+  >
+    <ion-label>
+      <h3 class="driver-name">{{ driver.fullName | titlecase }}</h3>
+      <div class="description">
+        <p>Date of Birth: {{ driver.dob | date: 'MM/dd/yyyy' }}</p>
+
+        <ng-container *ngIf="isItemOpen(ix)">
+          <p *ngIf="driver.coverageType === DriverCoverageType.Rated">Rated Driver</p>
+          <p *ngIf="driver.coverageType === DriverCoverageType.Excluded">Excluded Driver</p>
+          <p *ngIf="driver.coverageType === DriverCoverageType.NotRated">Not Covered Driver</p>
+          <div class="open-card">
+            <ng-container
+              *ngIf="driver.coverageType === DriverCoverageType.Rated && !driver.coverages.length"
+            >
+              <div class="open-label ion-padding-top no-coverage">No Extra Coverages</div>
+            </ng-container>
+            <ng-container *ngFor="let coverage of driver.coverages; let i = index">
+              <div class="open-label" *ngIf="coverage.label">
+                {{ coverage.label }}
+              </div>
+              <div class="open-description" *ngIf="coverage.shortDesc">
+                {{ coverage.shortDesc }}
+              </div>
+              <div class="lower-fold" *ngIf="coverage.individualLimit">
+                <p class="coverage-limit-label">
+                  <ng-container *ngIf="coverage.individualLimit">{{
+                    coverage.individualLimitDelimiter || 'Limit Per Person'
+                  }}</ng-container>
+                  <ng-container *ngIf="coverage.individualLimit && coverage.occurrenceLimit">
+                    /</ng-container
+                  >
+                  <ng-container *ngIf="coverage.occurrenceLimit">{{
+                    coverage.occurrenceLimitDelimiter || 'Limit Per Incident'
+                  }}</ng-container>
+                </p>
+                <p class="coverage-limit">
+                  <ng-container *ngIf="coverage.individualLimit">
+                    {{ coverage.individualLimit | currency: 'USD':'symbol':'1.0-0' }}
+                  </ng-container>
+                  <ng-container *ngIf="coverage.individualLimit && coverage.occurrenceLimit">
+                    /</ng-container
+                  >
+                  <ng-container *ngIf="coverage.occurrenceLimit">
+                    {{ coverage.occurrenceLimit | currency: 'USD':'symbol':'1.0-0' }}
+                  </ng-container>
+                </p>
+              </div>
+              <hr *ngIf="i < driver.coverages.length - 1" />
+            </ng-container>
+          </div>
+        </ng-container>
+      </div>
+    </ion-label>
+  </ion-item>
+</ion-list>

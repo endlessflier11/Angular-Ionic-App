@@ -1,0 +1,89 @@
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <csaa-back-button (back)="onClickBackBtn()" [text]=""></csaa-back-button>
+    </ion-buttons>
+    <ion-title>Pay with</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="done()" [disabled]="!canSubmitForm">Done</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="['csaa', currentTheme]" class="ion-text-center">
+  <h1 class="ion-text-center">{{title}}</h1>
+  <h2 class="ion-text-center">{{subtitle}}</h2>
+
+  <form [formGroup]="accountDetailsForm">
+    <div class="error-message" *ngIf="accountHolderName.invalid && accountHolderName.touched">
+      <span *ngIf="accountHolderName.errors['required']">The name is required</span>
+    </div>
+    <ion-item lines="full">
+      <ion-label position="fixed">Name</ion-label>
+      <ion-input
+        formControlName="accountHolderName"
+        type="text"
+        placeholder="Required"
+        required
+      ></ion-input>
+    </ion-item>
+    <div class="error-message" *ngIf="accountNumber.invalid && accountNumber.touched">
+      <span *ngIf="accountNumber.errors['accountNumber']"
+        >The account number has invalid format</span
+      >
+      <span *ngIf="accountNumber.errors['required']">The account number is required</span>
+    </div>
+    <ion-item lines="full">
+      <ion-label position="fixed">Account Number</ion-label>
+      <ion-input
+        formControlName="accountNumber"
+        type="text"
+        placeholder="Required"
+        required
+      ></ion-input>
+    </ion-item>
+    <div class="error-message" *ngIf="routingNumber.invalid && routingNumber.touched">
+      <span *ngIf="routingNumber.errors['routingNumber']"
+        >The routing number has invalid format</span
+      >
+      <span *ngIf="routingNumber.errors['required']">The routing number is required</span>
+      <span *ngIf="routingNumber.errors['invalidRoutingNumber']"
+        >The routing number is not valid</span
+      >
+    </div>
+    <ion-item lines="full">
+      <ion-label position="fixed">Routing Number</ion-label>
+      <ion-input
+        formControlName="routingNumber"
+        type="text"
+        placeholder="Required"
+        required
+      ></ion-input>
+    </ion-item>
+    <ion-item lines="full" *ngIf="(hasRegId$ |async) && !isEditing">
+      <ion-label position="fixed">Save Account</ion-label>
+      <ion-toggle formControlName="saveAccount" [checked]="false" item-end></ion-toggle>
+    </ion-item>
+    <div class="error-message" *ngIf="showNickname && nickname.invalid && nickname.touched">
+      <span *ngIf="accountNumber.errors['required']">The name number is required</span>
+    </div>
+    <ion-item lines="full" *ngIf="showNickname">
+      <ion-label position="fixed">Nickname</ion-label>
+      <ion-input formControlName="nickname" type="text" placeholder="Name your account"></ion-input>
+    </ion-item>
+  </form>
+
+  <p class="ion-padding">
+    By selecting done you agree to the
+    <span class="csaa-link" (click)="openPaymentTerms()">payment terms and conditions</span>.
+  </p>
+  <ion-button
+    fill="clear"
+    color="danger"
+    *ngIf="isEditing"
+    class="delete-card"
+    [deleteConfirmTarget]="editingPaymentMethod"
+    [csaaDeleteConfirm]="onDeleteConfirmed"
+  >
+    Delete Account
+  </ion-button>
+</ion-content>

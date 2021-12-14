@@ -1,0 +1,86 @@
+@import './variables';
+
+&.csaa-home-header {
+  --ion-toolbar-color: white;
+  --ion-toolbar-background: var(--ion-color-primary);
+  &.header-translucent,
+  &.header-translucent-ios {
+    ion-toolbar {
+      --opacity: 1;
+      --padding-bottom: 0;
+    }
+  }
+  ion-toolbar:nth-of-type(1) {
+    ion-title {
+      padding-bottom: 0;
+    }
+  }
+  ion-toolbar:nth-of-type(2) {
+    --padding-bottom: 0px;
+    ion-title {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &.ios {
+      ion-title {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+csaa-payments-card {
+  ion-card {
+    ion-card-content {
+      .item {
+        h3 {
+          color: inherit !important;
+        }
+
+        ion-col {
+          --ion-grid-column-padding: 0;
+        }
+      }
+    }
+  }
+}
+
+csaa-my-policy-card {
+  ion-card {
+    border-bottom: none;
+  }
+}
+
+csaa-what-to-do-card {
+  ion-card {
+    padding: 0;
+    ion-card-content {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: $aca-shrink-small-breakpoint) {
+  csaa-what-to-do-card {
+    ion-card {
+      ion-card-content {
+        padding-left: 15px;
+        padding-right: 15px;
+        &.card-body {
+          padding-bottom: 5px;
+        }
+        &.card-footer {
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+csaa-auto-id-card {
+  .poi-card {
+    background: $aca-id-card-background;
+  }
+}

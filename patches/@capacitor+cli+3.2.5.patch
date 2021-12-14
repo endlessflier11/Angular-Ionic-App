@@ -1,0 +1,55 @@
+diff --git a/node_modules/@capacitor/cli/dist/android/run.js b/node_modules/@capacitor/cli/dist/android/run.js
+index b45588c..94e0ca4 100644
+--- a/node_modules/@capacitor/cli/dist/android/run.js
++++ b/node_modules/@capacitor/cli/dist/android/run.js
+@@ -11,7 +11,7 @@ const subprocess_1 = require("../util/subprocess");
+ const debug = debug_1.default('capacitor:android:run');
+ async function runAndroid(config, { target: selectedTarget }) {
+     const target = await common_1.promptForPlatformTarget(await native_run_1.getPlatformTargets('android'), selectedTarget);
+-    const gradleArgs = ['assembleDebug'];
++    const gradleArgs = [`assemble${config.android.flavorRun}Debug`];
+     debug('Invoking ./gradlew with args: %O', gradleArgs);
+     await common_1.runTask('Running Gradle build', async () => subprocess_1.runCommand('./gradlew', gradleArgs, {
+         cwd: config.android.platformDirAbs,
+diff --git a/node_modules/@capacitor/cli/dist/android/update.js b/node_modules/@capacitor/cli/dist/android/update.js
+index d7b6ca4..039b2a3 100644
+--- a/node_modules/@capacitor/cli/dist/android/update.js
++++ b/node_modules/@capacitor/cli/dist/android/update.js
+@@ -69,10 +69,12 @@ async function findAndroidPluginClassesInPlugin(plugin) {
+     debug('Searching %O source files in %O by %O regex', srcFiles.length, srcPath, classRegex);
+     const entries = await Promise.all(srcFiles.map(async (srcFile) => {
+         const srcFileContents = await utils_fs_1.readFile(srcFile, { encoding: 'utf-8' });
++        classRegex.lastIndex = 0;
+         const classMatch = classRegex.exec(srcFileContents);
+         if (classMatch) {
+             const className = classMatch[1];
+             debug('Searching %O for package by %O regex', srcFile, packageRegex);
++            packageRegex.lastIndex = 0;
+             const packageMatch = packageRegex.exec(srcFileContents.substring(0, classMatch.index));
+             if (!packageMatch) {
+                 errors_1.fatal(`Package could not be parsed from Android plugin.\n` +
+diff --git a/node_modules/@capacitor/cli/dist/config.js b/node_modules/@capacitor/cli/dist/config.js
+index 1378dba..7934734 100644
+--- a/node_modules/@capacitor/cli/dist/config.js
++++ b/node_modules/@capacitor/cli/dist/config.js
+@@ -160,9 +160,12 @@ async function loadAndroidConfig(rootDir, extConfig, cliConfig) {
+     const resDir = `${srcMainDir}/res`;
+     let apkPath = `${appDir}/build/outputs/apk/`;
+     let flavorPrefix = '';
++    let flavorRun = '';
+     if ((_c = extConfig.android) === null || _c === void 0 ? void 0 : _c.flavor) {
+         apkPath = `${apkPath}/${(_d = extConfig.android) === null || _d === void 0 ? void 0 : _d.flavor}`;
+         flavorPrefix = `-${(_e = extConfig.android) === null || _e === void 0 ? void 0 : _e.flavor}`;
++        flavorRun = `${(_e = extConfig.android) === null || _e === void 0 ? void 0 : _e.flavor}`;
++        flavorRun = flavorRun.charAt(0).toUpperCase() + flavorRun.slice(1);
+     }
+     const apkName = `app${flavorPrefix}-debug.apk`;
+     const buildOutputDir = `${apkPath}/debug`;
+@@ -191,6 +194,7 @@ async function loadAndroidConfig(rootDir, extConfig, cliConfig) {
+         apkName,
+         buildOutputDir,
+         buildOutputDirAbs: path_1.resolve(platformDirAbs, buildOutputDir),
++        flavorRun,
+     };
+ }
+ async function loadIOSConfig(rootDir, extConfig) {

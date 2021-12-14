@@ -1,0 +1,45 @@
+@import '../../_scss/variables';
+:host {
+  ion-card {
+    padding: 0 0 15px !important;
+    ion-card-content {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  .error-card-title {
+    font-size: 16px;
+    font-weight: $csaa-light-font-weight;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .error-card-message {
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: bold;
+  }
+
+  .error-card-message-sub {
+    font-weight: $csaa-active-font-weight;
+    color: $csaa-link-color;
+    margin: 15px 0px 40px;
+  }
+}
+
+@media screen and (max-width: $shrink-small-breakpoint) {
+  ion-card {
+    padding: 0 0 15px !important;
+    ion-card-content {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      padding-top: 0px !important;
+      padding-bottom: 7px !important;
+    }
+  }
+
+  .error-card-message-sub {
+    margin-bottom: 30px !important;
+  }
+}

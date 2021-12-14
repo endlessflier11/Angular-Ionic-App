@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthLandingPage should match snapshot 1`] = `
+<app-csaa-auth-landing
+  __ngContext__={[Function LRootView]}
+  navController={[Function NavController]}
+  route={[Function Function]}
+>
+  <ion-content>
+    <div
+      class="wrapper"
+    >
+      <ion-row>
+        <ion-col>
+          <ion-grid>
+            <ion-item-group>
+              <ion-button
+                expand="block"
+              >
+                Sign Up
+              </ion-button>
+            </ion-item-group>
+            <ion-item-group>
+              <ion-text>
+                OR
+              </ion-text>
+            </ion-item-group>
+            <ion-item-group>
+              <ion-button
+                color="primary"
+                expand="block"
+                fill="outline"
+                routerlink="sso"
+                tabindex="0"
+              >
+                Log In (SSO)
+              </ion-button>
+            </ion-item-group>
+          </ion-grid>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col
+          class="ion-text-center"
+        >
+          <ion-button
+            fill="none"
+          >
+            Back
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-content>
+</app-csaa-auth-landing>
+`;

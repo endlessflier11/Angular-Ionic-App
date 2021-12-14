@@ -1,0 +1,11 @@
+csaa-payment-history-card {
+  ::ng-deep {
+    ion-card {
+      ion-card-header {
+        ion-item {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CsaaDocumentsPageComponent should load documents data 1`] = `
+<csaa-csaa-documents-page
+  __ngContext__={[Function LRootView]}
+  __refreshingUri$__selector={[Function Observable]}
+  activeFilter$={[Function BehaviorSubject]}
+  analyticsService={[Function AnalyticsMockService]}
+  configService={[Function ConfigMockService]}
+  currentLimit$={[Function BehaviorSubject]}
+  currentTheme=""
+  documents$={[Function Observable]}
+  limitedDocuments$={[Function Observable]}
+  loading="false"
+  modalCtrl={[Function ModalController]}
+  pdfDisplayService={[Function Object]}
+  platform={[Function Platform]}
+  policy$={[Function Observable]}
+  policyNumber={[Function String]}
+  route={[Function Object]}
+  routerService={[Function RouterMockService]}
+  store={[Function Store]}
+  toggleControlValue="false"
+  viewArchive$={[Function BehaviorSubject]}
+>
+  <csaa-loading>
+  </csaa-loading><ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Documents
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <ion-card
+      class="csaa-card coverage-list"
+    >
+      <ion-card-content
+        class="csaa-item-list"
+      >
+        <ion-list>
+          <ion-item
+            lines="none"
+          >
+            <ion-label>
+              <h3>
+                CAAC910026006
+              </h3>
+              <span
+                class="subtitle"
+              >
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    2009 Acura Tsx,
+                  </span>
+                  <span
+                    class="subtitle"
+                  >
+                    2007 Jeep Grand Cherokee
+                  </span>
+                  <a
+                    class="csaa-link"
+                    href="#"
+                  >
+                    <small>
+                      Show more
+                    </small>
+                  </a>
+                </csaa-policy-subtitles>
+              </span>
+            </ion-label>
+            <csaa-theme-icon
+              slot="end"
+            >
+              <img
+                src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                style="width: 40px; height: 40px;"
+              />
+            </csaa-theme-icon>
+          </ion-item>
+          <ion-item
+            class="filter-by"
+            detail=""
+          >
+            <ion-label>
+              <ion-text>
+                 Filter by 
+              </ion-text>
+            </ion-label>
+            <span>
+              All Documents
+            </span>
+          </ion-item>
+          <ion-item
+            class="filter-by-current"
+            lines="none"
+          >
+            <ion-label>
+              <ion-text>
+                Current
+              </ion-text>
+              <ion-toggle />
+              <ion-text>
+                Archive
+              </ion-text>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</csaa-csaa-documents-page>
+`;

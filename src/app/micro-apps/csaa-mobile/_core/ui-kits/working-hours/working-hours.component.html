@@ -1,0 +1,26 @@
+<div class="csaa-working-hours" [ngClass]="{ hidden: hidden }" (click)="onOverlayClick($event)">
+  <ion-card class="card card-md" (click)="$event.stopPropagation()">
+    <ion-card-header>{{ title }}</ion-card-header>
+    <ion-card-content class="card-content card-content-md">
+      <ion-list>
+        <ng-container *ngIf="(showLoader$ | async); else workHours">
+          <ion-item>
+            <span>Retrieving...</span>
+          </ion-item>
+        </ng-container>
+      </ion-list>
+      <ion-button expand="full" (click)="onCallClicked($event)">
+        {{ label }}
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</div>
+
+<ng-template #workHours>
+  <ion-item>
+    <div class="csaa-working-hours-item" *ngFor="let hour of hoursOfOperation">
+              <span class="days">{{ hour.days }}</span
+              ><span class="hours">{{ hour.hours }}</span>
+    </div>
+  </ion-item>
+</ng-template>

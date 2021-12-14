@@ -1,0 +1,13 @@
+<ng-container
+  *ngFor="
+    let info of policySubtitles.slice(0, !policySubtitlesExpanded ? 2 : policySubtitles.length);
+    last as isLast
+  "
+>
+  <span class="subtitle">{{ info }}{{ !isLast ? ',' : '' }}</span>
+</ng-container>
+<ng-container *ngIf="policySubtitles.length > 2">
+  <a class="csaa-link" href="#" (click)="onToggle($event)"
+    ><small>Show {{ policySubtitlesExpanded ? 'less' : 'more' }}</small></a
+  >
+</ng-container>

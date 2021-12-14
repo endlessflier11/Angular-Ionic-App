@@ -1,0 +1,90 @@
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <csaa-back-button (back)="onClickBackBtn()"></csaa-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="hoursPopup.show()">Call Service</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="['csaa', currentTheme]">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event.target)" #refresher>
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <csaa-skeleton-card *ngIf="loading || (isPaymentsLoading$ | async)"></csaa-skeleton-card>
+
+  <ng-container *ngFor="let payment of payments$ | async">
+    <csaa-payment-succeeded-card
+      *ngIf="isPaymentSuccess(payment)"
+      [policy]="getPolicyByNumber(payment.policyNumber)"
+      [payment]="payment"
+      [result]="paymentResults[payment.policyNumber]"
+    >
+    </csaa-payment-succeeded-card>
+  </ng-container>
+
+  <csaa-pay-all-policies-card
+    *ngIf="(payments$ | async)?.length > 1"
+    [loading]="loading"
+    [payments]="(payments$ | async)"
+    [paymentSucceeded]="payAllPaymentsSuccessful"
+    (selectAmountClick)="selectAmount($event)"
+    (selectPaymentClick)="selectPaymentAccount($event)"
+    (makePaymentClick)="payAllPolicies($event)"
+    [paymentMethod]="getSelectedPaymentMethod()"
+    [disabled]="payallTransactionUnderway"
+  >
+  </csaa-pay-all-policies-card>
+
+  <ng-container *ngFor="let payment of payments$ | async">
+    <csaa-make-payment-card
+      *ngIf="!isPaymentSuccess(payment)"
+      [loading]="loading"
+      [payment]="payment"
+      [paymentMethod]="getSelectedPaymentMethod()"
+      [customerSearch]="customerSearch$ | async"
+      [otherAmount]="payment?.otherAmount"
+      [autopayEnrollment]="payment?.autopayEnrollment"
+      (selectAmountClick)="selectAmount($event)"
+      (selectPaymentClick)="selectPaymentAccount($event)"
+      (makePaymentClick)="makePayment($event)"
+    >
+    </csaa-make-payment-card>
+  </ng-container>
+
+  <!--  If user has multiple policy, select history to view -->
+  <csaa-select-policy-card
+    *ngIf="(policies$ | async)?.length > 1"
+    [loading]="loading || (isPaymentsLoading$ | async)"
+    [policies]="policies$ | async"
+    (policyClick)="openPaymentHistory($event)"
+  >
+  </csaa-select-policy-card>
+
+  <csaa-csaa-bills-card
+    *ngIf="(latestBills$ | async)?.length"
+    [loading]="loading || (isPaymentsLoading$ | async)"
+    [bills]="latestBills$ | async"
+    [autoPayEnrollmentStatusMap]="autoPayEnrollmentStatusMap"
+    [isPaidInFullStatusMap]="isPaidInFullStatusMap"
+    [availableDocumentsMap]="availableDocumentsMap"
+    (billClick)="openBill($event)"
+  >
+  </csaa-csaa-bills-card>
+
+  <!-- If user has only one policy, display history for it -->
+  <csaa-payment-history-card
+    *ngIf="renderSinglePolicyHistoryCard( (history$|async), (policies$ | async) )"
+    [history]="(history$ | async)"
+    [policy]="(policies$ | async)[0]"
+    [loading]="loading || (isPaymentsLoading$ | async)"
+  >
+  </csaa-payment-history-card>
+</ion-content>
+<csaa-working-hours #hoursPopup [ngClass]="['csaa', currentTheme]" serviceType="CUSTOMER">
+</csaa-working-hours>

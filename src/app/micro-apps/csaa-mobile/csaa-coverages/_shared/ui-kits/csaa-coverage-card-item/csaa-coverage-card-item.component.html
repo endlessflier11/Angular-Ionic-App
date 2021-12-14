@@ -1,0 +1,89 @@
+<div
+  (click)="handleItemClick($event)"
+  class="csaa-coverage-card-item"
+  [class.open]="isOpen && coverage.shortDesc"
+>
+  <h4 class="title">{{ coverage.shortName }}</h4>
+  <div *ngIf="!isOpen || !coverage.shortDesc" class="unopened-card">
+    <ng-container
+      *ngIf="coverage.coverages && coverage.coverages.length > 0; else noIndentedCoverage"
+    >
+      <ion-item
+        detail
+        track-click="coverages:gotoindentedcoverages"
+        (click)="goToIndentedCoverages($event)"
+      >
+        <h3>Tap to view coverages</h3>
+      </ion-item>
+    </ng-container>
+    <ng-template #noIndentedCoverage>
+      <p class="limit-info">
+        <ng-container *ngIf="coverage.general; else otherCoverage">
+          <ng-container *ngIf="coverage.individualLimit; else noIndividualLimit">
+            <span>{{ coverage.individualLimit | currency: 'USD':'symbol':'1.0-0' }}</span>
+            {{ coverage.individualLimitDelimiter }}
+            <ng-container *ngIf="coverage.occurrenceLimit">
+              <span>/ {{ coverage.occurrenceLimit | currency: 'USD':'symbol':'1.0-0' }}</span>
+              {{ coverage.occurrenceLimitDelimiter }}
+            </ng-container>
+          </ng-container>
+          <ng-template #noIndividualLimit>
+            <ng-container *ngIf="coverage.occurrenceLimit">
+              <span>{{ coverage.occurrenceLimit | currency: 'USD':'symbol':'1.0-0' }}</span>
+              {{ coverage.occurrenceLimitDelimiter }}
+            </ng-container>
+          </ng-template>
+        </ng-container>
+
+        <ng-template #otherCoverage>
+          <ng-container *ngIf="policyType === PolicyType.PUP; else vehicleCoverage">
+            <span>{{ coverage.combinedSingleLimitAmount | currency: 'USD':'symbol':'1.0-0' }}</span>
+          </ng-container>
+          <ng-template #vehicleCoverage>
+            <ng-container *ngIf="coverage.covered">
+              <ng-container *ngIf="isComprehensiveCoverage()">
+                <span>{{ coverage.occurrenceLimit | currency: 'USD':'symbol':'1.0-0' }}</span>
+                {{ coverage.occurrenceLimitDelimiter }}
+                <ng-container *ngIf="isGlassIndicatorSet()">
+                  <span>/ $0</span> Glass Deductible
+                </ng-container>
+              </ng-container>
+              <ng-container *ngIf="!isComprehensiveCoverage()">
+                <ng-container *ngIf="!coverage.individualLimit && coverage.occurrenceLimit">
+                  <span>{{ coverage.occurrenceLimit | currency: 'USD':'symbol':'1.0-0' }}</span>
+                  {{ coverage.occurrenceLimitDelimiter }}
+                </ng-container>
+                <ng-container *ngIf="coverage.individualLimit && !coverage.occurrenceLimit">
+                  <span>{{ coverage.individualLimit | currency: 'USD':'symbol':'1.0-0' }}</span>
+                  {{ coverage.individualLimitDelimiter }}
+                </ng-container>
+                <ng-container *ngIf="coverage.individualLimit && coverage.occurrenceLimit">
+                  <span
+                    >{{ coverage.individualLimit | currency: 'USD':'symbol':'1.0-0' }}/{{
+                      coverage.occurrenceLimit | currency: 'USD':'symbol':'1.0-0'
+                    }}</span
+                  >
+                  {{ coverage.individualLimitDelimiter }}/{{ coverage.occurrenceLimitDelimiter }}
+                </ng-container>
+                <ng-container
+                  *ngIf="
+                    policyType === PolicyType.Auto &&
+                    coverage.deductible &&
+                    coverage.deductible.isPresent
+                  "
+                >
+                  <span>{{ coverage.deductible.value | currency: 'USD':'symbol':'1.0-0' }}</span>
+                  Deductible
+                </ng-container>
+              </ng-container>
+            </ng-container>
+            <ng-container *ngIf="!coverage.covered">
+              {{ coverage.twitterPitch }}
+            </ng-container>
+          </ng-template>
+        </ng-template>
+      </p>
+    </ng-template>
+  </div>
+  <div *ngIf="isOpen && coverage.shortDesc" class="description">{{ coverage.shortDesc }}</div>
+</div>

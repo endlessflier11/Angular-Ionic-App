@@ -1,0 +1,36 @@
+@import '../../_scss/variables';
+
+ion-content {
+  --background: var(--ion-color-primary-contrast);
+}
+
+h2 {
+  margin-bottom: 18px;
+  font-weight: normal;
+}
+
+ion-item {
+  --highlight-color-valid: var(--ion-color-primary);
+
+  ion-label.label-fixed {
+    width: 130px;
+    min-width: 130px;
+    color: $csaa-lighter-color;
+  }
+}
+
+.error-message {
+  text-align: left;
+  background-color: white;
+  color: $csaa-emergency-color;
+  padding: 16px 16px 0;
+}
+
+ion-button {
+  &:not(.in-toolbar) {
+    &.delete-card {
+      font-size: 17px;
+      font-weight: normal;
+    }
+  }
+}

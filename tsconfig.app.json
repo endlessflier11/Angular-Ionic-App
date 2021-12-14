@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": ["node"]
+  },
+  "files": ["src/main.ts", "src/polyfills.ts"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts"],
+  "exclude": [
+    "src/test.ts",
+    "src/**/*.spec.ts",
+    "src/testing/**/*.ts",
+    "src/**/__tests__/*.ts",
+    "node_modules/@aaa-mobile/**/*.spec.ts",
+    "node_modules/@aaa-mobile/cordova-*/*",
+    "jest-global-mocks.ts",
+    "setup-jest.ts",
+    "src/environments/environment.ds.ts",
+    "src/environments/environment.prod.ts"
+  ]
+}

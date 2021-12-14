@@ -1,0 +1,13 @@
+<ng-container *ngIf="isIos">
+  <ion-card>
+    <ion-card-content class="ion-text-center">
+      <ion-button fill="none" (click)="clickBtn.emit()">
+        <ion-icon
+          slot="icon-only"
+          style="font-size: 13em"
+          src="/assets/csaa-mobile/vectors/add-apple-wallet.svg"
+        ></ion-icon>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ng-container>

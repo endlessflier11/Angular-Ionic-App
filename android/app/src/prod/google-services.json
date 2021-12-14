@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "870391904772",
+    "firebase_url": "https://aaa-mobile-discounts.firebaseio.com",
+    "project_id": "aaa-mobile-discounts",
+    "storage_bucket": "aaa-mobile-discounts.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870391904772:android:5aca8c158414daf0",
+        "android_client_info": {
+          "package_name": "com.aaa.android.discounts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870391904772-nbj7uf0b195qnkn3o43v8rl286ff414o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4gRQ7JLDkjAWBXuDdd2d2_uKC7ZA3Npo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-96133587-11"
+          }
+        },
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870391904772-nbj7uf0b195qnkn3o43v8rl286ff414o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "870391904772-npd45uqb07hja4mk1t3lcljnaa7j013k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.aaa.csaa_insurance.mypolicy",
+                "app_store_id": "310730297"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870391904772:android:0d902d0c9a6e87c2",
+        "android_client_info": {
+          "package_name": "rso2.aaa.com.rso2app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870391904772-nbj7uf0b195qnkn3o43v8rl286ff414o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4gRQ7JLDkjAWBXuDdd2d2_uKC7ZA3Npo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870391904772-nbj7uf0b195qnkn3o43v8rl286ff414o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "870391904772-npd45uqb07hja4mk1t3lcljnaa7j013k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.aaa.csaa_insurance.mypolicy",
+                "app_store_id": "310730297"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

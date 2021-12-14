@@ -1,0 +1,72 @@
+export const EMPLOYEE_SEARCH = {
+  mdmId: '1478480187451',
+  email: 'A865@TESTUSER.EXAMPLE.COM',
+  fullName: 'MARY E BALL-SCHROEDER',
+  firstName: 'MARY',
+  lastName: 'BALL-SCHROEDER',
+  customerAddress: {
+    addressType: 'mailing',
+    address1: '30 N PINEY RD',
+    zipCode: '82832-5042',
+    city: 'STORY',
+    state: 'WY',
+  },
+  insuranceAddress: {
+    address2: 'PO Box 24511',
+    additional: 'NAIC # : 37770',
+    addressType: null,
+    address1: 'CSAA General Insurance Company',
+    zipCode: '94623=9865',
+    city: 'Oakland',
+    state: 'CA',
+  },
+  policies: [
+    {
+      sourceSystem: 'PAS',
+      termExpirationDate: '2021-06-11',
+      policyNumber: 'WYSS910014303',
+      effectivePolicyStatus: 'active',
+      policyStatus: 'Active',
+      policyType: 'AU',
+      prodTypeCode: 'PA',
+      productCode: 'SIG',
+      riskState: 'WY',
+      ubiFlag: null,
+      roleList: [
+        {
+          roleType: 'INSURED',
+          sourceId: 'q6qIVQ2pTWCt6_DIAdhJ8A',
+          roleStatus: 'ACTIVE',
+        },
+        {
+          roleType: 'LISTED DRIVER',
+          sourceId: 'opHfUBMcj9M4QwrU2JtCnQ',
+          roleStatus: 'ACTIVE',
+        },
+      ],
+
+      clubCode: '',
+      insuranceAddress: {
+        address2: 'PO Box 24511',
+        additional: 'NAIC # : 10921',
+        siteDomain: null,
+        phone: null,
+        addressType: null,
+        address1: 'CSAA Fire \u0026 Casualty Insurance Company',
+        streetAddressLine: null,
+        zipCode: '94623-9865',
+        city: 'Oakland',
+        state: 'CA',
+        stateFullName: 'California',
+      },
+    },
+  ],
+  hash: '',
+  registrations: [
+    {
+      registrationId: '02FA1E8C-53A2-49CC-9F64-FEE0DB5FFDA1',
+      registrationSource: null,
+      startDate: null,
+    },
+  ],
+};

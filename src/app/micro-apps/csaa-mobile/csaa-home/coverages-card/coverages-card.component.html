@@ -1,0 +1,24 @@
+<csaa-skeleton-card *ngIf="loading"></csaa-skeleton-card>
+<ion-card *ngIf="!loading" class="csaa-card">
+  <ion-card-header>
+    <ion-card-title>Coverages </ion-card-title>
+  </ion-card-header>
+  <ion-card-content class="csaa-item-list">
+    <ion-list>
+      <ion-item
+        detail
+        track-click="coverages:gotodetails"
+        *ngFor="let policy of policies"
+        (click)="goToPolicyDetails(policy)"
+      >
+        <ion-label>
+          <h3>{{ policy.number }}</h3>
+          <span class="subtitle">
+            <csaa-policy-subtitles [policySubtitle]="policy.subtitle"></csaa-policy-subtitles>
+          </span>
+        </ion-label>
+        <csaa-theme-icon slot="end" [type]="policy.type" [size]="40"> </csaa-theme-icon>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>

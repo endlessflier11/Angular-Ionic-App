@@ -1,0 +1,26 @@
+jobs:
+  include:
+    - &macosmachine
+      stage: test
+      name: Test & Lint
+      os: osx
+      osx_image: xcode11.6
+      language: node_js
+      before_install:
+        - if [[ `npm -v` != 7* ]]; then npm i -g npm@7; fi
+      script:
+        - npm run lint
+        - npm test
+    - <<: *macosmachine
+      stage: deploy
+      name: NPM Build
+      before_install:
+        - echo "//registry.npmjs.org/:_authToken=\${CSAA_MOBILE_MICROAPP_NPM_TOKEN}" > src/app/micro-apps/csaa-mobile/.npmrc
+      script:
+        - cd ./src/app/micro-apps/csaa-mobile
+        - npm publish
+stages:
+  - name: test
+    if: ((branch = main OR branch = develop OR branch =~ /^release\/mmp-*/ ) AND type = pull_request)  OR tag IS present
+  - name: deploy
+    if: tag IS present

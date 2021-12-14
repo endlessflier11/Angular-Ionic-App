@@ -1,0 +1,129 @@
+:host {
+  ion-content {
+    --background: transparent;
+    --backdrop-opacity: 0.4;
+  }
+
+  .frame {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+
+  .phone-link {
+    color: #0657a0;
+    background: none;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .modal {
+    width: 84%;
+    max-width: 300px;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 22px;
+    background-color: #fff;
+    opacity: 1;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    .top {
+      display: inline-block;
+      // height: 210px;
+      padding-bottom: 40px;
+      width: 100%;
+      text-align: center;
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: 100% auto;
+      background-image: url(/assets/csaa-mobile/imgs/lonelyroad.png);
+      .logos {
+        display: flex;
+        margin-top: 28px;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+
+        .aaa-logo {
+          height: 31.91px;
+          width: 50.83px;
+        }
+      }
+
+      .header-text {
+        height: 21px;
+        width: 100%;
+        margin-top: 20px;
+        color: #000000;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 21px;
+        text-align: center;
+      }
+
+      .message-text {
+        min-height: 66px;
+        width: 100%;
+        padding: 10px 28px 0 28px;
+        color: #000000;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: center;
+      }
+    }
+
+    .buttons-column {
+      height: 156px;
+      width: 100%;
+    }
+
+    .buttons-row {
+      height: 52px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .alert-option {
+      display: block;
+      font-size: 18px;
+      font-weight: 400;
+      color: #0657a0;
+      line-height: 21px;
+      text-align: center;
+      height: 52px;
+      border: 0;
+      border-top: 1px solid rgba(6, 87, 160, 0.44);
+      margin: 0;
+      text-transform: unset;
+    }
+
+    .alert-option-full-width {
+      width: 100%;
+    }
+
+    .alert-option-separator {
+      border-right: 1px solid rgba(6, 87, 160, 0.44);
+    }
+
+    .alert-option-bold {
+      font-weight: 600;
+    }
+  }
+
+  .scroll-content {
+    overflow: hidden;
+  }
+}

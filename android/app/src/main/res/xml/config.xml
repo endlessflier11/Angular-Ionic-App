@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <access origin="*" />
+  
+  <feature name="IonicNativeAuth">
+    <param name="android-package" value="com.ionicframework.auth.IonicNativeAuth"/>
+    <param name="onload" value="true"/>
+  </feature>
+  <feature name="DevicePlugin">
+    <param name="android-package" value="com.ionicframework.IdentityVault.DevicePlugin"/>
+  </feature>
+  <feature name="VaultPlugin">
+    <param name="android-package" value="com.ionicframework.IdentityVault.VaultPlugin"/>
+    <param name="onload" value="true"/>
+  </feature>
+
+  <feature name="Whitelist">
+    <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin"/>
+    <param name="onload" value="true"/>
+  </feature>
+
+  <feature name="Contacts">
+    <param name="android-package" value="org.apache.cordova.contacts.ContactManager"/>
+  </feature>
+
+  <feature name="File">
+    <param name="android-package" value="org.apache.cordova.file.FileUtils"/>
+    <param name="onload" value="true"/>
+  </feature>
+
+  <feature name="FileTransfer">
+    <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer"/>
+  </feature>
+
+  <feature name="AppPreferences">
+    <param name="android-package" value="me.apla.cordova.AppPreferences"/>
+  </feature>
+
+  <feature name="Badge">
+    <param name="android-package" value="de.appplant.cordova.plugin.badge.Badge"/>
+  </feature>
+
+  <feature name="Notification">
+    <param name="android-package" value="org.apache.cordova.dialogs.Notification"/>
+  </feature>
+
+  <feature name="Fingerprint">
+    <param name="android-package" value="de.niklasmerz.cordova.biometric.Fingerprint"/>
+  </feature>
+
+  <feature name="SQLitePlugin">
+    <param name="android-package" value="io.sqlc.SQLitePlugin"/>
+  </feature>
+
+  <feature name="FirebaseAnalytics">
+    <param name="android-package" value="by.chemerisuk.cordova.firebase.FirebaseAnalyticsPlugin"/>
+    <param name="onload" value="$ANALYTICS_COLLECTION_ENABLED"/>
+  </feature>
+
+  <feature name="FirebaseConfig">
+    <param name="android-package" value="by.chemerisuk.cordova.firebase.FirebaseConfigPlugin"/>
+  </feature>
+
+  <feature name="Diagnostic">
+    <param name="android-package" value="cordova.plugins.Diagnostic"/>
+    <param name="onload" value="true"/>
+  </feature>
+
+  <feature name="Diagnostic_Location">
+    <param name="android-package" value="cordova.plugins.Diagnostic_Location"/>
+    <param name="onload" value="true"/>
+  </feature>
+
+  <feature name="Diagnostic_Bluetooth">
+    <param name="android-package" value="cordova.plugins.Diagnostic_Bluetooth"/>
+    <param name="onload" value="true"/>
+  </feature>
+
+  <feature name="Diagnostic_Wifi">
+    <param name="android-package" value="cordova.plugins.Diagnostic_Wifi"/>
+    <param name="onload" value="true"/>
+  </feature>
+
+  <feature name="Diagnostic_Camera">
+    <param name="android-package" value="cordova.plugins.Diagnostic_Camera"/>
+    <param name="onload" value="true"/>
+  </feature>
+
+  <feature name="Diagnostic_Notifications">
+    <param name="android-package" value="cordova.plugins.Diagnostic_Notifications"/>
+    <param name="onload" value="true"/>
+  </feature>
+
+  <feature name="Diagnostic_NFC">
+    <param name="android-package" value="cordova.plugins.Diagnostic_NFC"/>
+    <param name="onload" value="true"/>
+  </feature>
+
+  <feature name="Diagnostic_External_Storage">
+    <param name="android-package" value="cordova.plugins.Diagnostic_External_Storage"/>
+    <param name="onload" value="true"/>
+  </feature>
+
+  <feature name="IonicCordovaCommon">
+    <param name="android-package" value="com.ionicframework.common.IonicCordovaCommon" onload="true"/>
+  </feature>
+
+  <feature name="AppAvailability">
+    <param name="android-package" value="com.ohh2ahh.appavailability.AppAvailability"/>
+  </feature>
+
+  <feature name="broadcaster">
+    <param name="android-package" value="org.bsc.cordova.CDVBroadcaster"/>
+  </feature>
+
+  <feature name="EmailComposer">
+    <param name="android-package" value="de.appplant.cordova.emailcomposer.EmailComposer"/>
+  </feature>
+
+  <feature name="UniversalAnalytics">
+    <param name="android-package" value="com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin"/>
+  </feature>
+
+  <feature name="Launcher">
+    <param name="android-package" value="com.hutchind.cordova.plugins.launcher.Launcher"/>
+  </feature>
+
+  <feature name="SecureStorage">
+    <param name="android-package" value="com.crypho.plugins.SecureStorage"/>
+  </feature>
+
+  <feature name="TealiumCordova">
+    <param name="android-package" value="com.tealium.cordova.TealiumCordova"/>
+  </feature>
+
+  <feature name="SafariViewController">
+    <param name="android-package" value="com.customtabplugin.ChromeCustomTabPlugin"/>
+    <param name="onload" value="true"/>
+  </feature>
+
+  <feature name="CardIO">
+    <param name="android-package" value="io.card.cordova.sdk.CardIOCordovaPlugin"/>
+  </feature>
+
+  <feature name="FileOpener2">
+    <param name="android-package" value="io.github.pwlin.cordova.plugins.fileopener2.FileOpener2"/>
+  </feature>
+
+  <feature name="MedalliaDigitalSDKCordova">
+    <param name="android-package" value="com.medallia.plugin.MedalliaDigitalSDKCordova"/>
+  </feature>
+
+  <feature name="CordovaHttpPlugin">
+    <param name="android-package" value="com.silkimen.cordovahttp.CordovaHttpPlugin"/>
+  </feature>
+
+  <feature name="CloudSettingsPlugin">
+    <param name="android-package" value="cordova.plugin.cloudsettings.CloudSettingsPlugin"/>
+    <param name="onload" value="true"/>
+  </feature>
+
+  <feature name="InAppBrowser">
+    <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser"/>
+  </feature>
+
+  
+  <preference name="ScrollEnabled" value="false" />
+  <preference name="BackupWebStorage" value="none" />
+  <preference name="cordova.plugins.diagnostic.modules" value="LOCATION BLUETOOTH WIFI CAMERA NOTIFICATIONS EXTERNAL_STORAGE" />
+  <preference name="GoogleAndroidClientId" value="870391904772-nbj7uf0b195qnkn3o43v8rl286ff414o.apps.googleusercontent.com" />
+</widget>

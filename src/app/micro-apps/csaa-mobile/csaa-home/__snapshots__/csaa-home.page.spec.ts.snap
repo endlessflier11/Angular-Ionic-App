@@ -1,0 +1,4670 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CsaaHomePage cancelled policies Should only show the cancelled cards if all policies are cancelled 1`] = `
+<app-csaa-home
+  __cancelledPolicies$__selector={[Function Observable]}
+  __claims$__selector={[Function Observable]}
+  __gracePeriodPolicies$__selector={[Function Observable]}
+  __ngContext__={[Function LRootView]}
+  __policies$__selector={[Function Observable]}
+  __upcomingPayments$__selector={[Function Observable]}
+  __upcomingPaymentsDue$__selector={[Function Observable]}
+  __username$__selector={[Function Observable]}
+  alertCtrl={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  authService={[Function AuthMockService]}
+  callService={[Function Object]}
+  csaaBaseClass={[Function Boolean]}
+  currentTheme=""
+  didAlertThisSession="false"
+  errorHandler={[Function Object]}
+  errorMap={[Function Object]}
+  globalStateService={[Function Object]}
+  hasActivePolicies={[Function Boolean]}
+  hasAutoPolicy="false"
+  isAndroidPlatform="false"
+  loading="false"
+  loading$={[Function Observable]}
+  platform={[Function PlatformMock]}
+  routerService={[Function RouterService]}
+  showHeader="false"
+  showSettings="false"
+  storage={[Function StorageMockService]}
+  store={[Function Store]}
+  subsink={[Function SubSink]}
+  unsubscribe$={[Function Subject]}
+>
+  <ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <section
+      class="main-cards"
+    >
+      <csaa-paperless-terms>
+      </csaa-paperless-terms>
+      <csaa-policy-cancelled-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+               Policy is no longer active 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row
+                class="policy"
+              >
+                <ion-col>
+                  <div
+                    class="policy-data"
+                  >
+                    <h3
+                      class="card-subheader"
+                    >
+                      AZAC910018915
+                    </h3>
+                    <p
+                      class="subtitle lighter"
+                    >
+                      2011 Ford Econoline Van, 2019 Audi A8
+                    </p>
+                  </div>
+                </ion-col>
+                <ion-col
+                  size="auto"
+                >
+                  <csaa-theme-icon>
+                    <img
+                      src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                      style="width: 40px; height: 40px;"
+                    />
+                  </csaa-theme-icon>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                   Your policy is no longer active. Making a payment now may not reinstate your policy if it has been cancelled or expired. 
+                </ion-col>
+              </ion-row>
+              <ion-row
+                class="content-message"
+              >
+                <ion-col>
+                  <h3>
+                    Please contact our service team for assistance.
+                  </h3>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            <ion-button
+              expand="full"
+            >
+               Call Service 
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </csaa-policy-cancelled-card>
+      <csaa-policy-cancelled-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+               Policy is no longer active 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row
+                class="policy"
+              >
+                <ion-col>
+                  <div
+                    class="policy-data"
+                  >
+                    <h3
+                      class="card-subheader"
+                    >
+                      AZH3910018916
+                    </h3>
+                    <p
+                      class="subtitle lighter"
+                    >
+                      28425 N Black Canyon Hwy
+                    </p>
+                  </div>
+                </ion-col>
+                <ion-col
+                  size="auto"
+                >
+                  <csaa-theme-icon>
+                    <img
+                      src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                      style="width: 40px; height: 40px;"
+                    />
+                  </csaa-theme-icon>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                   Your policy is no longer active. Making a payment now may not reinstate your policy if it has been cancelled or expired. 
+                </ion-col>
+              </ion-row>
+              <ion-row
+                class="content-message"
+              >
+                <ion-col>
+                  <h3>
+                    Please contact our service team for assistance.
+                  </h3>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            <ion-button
+              expand="full"
+            >
+               Call Service 
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </csaa-policy-cancelled-card>
+      <csaa-policy-cancelled-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+               Policy is no longer active 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row
+                class="policy"
+              >
+                <ion-col>
+                  <div
+                    class="policy-data"
+                  >
+                    <h3
+                      class="card-subheader"
+                    >
+                      AZPU910018917
+                    </h3>
+                    <p
+                      class="subtitle lighter"
+                    >
+                      Personal Umbrella Policy
+                    </p>
+                  </div>
+                </ion-col>
+                <ion-col
+                  size="auto"
+                >
+                  <csaa-theme-icon>
+                    <img
+                      src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                      style="width: 40px; height: 40px;"
+                    />
+                  </csaa-theme-icon>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                   Your policy is no longer active. Making a payment now may not reinstate your policy if it has been cancelled or expired. 
+                </ion-col>
+              </ion-row>
+              <ion-row
+                class="content-message"
+              >
+                <ion-col>
+                  <h3>
+                    Please contact our service team for assistance.
+                  </h3>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            <ion-button
+              expand="full"
+            >
+               Call Service 
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </csaa-policy-cancelled-card>
+      <csaa-claims-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-item>
+              <ion-card-title>
+                 Claims
+              </ion-card-title>
+              <ion-button
+                fill="clear"
+                slot="end"
+              >
+                What do I do?
+              </ion-button>
+            </ion-item>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                     Collision while Turning 
+                  </h3>
+                  <span
+                    class="claim-number"
+                  >
+                    Claim #1003-75-7692
+                  </span>
+                  <br />
+                  <span
+                    class="status"
+                  >
+                    Status: Open
+                  </span>
+                  <br />
+                  <span
+                    class="subtitle"
+                  >
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+            <ion-button
+              expand="full"
+            >
+              I Had an Accident
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </csaa-claims-card>
+      <csaa-payments-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+               Payments 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item>
+                <ion-label>
+                  <ion-grid>
+                    <ion-row>
+                      <h3>
+                        No Payment Due
+                      </h3>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col>
+                        AZH3910018916
+                      </ion-col>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col
+                        class="payment-subtitle"
+                      >
+                        <csaa-policy-subtitles>
+                          <span
+                            class="subtitle"
+                          >
+                            28425 N Black Canyon Hwy
+                          </span>
+                        </csaa-policy-subtitles>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <ion-grid>
+                    <ion-row>
+                      <h3>
+                        No Payment Due
+                      </h3>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col>
+                        AZPU910018917
+                      </ion-col>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col
+                        class="payment-subtitle"
+                      >
+                        <csaa-policy-subtitles>
+                          <span
+                            class="subtitle"
+                          >
+                            Personal Umbrella Policy
+                          </span>
+                        </csaa-policy-subtitles>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <ion-grid>
+                    <ion-row>
+                      <h3>
+                        No Payment Due
+                      </h3>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col>
+                        AZAC910018915
+                      </ion-col>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col
+                        class="payment-subtitle"
+                      >
+                        <csaa-policy-subtitles>
+                          <span
+                            class="subtitle"
+                          >
+                            2011 Ford Econoline Van,
+                          </span>
+                          <span
+                            class="subtitle"
+                          >
+                            2019 Audi A8
+                          </span>
+                        </csaa-policy-subtitles>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+            <ion-button
+              expand="full"
+            >
+               Payments 
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </csaa-payments-card>
+    </section>
+    <csaa-get-a-quote-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-content>
+          <ion-button
+            expand="full"
+          >
+            Get a Quote
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-get-a-quote-card>
+    <csaa-file-a-claim-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-content>
+          <ion-button
+            expand="full"
+          >
+            Start a Claim
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-file-a-claim-card>
+    <csaa-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            <span>
+              Manage Paperless
+            </span>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p
+            class="ion-padding-bottom text-lighter"
+          >
+             View and change your paperless preferences for policy documents, bills, payment reminders and confirmations. 
+          </p>
+          <ion-button
+            expand="block"
+          >
+             View Preferences 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-paperless-preference-card>
+    <csaa-my-policy-card
+      text="Tap to download policy & billing documents, make policy changes, and more"
+    >
+      <div
+        class="my-policy"
+      >
+        <ion-card
+          class="csaa-card picture-card"
+        >
+          <ion-card-content
+            class="mypolicy-body-card"
+          >
+            <h2>
+              Tap to download policy & billing documents, make policy changes, and more
+            </h2>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </csaa-my-policy-card>
+  </ion-content><csaa-working-hours
+    class="csaa"
+    label="Call Service"
+    servicetype="CUSTOMER"
+    title="Service Hours"
+  >
+    <div
+      class="csaa-working-hours hidden"
+    >
+      <ion-card
+        class="card card-md"
+      >
+        <ion-card-header>
+          Service Hours
+        </ion-card-header>
+        <ion-card-content
+          class="card-content card-content-md"
+        >
+          <ion-list>
+            <ion-item>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+             Call Service 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </csaa-working-hours>
+</app-csaa-home>
+`;
+
+exports[`CsaaHomePage cancelled policies Should show no active policies card if all policies are cancelled after grace period 1`] = `
+<app-csaa-home
+  __gracePeriodPolicies$__selector={[Function Observable]}
+  __ngContext__={[Function LRootView]}
+  __policies$__selector={[Function Observable]}
+  __upcomingPayments$__selector={[Function Observable]}
+  __username$__selector={[Function Observable]}
+  alertCtrl={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  authService={[Function AuthMockService]}
+  callService={[Function Object]}
+  csaaBaseClass={[Function Boolean]}
+  currentTheme=""
+  didAlertThisSession="false"
+  errorHandler={[Function Object]}
+  errorMap={[Function Object]}
+  globalStateService={[Function Object]}
+  hasActivePolicies="false"
+  hasAutoPolicy="false"
+  isAndroidPlatform="false"
+  loading="false"
+  loading$={[Function Observable]}
+  platform={[Function PlatformMock]}
+  routerService={[Function RouterService]}
+  showHeader="false"
+  showSettings="false"
+  storage={[Function StorageMockService]}
+  store={[Function Store]}
+  subsink={[Function SubSink]}
+  unsubscribe$={[Function Subject]}
+>
+  <ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <csaa-no-active-policies-card>
+      <div
+        class="no-policies-component"
+      >
+        <ion-card
+          class="no-policies csaa-card"
+        >
+          <div
+            class="error-img"
+          >
+            <img
+              src="/assets/csaa-mobile/imgs/insurance-error-card.jpeg"
+            />
+          </div>
+          <ion-card-content
+            class="main-body-card"
+          >
+            <h2
+              class="no-policies-title"
+            >
+              No Active Policies
+            </h2>
+            <p
+              class="no-policies-message"
+            >
+              We could not locate any active policies.
+            </p>
+            <p
+              class="no-policies-message-sub"
+            >
+              Please contact our service team for asistance.
+            </p>
+            <ion-button
+              expand="full"
+            >
+              Call Service
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </csaa-no-active-policies-card>
+    <csaa-get-a-quote-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-content>
+          <ion-button
+            expand="full"
+          >
+            Get a Quote
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-get-a-quote-card>
+    <csaa-file-a-claim-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-content>
+          <ion-button
+            expand="full"
+          >
+            Start a Claim
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-file-a-claim-card>
+    <csaa-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            <span>
+              Manage Paperless
+            </span>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p
+            class="ion-padding-bottom text-lighter"
+          >
+             View and change your paperless preferences for policy documents, bills, payment reminders and confirmations. 
+          </p>
+          <ion-button
+            expand="block"
+          >
+             View Preferences 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-paperless-preference-card>
+    <csaa-my-policy-card
+      text="Tap to download policy & billing documents, make policy changes, and more"
+    >
+      <div
+        class="my-policy"
+      >
+        <ion-card
+          class="csaa-card picture-card"
+        >
+          <ion-card-content
+            class="mypolicy-body-card"
+          >
+            <h2>
+              Tap to download policy & billing documents, make policy changes, and more
+            </h2>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </csaa-my-policy-card>
+  </ion-content><csaa-working-hours
+    class="csaa"
+    label="Call Service"
+    servicetype="CUSTOMER"
+    title="Service Hours"
+  >
+    <div
+      class="csaa-working-hours hidden"
+    >
+      <ion-card
+        class="card card-md"
+      >
+        <ion-card-header>
+          Service Hours
+        </ion-card-header>
+        <ion-card-content
+          class="card-content card-content-md"
+        >
+          <ion-list>
+            <ion-item>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+             Call Service 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </csaa-working-hours>
+</app-csaa-home>
+`;
+
+exports[`CsaaHomePage cancelled policies Should show the cancelled card with the other cards if only one policy cancelled 1`] = `
+<app-csaa-home
+  __cancelledPolicies$__selector={[Function Observable]}
+  __claims$__selector={[Function Observable]}
+  __gracePeriodPolicies$__selector={[Function Observable]}
+  __ngContext__={[Function LRootView]}
+  __policies$__selector={[Function Observable]}
+  __upcomingPayments$__selector={[Function Observable]}
+  __upcomingPaymentsDue$__selector={[Function Observable]}
+  __username$__selector={[Function Observable]}
+  alertCtrl={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  authService={[Function AuthMockService]}
+  callService={[Function Object]}
+  csaaBaseClass={[Function Boolean]}
+  currentTheme=""
+  didAlertThisSession="false"
+  errorHandler={[Function Object]}
+  errorMap={[Function Object]}
+  globalStateService={[Function Object]}
+  hasActivePolicies={[Function Boolean]}
+  hasAutoPolicy="false"
+  isAndroidPlatform="false"
+  loading="false"
+  loading$={[Function Observable]}
+  platform={[Function PlatformMock]}
+  routerService={[Function RouterService]}
+  showHeader="false"
+  showSettings="false"
+  storage={[Function StorageMockService]}
+  store={[Function Store]}
+  subsink={[Function SubSink]}
+  unsubscribe$={[Function Subject]}
+>
+  <ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <section
+      class="main-cards"
+    >
+      <csaa-paperless-terms>
+      </csaa-paperless-terms>
+      <csaa-policy-cancelled-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+               Policy is no longer active 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row
+                class="policy"
+              >
+                <ion-col>
+                  <div
+                    class="policy-data"
+                  >
+                    <h3
+                      class="card-subheader"
+                    >
+                      AZAC910018915
+                    </h3>
+                    <p
+                      class="subtitle lighter"
+                    >
+                      2011 Ford Econoline Van, 2019 Audi A8
+                    </p>
+                  </div>
+                </ion-col>
+                <ion-col
+                  size="auto"
+                >
+                  <csaa-theme-icon>
+                    <img
+                      src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                      style="width: 40px; height: 40px;"
+                    />
+                  </csaa-theme-icon>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                   Your policy is no longer active. Making a payment now may not reinstate your policy if it has been cancelled or expired. 
+                </ion-col>
+              </ion-row>
+              <ion-row
+                class="content-message"
+              >
+                <ion-col>
+                  <h3>
+                    Please contact our service team for assistance.
+                  </h3>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            <ion-button
+              expand="full"
+            >
+               Call Service 
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </csaa-policy-cancelled-card>
+      <csaa-insurance-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+               Proof of Insurance 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZH3910018916
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        28425 N Black Canyon Hwy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </csaa-insurance-card>
+      <csaa-coverages-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+              Coverages 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+                track-click="coverages:gotodetails"
+              >
+                <ion-label>
+                  <h3>
+                    AZH3910018916
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        28425 N Black Canyon Hwy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+                track-click="coverages:gotodetails"
+              >
+                <ion-label>
+                  <h3>
+                    AZPU910018917
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        Personal Umbrella Policy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </csaa-coverages-card>
+      <csaa-claims-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-item>
+              <ion-card-title>
+                 Claims
+              </ion-card-title>
+              <ion-button
+                fill="clear"
+                slot="end"
+              >
+                What do I do?
+              </ion-button>
+            </ion-item>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                     Collision while Turning 
+                  </h3>
+                  <span
+                    class="claim-number"
+                  >
+                    Claim #1003-75-7692
+                  </span>
+                  <br />
+                  <span
+                    class="status"
+                  >
+                    Status: Open
+                  </span>
+                  <br />
+                  <span
+                    class="subtitle"
+                  >
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+            <ion-button
+              expand="full"
+            >
+              I Had an Accident
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </csaa-claims-card>
+      <csaa-documents-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+              Documents 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZH3910018916
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        28425 N Black Canyon Hwy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZPU910018917
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        Personal Umbrella Policy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </csaa-documents-card>
+      <csaa-payments-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+               Payments 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item>
+                <ion-label>
+                  <ion-grid>
+                    <ion-row>
+                      <h3>
+                        No Payment Due
+                      </h3>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col>
+                        AZH3910018916
+                      </ion-col>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col
+                        class="payment-subtitle"
+                      >
+                        <csaa-policy-subtitles>
+                          <span
+                            class="subtitle"
+                          >
+                            28425 N Black Canyon Hwy
+                          </span>
+                        </csaa-policy-subtitles>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <ion-grid>
+                    <ion-row>
+                      <h3>
+                        No Payment Due
+                      </h3>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col>
+                        AZPU910018917
+                      </ion-col>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col
+                        class="payment-subtitle"
+                      >
+                        <csaa-policy-subtitles>
+                          <span
+                            class="subtitle"
+                          >
+                            Personal Umbrella Policy
+                          </span>
+                        </csaa-policy-subtitles>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <ion-grid>
+                    <ion-row>
+                      <h3>
+                        No Payment Due
+                      </h3>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col>
+                        AZAC910018915
+                      </ion-col>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col
+                        class="payment-subtitle"
+                      >
+                        <csaa-policy-subtitles>
+                          <span
+                            class="subtitle"
+                          >
+                            2011 Ford Econoline Van,
+                          </span>
+                          <span
+                            class="subtitle"
+                          >
+                            2019 Audi A8
+                          </span>
+                        </csaa-policy-subtitles>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+            <ion-button
+              expand="full"
+            >
+               Payments 
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </csaa-payments-card>
+    </section>
+    <csaa-get-a-quote-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-content>
+          <p
+            class="ion-padding-bottom text-lighter"
+          >
+             Save Big at AAA When You Bundle Home & Auto Insurance. 
+          </p>
+          <ion-button
+            expand="full"
+          >
+            Get Your Free Quote 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-get-a-quote-card>
+    <csaa-file-a-claim-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-content>
+          <ion-button
+            expand="full"
+          >
+            Start a Claim
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-file-a-claim-card>
+    <csaa-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            <span>
+              Manage Paperless
+            </span>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p
+            class="ion-padding-bottom text-lighter"
+          >
+             View and change your paperless preferences for policy documents, bills, payment reminders and confirmations. 
+          </p>
+          <ion-button
+            expand="block"
+          >
+             View Preferences 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-paperless-preference-card>
+    <csaa-my-policy-card
+      text="Tap to download policy & billing documents, make policy changes, and more"
+    >
+      <div
+        class="my-policy"
+      >
+        <ion-card
+          class="csaa-card picture-card"
+        >
+          <ion-card-content
+            class="mypolicy-body-card"
+          >
+            <h2>
+              Tap to download policy & billing documents, make policy changes, and more
+            </h2>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </csaa-my-policy-card>
+  </ion-content><csaa-working-hours
+    class="csaa"
+    label="Call Service"
+    servicetype="CUSTOMER"
+    title="Service Hours"
+  >
+    <div
+      class="csaa-working-hours hidden"
+    >
+      <ion-card
+        class="card card-md"
+      >
+        <ion-card-header>
+          Service Hours
+        </ion-card-header>
+        <ion-card-content
+          class="card-content card-content-md"
+        >
+          <ion-list>
+            <ion-item>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+             Call Service 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </csaa-working-hours>
+</app-csaa-home>
+`;
+
+exports[`CsaaHomePage should detect payment is past due and warn user 1`] = `
+<app-csaa-home
+  __cancelledPolicies$__selector={[Function Observable]}
+  __claims$__selector={[Function Observable]}
+  __gracePeriodPolicies$__selector={[Function Observable]}
+  __ngContext__={[Function LRootView]}
+  __policies$__selector={[Function Observable]}
+  __upcomingPayments$__selector={[Function Observable]}
+  __upcomingPaymentsDue$__selector={[Function Observable]}
+  __username$__selector={[Function Observable]}
+  alertCtrl={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  authService={[Function AuthMockService]}
+  callService={[Function Object]}
+  csaaBaseClass={[Function Boolean]}
+  currentTheme=""
+  didAlertThisSession="false"
+  errorHandler={[Function Object]}
+  errorMap={[Function Object]}
+  globalStateService={[Function Object]}
+  hasActivePolicies={[Function Boolean]}
+  hasAutoPolicy={[Function Boolean]}
+  isAndroidPlatform="false"
+  loading="false"
+  loading$={[Function Observable]}
+  platform={[Function PlatformMock]}
+  routerService={[Function RouterService]}
+  showHeader="false"
+  showPaymentDueWarning={[Function Function]}
+  showSettings="false"
+  storage={[Function StorageMockService]}
+  store={[Function Store]}
+  subsink={[Function SubSink]}
+  unsubscribe$={[Function Subject]}
+>
+  <ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <section
+      class="main-cards"
+    >
+      <csaa-paperless-terms>
+      </csaa-paperless-terms>
+      <csaa-payments-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+               Payments 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item>
+                <ion-label>
+                  <ion-grid>
+                    <ion-row
+                      class="overdue"
+                    >
+                      <ion-col
+                        class="due-date"
+                      >
+                        <h3>
+                          Past
+                           Due Oct 10, 2020 
+                        </h3>
+                      </ion-col>
+                      <ion-col
+                        size="auto"
+                      >
+                        <h3>
+                          $0.00
+                        </h3>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col>
+                        AZAC910018915
+                      </ion-col>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col
+                        class="payment-subtitle"
+                      >
+                        <csaa-policy-subtitles>
+                          <span
+                            class="subtitle"
+                          >
+                            2011 Ford Econoline Van,
+                          </span>
+                          <span
+                            class="subtitle"
+                          >
+                            2019 Audi A8
+                          </span>
+                        </csaa-policy-subtitles>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <ion-grid>
+                    <ion-row>
+                      <h3>
+                        No Payment Due
+                      </h3>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col>
+                        AZH3910018916
+                      </ion-col>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col
+                        class="payment-subtitle"
+                      >
+                        <csaa-policy-subtitles>
+                          <span
+                            class="subtitle"
+                          >
+                            28425 N Black Canyon Hwy
+                          </span>
+                        </csaa-policy-subtitles>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <ion-grid>
+                    <ion-row>
+                      <h3>
+                        No Payment Due
+                      </h3>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col>
+                        AZPU910018917
+                      </ion-col>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col
+                        class="payment-subtitle"
+                      >
+                        <csaa-policy-subtitles>
+                          <span
+                            class="subtitle"
+                          >
+                            Personal Umbrella Policy
+                          </span>
+                        </csaa-policy-subtitles>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+            <ion-button
+              expand="full"
+            >
+               Payments 
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </csaa-payments-card>
+      <csaa-insurance-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+               Proof of Insurance 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZAC910018915
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        2011 Ford Econoline Van,
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        2019 Audi A8
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZH3910018916
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        28425 N Black Canyon Hwy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </csaa-insurance-card>
+      <csaa-coverages-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+              Coverages 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+                track-click="coverages:gotodetails"
+              >
+                <ion-label>
+                  <h3>
+                    AZAC910018915
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        2011 Ford Econoline Van,
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        2019 Audi A8
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+                track-click="coverages:gotodetails"
+              >
+                <ion-label>
+                  <h3>
+                    AZH3910018916
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        28425 N Black Canyon Hwy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+                track-click="coverages:gotodetails"
+              >
+                <ion-label>
+                  <h3>
+                    AZPU910018917
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        Personal Umbrella Policy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </csaa-coverages-card>
+      <csaa-claims-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-item>
+              <ion-card-title>
+                 Claims
+              </ion-card-title>
+              <ion-button
+                fill="clear"
+                slot="end"
+              >
+                What do I do?
+              </ion-button>
+            </ion-item>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                     Collision while Turning 
+                  </h3>
+                  <span
+                    class="claim-number"
+                  >
+                    Claim #1003-75-7692
+                  </span>
+                  <br />
+                  <span
+                    class="status"
+                  >
+                    Status: Open
+                  </span>
+                  <br />
+                  <span
+                    class="subtitle"
+                  >
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+            <ion-button
+              expand="full"
+            >
+              I Had an Accident
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </csaa-claims-card>
+      <csaa-documents-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+              Documents 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZAC910018915
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        2011 Ford Econoline Van,
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        2019 Audi A8
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZH3910018916
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        28425 N Black Canyon Hwy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZPU910018917
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        Personal Umbrella Policy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </csaa-documents-card>
+    </section>
+    <csaa-get-a-quote-card>
+    </csaa-get-a-quote-card>
+    <csaa-file-a-claim-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-content>
+          <ion-button
+            expand="full"
+          >
+            Start a Claim
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-file-a-claim-card>
+    <csaa-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            <span>
+              Manage Paperless
+            </span>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p
+            class="ion-padding-bottom text-lighter"
+          >
+             View and change your paperless preferences for policy documents, bills, payment reminders and confirmations. 
+          </p>
+          <ion-button
+            expand="block"
+          >
+             View Preferences 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-paperless-preference-card>
+    <csaa-my-policy-card
+      text="Tap to download policy & billing documents, make policy changes, and more"
+    >
+      <div
+        class="my-policy"
+      >
+        <ion-card
+          class="csaa-card picture-card"
+        >
+          <ion-card-content
+            class="mypolicy-body-card"
+          >
+            <h2>
+              Tap to download policy & billing documents, make policy changes, and more
+            </h2>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </csaa-my-policy-card>
+  </ion-content><csaa-working-hours
+    class="csaa"
+    label="Call Service"
+    servicetype="CUSTOMER"
+    title="Service Hours"
+  >
+    <div
+      class="csaa-working-hours hidden"
+    >
+      <ion-card
+        class="card card-md"
+      >
+        <ion-card-header>
+          Service Hours
+        </ion-card-header>
+        <ion-card-content
+          class="card-content card-content-md"
+        >
+          <ion-list>
+            <ion-item>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+             Call Service 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </csaa-working-hours>
+</app-csaa-home>
+`;
+
+exports[`CsaaHomePage should match snapshot 1`] = `
+<app-csaa-home
+  __cancelledPolicies$__selector={[Function Observable]}
+  __claims$__selector={[Function Observable]}
+  __gracePeriodPolicies$__selector={[Function Observable]}
+  __ngContext__={[Function LRootView]}
+  __policies$__selector={[Function Observable]}
+  __upcomingPayments$__selector={[Function Observable]}
+  __upcomingPaymentsDue$__selector={[Function Observable]}
+  alertCtrl={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  authService={[Function AuthMockService]}
+  callService={[Function Object]}
+  csaaBaseClass={[Function Boolean]}
+  currentTheme=""
+  didAlertThisSession="false"
+  errorHandler={[Function Object]}
+  errorMap={[Function Object]}
+  globalStateService={[Function Object]}
+  hasActivePolicies="false"
+  hasAutoPolicy="false"
+  isAndroidPlatform="false"
+  loading={[Function Boolean]}
+  loading$={[Function Observable]}
+  platform={[Function PlatformMock]}
+  routerService={[Function RouterService]}
+  showHeader="false"
+  showSettings="false"
+  storage={[Function StorageMockService]}
+  store={[Function Store]}
+  subsink={[Function SubSink]}
+  unsubscribe$={[Function Subject]}
+>
+  <ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <section
+      class="main-cards"
+    >
+      <csaa-paperless-terms>
+      </csaa-paperless-terms>
+      <csaa-claims-card>
+        <csaa-skeleton-card>
+          <ion-card
+            class="csaa-card"
+          >
+            <ion-card-header>
+              <ion-card-title>
+                <ion-skeleton-text
+                  animated=""
+                  style="width: 70%; height: 30px;"
+                />
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content
+              class="csaa-item-list"
+            >
+              <ion-list>
+                <ion-item>
+                  <ion-label>
+                    <ion-skeleton-text
+                      animated=""
+                      style="width: 88%; height: 15px;"
+                    />
+                    <ion-skeleton-text
+                      animated=""
+                      style="width: 70%;"
+                    />
+                    <ion-skeleton-text
+                      animated=""
+                      style="width: 60%;"
+                    />
+                  </ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label>
+                    <ion-skeleton-text
+                      animated=""
+                      style="width: 70%; height: 15px;"
+                    />
+                    <ion-skeleton-text
+                      animated=""
+                      style="width: 55%;"
+                    />
+                    <ion-skeleton-text
+                      animated=""
+                      style="width: 30%;"
+                    />
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+              <ion-skeleton-text
+                animated=""
+                style="height: 45px;"
+              />
+            </ion-card-content>
+          </ion-card>
+        </csaa-skeleton-card>
+      </csaa-claims-card>
+    </section>
+    <csaa-get-a-quote-card>
+      <csaa-skeleton-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-skeleton-text
+              animated=""
+              class="button-only"
+              style="height: 45px;"
+            />
+          </ion-card-content>
+        </ion-card>
+      </csaa-skeleton-card>
+    </csaa-get-a-quote-card>
+    <csaa-file-a-claim-card>
+      <csaa-skeleton-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-skeleton-text
+              animated=""
+              class="button-only"
+              style="height: 45px;"
+            />
+          </ion-card-content>
+        </ion-card>
+      </csaa-skeleton-card>
+    </csaa-file-a-claim-card>
+    <csaa-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            <span>
+              Manage Paperless
+            </span>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p
+            class="ion-padding-bottom text-lighter"
+          >
+             View and change your paperless preferences for policy documents, bills, payment reminders and confirmations. 
+          </p>
+          <ion-button
+            expand="block"
+          >
+             View Preferences 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-paperless-preference-card>
+    <csaa-my-policy-card
+      text="Tap to download policy & billing documents, make policy changes, and more"
+    >
+      <div
+        class="my-policy"
+      >
+        <ion-card
+          class="csaa-card picture-card"
+        >
+          <ion-card-content
+            class="mypolicy-body-card"
+          >
+            <h2>
+              Tap to download policy & billing documents, make policy changes, and more
+            </h2>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </csaa-my-policy-card>
+  </ion-content><csaa-working-hours
+    class="csaa"
+    label="Call Service"
+    servicetype="CUSTOMER"
+    title="Service Hours"
+  >
+    <div
+      class="csaa-working-hours hidden"
+    >
+      <ion-card
+        class="card card-md"
+      >
+        <ion-card-header>
+          Service Hours
+        </ion-card-header>
+        <ion-card-content
+          class="card-content card-content-md"
+        >
+          <ion-list>
+            <ion-item>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+             Call Service 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </csaa-working-hours>
+</app-csaa-home>
+`;
+
+exports[`CsaaHomePage should match snapshot after load 1`] = `
+<app-csaa-home
+  __cancelledPolicies$__selector={[Function Observable]}
+  __claims$__selector={[Function Observable]}
+  __gracePeriodPolicies$__selector={[Function Observable]}
+  __ngContext__={[Function LRootView]}
+  __policies$__selector={[Function Observable]}
+  __upcomingPayments$__selector={[Function Observable]}
+  __upcomingPaymentsDue$__selector={[Function Observable]}
+  __username$__selector={[Function Observable]}
+  alertCtrl={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  authService={[Function AuthMockService]}
+  callService={[Function Object]}
+  csaaBaseClass={[Function Boolean]}
+  currentTheme=""
+  didAlertThisSession="false"
+  errorHandler={[Function Object]}
+  errorMap={[Function Object]}
+  globalStateService={[Function Object]}
+  hasActivePolicies={[Function Boolean]}
+  hasAutoPolicy={[Function Boolean]}
+  isAndroidPlatform="false"
+  loading="false"
+  loading$={[Function Observable]}
+  platform={[Function PlatformMock]}
+  routerService={[Function RouterService]}
+  showHeader="false"
+  showSettings="false"
+  storage={[Function StorageMockService]}
+  store={[Function Store]}
+  subsink={[Function SubSink]}
+  unsubscribe$={[Function Subject]}
+>
+  <ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <section
+      class="main-cards"
+    >
+      <csaa-paperless-terms>
+      </csaa-paperless-terms>
+      <csaa-insurance-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+               Proof of Insurance 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZAC910018915
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        2011 Ford Econoline Van,
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        2019 Audi A8
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZH3910018916
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        28425 N Black Canyon Hwy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </csaa-insurance-card>
+      <csaa-coverages-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+              Coverages 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+                track-click="coverages:gotodetails"
+              >
+                <ion-label>
+                  <h3>
+                    AZAC910018915
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        2011 Ford Econoline Van,
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        2019 Audi A8
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+                track-click="coverages:gotodetails"
+              >
+                <ion-label>
+                  <h3>
+                    AZH3910018916
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        28425 N Black Canyon Hwy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+                track-click="coverages:gotodetails"
+              >
+                <ion-label>
+                  <h3>
+                    AZPU910018917
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        Personal Umbrella Policy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </csaa-coverages-card>
+      <csaa-claims-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-item>
+              <ion-card-title>
+                 Claims
+              </ion-card-title>
+              <ion-button
+                fill="clear"
+                slot="end"
+              >
+                What do I do?
+              </ion-button>
+            </ion-item>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                     Collision while Turning 
+                  </h3>
+                  <span
+                    class="claim-number"
+                  >
+                    Claim #1003-75-7692
+                  </span>
+                  <br />
+                  <span
+                    class="status"
+                  >
+                    Status: Open
+                  </span>
+                  <br />
+                  <span
+                    class="subtitle"
+                  >
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+            <ion-button
+              expand="full"
+            >
+              I Had an Accident
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </csaa-claims-card>
+      <csaa-documents-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+              Documents 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZAC910018915
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        2011 Ford Econoline Van,
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        2019 Audi A8
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZH3910018916
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        28425 N Black Canyon Hwy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZPU910018917
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        Personal Umbrella Policy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </csaa-documents-card>
+      <csaa-payments-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+               Payments 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item>
+                <ion-label>
+                  <ion-grid>
+                    <ion-row>
+                      <h3>
+                        No Payment Due
+                      </h3>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col>
+                        AZH3910018916
+                      </ion-col>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col
+                        class="payment-subtitle"
+                      >
+                        <csaa-policy-subtitles>
+                          <span
+                            class="subtitle"
+                          >
+                            28425 N Black Canyon Hwy
+                          </span>
+                        </csaa-policy-subtitles>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <ion-grid>
+                    <ion-row>
+                      <h3>
+                        No Payment Due
+                      </h3>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col>
+                        AZPU910018917
+                      </ion-col>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col
+                        class="payment-subtitle"
+                      >
+                        <csaa-policy-subtitles>
+                          <span
+                            class="subtitle"
+                          >
+                            Personal Umbrella Policy
+                          </span>
+                        </csaa-policy-subtitles>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <ion-grid>
+                    <ion-row>
+                      <h3>
+                        No Payment Due
+                      </h3>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col>
+                        AZAC910018915
+                      </ion-col>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col
+                        class="payment-subtitle"
+                      >
+                        <csaa-policy-subtitles>
+                          <span
+                            class="subtitle"
+                          >
+                            2011 Ford Econoline Van,
+                          </span>
+                          <span
+                            class="subtitle"
+                          >
+                            2019 Audi A8
+                          </span>
+                        </csaa-policy-subtitles>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+            <ion-button
+              expand="full"
+            >
+               Payments 
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </csaa-payments-card>
+    </section>
+    <csaa-get-a-quote-card>
+    </csaa-get-a-quote-card>
+    <csaa-file-a-claim-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-content>
+          <ion-button
+            expand="full"
+          >
+            Start a Claim
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-file-a-claim-card>
+    <csaa-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            <span>
+              Manage Paperless
+            </span>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p
+            class="ion-padding-bottom text-lighter"
+          >
+             View and change your paperless preferences for policy documents, bills, payment reminders and confirmations. 
+          </p>
+          <ion-button
+            expand="block"
+          >
+             View Preferences 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-paperless-preference-card>
+    <csaa-my-policy-card
+      text="Tap to download policy & billing documents, make policy changes, and more"
+    >
+      <div
+        class="my-policy"
+      >
+        <ion-card
+          class="csaa-card picture-card"
+        >
+          <ion-card-content
+            class="mypolicy-body-card"
+          >
+            <h2>
+              Tap to download policy & billing documents, make policy changes, and more
+            </h2>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </csaa-my-policy-card>
+  </ion-content><csaa-working-hours
+    class="csaa"
+    label="Call Service"
+    servicetype="CUSTOMER"
+    title="Service Hours"
+  >
+    <div
+      class="csaa-working-hours hidden"
+    >
+      <ion-card
+        class="card card-md"
+      >
+        <ion-card-header>
+          Service Hours
+        </ion-card-header>
+        <ion-card-content
+          class="card-content card-content-md"
+        >
+          <ion-list>
+            <ion-item>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+             Call Service 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </csaa-working-hours>
+</app-csaa-home>
+`;
+
+exports[`CsaaHomePage should match snapshot after load with header 1`] = `
+<app-csaa-home
+  __cancelledPolicies$__selector={[Function Observable]}
+  __claims$__selector={[Function Observable]}
+  __gracePeriodPolicies$__selector={[Function Observable]}
+  __ngContext__={[Function LRootView]}
+  __policies$__selector={[Function Observable]}
+  __upcomingPayments$__selector={[Function Observable]}
+  __upcomingPaymentsDue$__selector={[Function Observable]}
+  __username$__selector={[Function Observable]}
+  alertCtrl={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  authService={[Function AuthMockService]}
+  callService={[Function Object]}
+  csaaBaseClass={[Function Boolean]}
+  currentTheme=""
+  didAlertThisSession="false"
+  errorHandler={[Function Object]}
+  errorMap={[Function Object]}
+  globalStateService={[Function Object]}
+  hasActivePolicies={[Function Boolean]}
+  hasAutoPolicy={[Function Boolean]}
+  isAndroidPlatform="false"
+  loading="false"
+  loading$={[Function Observable]}
+  platform={[Function PlatformMock]}
+  routerService={[Function RouterService]}
+  showHeader={[Function Boolean]}
+  showSettings="false"
+  storage={[Function StorageMockService]}
+  store={[Function Store]}
+  subsink={[Function SubSink]}
+  unsubscribe$={[Function Subject]}
+>
+  <ion-header
+    class="csaa csaa-home-header"
+  >
+    <ion-toolbar
+      mode="ios"
+    >
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button
+          text=""
+        >
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-title
+        size="small"
+      >
+        <csaa-theme-icon
+          name="header-logo"
+        >
+          <img
+            src="/assets/csaa-mobile/vectors/icn-header-logo.svg"
+            style="width: 40px; height: 40px;"
+          />
+        </csaa-theme-icon>
+      </ion-title>
+      <ion-buttons
+        slot="end"
+      >
+        <csaa-theme-icon
+          name="empty"
+        >
+          <img
+            src="/assets/csaa-mobile/vectors/icn-empty.svg"
+            style="width: 38px; height: 38px;"
+          />
+        </csaa-theme-icon>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title
+        size="small"
+      >
+        Hello FirstName
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <section
+      class="main-cards"
+    >
+      <csaa-paperless-terms>
+      </csaa-paperless-terms>
+      <csaa-insurance-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+               Proof of Insurance 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZAC910018915
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        2011 Ford Econoline Van,
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        2019 Audi A8
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZH3910018916
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        28425 N Black Canyon Hwy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </csaa-insurance-card>
+      <csaa-coverages-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+              Coverages 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+                track-click="coverages:gotodetails"
+              >
+                <ion-label>
+                  <h3>
+                    AZAC910018915
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        2011 Ford Econoline Van,
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        2019 Audi A8
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+                track-click="coverages:gotodetails"
+              >
+                <ion-label>
+                  <h3>
+                    AZH3910018916
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        28425 N Black Canyon Hwy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+                track-click="coverages:gotodetails"
+              >
+                <ion-label>
+                  <h3>
+                    AZPU910018917
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        Personal Umbrella Policy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </csaa-coverages-card>
+      <csaa-claims-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-item>
+              <ion-card-title>
+                 Claims
+              </ion-card-title>
+              <ion-button
+                fill="clear"
+                slot="end"
+              >
+                What do I do?
+              </ion-button>
+            </ion-item>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                     Collision while Turning 
+                  </h3>
+                  <span
+                    class="claim-number"
+                  >
+                    Claim #1003-75-7692
+                  </span>
+                  <br />
+                  <span
+                    class="status"
+                  >
+                    Status: Open
+                  </span>
+                  <br />
+                  <span
+                    class="subtitle"
+                  >
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+            <ion-button
+              expand="full"
+            >
+              I Had an Accident
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </csaa-claims-card>
+      <csaa-documents-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+              Documents 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZAC910018915
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        2011 Ford Econoline Van,
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        2019 Audi A8
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZH3910018916
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        28425 N Black Canyon Hwy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZPU910018917
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        Personal Umbrella Policy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </csaa-documents-card>
+      <csaa-payments-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+               Payments 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item>
+                <ion-label>
+                  <ion-grid>
+                    <ion-row>
+                      <h3>
+                        No Payment Due
+                      </h3>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col>
+                        AZH3910018916
+                      </ion-col>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col
+                        class="payment-subtitle"
+                      >
+                        <csaa-policy-subtitles>
+                          <span
+                            class="subtitle"
+                          >
+                            28425 N Black Canyon Hwy
+                          </span>
+                        </csaa-policy-subtitles>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <ion-grid>
+                    <ion-row>
+                      <h3>
+                        No Payment Due
+                      </h3>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col>
+                        AZPU910018917
+                      </ion-col>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col
+                        class="payment-subtitle"
+                      >
+                        <csaa-policy-subtitles>
+                          <span
+                            class="subtitle"
+                          >
+                            Personal Umbrella Policy
+                          </span>
+                        </csaa-policy-subtitles>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <ion-grid>
+                    <ion-row>
+                      <h3>
+                        No Payment Due
+                      </h3>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col>
+                        AZAC910018915
+                      </ion-col>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col
+                        class="payment-subtitle"
+                      >
+                        <csaa-policy-subtitles>
+                          <span
+                            class="subtitle"
+                          >
+                            2011 Ford Econoline Van,
+                          </span>
+                          <span
+                            class="subtitle"
+                          >
+                            2019 Audi A8
+                          </span>
+                        </csaa-policy-subtitles>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+            <ion-button
+              expand="full"
+            >
+               Payments 
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </csaa-payments-card>
+    </section>
+    <csaa-get-a-quote-card>
+    </csaa-get-a-quote-card>
+    <csaa-file-a-claim-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-content>
+          <ion-button
+            expand="full"
+          >
+            Start a Claim
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-file-a-claim-card>
+    <csaa-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            <span>
+              Manage Paperless
+            </span>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p
+            class="ion-padding-bottom text-lighter"
+          >
+             View and change your paperless preferences for policy documents, bills, payment reminders and confirmations. 
+          </p>
+          <ion-button
+            expand="block"
+          >
+             View Preferences 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-paperless-preference-card>
+    <csaa-my-policy-card
+      text="Tap to download policy & billing documents, make policy changes, and more"
+    >
+      <div
+        class="my-policy"
+      >
+        <ion-card
+          class="csaa-card picture-card"
+        >
+          <ion-card-content
+            class="mypolicy-body-card"
+          >
+            <h2>
+              Tap to download policy & billing documents, make policy changes, and more
+            </h2>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </csaa-my-policy-card>
+  </ion-content><csaa-working-hours
+    class="csaa"
+    label="Call Service"
+    servicetype="CUSTOMER"
+    title="Service Hours"
+  >
+    <div
+      class="csaa-working-hours hidden"
+    >
+      <ion-card
+        class="card card-md"
+      >
+        <ion-card-header>
+          Service Hours
+        </ion-card-header>
+        <ion-card-content
+          class="card-content card-content-md"
+        >
+          <ion-list>
+            <ion-item>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+             Call Service 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </csaa-working-hours>
+</app-csaa-home>
+`;
+
+exports[`CsaaHomePage should show error cards 1`] = `
+<app-csaa-home
+  __cancelledPolicies$__selector={[Function Observable]}
+  __gracePeriodPolicies$__selector={[Function Observable]}
+  __ngContext__={[Function LRootView]}
+  __policies$__selector={[Function Observable]}
+  __upcomingPayments$__selector={[Function Observable]}
+  alertCtrl={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  authService={[Function AuthMockService]}
+  callService={[Function Object]}
+  csaaBaseClass={[Function Boolean]}
+  currentTheme=""
+  didAlertThisSession="false"
+  errorHandler={[Function Object]}
+  errorMap={[Function Object]}
+  globalStateService={[Function Object]}
+  hasActivePolicies="false"
+  hasAutoPolicy="false"
+  isAndroidPlatform="false"
+  loading="false"
+  loading$={[Function Observable]}
+  platform={[Function PlatformMock]}
+  routerService={[Function RouterService]}
+  showHeader="false"
+  showSettings="false"
+  storage={[Function StorageMockService]}
+  store={[Function Store]}
+  subsink={[Function SubSink]}
+  unsubscribe$={[Function Subject]}
+>
+  <ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <section
+      class="main-cards"
+    >
+      <csaa-paperless-terms>
+      </csaa-paperless-terms>
+      <csaa-error-card
+        type="payments"
+      >
+        <div
+          class="error-card-component"
+        >
+          <ion-card
+            class="csaa-card error-card"
+          >
+            <div
+              class="error-img"
+            >
+              <img
+                src="/assets/csaa-mobile/imgs/payments-error-card.jpeg"
+              />
+            </div>
+            <ion-card-content
+              class="main-body-card"
+            >
+              <p
+                class="error-card-title"
+              >
+                Payments
+              </p>
+              <p
+                class="error-card-message"
+              >
+                Oops! Something went wrong.
+              </p>
+              <p
+                class="error-card-message-sub"
+              >
+                Try again later.
+              </p>
+              <ion-button
+                expand="full"
+              >
+                 Retry 
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </csaa-error-card>
+      <csaa-error-card
+        type="insurance"
+      >
+        <div
+          class="error-card-component"
+        >
+          <ion-card
+            class="csaa-card error-card"
+          >
+            <div
+              class="error-img"
+            >
+              <img
+                src="/assets/csaa-mobile/imgs/insurance-error-card.jpeg"
+              />
+            </div>
+            <ion-card-content
+              class="main-body-card"
+            >
+              <p
+                class="error-card-title"
+              >
+                Proof of Insurance
+              </p>
+              <p
+                class="error-card-message"
+              >
+                Oops! Something went wrong.
+              </p>
+              <p
+                class="error-card-message-sub"
+              >
+                Try again later.
+              </p>
+              <ion-button
+                expand="full"
+              >
+                 Retry 
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </csaa-error-card>
+      <csaa-error-card
+        type="coverages"
+      >
+        <div
+          class="error-card-component"
+        >
+          <ion-card
+            class="csaa-card error-card"
+          >
+            <div
+              class="error-img"
+            >
+              <img
+                src="/assets/csaa-mobile/imgs/coverages-error-card.jpeg"
+              />
+            </div>
+            <ion-card-content
+              class="main-body-card"
+            >
+              <p
+                class="error-card-title"
+              >
+                Coverages
+              </p>
+              <p
+                class="error-card-message"
+              >
+                Oops! Something went wrong.
+              </p>
+              <p
+                class="error-card-message-sub"
+              >
+                Try again later.
+              </p>
+              <ion-button
+                expand="full"
+              >
+                 Retry 
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </csaa-error-card>
+      <csaa-error-card
+        type="claims"
+      >
+        <div
+          class="error-card-component"
+        >
+          <ion-card
+            class="csaa-card error-card"
+          >
+            <div
+              class="error-img"
+            >
+              <img
+                src="/assets/csaa-mobile/imgs/claims-error-card.jpeg"
+              />
+            </div>
+            <ion-card-content
+              class="main-body-card"
+            >
+              <p
+                class="error-card-title"
+              >
+                Claims
+              </p>
+              <p
+                class="error-card-message"
+              >
+                Oops! Something went wrong.
+              </p>
+              <p
+                class="error-card-message-sub"
+              >
+                Try again later.
+              </p>
+              <ion-button
+                expand="full"
+              >
+                 Retry 
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </csaa-error-card>
+    </section>
+    <csaa-get-a-quote-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-content>
+          <ion-button
+            expand="full"
+          >
+            Get a Quote
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-get-a-quote-card>
+    <csaa-file-a-claim-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-content>
+          <ion-button
+            expand="full"
+          >
+            Start a Claim
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-file-a-claim-card>
+    <csaa-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            <span>
+              Manage Paperless
+            </span>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p
+            class="ion-padding-bottom text-lighter"
+          >
+             View and change your paperless preferences for policy documents, bills, payment reminders and confirmations. 
+          </p>
+          <ion-button
+            expand="block"
+          >
+             View Preferences 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-paperless-preference-card>
+    <csaa-my-policy-card
+      text="Tap to download policy & billing documents, make policy changes, and more"
+    >
+      <div
+        class="my-policy"
+      >
+        <ion-card
+          class="csaa-card picture-card"
+        >
+          <ion-card-content
+            class="mypolicy-body-card"
+          >
+            <h2>
+              Tap to download policy & billing documents, make policy changes, and more
+            </h2>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </csaa-my-policy-card>
+  </ion-content><csaa-working-hours
+    class="csaa"
+    label="Call Service"
+    servicetype="CUSTOMER"
+    title="Service Hours"
+  >
+    <div
+      class="csaa-working-hours hidden"
+    >
+      <ion-card
+        class="card card-md"
+      >
+        <ion-card-header>
+          Service Hours
+        </ion-card-header>
+        <ion-card-content
+          class="card-content card-content-md"
+        >
+          <ion-list>
+            <ion-item>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+             Call Service 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </csaa-working-hours>
+</app-csaa-home>
+`;
+
+exports[`CsaaHomePage should show proof of insurance, coverages, claims and payments 1`] = `
+<app-csaa-home
+  __cancelledPolicies$__selector={[Function Observable]}
+  __claims$__selector={[Function Observable]}
+  __gracePeriodPolicies$__selector={[Function Observable]}
+  __ngContext__={[Function LRootView]}
+  __policies$__selector={[Function Observable]}
+  __upcomingPayments$__selector={[Function Observable]}
+  __upcomingPaymentsDue$__selector={[Function Observable]}
+  __username$__selector={[Function Observable]}
+  alertCtrl={[Function AlertControllerMock]}
+  analyticsService={[Function AnalyticsMockService]}
+  authService={[Function AuthMockService]}
+  callService={[Function Object]}
+  csaaBaseClass={[Function Boolean]}
+  currentTheme=""
+  didAlertThisSession="false"
+  errorHandler={[Function Object]}
+  errorMap={[Function Object]}
+  globalStateService={[Function Object]}
+  hasActivePolicies={[Function Boolean]}
+  hasAutoPolicy={[Function Boolean]}
+  isAndroidPlatform="false"
+  loading="false"
+  loading$={[Function Observable]}
+  platform={[Function PlatformMock]}
+  routerService={[Function RouterService]}
+  showHeader="false"
+  showSettings="false"
+  storage={[Function StorageMockService]}
+  store={[Function Store]}
+  subsink={[Function SubSink]}
+  unsubscribe$={[Function Subject]}
+>
+  <ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <section
+      class="main-cards"
+    >
+      <csaa-paperless-terms>
+      </csaa-paperless-terms>
+      <csaa-insurance-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+               Proof of Insurance 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZAC910018915
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        2011 Ford Econoline Van,
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        2019 Audi A8
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZH3910018916
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        28425 N Black Canyon Hwy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </csaa-insurance-card>
+      <csaa-coverages-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+              Coverages 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+                track-click="coverages:gotodetails"
+              >
+                <ion-label>
+                  <h3>
+                    AZAC910018915
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        2011 Ford Econoline Van,
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        2019 Audi A8
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+                track-click="coverages:gotodetails"
+              >
+                <ion-label>
+                  <h3>
+                    AZH3910018916
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        28425 N Black Canyon Hwy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+                track-click="coverages:gotodetails"
+              >
+                <ion-label>
+                  <h3>
+                    AZPU910018917
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        Personal Umbrella Policy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </csaa-coverages-card>
+      <csaa-claims-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-item>
+              <ion-card-title>
+                 Claims
+              </ion-card-title>
+              <ion-button
+                fill="clear"
+                slot="end"
+              >
+                What do I do?
+              </ion-button>
+            </ion-item>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                     Collision while Turning 
+                  </h3>
+                  <span
+                    class="claim-number"
+                  >
+                    Claim #1003-75-7692
+                  </span>
+                  <br />
+                  <span
+                    class="status"
+                  >
+                    Status: Open
+                  </span>
+                  <br />
+                  <span
+                    class="subtitle"
+                  >
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+            <ion-button
+              expand="full"
+            >
+              I Had an Accident
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </csaa-claims-card>
+      <csaa-documents-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+              Documents 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZAC910018915
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        2011 Ford Econoline Van,
+                      </span>
+                      <span
+                        class="subtitle"
+                      >
+                        2019 Audi A8
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZH3910018916
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        28425 N Black Canyon Hwy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+              <ion-item
+                detail=""
+              >
+                <ion-label>
+                  <h3>
+                    AZPU910018917
+                  </h3>
+                  <span
+                    class="subtitle"
+                  >
+                    <csaa-policy-subtitles>
+                      <span
+                        class="subtitle"
+                      >
+                        Personal Umbrella Policy
+                      </span>
+                    </csaa-policy-subtitles>
+                  </span>
+                </ion-label>
+                <csaa-theme-icon
+                  slot="end"
+                >
+                  <img
+                    src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                    style="width: 40px; height: 40px;"
+                  />
+                </csaa-theme-icon>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </csaa-documents-card>
+      <csaa-payments-card>
+        <ion-card
+          class="csaa-card"
+        >
+          <ion-card-header>
+            <ion-card-title>
+               Payments 
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content
+            class="csaa-item-list"
+          >
+            <ion-list>
+              <ion-item>
+                <ion-label>
+                  <ion-grid>
+                    <ion-row>
+                      <h3>
+                        No Payment Due
+                      </h3>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col>
+                        AZH3910018916
+                      </ion-col>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col
+                        class="payment-subtitle"
+                      >
+                        <csaa-policy-subtitles>
+                          <span
+                            class="subtitle"
+                          >
+                            28425 N Black Canyon Hwy
+                          </span>
+                        </csaa-policy-subtitles>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <ion-grid>
+                    <ion-row>
+                      <h3>
+                        No Payment Due
+                      </h3>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col>
+                        AZPU910018917
+                      </ion-col>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col
+                        class="payment-subtitle"
+                      >
+                        <csaa-policy-subtitles>
+                          <span
+                            class="subtitle"
+                          >
+                            Personal Umbrella Policy
+                          </span>
+                        </csaa-policy-subtitles>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <ion-grid>
+                    <ion-row>
+                      <h3>
+                        No Payment Due
+                      </h3>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col>
+                        AZAC910018915
+                      </ion-col>
+                    </ion-row>
+                    <ion-row
+                      class="subtitle"
+                    >
+                      <ion-col
+                        class="payment-subtitle"
+                      >
+                        <csaa-policy-subtitles>
+                          <span
+                            class="subtitle"
+                          >
+                            2011 Ford Econoline Van,
+                          </span>
+                          <span
+                            class="subtitle"
+                          >
+                            2019 Audi A8
+                          </span>
+                        </csaa-policy-subtitles>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+            <ion-button
+              expand="full"
+            >
+               Payments 
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </csaa-payments-card>
+    </section>
+    <csaa-get-a-quote-card>
+    </csaa-get-a-quote-card>
+    <csaa-file-a-claim-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-content>
+          <ion-button
+            expand="full"
+          >
+            Start a Claim
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-file-a-claim-card>
+    <csaa-paperless-preference-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            <span>
+              Manage Paperless
+            </span>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p
+            class="ion-padding-bottom text-lighter"
+          >
+             View and change your paperless preferences for policy documents, bills, payment reminders and confirmations. 
+          </p>
+          <ion-button
+            expand="block"
+          >
+             View Preferences 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-paperless-preference-card>
+    <csaa-my-policy-card
+      text="Tap to download policy & billing documents, make policy changes, and more"
+    >
+      <div
+        class="my-policy"
+      >
+        <ion-card
+          class="csaa-card picture-card"
+        >
+          <ion-card-content
+            class="mypolicy-body-card"
+          >
+            <h2>
+              Tap to download policy & billing documents, make policy changes, and more
+            </h2>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </csaa-my-policy-card>
+  </ion-content><csaa-working-hours
+    class="csaa"
+    label="Call Service"
+    servicetype="CUSTOMER"
+    title="Service Hours"
+  >
+    <div
+      class="csaa-working-hours hidden"
+    >
+      <ion-card
+        class="card card-md"
+      >
+        <ion-card-header>
+          Service Hours
+        </ion-card-header>
+        <ion-card-content
+          class="card-content card-content-md"
+        >
+          <ion-list>
+            <ion-item>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+              <div
+                class="csaa-working-hours-item"
+              >
+                <span
+                  class="days"
+                >
+                  Mon-Fri
+                </span>
+                <span
+                  class="hours"
+                >
+                  8am-5pm
+                </span>
+              </div>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+             Call Service 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </csaa-working-hours>
+</app-csaa-home>
+`;

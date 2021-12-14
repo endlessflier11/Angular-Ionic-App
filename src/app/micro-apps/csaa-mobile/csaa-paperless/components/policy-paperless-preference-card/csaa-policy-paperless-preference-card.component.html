@@ -1,0 +1,92 @@
+<csaa-skeleton-card *ngIf="loading && !policy"></csaa-skeleton-card>
+<ng-container *ngIf="policy">
+  <ion-card class="csaa-card">
+    <ion-card-header>
+      <ion-card-title> {{ policy.number }} </ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="csaa-item-list">
+      <ion-list>
+        <ion-item [lines]="policy.type === PolicyType.Auto ? undefined : 'none'">
+          <ion-label>
+            <h3 class="csaa-pending-enrollment" *ngIf="isPendingEnrollment()">
+              Pending Enrollment
+            </h3>
+            <h3>{{ policyTypeTitle }}</h3>
+            <csaa-policy-subtitles [policySubtitle]="policy.subtitle"></csaa-policy-subtitles>
+          </ion-label>
+          <csaa-theme-icon slot="end" [type]="policy.type" [size]="40"></csaa-theme-icon>
+        </ion-item>
+
+        <csaa-accordion>
+          <csaa-accordion-item (toggle)="trackToggle('POLICY_DOCUMENTS', $event)">
+            <ion-item slot="header" lines="none">
+              <ion-label>
+                <h3>Policy Documents</h3>
+                <span class="subtitle">{{ policyEmailAlertsStatus }}</span>
+              </ion-label>
+            </ion-item>
+            <p>Notifications for renewals, policy changes and important policy information</p>
+          </csaa-accordion-item>
+          <hr />
+
+          <csaa-accordion-item (toggle)="trackToggle('BILL_PAYMENT', $event)">
+            <ion-item slot="header" lines="none">
+              <ion-label>
+                <h3>Billing & Payments</h3>
+                <span class="subtitle">{{ billEmailAlertsStatus }}</span>
+                <span class="subtitle" *ngFor="let label of activeBillingNotificationItems">{{
+                  label
+                }}</span>
+              </ion-label>
+            </ion-item>
+            <p class="ion-margin-vertical">
+              Bill notifications, payment reminders, and payment confirmations or declines
+            </p>
+          </csaa-accordion-item>
+          <hr />
+
+          <csaa-accordion-item (toggle)="trackToggle('TEXT_ALERTS', $event)">
+            <ion-item slot="header">
+              <ion-label>
+                <h3>Text Alerts</h3>
+                <span class="subtitle">{{ textAlertsStatus }}</span>
+                <span *ngIf="preference?.sms.enabled" class="subtitle">{{
+                  preference?.sms?.phoneNumber | phone
+                }}</span>
+              </ion-label>
+            </ion-item>
+            <p>Payment reminders, payment declines and other policy notifications</p>
+          </csaa-accordion-item>
+          <hr />
+
+          <ng-container *ngIf="preference?.email?.enabled || preference?.email?.isPending">
+            <ion-item>
+              <ion-label>
+                <h3>Email Address</h3>
+                <span
+                  class="subtitle"
+                  [ngClass]="{ 'csaa-pending-enrollment': isPendingEnrollment() }"
+                  >{{ preference.email.email || '--' }}</span
+                >
+              </ion-label>
+            </ion-item>
+          </ng-container>
+        </csaa-accordion>
+      </ion-list>
+      <ion-button
+        *ngIf="!isPendingEnrollment(); else reviewTerms"
+        expand="block"
+        (click)="navigateToPreference()"
+      >
+        Edit</ion-button
+      >
+    </ion-card-content>
+  </ion-card>
+</ng-container>
+<ng-template #reviewTerms>
+  <csaa-paperless-terms
+    [buttonOnly]="true"
+    [policy]="policy"
+    (accepted)="onAccepted($event)"
+  ></csaa-paperless-terms>
+</ng-template>

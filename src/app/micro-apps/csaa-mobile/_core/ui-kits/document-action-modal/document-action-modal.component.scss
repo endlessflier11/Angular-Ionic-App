@@ -1,0 +1,20 @@
+ion-content {
+  --background: white;
+  --ion-background-color: white;
+  h2 {
+    margin: 10px 0 20px;
+  }
+}
+
+ion-item {
+  --detail-icon-color: var(--ion-color-primary);
+  --detail-icon-opacity: 1;
+  &.csaa-save-as {
+    align-items: flex-end;
+  }
+}
+
+ion-footer {
+  background-color: white;
+}
+

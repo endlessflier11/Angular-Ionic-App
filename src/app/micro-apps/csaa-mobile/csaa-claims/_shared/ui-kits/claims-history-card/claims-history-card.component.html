@@ -1,0 +1,31 @@
+<csaa-skeleton-card *ngIf="loading"></csaa-skeleton-card>
+<ion-card class="csaa-card" *ngIf="!loading">
+  <ion-card-header>
+    <ion-card-title>
+      <div class="display-flex ion-align-items-center">
+        {{ claim?.policyNumber }}
+      </div>
+      <csaa-theme-icon [type]="policy?.type" [size]="40"> </csaa-theme-icon>
+    </ion-card-title>
+    <ion-card-subtitle>
+      {{ claim?.type === PolicyTypes.Auto ? claim?.vehicle?.name : policy?.subtitle }}
+      <br />
+      Claim #: <strong>{{ claim?.number }}</strong>
+    </ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content class="csaa-item-list">
+    <ion-list>
+      <ion-item *ngFor="let item of claim?.workflow" (click)="itemClicked(item)">
+        <ion-label>
+          <p class="date-text" text-small *ngIf="item.eventType !== 'Payment'">
+            {{ item.date | date: 'mediumDate':timezone }}
+          </p>
+          <h2 [ngClass]="item.eventType === 'Processed' && 'full-bullet'">
+            {{ getTitleFor(item.eventType) }}
+          </h2>
+          <p text-small text-wrap>{{ item.description }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>

@@ -1,0 +1,20 @@
+git_url("git@github.com:aaa-ncnu-ie/csaa-ins-certificates.git")
+
+storage_mode("git")
+
+type("development") # The default type, can be: appstore, adhoc, enterprise or development
+
+app_identifier(["com.aaa.csaa_insurance.mypolicy"])
+username "csaa.mobile.ci@gmail.com" # Your Apple Developer Portal username
+
+keychain_name "csaaKeychain"
+keychain_password "secretPass"
+
+# For all available options run `fastlane match --help`
+# Remove the # in the beginning of the line to enable the other options
+
+# Command used to generate the certificates and profiles:
+# MATCH_PASSWORD=$CSAA_MATCH_PASSPHRASE bundle exec fastlane match enterprise
+# MATCH_PASSWORD=$CSAA_MATCH_PASSPHRASE bundle exec fastlane match development
+
+# The docs are available on https://docs.fastlane.tools/actions/match

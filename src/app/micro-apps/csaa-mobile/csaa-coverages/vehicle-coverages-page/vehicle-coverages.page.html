@@ -1,0 +1,37 @@
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <csaa-back-button (click)="onClickBack()" text="Back"></csaa-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="hoursPopup.show()">Call Service</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [ngClass]="['csaa', currentTheme]" class="csaa-item-list">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event.target)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <h1 *ngIf="!loading" class="csaa-content-title">{{title}}</h1>
+
+  <csaa-vehicle-coverages-covered-card
+    [loading]="loading"
+    [policy]="policy$ | async"
+    [showEditPolicy]="isPbeEligible$ | async"
+    [coverages]="coverages"
+    (viewDeclarationClick)="viewDeclaration()"
+    (webviewDismissed)="doRefresh()"
+  >
+  </csaa-vehicle-coverages-covered-card>
+  <csaa-vehicle-coverages-not-covered-card [loading]="loading" [coverages]="notCoverages">
+  </csaa-vehicle-coverages-not-covered-card>
+</ion-content>
+<csaa-working-hours
+  #hoursPopup
+  [ngClass]="['csaa', currentTheme]"
+  [riskState]="(policy$ | async)?.riskState"
+  serviceType="CUSTOMER"
+>
+</csaa-working-hours>

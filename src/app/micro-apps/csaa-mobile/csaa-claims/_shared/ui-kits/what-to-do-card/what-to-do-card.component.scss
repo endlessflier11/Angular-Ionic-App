@@ -1,0 +1,143 @@
+@import '../../../../_scss/variables';
+ion-card.what-to-do-card {
+  padding: 0;
+
+  ion-card-header {
+    margin-top: 75%;
+    margin-bottom: 0;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: white;
+    ion-card-subtitle {
+      font-size: $csaa-subtitle-small-font-size;
+      text-transform: uppercase;
+      color: $csaa-lighter-color;
+      font-weight: $csaa-active-font-weight;
+    }
+  }
+  ion-card-content {
+    background-color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: $csaa-lighter-color;
+    font-size: 16px;
+    line-height: 24px;
+    &.card-content-md,
+    &.card-content-ios {
+      p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .smaller {
+        font-size: $csaa-subtitle-font-size;
+        line-height: 18px;
+      }
+      ul {
+        li {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+    &.card-footer {
+      padding-bottom: 30px;
+    }
+
+    .footer-view-more {
+      font-size: $csaa-subtitle-font-size;
+      font-weight: $csaa-active-font-weight;
+      color: var(--ion-color-primary);
+      ion-icon {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &:not(.open-card) {
+    .show-card-opened,
+    .hide-card-closed {
+      display: none;
+    }
+  }
+
+  &.open-card {
+    .hide-card-opened,
+    .show-card-closed {
+      display: none;
+    }
+  }
+  &.call-911 {
+    background: url(/assets/csaa-mobile/imgs/call-911.jpg) no-repeat;
+    background-position: -200px -60px;
+    background-size: 45em;
+    p.smaller {
+      margin-top: 20px;
+    }
+  }
+  &.call-us {
+    background: url(/assets/csaa-mobile/imgs/call-us.jpg) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &.take-photos {
+    background: url(/assets/csaa-mobile/imgs/take-photos.jpg) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &.todo-auto {
+    background: url(/assets/csaa-mobile/imgs/auto-policy-bg.jpg) no-repeat;
+    background-position: -100px -41px;
+    background-size: calc(100vw + 80px);
+    ion-card-header {
+      margin-top: 60%;
+    }
+  }
+
+  &.todo-home {
+    background: url(/assets/csaa-mobile/imgs/home-policy-bg.jpg) no-repeat;
+    background-position: -217px -172px;
+    background-size: cover;
+    ion-card-header {
+      margin-top: 60%;
+    }
+  }
+}
+
+.home-what-do-i-do {
+  ion-card.what-to-do-card {
+    &.call-911 {
+      background: url(/assets/csaa-mobile/imgs/home-call-911.jpg) no-repeat;
+      background-position: -45px 0px;
+      background-size: 30em;
+    }
+    &.call-us {
+      background: url(/assets/csaa-mobile/imgs/home-report-claim.jpg) no-repeat;
+      background-position: 0px -75px;
+      background-size: 23em;
+    }
+
+    &.take-photos {
+      background: url(/assets/csaa-mobile/imgs/home-take-photos.jpg) no-repeat;
+      background-position: -17px -110px;
+      background-size: 24em;
+    }
+  }
+}
+
+@media screen and (max-width: $shrink-small-breakpoint) {
+  ion-card.what-to-do-card {
+    ion-card-header {
+      padding-top: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    ion-card-content {
+      padding-left: 15px;
+      padding-right: 15px;
+      &.card-footer {
+        padding-bottom: 15px;
+      }
+    }
+  }
+}

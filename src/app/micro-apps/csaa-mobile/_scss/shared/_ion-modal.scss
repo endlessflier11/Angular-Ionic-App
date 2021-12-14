@@ -1,0 +1,32 @@
+.action-sheet-modal-wrapper {
+  --width: 80%;
+  --height: auto;
+
+  .modal-wrapper {
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    top: 50%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+  }
+
+  &.document-actions {
+    .modal-wrapper {
+      bottom: 0;
+      top: unset;
+      height: 380px;
+    }
+  }
+}
+
+.ios {
+  .action-sheet-modal-wrapper {
+    &.document-actions {
+      .modal-wrapper {
+        height: 270px;
+      }
+    }
+  }
+}

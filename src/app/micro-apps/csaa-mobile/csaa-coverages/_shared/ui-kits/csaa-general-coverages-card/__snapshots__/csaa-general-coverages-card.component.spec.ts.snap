@@ -1,0 +1,594 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CsaaGeneralCoveragesCardComponent it should collapse the card after clicking on the expanded card 1`] = `
+<csaa-general-coverages-card
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  coverages={[Function Array]}
+  loading="false"
+  openCard="undefined"
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  showEditPolicy={[Function Boolean]}
+  ssoService={[Function SsoService]}
+  viewDeclarationClick={[Function EventEmitter_]}
+  webviewDismissed={[Function EventEmitter_]}
+  webviewService={[Function WebviewService]}
+>
+  <ion-card
+    class="csaa-card coverage-list"
+  >
+    <ion-card-header>
+      <ion-item>
+        <ion-card-title>
+          General
+        </ion-card-title>
+        <ion-button
+          class="editPolicyButton"
+          fill="clear"
+          slot="end"
+        >
+          Edit Policy
+        </ion-button>
+      </ion-item>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <span
+        class="subtitle"
+      >
+        <span
+          class="message"
+        >
+          Coverages do not apply to Lamborghini Gallardo
+        </span>
+        <br />
+      </span>
+      <ion-list>
+        <ion-item>
+          <csaa-coverage-card-item
+            class="no-border"
+          >
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Bodily Injury
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $750
+                  </span>
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Property Damage
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $50,000
+                  </span>
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Uninsured/Underinsured Motorist
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $100,000/$300,000
+                  </span>
+                   / 
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        expand="full"
+      >
+        View Declarations
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-general-coverages-card>
+`;
+
+exports[`CsaaGeneralCoveragesCardComponent it should expand coverage card item  1`] = `
+<csaa-general-coverages-card
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  coverages={[Function Array]}
+  loading="false"
+  openCard="0"
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  showEditPolicy={[Function Boolean]}
+  ssoService={[Function SsoService]}
+  viewDeclarationClick={[Function EventEmitter_]}
+  webviewDismissed={[Function EventEmitter_]}
+  webviewService={[Function WebviewService]}
+>
+  <ion-card
+    class="csaa-card coverage-list"
+  >
+    <ion-card-header>
+      <ion-item>
+        <ion-card-title>
+          General
+        </ion-card-title>
+        <ion-button
+          class="editPolicyButton"
+          fill="clear"
+          slot="end"
+        >
+          Edit Policy
+        </ion-button>
+      </ion-item>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <span
+        class="subtitle"
+      >
+        <span
+          class="message"
+        >
+          Coverages do not apply to Lamborghini Gallardo
+        </span>
+        <br />
+      </span>
+      <ion-list>
+        <ion-item>
+          <csaa-coverage-card-item
+            class="no-border"
+          >
+            <div
+              class="csaa-coverage-card-item open"
+            >
+              <h4
+                class="title"
+              >
+                Bodily Injury
+              </h4>
+              <div
+                class="description"
+              >
+                Covers your damages and legal defense if you injure someone
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Property Damage
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $50,000
+                  </span>
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Uninsured/Underinsured Motorist
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $100,000/$300,000
+                  </span>
+                   / 
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        expand="full"
+      >
+        View Declarations
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-general-coverages-card>
+`;
+
+exports[`CsaaGeneralCoveragesCardComponent should match snapshots when loading and there are coverages 1`] = `
+<csaa-general-coverages-card
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  coverages={[Function Array]}
+  loading={[Function Boolean]}
+  openCard="undefined"
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  showEditPolicy={[Function Boolean]}
+  ssoService={[Function SsoService]}
+  viewDeclarationClick={[Function EventEmitter_]}
+  webviewDismissed={[Function EventEmitter_]}
+  webviewService={[Function WebviewService]}
+>
+  <csaa-skeleton-card>
+    <ion-card
+      class="csaa-card"
+    >
+      <ion-card-header>
+        <ion-card-title>
+          <ion-skeleton-text
+            animated=""
+            style="width: 70%; height: 30px;"
+          />
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content
+        class="csaa-item-list"
+      >
+        <ion-list>
+          <ion-item>
+            <ion-label>
+              <ion-skeleton-text
+                animated=""
+                style="width: 88%; height: 15px;"
+              />
+              <ion-skeleton-text
+                animated=""
+                style="width: 70%;"
+              />
+              <ion-skeleton-text
+                animated=""
+                style="width: 60%;"
+              />
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <ion-skeleton-text
+                animated=""
+                style="width: 70%; height: 15px;"
+              />
+              <ion-skeleton-text
+                animated=""
+                style="width: 55%;"
+              />
+              <ion-skeleton-text
+                animated=""
+                style="width: 30%;"
+              />
+            </ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-skeleton-text
+          animated=""
+          style="height: 45px;"
+        />
+      </ion-card-content>
+    </ion-card>
+  </csaa-skeleton-card>
+</csaa-general-coverages-card>
+`;
+
+exports[`CsaaGeneralCoveragesCardComponent should match snapshots when loading and there are no coverages 1`] = `
+<csaa-general-coverages-card
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  coverages={[Function Array]}
+  loading={[Function Boolean]}
+  openCard="undefined"
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  showEditPolicy={[Function Boolean]}
+  ssoService={[Function SsoService]}
+  viewDeclarationClick={[Function EventEmitter_]}
+  webviewDismissed={[Function EventEmitter_]}
+  webviewService={[Function WebviewService]}
+>
+  <csaa-skeleton-card>
+    <ion-card
+      class="csaa-card"
+    >
+      <ion-card-header>
+        <ion-card-title>
+          <ion-skeleton-text
+            animated=""
+            style="width: 70%; height: 30px;"
+          />
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content
+        class="csaa-item-list"
+      >
+        <ion-list>
+          <ion-item>
+            <ion-label>
+              <ion-skeleton-text
+                animated=""
+                style="width: 88%; height: 15px;"
+              />
+              <ion-skeleton-text
+                animated=""
+                style="width: 70%;"
+              />
+              <ion-skeleton-text
+                animated=""
+                style="width: 60%;"
+              />
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <ion-skeleton-text
+                animated=""
+                style="width: 70%; height: 15px;"
+              />
+              <ion-skeleton-text
+                animated=""
+                style="width: 55%;"
+              />
+              <ion-skeleton-text
+                animated=""
+                style="width: 30%;"
+              />
+            </ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-skeleton-text
+          animated=""
+          style="height: 45px;"
+        />
+      </ion-card-content>
+    </ion-card>
+  </csaa-skeleton-card>
+</csaa-general-coverages-card>
+`;
+
+exports[`CsaaGeneralCoveragesCardComponent should match snapshots when no coverages 1`] = `
+<csaa-general-coverages-card
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  coverages={[Function Array]}
+  loading="false"
+  openCard="undefined"
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  showEditPolicy={[Function Boolean]}
+  ssoService={[Function SsoService]}
+  viewDeclarationClick={[Function EventEmitter_]}
+  webviewDismissed={[Function EventEmitter_]}
+  webviewService={[Function WebviewService]}
+>
+  <ion-card
+    class="csaa-card coverage-list"
+  >
+    <ion-card-header>
+      <ion-item>
+        <ion-card-title>
+          General
+        </ion-card-title>
+        <ion-button
+          class="editPolicyButton"
+          fill="clear"
+          slot="end"
+        >
+          Edit Policy
+        </ion-button>
+      </ion-item>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <span
+        class="subtitle"
+      >
+        <span
+          class="message"
+        >
+          Coverages do not apply to Lamborghini Gallardo
+        </span>
+        <br />
+      </span>
+      <ion-button
+        expand="full"
+      >
+        View Declarations
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-general-coverages-card>
+`;
+
+exports[`CsaaGeneralCoveragesCardComponent should match snapshots when there are coverages 1`] = `
+<csaa-general-coverages-card
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  coverages={[Function Array]}
+  loading="false"
+  openCard="undefined"
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  showEditPolicy={[Function Boolean]}
+  ssoService={[Function SsoService]}
+  viewDeclarationClick={[Function EventEmitter_]}
+  webviewDismissed={[Function EventEmitter_]}
+  webviewService={[Function WebviewService]}
+>
+  <ion-card
+    class="csaa-card coverage-list"
+  >
+    <ion-card-header>
+      <ion-item>
+        <ion-card-title>
+          General
+        </ion-card-title>
+        <ion-button
+          class="editPolicyButton"
+          fill="clear"
+          slot="end"
+        >
+          Edit Policy
+        </ion-button>
+      </ion-item>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <span
+        class="subtitle"
+      >
+        <span
+          class="message"
+        >
+          Coverages do not apply to Lamborghini Gallardo
+        </span>
+        <br />
+      </span>
+      <ion-list>
+        <ion-item>
+          <csaa-coverage-card-item
+            class="no-border"
+          >
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Bodily Injury
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $750
+                  </span>
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Property Damage
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $50,000
+                  </span>
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Uninsured/Underinsured Motorist
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $100,000/$300,000
+                  </span>
+                   / 
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        expand="full"
+      >
+        View Declarations
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-general-coverages-card>
+`;

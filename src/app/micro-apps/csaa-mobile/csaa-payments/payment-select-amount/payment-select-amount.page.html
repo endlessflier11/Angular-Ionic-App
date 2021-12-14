@@ -1,0 +1,62 @@
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-title>Amount</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="selectAmount()">Done</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="['csaa', currentTheme]" class="csaa-item-list">
+  <h3 class="ion-text-center">Select an amount</h3>
+
+  <form [formGroup]="amountForm">
+    <csaa-skeleton-card
+      *ngIf="!paymentData"
+      [showHeader]="false"
+      [showButton]="false"
+    ></csaa-skeleton-card>
+    <ion-list lines="full" *ngIf="!!paymentData">
+      <ion-item
+        id="item-minimum"
+        (click)="selectAmountType('minimum')"
+        [class.active]="paymentData?.type === 'minimum'"
+      >
+        <ion-label>Minimum Due</ion-label>
+        <span slot="end">
+          {{ paymentData?.minimumAmount | currency: 'USD':'symbol':'1.2-2' }}
+        </span>
+      </ion-item>
+
+      <ion-item
+        id="item-remaining"
+        (click)="selectAmountType('remaining')"
+        [class.active]="paymentData?.type === 'remaining'"
+      >
+        <ion-label>Remaining Premium</ion-label>
+        <span item-end>
+          {{ paymentData?.remainingPremium | currency: 'USD':'symbol':'1.2-2' }}
+        </span>
+      </ion-item>
+
+      <ion-item
+        *ngIf="!paymentData?.allPolicies"
+        id="item-other"
+        (click)="selectAmountType('other'); otherAmountInput.setFocus();"
+        [class.active]="paymentData?.type === 'other'"
+      >
+        <ion-label>Other Amount</ion-label>
+        <ion-input
+          formControlName="otherAmount"
+          type="{{isIos?'text':'tel'}}"
+          class="ion-text-right"
+          [brmasker]="otherAmountMaskConfig"
+          #otherAmountInput
+        >
+        </ion-input>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>

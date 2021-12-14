@@ -1,0 +1,18 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+:root {
+  --csaa-color-success: #18a765;
+  --csaa-color-success-rgb: 24, 167, 101;
+  --csaa-color-success-contrast: #ffffff;
+  --csaa-color-success-contrast-rgb: 255, 255, 255;
+  --csaa-color-success-shade: #159359;
+  --csaa-color-success-tint: #2fb074;
+}
+
+/** Ionic CSS Variables **/
+.csaa {
+  color: $csaa-text-color;
+  --color: $csaa-text-color;
+  --ion-text-color: $csaa-text-color;
+}

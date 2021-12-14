@@ -1,0 +1,90 @@
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <csaa-back-button (back)="onClickBackBtn()" text="Cancel"></csaa-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="['csaa', currentTheme]">
+  <ng-container *ngIf="wallet?.paymentAccounts.length > 0">
+    <h2 class="ion-text-center">Wallet</h2>
+    <ion-list>
+      <ng-container
+        *ngFor="let paymentAccount of wallet.paymentAccounts; let i = index, let isLast = last;"
+      >
+        <ion-item
+          class="wallet-item item"
+          (click)="selectPaymentAccount(paymentAccount)"
+          [lines]="isLast ? 'full' : undefined"
+        >
+          <ion-avatar slot="start">
+            <span><img [src]="generateIconSrc(paymentAccount)" [alt]="undefined" /></span>
+          </ion-avatar>
+          <ion-label>
+            <h3>{{ paymentAccount.shortName }}</h3>
+            <ng-container *ngIf="paymentAccount.card">
+              <p [class]="{'card-expired': paymentAccount.card.expired}">
+                {{ paymentAccount.card.expired ? 'Expired' : paymentAccount.card.last4digits +' '+
+                (paymentAccount.card.type | titlecase) }}
+              </p>
+            </ng-container>
+            <ng-container *ngIf="paymentAccount.account">
+              <p>
+                {{ paymentAccount.account.accountNumber }} {{ paymentAccount.account.bankAccountType
+                }}
+              </p>
+            </ng-container>
+          </ion-label>
+          <ion-button
+            slot="end"
+            fill="none"
+            (click)="onClickEditPaymentAccount(paymentAccount); $event.stopPropagation()"
+          >
+            EDIT
+          </ion-button>
+        </ion-item>
+      </ng-container>
+    </ion-list>
+  </ng-container>
+
+  <h2 class="ion-text-center">Payment Method</h2>
+  <ion-list class="ion-margin-bottom">
+    <ion-item
+      *ngFor="let item of newPaymentAccountMenu, let isLast = last"
+      [lines]="isLast ? 'none' : 'full'"
+      detail
+      [routerLink]="route(item.route)"
+      [queryParams]="{ autopay: true, policyNumber: policyNumber }"
+      >{{ item.title}}</ion-item
+    >
+  </ion-list>
+
+  <ng-container *ngIf="autopayEnrolledPayments.length">
+    <h2 class="ion-text-center">AutoPay</h2>
+
+    <ion-grid class="ion-no-padding">
+      <ng-container *ngFor="let payment of autopayEnrolledPayments">
+        <ion-row class="ion-padding-top ion-padding-bottom" (click)="goToAutopay($event,payment)">
+          <ion-col>
+            <ion-item lines="none" detail>
+              <div class="policy-meta-content">
+                <h3>{{ payment.policyNumber }}</h3>
+                <span class="subtitle">{{ autopayLabel(payment.autopayEnrollment) }}</span>
+              </div>
+              <div slot="end" class="policy-meta-icon">
+                <csaa-theme-icon
+                  slot="end"
+                  [type]="payment.policyType"
+                  [size]="40"
+                ></csaa-theme-icon>
+              </div>
+            </ion-item>
+            <ion-item lines="none">
+              <csaa-policy-subtitles [policySubtitle]="payment.subtitle"></csaa-policy-subtitles>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ng-container>
+    </ion-grid>
+  </ng-container>
+</ion-content>

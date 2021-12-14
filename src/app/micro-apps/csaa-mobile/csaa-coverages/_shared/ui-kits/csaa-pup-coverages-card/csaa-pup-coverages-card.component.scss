@@ -1,0 +1,7 @@
+ion-card-title {
+  display: flex;
+  flex-flow: row wrap;
+  div {
+    flex-grow: 1;
+  }
+}

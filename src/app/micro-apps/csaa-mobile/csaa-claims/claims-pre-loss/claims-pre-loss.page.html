@@ -1,0 +1,34 @@
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <csaa-back-button (back)="backButtonClick()"></csaa-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="callClaims()">Call Claims</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>What do I do?</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="['csaa', currentTheme]">
+  <csaa-what-to-do-card
+    cardSubtitle="Auto Policy"
+    cardTitle="Learn what to do if you<br\> are in an accident"
+    footerLabel="Learn More"
+    cardClass="todo-auto"
+    (clicked)="routeToAuto()"
+    [togglable]="false"
+  >
+  </csaa-what-to-do-card>
+
+  <csaa-what-to-do-card
+    cardSubtitle="Home Policy"
+    cardTitle="Learn what to do if you<br\> have a property loss"
+    footerLabel="Learn More"
+    cardClass="todo-home"
+    (clicked)="routeToHome()"
+    [togglable]="false"
+  >
+  </csaa-what-to-do-card>
+</ion-content>

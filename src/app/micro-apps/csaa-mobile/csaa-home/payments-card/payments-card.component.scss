@@ -1,0 +1,19 @@
+@import '../../_scss/variables';
+
+ion-row {
+  padding: 2px 0;
+}
+
+h3 {
+  margin: 0 !important;
+}
+
+.overdue {
+  h3 {
+    color: $csaa-emergency-color !important;
+  }
+}
+
+.payment-type {
+  text-transform: uppercase;
+}

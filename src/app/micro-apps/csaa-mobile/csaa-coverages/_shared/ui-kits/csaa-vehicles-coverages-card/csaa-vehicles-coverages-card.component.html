@@ -1,0 +1,23 @@
+<csaa-skeleton-card *ngIf="loading"></csaa-skeleton-card>
+<ion-card *ngIf="!loading" class="csaa-card">
+  <ion-card-header>
+    <ion-card-title>Vehicle</ion-card-title>
+  </ion-card-header>
+  <ion-card-content class="csaa-item-list">
+    <ion-list>
+      <ion-item
+        detail
+        *ngFor="let vehicle of policy?.vehicles"
+        (click)="openVehicleCoverages(vehicle)"
+      >
+        <h3>
+          {{ vehicle.name }}
+        </h3>
+      </ion-item>
+    </ion-list>
+
+    <ion-button *ngIf="showDeclarations" expand="full" (click)="viewDeclarationClick.emit($event)"
+      >View Declarations
+    </ion-button>
+  </ion-card-content>
+</ion-card>

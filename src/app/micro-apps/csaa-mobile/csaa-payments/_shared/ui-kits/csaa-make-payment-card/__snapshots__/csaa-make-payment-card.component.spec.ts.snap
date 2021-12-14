@@ -1,0 +1,692 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CsaaMakePaymentCardComponent it should click on the make a payment button 1`] = `
+<csaa-make-payment-card
+  __ngContext__={[Function LRootView]}
+  alertCtrl={[Function AlertController]}
+  analyticsService={[Function AnalyticsMockService]}
+  customerSearch={[Function Object]}
+  loading="false"
+  makePaymentClick={[Function EventEmitter_]}
+  payment={[Function Object]}
+  paymentMethod={[Function Object]}
+  paymentSucceeded="false"
+  routerService={[Function RouterService]}
+  selectAmountClick={[Function EventEmitter_]}
+  selectPaymentClick={[Function EventEmitter_]}
+  timezone={[Function String]}
+>
+  <ion-card
+    class="csaa-card"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        AZSS294857564
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row
+          class="item"
+        >
+          <ion-col>
+            <div
+              class="policy-meta-content"
+            >
+              <h3>
+                Due:
+                 Aug 19, 2040 
+              </h3>
+              <span
+                class="subtitle"
+              >
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    test
+                  </span>
+                </csaa-policy-subtitles>
+              </span>
+            </div>
+          </ion-col>
+          <ion-col
+            size="auto"
+          >
+            <div
+              class="policy-meta-icon"
+            >
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-list>
+        <ion-item
+          class="csaa-payment-amount-list-item ion-no-padding"
+          detail=""
+        >
+          <ion-label>
+            Amount 
+          </ion-label>
+          <span
+            slot="end"
+          >
+            $1,000.00
+          </span>
+        </ion-item>
+        <ion-item
+          class="csaa-payment-autopay-item ion-no-padding"
+          detail=""
+        >
+          <ion-label>
+            <label>
+              AutoPay
+            </label>
+            <small>
+            </small>
+          </ion-label>
+          <span
+            slot="end"
+          >
+             On
+          </span>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        class="ion-no-margin"
+        expand="full"
+      >
+         Make a Payment 
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-make-payment-card>
+`;
+
+exports[`CsaaMakePaymentCardComponent it should display autopay when clicking on card details 1`] = `
+<csaa-make-payment-card
+  __ngContext__={[Function LRootView]}
+  alertCtrl={[Function AlertController]}
+  analyticsService={[Function AnalyticsMockService]}
+  customerSearch={[Function Object]}
+  loading="false"
+  makePaymentClick={[Function EventEmitter_]}
+  payment={[Function Object]}
+  paymentMethod={[Function Object]}
+  paymentSucceeded="false"
+  routerService={[Function RouterService]}
+  selectAmountClick={[Function EventEmitter_]}
+  selectPaymentClick={[Function EventEmitter_]}
+  timezone={[Function String]}
+>
+  <ion-card
+    class="csaa-card"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        AZSS294857564
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row
+          class="item"
+        >
+          <ion-col>
+            <div
+              class="policy-meta-content"
+            >
+              <h3>
+                Due:
+                 Aug 19, 2040 
+              </h3>
+              <span
+                class="subtitle"
+              >
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    test
+                  </span>
+                </csaa-policy-subtitles>
+              </span>
+            </div>
+          </ion-col>
+          <ion-col
+            size="auto"
+          >
+            <div
+              class="policy-meta-icon"
+            >
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-list>
+        <ion-item
+          class="csaa-payment-amount-list-item ion-no-padding"
+          detail=""
+        >
+          <ion-label>
+            Amount 
+          </ion-label>
+          <span
+            slot="end"
+          >
+            $1,000.00
+          </span>
+        </ion-item>
+        <ion-item
+          class="csaa-payment-autopay-item ion-no-padding"
+          detail=""
+        >
+          <ion-label>
+            <label>
+              AutoPay
+            </label>
+            <small>
+            </small>
+          </ion-label>
+          <span
+            slot="end"
+          >
+             On
+          </span>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        class="ion-no-margin"
+        expand="full"
+      >
+         Make a Payment 
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-make-payment-card>
+`;
+
+exports[`CsaaMakePaymentCardComponent it should display selectAmountClick when clicking on card details 1`] = `
+<csaa-make-payment-card
+  __ngContext__={[Function LRootView]}
+  alertCtrl={[Function AlertController]}
+  analyticsService={[Function AnalyticsMockService]}
+  customerSearch={[Function Object]}
+  loading="false"
+  makePaymentClick={[Function EventEmitter_]}
+  payment={[Function Object]}
+  paymentMethod={[Function Object]}
+  paymentSucceeded="false"
+  routerService={[Function RouterService]}
+  selectAmountClick={[Function EventEmitter_]}
+  selectPaymentClick={[Function EventEmitter_]}
+  timezone={[Function String]}
+>
+  <ion-card
+    class="csaa-card"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        AZSS294857564
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row
+          class="item"
+        >
+          <ion-col>
+            <div
+              class="policy-meta-content"
+            >
+              <h3>
+                Due:
+                 Aug 19, 2040 
+              </h3>
+              <span
+                class="subtitle"
+              >
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    test
+                  </span>
+                </csaa-policy-subtitles>
+              </span>
+            </div>
+          </ion-col>
+          <ion-col
+            size="auto"
+          >
+            <div
+              class="policy-meta-icon"
+            >
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-list>
+        <ion-item
+          class="csaa-payment-amount-list-item ion-no-padding"
+          detail=""
+        >
+          <ion-label>
+            Amount 
+          </ion-label>
+          <span
+            slot="end"
+          >
+            $1,000.00
+          </span>
+        </ion-item>
+        <ion-item
+          class="csaa-payment-autopay-item ion-no-padding"
+          detail=""
+        >
+          <ion-label>
+            <label>
+              AutoPay
+            </label>
+            <small>
+            </small>
+          </ion-label>
+          <span
+            slot="end"
+          >
+             On
+          </span>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        class="ion-no-margin"
+        expand="full"
+      >
+         Make a Payment 
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-make-payment-card>
+`;
+
+exports[`CsaaMakePaymentCardComponent it should display selectPaymentClick when clicking on card details 1`] = `
+<csaa-make-payment-card
+  __ngContext__={[Function LRootView]}
+  alertCtrl={[Function AlertController]}
+  analyticsService={[Function AnalyticsMockService]}
+  customerSearch={[Function Object]}
+  loading="false"
+  makePaymentClick={[Function EventEmitter_]}
+  payment={[Function Object]}
+  paymentMethod={[Function Object]}
+  paymentSucceeded="false"
+  routerService={[Function RouterService]}
+  selectAmountClick={[Function EventEmitter_]}
+  selectPaymentClick={[Function EventEmitter_]}
+  timezone={[Function String]}
+>
+  <ion-card
+    class="csaa-card"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        AZSS294857564
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row
+          class="item"
+        >
+          <ion-col>
+            <div
+              class="policy-meta-content"
+            >
+              <h3>
+                Due:
+                 Aug 19, 2040 
+              </h3>
+              <span
+                class="subtitle"
+              >
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    test
+                  </span>
+                </csaa-policy-subtitles>
+              </span>
+            </div>
+          </ion-col>
+          <ion-col
+            size="auto"
+          >
+            <div
+              class="policy-meta-icon"
+            >
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-list>
+        <ion-item
+          class="csaa-payment-amount-list-item ion-no-padding"
+          detail=""
+        >
+          <ion-label>
+            Amount 
+          </ion-label>
+          <span
+            slot="end"
+          >
+            $1,000.00
+          </span>
+        </ion-item>
+        <ion-item
+          class="csaa-payment-method-list-item ion-no-padding"
+          detail=""
+          lines="none"
+        >
+          <ion-avatar
+            slot="start"
+          >
+            <span>
+              <img
+                src="/assets/csaa-mobile/vectors/mastercard.svg"
+              />
+            </span>
+          </ion-avatar>
+          <ion-label
+            class="ion-text-nowrap"
+          >
+            <span>
+              Matts test 5454 5454 5454
+            </span>
+          </ion-label>
+          <span
+            slot="end"
+          >
+            Debit
+          </span>
+        </ion-item>
+        <ion-item
+          class="csaa-payment-autopay-item ion-no-padding"
+          detail=""
+        >
+          <ion-label>
+            <label>
+              AutoPay
+            </label>
+          </ion-label>
+          <span
+            slot="end"
+          >
+             Off
+          </span>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        class="ion-no-margin"
+        expand="full"
+      >
+         Make a Payment 
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-make-payment-card>
+`;
+
+exports[`CsaaMakePaymentCardComponent should match snapshots when payment is due 1`] = `
+<csaa-make-payment-card
+  __ngContext__={[Function LRootView]}
+  alertCtrl={[Function AlertController]}
+  analyticsService={[Function AnalyticsMockService]}
+  customerSearch={[Function Object]}
+  loading="false"
+  makePaymentClick={[Function EventEmitter_]}
+  payment={[Function Object]}
+  paymentMethod={[Function Object]}
+  paymentSucceeded="false"
+  routerService={[Function RouterService]}
+  selectAmountClick={[Function EventEmitter_]}
+  selectPaymentClick={[Function EventEmitter_]}
+  timezone={[Function String]}
+>
+  <ion-card
+    class="csaa-card"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        AZSS294857564
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row
+          class="item"
+        >
+          <ion-col>
+            <div
+              class="policy-meta-content"
+            >
+              <h3>
+                Due:
+                 Aug 19, 2040 
+              </h3>
+              <span
+                class="subtitle"
+              >
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    test
+                  </span>
+                </csaa-policy-subtitles>
+              </span>
+            </div>
+          </ion-col>
+          <ion-col
+            size="auto"
+          >
+            <div
+              class="policy-meta-icon"
+            >
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-list>
+        <ion-item
+          class="csaa-payment-amount-list-item ion-no-padding"
+          detail=""
+        >
+          <ion-label>
+            Amount 
+          </ion-label>
+          <span
+            slot="end"
+          >
+            $1,000.00
+          </span>
+        </ion-item>
+        <ion-item
+          class="csaa-payment-autopay-item ion-no-padding"
+          detail=""
+        >
+          <ion-label>
+            <label>
+              AutoPay
+            </label>
+            <small>
+            </small>
+          </ion-label>
+          <span
+            slot="end"
+          >
+             On
+          </span>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        class="ion-no-margin"
+        expand="full"
+      >
+         Make a Payment 
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-make-payment-card>
+`;
+
+exports[`CsaaMakePaymentCardComponent should match snapshots when payment is overdue 1`] = `
+<csaa-make-payment-card
+  __ngContext__={[Function LRootView]}
+  alertCtrl={[Function AlertController]}
+  analyticsService={[Function AnalyticsMockService]}
+  customerSearch={[Function Object]}
+  loading="false"
+  makePaymentClick={[Function EventEmitter_]}
+  payment={[Function Object]}
+  paymentMethod={[Function Object]}
+  paymentSucceeded="false"
+  routerService={[Function RouterService]}
+  selectAmountClick={[Function EventEmitter_]}
+  selectPaymentClick={[Function EventEmitter_]}
+  timezone={[Function String]}
+>
+  <ion-card
+    class="csaa-card overdue"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        AZSS294857564
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row
+          class="item"
+        >
+          <ion-col>
+            <div
+              class="policy-meta-content"
+            >
+              <h3>
+                Past Due
+                 Aug 10, 2018 
+              </h3>
+              <span
+                class="subtitle"
+              >
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    test
+                  </span>
+                </csaa-policy-subtitles>
+              </span>
+            </div>
+          </ion-col>
+          <ion-col
+            size="auto"
+          >
+            <div
+              class="policy-meta-icon"
+            >
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-list>
+        <ion-item
+          class="csaa-payment-amount-list-item ion-no-padding"
+          detail=""
+        >
+          <ion-label>
+            Amount 
+          </ion-label>
+          <span
+            slot="end"
+          >
+            $1,000.00
+          </span>
+        </ion-item>
+        <ion-item
+          class="csaa-payment-autopay-item ion-no-padding"
+          detail=""
+        >
+          <ion-label>
+            <label>
+              AutoPay
+            </label>
+            <small>
+            </small>
+          </ion-label>
+          <span
+            slot="end"
+          >
+             On
+          </span>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        class="ion-no-margin"
+        expand="full"
+      >
+         Make a Payment 
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-make-payment-card>
+`;

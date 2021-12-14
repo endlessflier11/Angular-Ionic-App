@@ -1,0 +1,10 @@
+@import 'font-sf-pro';
+@import 'font-smart';
+
+:root[mode='ios'],
+:root[mode='md'] {
+  .csaa {
+    --ion-font-family: $csaa-font-family !important;
+    font-family: $csaa-font-family !important;
+  }
+}

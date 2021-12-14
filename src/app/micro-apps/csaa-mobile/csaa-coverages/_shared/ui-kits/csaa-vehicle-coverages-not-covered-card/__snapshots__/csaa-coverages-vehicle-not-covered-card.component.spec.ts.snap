@@ -1,0 +1,458 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CsaaCoveragesVehicleNotCoveredCardComponent it should collapse the card after clicking on the expanded card 1`] = `
+<csaa-vehicle-coverages-not-covered-card
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  coverages={[Function Array]}
+  loading="false"
+  openCard="undefined"
+  policyNumber=""
+>
+  <ion-card
+    class="csaa-card coverage-list csaa-item-list"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        Not Covered
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-list>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Comprehensive
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $750
+                  </span>
+                   Deductible 
+                  <span>
+                    / $0
+                  </span>
+                   Glass Deductible 
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Collision
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Special Equipment
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $1,500
+                  </span>
+                   Per Disablement 
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Rental Reimbursement
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $40/$1,200
+                  </span>
+                   Per Day/Maximum 
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Towing & Labor
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $50/$300
+                  </span>
+                   Per Disablement/Maximum 
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</csaa-vehicle-coverages-not-covered-card>
+`;
+
+exports[`CsaaCoveragesVehicleNotCoveredCardComponent it should expand coverage card item  1`] = `
+<csaa-vehicle-coverages-not-covered-card
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  coverages={[Function Array]}
+  loading="false"
+  openCard="0"
+  policyNumber=""
+>
+  <ion-card
+    class="csaa-card coverage-list csaa-item-list"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        Not Covered
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-list>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item open"
+            >
+              <h4
+                class="title"
+              >
+                Comprehensive
+              </h4>
+              <div
+                class="description"
+              >
+                Covers repairs if your car is damaged by a non-collision incident. Option available to cover damage to safety glass without a deductible for eligible vehicles. Covers damage to safety glass without a deductible
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Collision
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Special Equipment
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $1,500
+                  </span>
+                   Per Disablement 
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Rental Reimbursement
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $40/$1,200
+                  </span>
+                   Per Day/Maximum 
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Towing & Labor
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $50/$300
+                  </span>
+                   Per Disablement/Maximum 
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</csaa-vehicle-coverages-not-covered-card>
+`;
+
+exports[`CsaaCoveragesVehicleNotCoveredCardComponent should match snapshots when no coverages 1`] = `
+<csaa-vehicle-coverages-not-covered-card
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  coverages={[Function Array]}
+  loading="false"
+  openCard="undefined"
+  policyNumber=""
+>
+</csaa-vehicle-coverages-not-covered-card>
+`;
+
+exports[`CsaaCoveragesVehicleNotCoveredCardComponent should match snapshots when there are coverages 1`] = `
+<csaa-vehicle-coverages-not-covered-card
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  coverages={[Function Array]}
+  loading="false"
+  openCard="undefined"
+  policyNumber=""
+>
+  <ion-card
+    class="csaa-card coverage-list csaa-item-list"
+  >
+    <ion-card-header>
+      <ion-card-title>
+        Not Covered
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-list>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Comprehensive
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $750
+                  </span>
+                   Deductible 
+                  <span>
+                    / $0
+                  </span>
+                   Glass Deductible 
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Collision
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Special Equipment
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $1,500
+                  </span>
+                   Per Disablement 
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Rental Reimbursement
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $40/$1,200
+                  </span>
+                   Per Day/Maximum 
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Towing & Labor
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $50/$300
+                  </span>
+                   Per Disablement/Maximum 
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</csaa-vehicle-coverages-not-covered-card>
+`;

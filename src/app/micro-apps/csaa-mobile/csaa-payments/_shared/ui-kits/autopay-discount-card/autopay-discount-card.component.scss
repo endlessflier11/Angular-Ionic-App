@@ -1,0 +1,44 @@
+@import '../../../../_scss/variables';
+
+ion-item {
+  --detail-icon-opacity: 1;
+  --detail-icon-color: var(--ion-color-primary);
+}
+ion-label {
+  h3 {
+    margin-top: 0;
+    color: var(--ion-color-primary);
+  }
+}
+.discount {
+  padding: 0 calc(var(--ion-padding) * 2);
+  height: 0;
+  overflow: hidden;
+
+  &.active {
+    height: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+
+    thead th {
+      text-align: left;
+      h3 {
+        margin: 0;
+      }
+    }
+
+    td,
+    th {
+      //padding: 8px;
+      text-align: left;
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+}

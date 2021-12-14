@@ -1,0 +1,58 @@
+<csaa-skeleton-card *ngIf="loading"></csaa-skeleton-card>
+<ion-card class="coverage-list" *ngIf="!loading">
+  <ion-card-header class="home">
+    <ion-card-title>
+      <div class="display-flex ion-align-items-center">
+        {{ policyNumber }}
+      </div>
+      <csaa-theme-icon [type]="policy?.type" [size]="40"> </csaa-theme-icon>
+    </ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content class="csaa-item-list">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <span class="subtitle"> {{ policy?.subtitle }} </span>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <span class="subtitle" *ngIf="policy?.deductible && policy?.deductible.isPresent">
+            <strong>{{ policy?.deductible.value | currency: 'USD':'symbol':'1.0-0' }}</strong>
+            Deductible
+          </span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-list>
+      <ion-item *ngFor="let coverage of policy?.coverages; let ix = index; first as isFirst">
+        <csaa-coverage-card-item
+          [policyType]="PolicyType.Home"
+          [coverage]="coverage"
+          (itemClick)="onItemClick(coverage, ix)"
+          [isOpen]="isItemOpen(ix)"
+        >
+        </csaa-coverage-card-item>
+      </ion-item>
+      <ion-item class="endorsements">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <h2>Endorsements</h2>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <span class="twitter-pitch">See Declarations for coverages</span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="full" (click)="viewDeclarationClick.emit($event)"
+      >View Declarations</ion-button
+    >
+  </ion-card-content>
+</ion-card>

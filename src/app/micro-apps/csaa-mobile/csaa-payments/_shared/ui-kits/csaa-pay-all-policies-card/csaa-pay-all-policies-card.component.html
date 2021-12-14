@@ -1,0 +1,55 @@
+<csaa-skeleton-card *ngIf="loading"></csaa-skeleton-card>
+<ion-card
+  *ngIf="!loading && payments && payments.length > 0 && !paymentSucceeded"
+  [class.overdue]="hasOverDuePayment"
+  class="csaa-card"
+>
+  <ion-card-header>
+    <ion-card-title>Pay All Policies</ion-card-title>
+  </ion-card-header>
+  <ion-card-content class="csaa-item-list">
+    <ion-list>
+      <ion-item detail class="csaa-payment-amount-list-item" (click)="selectAmount()">
+        <ion-label>Amount</ion-label>
+        <span slot="end">{{ amount | currency: 'USD':'symbol':'1.2-2' }}</span>
+      </ion-item>
+
+      <ion-item detail lines="none" class="csaa-payment-method-list-item" (click)="selectPayment()">
+        <ion-avatar slot="start" *ngIf="paymentMethod">
+          <span>
+            <!-- Span first because ion-avatar::slotted(img) style forces image to render unexpectedly -->
+            <img
+              *ngIf="paymentMethod?.card?.type"
+              [src]="'/assets/csaa-mobile/vectors/' + paymentMethod.card.type + '.svg'"
+            />
+            <img *ngIf="paymentMethod?.account" [src]="'/assets/csaa-mobile/vectors/bank.svg'" />
+          </span>
+        </ion-avatar>
+
+        <ion-label
+          [ngClass]="{ 'card-expired': paymentMethod?.card && paymentMethod?.card.expired }"
+          class="ion-text-nowrap"
+        >
+          <span>{{ paymentMethod ? paymentMethod.shortName : 'Pay With' }}</span>
+        </ion-label>
+        <span slot="end" *ngIf="paymentMethod?.card && paymentMethod?.card?.isDebitCard !== true">
+          {{ 'Credit' }}
+        </span>
+        <span slot="end" *ngIf="paymentMethod?.card?.isDebitCard">{{ 'Debit' }}</span>
+        <span slot="end" *ngIf="paymentMethod?.account">{{
+          paymentMethod?.account?.type | titlecase
+        }}</span>
+        <span slot="end" *ngIf="!paymentMethod">Payment Method</span>
+      </ion-item>
+    </ion-list>
+
+    <ion-button
+      [disabled]="isButtonDisabled()"
+      expand="full"
+      (click)="makePayment()"
+      class="ion-no-margin"
+    >
+      Make a Payment
+    </ion-button>
+  </ion-card-content>
+</ion-card>

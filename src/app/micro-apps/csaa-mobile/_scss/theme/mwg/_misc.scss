@@ -1,0 +1,28 @@
+@at-root ion-content.theme-mwg {
+  --background: #{$mwg-background-content};
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --border-radius: 0px;
+  ion-button {
+    --border-radius: 0px;
+  }
+  @media screen and (max-width: $mwg-shrink-small-breakpoint) {
+    --padding-start: 7px;
+    --padding-end: 7px;
+  }
+}
+ion-list {
+  --ion-background-color: white;
+  > ion-item {
+    --detail-icon-color: #{$mwg-color-primary};
+  }
+}
+ion-grid,
+ion-item {
+  --ion-background-color: white;
+}
+
+ion-button.in-toolbar.button-clear {
+  --color: $csaa-text-color;
+  font-size: 16px;
+}

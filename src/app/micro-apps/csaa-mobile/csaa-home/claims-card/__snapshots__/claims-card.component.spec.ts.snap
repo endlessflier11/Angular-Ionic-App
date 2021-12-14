@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClaimsCardComponent from Host should create host component 1`] = `
+<test-host-component
+  __ngContext__={[Function LRootView]}
+  claims={[Function Array]}
+  claimsCardComponent={[Function ClaimsCardComponent]}
+  loading="false"
+  policies={[Function Array]}
+>
+  <div>
+    <csaa-claims-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-item>
+            <ion-card-title>
+               Claims
+            </ion-card-title>
+            <ion-button
+              fill="clear"
+              slot="end"
+            >
+              What do I do?
+            </ion-button>
+          </ion-item>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item
+              detail=""
+            >
+              <ion-label>
+                <h3>
+                   test 
+                </h3>
+                <span
+                  class="claim-number"
+                >
+                  Claim #12345
+                </span>
+                <br />
+                <span
+                  class="status"
+                >
+                  Status: active
+                </span>
+                <br />
+                <span
+                  class="subtitle"
+                >
+                   Lamborghini Gallardo 
+                </span>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+            I Had an Accident
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-claims-card>
+  </div>
+</test-host-component>
+`;
+
+exports[`ClaimsCardComponent from Host should not fail ngOnChanges if got null claims 1`] = `
+<test-host-component
+  __ngContext__={[Function LRootView]}
+  claims={[Function Array]}
+  claimsCardComponent={[Function ClaimsCardComponent]}
+  loading="false"
+  policies={[Function Array]}
+>
+  <div>
+    <csaa-claims-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-item>
+            <ion-card-title>
+               Claims
+            </ion-card-title>
+            <ion-button
+              fill="clear"
+              slot="end"
+            >
+              What do I do?
+            </ion-button>
+          </ion-item>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item
+              detail=""
+            >
+              <ion-label>
+                <h3>
+                   test 
+                </h3>
+                <span
+                  class="claim-number"
+                >
+                  Claim #12345
+                </span>
+                <br />
+                <span
+                  class="status"
+                >
+                  Status: active
+                </span>
+                <br />
+                <span
+                  class="subtitle"
+                >
+                   Lamborghini Gallardo 
+                </span>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <ion-item
+              detail=""
+            >
+              <ion-label>
+                <h3>
+                   test 
+                </h3>
+                <span
+                  class="claim-number"
+                >
+                  Claim #12345
+                </span>
+                <br />
+                <span
+                  class="status"
+                >
+                  Status: active
+                </span>
+                <br />
+                <span
+                  class="subtitle"
+                >
+                   Lamborghini Gallardo 
+                </span>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+            I Had an Accident
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </csaa-claims-card>
+  </div>
+</test-host-component>
+`;

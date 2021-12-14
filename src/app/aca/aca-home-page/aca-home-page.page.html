@@ -1,0 +1,34 @@
+<ion-content>
+  <div class="main ion-text-center ion-padding-horizontal">
+    <h1>ACA Home Page</h1>
+
+    <ng-container *ngIf="(isLoggedIn$|async); else guest">
+      <h2>You're in!</h2>
+      <p>
+        Click to
+        <a href="#" (click)="$event.preventDefault();logout()">Log Out</a>
+      </p>
+    </ng-container>
+
+    <ion-button size="large" expand="block" routerLink="csaa" fill="outline">
+      <ion-icon
+        slot="start"
+        name="person-circle"
+        *ngIf="(isLoadingIgAccessToken$ | async) === false"
+      ></ion-icon>
+      My Policy
+    </ion-button>
+
+    <ion-button expand="block" fill="outline" routerLink="settings">
+      <ion-icon slot="start" name="settings-outline"></ion-icon> Dev Options
+    </ion-button>
+  </div>
+</ion-content>
+
+<ng-template #guest>
+  <h2>Welcome back!</h2>
+  <p>
+    Click to
+    <a href="#" routerLink="auth/sso">Log in</a>
+  </p>
+</ng-template>

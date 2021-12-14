@@ -1,0 +1,772 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CsaaHomeCoveragesCardComponent it should collapse the card after clicking on the expanded card 1`] = `
+<csaa-home-coverages-card
+  PolicyType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  coverages={[Function Array]}
+  loading="false"
+  openCard="undefined"
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  viewDeclarationClick={[Function EventEmitter_]}
+>
+  <ion-card
+    class="coverage-list"
+  >
+    <ion-card-header
+      class="home"
+    >
+      <ion-card-title>
+        <div
+          class="display-flex ion-align-items-center"
+        >
+           CAHO123456789 
+        </div>
+        <csaa-theme-icon>
+          <img
+            src="/assets/csaa-mobile/vectors/icn-Home.svg"
+            style="width: 40px; height: 40px;"
+          />
+        </csaa-theme-icon>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <span
+              class="subtitle"
+            >
+               Subtitle 
+            </span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-list>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Personal Property
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $750
+                  </span>
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Building Additions & Alterations
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Loss of Use
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $1,500
+                  </span>
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Personal Liability
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Medical Payments
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item
+          class="endorsements"
+        >
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <h2>
+                  Endorsements
+                </h2>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <span
+                  class="twitter-pitch"
+                >
+                  See Declarations for coverages
+                </span>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        expand="full"
+      >
+        View Declarations
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-home-coverages-card>
+`;
+
+exports[`CsaaHomeCoveragesCardComponent it should expand coverage card item  1`] = `
+<csaa-home-coverages-card
+  PolicyType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  coverages={[Function Array]}
+  loading="false"
+  openCard="0"
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  viewDeclarationClick={[Function EventEmitter_]}
+>
+  <ion-card
+    class="coverage-list"
+  >
+    <ion-card-header
+      class="home"
+    >
+      <ion-card-title>
+        <div
+          class="display-flex ion-align-items-center"
+        >
+           CAHO123456789 
+        </div>
+        <csaa-theme-icon>
+          <img
+            src="/assets/csaa-mobile/vectors/icn-Home.svg"
+            style="width: 40px; height: 40px;"
+          />
+        </csaa-theme-icon>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <span
+              class="subtitle"
+            >
+               Subtitle 
+            </span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-list>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item open"
+            >
+              <h4
+                class="title"
+              >
+                Personal Property
+              </h4>
+              <div
+                class="description"
+              >
+                Covers personal property
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Building Additions & Alterations
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Loss of Use
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $1,500
+                  </span>
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Personal Liability
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Medical Payments
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item
+          class="endorsements"
+        >
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <h2>
+                  Endorsements
+                </h2>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <span
+                  class="twitter-pitch"
+                >
+                  See Declarations for coverages
+                </span>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        expand="full"
+      >
+        View Declarations
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-home-coverages-card>
+`;
+
+exports[`CsaaHomeCoveragesCardComponent should display the Home coverage when there is one coverage 1`] = `
+<csaa-home-coverages-card
+  PolicyType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  coverages={[Function Array]}
+  loading="false"
+  openCard="undefined"
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  viewDeclarationClick={[Function EventEmitter_]}
+>
+  <ion-card
+    class="coverage-list"
+  >
+    <ion-card-header
+      class="home"
+    >
+      <ion-card-title>
+        <div
+          class="display-flex ion-align-items-center"
+        >
+           CAHO123456789 
+        </div>
+        <csaa-theme-icon>
+          <img
+            src="/assets/csaa-mobile/vectors/icn-Home.svg"
+            style="width: 40px; height: 40px;"
+          />
+        </csaa-theme-icon>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <span
+              class="subtitle"
+            >
+               Subtitle 
+            </span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-list>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Personal Property
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $750
+                  </span>
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item
+          class="endorsements"
+        >
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <h2>
+                  Endorsements
+                </h2>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <span
+                  class="twitter-pitch"
+                >
+                  See Declarations for coverages
+                </span>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        expand="full"
+      >
+        View Declarations
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-home-coverages-card>
+`;
+
+exports[`CsaaHomeCoveragesCardComponent should match snapshots when no coverages 1`] = `
+<csaa-home-coverages-card
+  PolicyType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  coverages={[Function Array]}
+  loading="false"
+  openCard="undefined"
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  viewDeclarationClick={[Function EventEmitter_]}
+>
+  <ion-card
+    class="coverage-list"
+  >
+    <ion-card-header
+      class="home"
+    >
+      <ion-card-title>
+        <div
+          class="display-flex ion-align-items-center"
+        >
+           CAHO123456789 
+        </div>
+        <csaa-theme-icon>
+          <img
+            src="/assets/csaa-mobile/vectors/icn-Home.svg"
+            style="width: 40px; height: 40px;"
+          />
+        </csaa-theme-icon>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <span
+              class="subtitle"
+            >
+               Subtitle 
+            </span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-list>
+        <ion-item
+          class="endorsements"
+        >
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <h2>
+                  Endorsements
+                </h2>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <span
+                  class="twitter-pitch"
+                >
+                  See Declarations for coverages
+                </span>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        expand="full"
+      >
+        View Declarations
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-home-coverages-card>
+`;
+
+exports[`CsaaHomeCoveragesCardComponent should match snapshots when there are coverages 1`] = `
+<csaa-home-coverages-card
+  PolicyType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  coverages={[Function Array]}
+  loading="false"
+  openCard="undefined"
+  policy={[Function Object]}
+  policyNumber={[Function String]}
+  viewDeclarationClick={[Function EventEmitter_]}
+>
+  <ion-card
+    class="coverage-list"
+  >
+    <ion-card-header
+      class="home"
+    >
+      <ion-card-title>
+        <div
+          class="display-flex ion-align-items-center"
+        >
+           CAHO123456789 
+        </div>
+        <csaa-theme-icon>
+          <img
+            src="/assets/csaa-mobile/vectors/icn-Home.svg"
+            style="width: 40px; height: 40px;"
+          />
+        </csaa-theme-icon>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content
+      class="csaa-item-list"
+    >
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <span
+              class="subtitle"
+            >
+               Subtitle 
+            </span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-list>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Personal Property
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $750
+                  </span>
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Building Additions & Alterations
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Loss of Use
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                  <span>
+                    $1,500
+                  </span>
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Personal Liability
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item>
+          <csaa-coverage-card-item>
+            <div
+              class="csaa-coverage-card-item"
+            >
+              <h4
+                class="title"
+              >
+                Medical Payments
+              </h4>
+              <div
+                class="unopened-card"
+              >
+                <p
+                  class="limit-info"
+                >
+                </p>
+              </div>
+            </div>
+          </csaa-coverage-card-item>
+        </ion-item>
+        <ion-item
+          class="endorsements"
+        >
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <h2>
+                  Endorsements
+                </h2>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <span
+                  class="twitter-pitch"
+                >
+                  See Declarations for coverages
+                </span>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+      <ion-button
+        expand="full"
+      >
+        View Declarations
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</csaa-home-coverages-card>
+`;

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dynamic_link_hosts">
+        <item>mobiledynamiclink.aaa.com</item>
+        <item>aaamobile.page.link</item>
+        <item>aaamobilee.page.link</item>
+    </string-array>
+</resources>

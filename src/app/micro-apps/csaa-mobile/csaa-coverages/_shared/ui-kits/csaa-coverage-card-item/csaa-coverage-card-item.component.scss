@@ -1,0 +1,77 @@
+@import '../../../../_scss/variables';
+@import '../../../../_scss/mixins';
+
+.title {
+  color: var(--ion-color-primary, $csaa-active-color);
+  font-weight: $csaa-bolder-font-weight;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+p.limit-info {
+  font-size: 12px;
+  margin-bottom: 12px;
+  font-weight: $csaa-light-font-weight;
+  span {
+    font-weight: $csaa-active-font-weight;
+  }
+}
+
+.open {
+  // width: 110%;
+  // transform: translateX(-4.55%);
+  z-index: 10;
+  padding-top: 1px;
+  padding-left: 5px;
+
+  // @include border-radius($csaa-card-border-radius);
+  @include box-shadow(10px 0px 20px 0px rgba(0, 0, 0, 0.2));
+
+  background: -moz-linear-gradient(
+    top,
+    $csaa-card-gradient-start 0%,
+    $csaa-card-gradient-end 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    $csaa-card-gradient-start 0%,
+    $csaa-card-gradient-end 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    $csaa-card-gradient-start 0%,
+    $csaa-card-gradient-end 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.description {
+  padding: 4px 16px 16px 25px;
+  font-size: 12px;
+}
+
+// .csaa {
+//   csaa-coverage-card-item,
+//   csaa-indented-coverage-card-item {
+//     h2 {
+//       color: $csaa-active-color;
+//       font-weight: $csaa-active-font-weight;
+//     }
+//     .twitter-pitch {
+//       font-family: $csaa-subtitle-font-family-ios;
+//       font-weight: $csaa-light-font-weight;
+//     }
+//     .home-limit {
+//       margin-top: 0.3rem;
+//       font-family: $csaa-subtitle-font-family-ios;
+//       font-weight: $csaa-light-font-weight;
+//       span {
+//         font-weight: $csaa-bold-font-weight;
+//       }
+//     }
+//     &.no-border {
+//       ion-item {
+//         border: none;
+//       }
+//     }
+//   }
+// }

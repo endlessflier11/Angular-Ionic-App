@@ -1,0 +1,45 @@
+<ng-container *ngIf="!buttonOnly; else showButtonOnly">
+  <ng-container *ngIf="(hasPendingEnrollment$ | async) || enrollmentRequestSuccessful">
+    <ng-container *ngIf="!enrollmentRequestSuccessful; else success">
+      <ion-card class="csaa-card">
+        <ion-card-header>
+          <ion-card-title>
+            <ion-row>
+              <ion-col [size]="8" class="ion-no-padding">
+                <span>Pending Enrollment</span>
+              </ion-col>
+              <ion-col size="4" class="ion-no-padding title-icon">
+                <ion-icon src="/assets/csaa-mobile/vectors/danger-exclamation.svg"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p class="ion-padding-bottom text-lighter">
+            To complete your enrollment in paperless, please review and accept the terms and
+            conditions.
+          </p>
+          <ion-button expand="block" (click)="reviewTerms()">
+            Review Terms & Conditions
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ng-container>
+  </ng-container>
+
+  <ng-template #success>
+    <ion-card class="csaa-card csaa-card--success">
+      <ion-card-header class="ion-margin-bottom">
+        <img [src]="'/assets/csaa-mobile/vectors/success.svg'" />
+        <ion-card-title>You have successfully enrolled in paperless notifications</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="block" (click)="dismissSuccessAlert()"> Dismiss </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ng-template>
+</ng-container>
+
+<ng-template #showButtonOnly>
+  <ion-button expand="block" (click)="reviewTerms()"> Review Terms & Conditions </ion-button>
+</ng-template>

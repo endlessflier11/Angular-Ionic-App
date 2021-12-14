@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DocumentActionModalComponent should dismiss action modal on close click 1`] = `
+<csaa-document-action-modal
+  __ngContext__={[Function LRootView]}
+  configService={[Function ConfigService]}
+  currentTheme=""
+  fileNameControl={[Function FormControl]}
+  modalController={[Function AlertControllerMock]}
+  platformService={[Function PlatformService]}
+  subSink={[Function SubSink]}
+>
+  <ion-content
+    class="ion-padding csaa"
+    scroll-y="false"
+  >
+    <h2
+      class="ion-text-center"
+    >
+      Document Options
+    </h2>
+    <ion-list>
+      <ion-item
+        detail=""
+      >
+        <ion-label>
+          View Document
+        </ion-label>
+      </ion-item>
+      <ion-item
+        detail=""
+      >
+        <ion-label>
+          Share Document
+        </ion-label>
+      </ion-item>
+      <ion-item
+        class="ion-margin-top csaa-save-as ion-untouched ion-pristine ion-invalid"
+        lines="none"
+      >
+        <ion-label
+          position="stacked"
+        >
+          Save file as
+        </ion-label>
+        <ion-input
+          class="ng-untouched ng-pristine ng-invalid ion-untouched ion-pristine ion-invalid"
+          placeholder="File name"
+          required=""
+          type="text"
+        />
+        <span
+          slot="end"
+        >
+          .pdf
+        </span>
+      </ion-item>
+      <ion-item
+        detail=""
+        lines="none"
+      >
+        <ion-label>
+          Save Document
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content><ion-footer
+    class="ion-padding csaa"
+  >
+    <ion-button
+      expand="full"
+    >
+      Close
+    </ion-button>
+  </ion-footer>
+</csaa-document-action-modal>
+`;
+
+exports[`DocumentActionModalComponent should display view document and share document 1`] = `
+<csaa-document-action-modal
+  __ngContext__={[Function LRootView]}
+  configService={[Function ConfigService]}
+  currentTheme=""
+  fileNameControl={[Function FormControl]}
+  modalController={[Function AlertControllerMock]}
+  platformService={[Function PlatformService]}
+  subSink={[Function SubSink]}
+>
+  <ion-content
+    class="ion-padding csaa"
+    scroll-y="false"
+  >
+    <h2
+      class="ion-text-center"
+    >
+      Document Options
+    </h2>
+    <ion-list>
+      <ion-item
+        detail=""
+      >
+        <ion-label>
+          View Document
+        </ion-label>
+      </ion-item>
+      <ion-item
+        detail=""
+      >
+        <ion-label>
+          Share Document
+        </ion-label>
+      </ion-item>
+      <ion-item
+        class="ion-margin-top csaa-save-as ion-untouched ion-pristine ion-invalid"
+        lines="none"
+      >
+        <ion-label
+          position="stacked"
+        >
+          Save file as
+        </ion-label>
+        <ion-input
+          class="ng-untouched ng-pristine ng-invalid ion-untouched ion-pristine ion-invalid"
+          placeholder="File name"
+          required=""
+          type="text"
+        />
+        <span
+          slot="end"
+        >
+          .pdf
+        </span>
+      </ion-item>
+      <ion-item
+        detail=""
+        lines="none"
+      >
+        <ion-label>
+          Save Document
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content><ion-footer
+    class="ion-padding csaa"
+  >
+    <ion-button
+      expand="full"
+    >
+      Close
+    </ion-button>
+  </ion-footer>
+</csaa-document-action-modal>
+`;

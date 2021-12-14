@@ -1,0 +1,12 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# if running bash
+if [ "$SHELL" = "/bin/bash" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+        . "$HOME/.bashrc"
+    fi
+fi
+
+npm run pretty-quick -- --staged && npm run lint-staged && node check-relative-imports.js

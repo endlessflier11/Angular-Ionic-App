@@ -1,0 +1,805 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CsaaPoiIndexPage should match snapshot 1`] = `
+<csaa-coverages-index
+  PolicyType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  currentTheme={[Function String]}
+  customerSearch$={[Function Observable]}
+  loading="false"
+  platform={[Function Platform]}
+  policy$={[Function Observable]}
+  policyDocumentHelper={[Function PolicyDocumentHelper]}
+  policyNumber={[Function String]}
+  route={[Function Object]}
+  routerService={[Function RouterMockService]}
+  selectedIdCardIndex="null"
+  ssoService={[Function SsoService]}
+  store={[Function Store]}
+  walletPassId={[Function String]}
+>
+  <ion-header
+    class="csaa theme-aca"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Call Service
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Proof of Insurance
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa theme-aca"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <ion-card
+      class="csaa-card policy-detail"
+    >
+      <ion-card-content>
+        <ion-grid
+          class="ion-no-padding"
+        >
+          <ion-row>
+            <ion-col>
+              <ion-item
+                lines="none"
+              >
+                <div
+                  class="policy-meta-content"
+                >
+                  <h2
+                    class="ion-color-dark"
+                  >
+                    CAAC910026006
+                  </h2>
+                </div>
+                <div
+                  class="policy-meta-icon"
+                  slot="end"
+                >
+                  <csaa-theme-icon
+                    slot="end"
+                  >
+                    <img
+                      src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                      style="width: 40px; height: 40px;"
+                    />
+                  </csaa-theme-icon>
+                </div>
+              </ion-item>
+              <ion-item
+                lines="none"
+              >
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    2009 Acura Tsx,
+                  </span>
+                  <span
+                    class="subtitle"
+                  >
+                    2007 Jeep Grand Cherokee
+                  </span>
+                  <a
+                    class="csaa-link"
+                    href="#"
+                  >
+                    <small>
+                      Show more
+                    </small>
+                  </a>
+                </csaa-policy-subtitles>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row
+            class="ion-padding-top"
+          >
+            <ion-col>
+              <ion-item
+                lines="none"
+              >
+                <h3
+                  class="ion-color-dark"
+                >
+                  Vehicle ID Card
+                </h3>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item
+                detail=""
+              >
+                <ion-text
+                  color="primary"
+                >
+                  <h4>
+                    2009 Acura Tsx
+                  </h4>
+                </ion-text>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item
+                detail=""
+              >
+                <ion-text
+                  color="primary"
+                >
+                  <h4>
+                    2007 Jeep Grand Cherokee
+                  </h4>
+                </ion-text>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item
+                detail=""
+              >
+                <ion-text
+                  color="primary"
+                >
+                  <h4>
+                    2015 Kia Forte
+                  </h4>
+                </ion-text>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item
+                detail=""
+              >
+                <ion-text
+                  color="primary"
+                >
+                  <h4>
+                    2006 Ford Lgt Convtnl F
+                  </h4>
+                </ion-text>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+    <ion-card
+      class="csaa-card"
+    >
+      <ion-card-content>
+        <ion-button
+          expand="full"
+        >
+          Save ID Cards to Device
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+    <csaa-apple-wallet-button>
+    </csaa-apple-wallet-button>
+    <csaa-drivers-coverages-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            Drivers
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <csaa-csaa-drivers-coverages-content-v2>
+            <ion-list>
+              <ion-item>
+                <ion-label>
+                  <h3
+                    class="driver-name"
+                  >
+                    Haithm Alabdi
+                  </h3>
+                  <div
+                    class="description"
+                  >
+                    <p>
+                      Date of Birth: 01/01/1991
+                    </p>
+                  </div>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <h3
+                    class="driver-name"
+                  >
+                    Neesa Alabdi
+                  </h3>
+                  <div
+                    class="description"
+                  >
+                    <p>
+                      Date of Birth: 12/12/1998
+                    </p>
+                  </div>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <h3
+                    class="driver-name"
+                  >
+                    Nana Alabdi
+                  </h3>
+                  <div
+                    class="description"
+                  >
+                    <p>
+                      Date of Birth: 08/10/1982
+                    </p>
+                  </div>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <h3
+                    class="driver-name"
+                  >
+                    Lola Alabdi
+                  </h3>
+                  <div
+                    class="description"
+                  >
+                    <p>
+                      Date of Birth: 05/06/2001
+                    </p>
+                  </div>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </csaa-csaa-drivers-coverages-content-v2>
+        </ion-card-content>
+      </ion-card>
+    </csaa-drivers-coverages-card>
+  </ion-content><csaa-working-hours
+    class="csaa theme-aca"
+    servicetype="CUSTOMER"
+  >
+    <div
+      class="csaa-working-hours hidden"
+    >
+      <ion-card
+        class="card card-md"
+      >
+        <ion-card-header>
+          Service Hours
+        </ion-card-header>
+        <ion-card-content
+          class="card-content card-content-md"
+        >
+          <ion-list>
+            <ion-item>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+             Call Service 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </csaa-working-hours>
+</csaa-coverages-index>
+`;
+
+exports[`CsaaPoiIndexPage should match snapshot with selected vehicle id card 1`] = `
+<csaa-coverages-index
+  PolicyType={[Function Object]}
+  __ngContext__={[Function LRootView]}
+  analyticsService={[Function AnalyticsMockService]}
+  currentTheme={[Function String]}
+  customerSearch$={[Function Observable]}
+  loading="false"
+  platform={[Function Platform]}
+  policy$={[Function Observable]}
+  policyDocumentHelper={[Function PolicyDocumentHelper]}
+  policyNumber={[Function String]}
+  route={[Function Object]}
+  routerService={[Function RouterMockService]}
+  selectedIdCardIndex="0"
+  ssoService={[Function SsoService]}
+  store={[Function Store]}
+  walletPassId={[Function String]}
+>
+  <ion-header
+    class="csaa theme-aca"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Call Service
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Proof of Insurance
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa theme-aca"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <ion-card
+      class="csaa-card policy-detail"
+    >
+      <ion-card-content>
+        <ion-grid
+          class="ion-no-padding"
+        >
+          <ion-row>
+            <ion-col>
+              <ion-item
+                lines="none"
+              >
+                <div
+                  class="policy-meta-content"
+                >
+                  <h2
+                    class="ion-color-dark"
+                  >
+                    CAAC910026006
+                  </h2>
+                </div>
+                <div
+                  class="policy-meta-icon"
+                  slot="end"
+                >
+                  <csaa-theme-icon
+                    slot="end"
+                  >
+                    <img
+                      src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                      style="width: 40px; height: 40px;"
+                    />
+                  </csaa-theme-icon>
+                </div>
+              </ion-item>
+              <ion-item
+                lines="none"
+              >
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    2009 Acura Tsx,
+                  </span>
+                  <span
+                    class="subtitle"
+                  >
+                    2007 Jeep Grand Cherokee
+                  </span>
+                  <a
+                    class="csaa-link"
+                    href="#"
+                  >
+                    <small>
+                      Show more
+                    </small>
+                  </a>
+                </csaa-policy-subtitles>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row
+            class="ion-padding-top"
+          >
+            <ion-col>
+              <ion-item
+                lines="none"
+              >
+                <h3
+                  class="ion-color-dark"
+                >
+                  Vehicle ID Card
+                </h3>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item
+                detail=""
+              >
+                <ion-text
+                  color="primary"
+                >
+                  <h4>
+                    2009 Acura Tsx
+                  </h4>
+                </ion-text>
+              </ion-item>
+              <ion-item
+                class="id-card-item"
+              >
+                <div
+                  class="id-card-wrapper"
+                >
+                  <csaa-auto-id-card>
+                    <div
+                      class="poi-card"
+                    >
+                      <ion-grid>
+                        <ion-row
+                          class="row--heading"
+                        >
+                          <ion-col
+                            class="ion-text-start card-logo"
+                            size="auto"
+                          >
+                            <img
+                              src="/assets/csaa-mobile/vectors/aaa-logo.svg"
+                            />
+                          </ion-col>
+                          <ion-col
+                            size="10"
+                          >
+                            <p>
+                              CSAA General Insurance Company / NAIC #37770
+                            </p>
+                            <p>
+                              PO Box 24511, Oakland, CA 94623-9865
+                            </p>
+                            <p>
+                              800-207-3618
+                            </p>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row
+                          class="row--title"
+                        >
+                          <ion-col>
+                            <h1>
+                              CA Insurance Identification Card
+                            </h1>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row
+                          class="row--content"
+                        >
+                          <ion-col
+                            size="8"
+                          >
+                            <p>
+                              <span>
+                                NAMED INSURED
+                              </span>
+                              <span>
+                                 Haithm Alabdi 
+                              </span>
+                              <span>
+                                 Neesa Alabdi 
+                              </span>
+                              <span>
+                                 Nana Alabdi 
+                              </span>
+                              <span>
+                                 Nisa Alabdi 
+                              </span>
+                            </p>
+                          </ion-col>
+                          <ion-col
+                            size="4"
+                          >
+                            <p>
+                              <span>
+                                POLICY #
+                              </span>
+                              <span>
+                                 CAAC910026006 
+                              </span>
+                            </p>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row
+                          class="row--content"
+                        >
+                          <ion-col
+                            size="8"
+                          >
+                            <p>
+                              <span>
+                                VEHICLE YEAR / MAKE / MODEL
+                              </span>
+                              <span>
+                                 2009 Acura Tsx 
+                              </span>
+                            </p>
+                          </ion-col>
+                          <ion-col
+                            size="4"
+                          >
+                            <p>
+                              <span>
+                                EFFECTIVE DATE
+                              </span>
+                              <span>
+                                 Jan 11, 2021 
+                              </span>
+                            </p>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row
+                          class="row--content"
+                        >
+                          <ion-col
+                            size="8"
+                          >
+                            <p>
+                              <span>
+                                VEHICLE ID#
+                              </span>
+                              <span>
+                                 JH4CU26669C015699 
+                              </span>
+                            </p>
+                          </ion-col>
+                          <ion-col
+                            size="4"
+                          >
+                            <p>
+                              <span>
+                                EXPIRATION DATE
+                              </span>
+                              <span>
+                                 Jul 11, 2021 
+                              </span>
+                            </p>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row
+                          class="row--content"
+                        >
+                          <ion-col
+                            size="8"
+                          >
+                            <p>
+                              <span>
+                                 This insurance complies with CVC §16056 or §16500.5 
+                              </span>
+                            </p>
+                          </ion-col>
+                        </ion-row>
+                      </ion-grid>
+                    </div>
+                  </csaa-auto-id-card>
+                </div>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item
+                detail=""
+              >
+                <ion-text
+                  color="primary"
+                >
+                  <h4>
+                    2007 Jeep Grand Cherokee
+                  </h4>
+                </ion-text>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item
+                detail=""
+              >
+                <ion-text
+                  color="primary"
+                >
+                  <h4>
+                    2015 Kia Forte
+                  </h4>
+                </ion-text>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item
+                detail=""
+              >
+                <ion-text
+                  color="primary"
+                >
+                  <h4>
+                    2006 Ford Lgt Convtnl F
+                  </h4>
+                </ion-text>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+    <ion-card
+      class="csaa-card"
+    >
+      <ion-card-content>
+        <ion-button
+          expand="full"
+        >
+          Save ID Cards to Device
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+    <csaa-apple-wallet-button>
+    </csaa-apple-wallet-button>
+    <csaa-drivers-coverages-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header>
+          <ion-card-title>
+            Drivers
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <csaa-csaa-drivers-coverages-content-v2>
+            <ion-list>
+              <ion-item>
+                <ion-label>
+                  <h3
+                    class="driver-name"
+                  >
+                    Haithm Alabdi
+                  </h3>
+                  <div
+                    class="description"
+                  >
+                    <p>
+                      Date of Birth: 01/01/1991
+                    </p>
+                  </div>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <h3
+                    class="driver-name"
+                  >
+                    Neesa Alabdi
+                  </h3>
+                  <div
+                    class="description"
+                  >
+                    <p>
+                      Date of Birth: 12/12/1998
+                    </p>
+                  </div>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <h3
+                    class="driver-name"
+                  >
+                    Nana Alabdi
+                  </h3>
+                  <div
+                    class="description"
+                  >
+                    <p>
+                      Date of Birth: 08/10/1982
+                    </p>
+                  </div>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <h3
+                    class="driver-name"
+                  >
+                    Lola Alabdi
+                  </h3>
+                  <div
+                    class="description"
+                  >
+                    <p>
+                      Date of Birth: 05/06/2001
+                    </p>
+                  </div>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </csaa-csaa-drivers-coverages-content-v2>
+        </ion-card-content>
+      </ion-card>
+    </csaa-drivers-coverages-card>
+  </ion-content><csaa-working-hours
+    class="csaa theme-aca"
+    servicetype="CUSTOMER"
+  >
+    <div
+      class="csaa-working-hours hidden"
+    >
+      <ion-card
+        class="card card-md"
+      >
+        <ion-card-header>
+          Service Hours
+        </ion-card-header>
+        <ion-card-content
+          class="card-content card-content-md"
+        >
+          <ion-list>
+            <ion-item>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+             Call Service 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </csaa-working-hours>
+</csaa-coverages-index>
+`;

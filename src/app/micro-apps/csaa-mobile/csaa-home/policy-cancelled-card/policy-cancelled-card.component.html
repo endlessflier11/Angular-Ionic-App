@@ -1,0 +1,33 @@
+<ion-card class="csaa-card">
+  <ion-card-header>
+    <ion-card-title> Policy is no longer active </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-grid>
+      <ion-row class="policy">
+        <ion-col>
+          <div class="policy-data">
+            <h3 class="card-subheader">{{ policy.number }}</h3>
+            <p class="subtitle lighter">{{ policy.subtitle }}</p>
+          </div>
+        </ion-col>
+        <ion-col size="auto">
+          <csaa-theme-icon [size]="40" [type]="policy.type"> </csaa-theme-icon>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          Your policy is no longer active. Making a payment now may not reinstate your policy if it
+          has been cancelled or expired.
+        </ion-col>
+      </ion-row>
+      <ion-row class="content-message">
+        <ion-col>
+          <h3>Please contact our service team for assistance.</h3>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-button expand="full" (click)="callService.next()"> Call Service </ion-button>
+  </ion-card-content>
+</ion-card>

@@ -1,0 +1,23 @@
+<h2>Dev Options</h2>
+<ion-item>
+  <ion-label>Version</ion-label>
+  <ion-label class="bold">{{ codeVersion }}</ion-label>
+</ion-item>
+<ion-item>
+  <ion-label>Theme</ion-label>
+  <ion-label class="bold">{{ theme }}</ion-label>
+</ion-item>
+<ion-item lines="none" class="ion-margin-bottom">
+  <ion-label>Environment ({{ env }})</ion-label>
+  <ion-select [formControl]="selectInputControl" [value]="'qa'">
+    <ion-select-option *ngFor="let config of availableConfigs" [value]="config.env">{{
+      config.env
+    }}</ion-select-option>
+  </ion-select>
+</ion-item>
+<ion-button (click)="reloadServiceLocator.emit($event)" expand="block" fill="outline">
+  <ion-icon slot="start" name="refresh-outline"></ion-icon> Reload URLs from Service Locator
+</ion-button>
+<ion-button (click)="goBackClubSelection.emit($event)" expand="block" fill="outline">
+  <ion-icon slot="start" name="log-out-outline"></ion-icon> Go Back to Club Selection
+</ion-button>

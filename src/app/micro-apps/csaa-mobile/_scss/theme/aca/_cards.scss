@@ -1,0 +1,30 @@
+@import './variables';
+
+ion-card {
+  border-radius: 0 !important;
+  border-bottom: 10px solid;
+  border-top: 0 !important;
+  border-image-source: url(/assets/csaa-mobile/imgs/gradient-border.png);
+  border-image-slice: 10;
+  padding: 5px 14px 15px 15px;
+  box-shadow: none !important;
+  --ion-background-color: white;
+}
+
+ion-card-content {
+  font-size: $aca-font-size;
+  .item {
+    --detail-icon-color: #034f9d;
+    --detail-icon-opacity: 1;
+    font-size: $aca-font-size;
+    h3 {
+      color: $aca-color-primary;
+    }
+  }
+}
+
+@media screen and (max-width: $aca-shrink-small-breakpoint) {
+  ion-card {
+    padding: 5px 7px 7px 7px;
+  }
+}

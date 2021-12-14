@@ -1,0 +1,14 @@
+app_identifier "com.aaa.csaa_insurance.mypolicy" # The bundle identifier of your app
+apple_id "csaa.mobile.ci@gmail.com" # Your Apple email address
+team_id "A7PMT66CH3"
+
+# for_platform :ios do
+#     for_lane :appstore do
+#         app_identifier "com.aaa.mypolicy-ionic"
+#         team_id 'X6A33A95SU' # for all iOS related things
+#         apple_id 'maksymilian.majer@clevertech.biz'
+#     end
+# end
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

@@ -1,0 +1,39 @@
+@import '../../_scss/variables';
+
+ion-content {
+  --background: #fff;
+  --padding-start: 0;
+  --padding-end: 0;
+}
+
+.policy-meta-content {
+  h3 {
+    margin-top: 0;
+    color: var(--ion-color-primary);
+  }
+  .subtitle {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+  .more-text {
+    display: block;
+    text-decoration: none;
+  }
+}
+
+.policy-meta-icon {
+  align-self: flex-start;
+}
+
+ion-list {
+  ion-item {
+    --detail-icon-opacity: 1;
+    ion-text {
+      margin-right: 5px;
+    }
+    span[slot='end'] {
+      font-weight: 300;
+    }
+  }
+}

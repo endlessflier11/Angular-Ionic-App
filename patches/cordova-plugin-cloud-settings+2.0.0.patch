@@ -1,0 +1,35 @@
+diff --git a/node_modules/cordova-plugin-cloud-settings/plugin.xml b/node_modules/cordova-plugin-cloud-settings/plugin.xml
+index 23e7c0c..efd9995 100644
+--- a/node_modules/cordova-plugin-cloud-settings/plugin.xml
++++ b/node_modules/cordova-plugin-cloud-settings/plugin.xml
+@@ -32,15 +32,6 @@
+             <clobbers target="cordova.plugin.cloudsettings" />
+         </js-module>
+ 
+-        <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
+-            <application
+-                    android:allowBackup="true"
+-                    android:backupAgent="cordova.plugin.cloudsettings.BackupAgentHelper"
+-                    android:fullBackupOnly="true"
+-                    android:fullBackupContent="@xml/backup_rules"
+-            />
+-        </edit-config>
+-
+         <resource-file src="src/android/backup_rules.xml" target="res/xml/backup_rules.xml" />
+         <source-file src="src/android/CloudSettingsPlugin.java" target-dir="src/cordova/plugin/cloudsettings" />
+         <source-file src="src/android/BackupAgentHelper.java" target-dir="src/cordova/plugin/cloudsettings" />
+diff --git a/node_modules/cordova-plugin-cloud-settings/www/android/cloudsettings.js b/node_modules/cordova-plugin-cloud-settings/www/android/cloudsettings.js
+index f8b398b..3503991 100644
+--- a/node_modules/cordova-plugin-cloud-settings/www/android/cloudsettings.js
++++ b/node_modules/cordova-plugin-cloud-settings/www/android/cloudsettings.js
+@@ -67,7 +67,9 @@ cloudsettings.load = function(onSuccess, onError){
+             exclusive: false
+         }, function (fileEntry) {
+             fileEntry.file(function (file) {
+-                var reader = new FileReader();
++                var fileReader = new FileReader();
++                var zoneOriginalInstance = fileReader["__zone_symbol__originalInstance"];
++                var reader = zoneOriginalInstance ? zoneOriginalInstance : fileReader;
+                 reader.onloadend = function() {
+                     try{
+                         var data = JSON.parse(this.result);

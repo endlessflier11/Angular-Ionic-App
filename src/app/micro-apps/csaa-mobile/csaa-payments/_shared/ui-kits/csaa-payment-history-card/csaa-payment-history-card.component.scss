@@ -1,0 +1,23 @@
+@import '../../../../_scss/variables';
+
+ion-card {
+  ion-card-header {
+    padding-bottom: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  ion-card-content {
+    padding-inline-start: 15px;
+    padding-inline-end: 15px;
+  }
+
+  ion-item {
+    &.failed {
+      .amount,
+      .status,
+      &:before {
+        color: $csaa-emergency-color;
+      }
+    }
+  }
+}

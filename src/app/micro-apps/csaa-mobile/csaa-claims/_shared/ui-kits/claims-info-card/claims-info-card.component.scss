@@ -1,0 +1,26 @@
+@import '../../../../_scss/variables';
+
+ion-card.claims-info-card {
+  ion-card-content {
+    color: $csaa-lighter-color;
+    font-size: 16px;
+    line-height: 24px;
+    &.card-content-md,
+    &.card-content-ios {
+      p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .smaller {
+        font-size: $csaa-subtitle-font-size;
+        line-height: 18px;
+      }
+      ul {
+        li {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}

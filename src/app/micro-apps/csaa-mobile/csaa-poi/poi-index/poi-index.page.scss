@@ -1,0 +1,51 @@
+ion-grid {
+  ion-row {
+    ion-col {
+      ion-item {
+        --detail-icon-color: var(--ion-color-primary);
+        --detail-icon-opacity: 1;
+
+        h3.ion-color-dark {
+          color: var(--ion-text-color);
+        }
+
+        h4 {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.id-card-wrapper {
+  margin: auto;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  max-width: 315px;
+}
+
+ion-card.csaa-card.policy-detail {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  ion-card-content {
+    padding-inline-start: 0 !important;
+    padding-inline-end: 0 !important;
+  }
+  ion-item {
+    --inner-padding-end: 16px;
+    --padding-start: 32px;
+    &.id-card-item {
+      --inner-padding-end: 0;
+      --padding-start: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  ion-content {
+    --padding-start: 7px;
+    --padding-end: 7px;
+  }
+}

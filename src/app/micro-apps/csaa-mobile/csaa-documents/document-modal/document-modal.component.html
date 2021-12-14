@@ -1,0 +1,33 @@
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar>
+    <ion-buttons slot='start'>
+      <csaa-back-button (back)='backButtonClick()'></csaa-back-button>
+    </ion-buttons>
+    <ion-title>Filter</ion-title>
+    <ion-buttons slot='end'>
+      <ion-button (click)='dismissModal()'>Done</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="['csaa', currentTheme]">
+  <ion-list>
+    <ion-radio-group [value]='activeFilter' (ionChange)='onFilterChange($event)'>
+      <ion-item>
+        <ion-label>All Documents</ion-label>
+        <ion-radio slot='end' mode='md' value='all_documents'></ion-radio>
+      </ion-item>
+      <ion-item *ngIf='checkPolicyTypes()'>
+        <ion-label>Policy Documents</ion-label>
+        <ion-radio slot='end' mode='md' value='policy_documents'></ion-radio>
+      </ion-item>
+      <ion-item *ngIf='checkBillingPayments()'>
+        <ion-label>Billing & Payments</ion-label>
+        <ion-radio slot='end' mode='md' value='billing_&_payments'></ion-radio>
+      </ion-item>
+      <ion-item *ngFor='let filterType of currentFilter'>
+        <ion-label>{{ PolicyDocumentType[filterType] }}</ion-label>
+        <ion-radio slot='end' mode='md' [value]='filterType'></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+</ion-content>

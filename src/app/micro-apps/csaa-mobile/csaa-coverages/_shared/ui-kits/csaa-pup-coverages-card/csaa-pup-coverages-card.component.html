@@ -1,0 +1,30 @@
+<csaa-skeleton-card *ngIf="loading"></csaa-skeleton-card>
+<ion-card *ngIf="!loading && coverages && coverages.length" class="coverage-list">
+  <ion-card-header>
+    <ion-card-title>
+      <div class="display-flex ion-align-items-center">
+        {{ policyNumber }}
+      </div>
+      <csaa-theme-icon [type]="policy?.type" [size]="40"> </csaa-theme-icon>
+    </ion-card-title>
+    <ion-card-subtitle>Personal Umbrella Policy</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content class="csaa-item-list">
+    <ion-list *ngIf="coverages.length > 0">
+      <ion-item *ngFor="let coverage of coverages; let ix = index">
+        <csaa-coverage-card-item
+          [policyType]="PolicyType.PUP"
+          *ngFor="let coverage of coverages; let ix = index"
+          [coverage]="coverage"
+          (itemClick)="onItemClick(coverage, ix)"
+          [isOpen]="isItemOpen(ix)"
+        >
+        </csaa-coverage-card-item>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="full" (click)="viewDeclarationClick.emit($event)">
+      View Declarations</ion-button
+    >
+  </ion-card-content>
+</ion-card>

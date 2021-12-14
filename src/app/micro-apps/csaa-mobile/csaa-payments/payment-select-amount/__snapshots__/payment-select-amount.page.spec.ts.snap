@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaymentSelectAmountPage should match screenshot 1`] = `
+<app-csaa-payment-select-amount
+  __ngContext__={[Function LRootView]}
+  alertCtrl={[Function AlertControllerMock]}
+  amountForm={[Function FormGroup]}
+  analyticsService={[Function AnalyticsMockService]}
+  configService={[Function ConfigMockService]}
+  currentTheme=""
+  formBuilder={[Function FormBuilder]}
+  isIos="false"
+  makePaymentService={[Function Object]}
+  paymentData={[Function Object]}
+  payments={[Function Array]}
+  platform={[Function Platform]}
+  routerService={[Function RouterMockService]}
+  store={[Function Store]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <ion-button>
+          Cancel
+        </ion-button>
+      </ion-buttons>
+      <ion-title>
+        Amount
+      </ion-title>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Done
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa-item-list csaa"
+  >
+    <h3
+      class="ion-text-center"
+    >
+      Select an amount
+    </h3>
+    <form
+      class="ng-untouched ng-pristine ng-valid"
+      novalidate=""
+    >
+      <ion-list
+        lines="full"
+      >
+        <ion-item
+          id="item-minimum"
+        >
+          <ion-label>
+            Minimum Due
+          </ion-label>
+          <span
+            slot="end"
+          >
+             $20.00 
+          </span>
+        </ion-item>
+        <ion-item
+          id="item-remaining"
+        >
+          <ion-label>
+            Remaining Premium
+          </ion-label>
+          <span
+            item-end=""
+          >
+             $10,000.00 
+          </span>
+        </ion-item>
+        <ion-item
+          class="active"
+          id="item-other"
+        >
+          <ion-label>
+            Other Amount
+          </ion-label>
+          <ion-input
+            class="ion-text-right ng-untouched ng-pristine ng-valid"
+            formcontrolname="otherAmount"
+          />
+        </ion-item>
+      </ion-list>
+    </form>
+  </ion-content>
+</app-csaa-payment-select-amount>
+`;

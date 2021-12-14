@@ -1,0 +1,116 @@
+import { deepCopy } from '@app/testing';
+
+const CUSTOMER = {
+  mdmId: '1485570068204',
+  fullName: 'AMANDA GRANT',
+  firstName: 'AMANDA',
+  lastName: 'GRANT',
+  customerAddress: {
+    addressType: 'mailing',
+    address1: '2937 ALLENDALE BLVD',
+    streetAddressLine: null,
+    zipCode: '82601-5707',
+    city: 'CASPER',
+    state: 'WY',
+    stateFullName: 'Wyoming',
+  },
+  insuranceAddress: {
+    address2: 'PO Box 24511',
+    additional: 'NAIC # : 37770',
+    siteDomain: null,
+    phone: null,
+    addressType: null,
+    address1: 'CSAA General Insurance Company',
+    streetAddressLine: null,
+    zipCode: '94623\u003d9865',
+    city: 'Oakland',
+    state: 'CA',
+    stateFullName: 'California',
+  },
+  registrations: [
+    {
+      registrationId: '0FC85594-6B12-452F-B7FF-4577F4EF4CCD',
+      registrationSource: null,
+      startDate: null,
+    },
+  ],
+  policies: [
+    {
+      sourceSystem: 'PAS',
+      termExpirationDate: '2021-07-22',
+      policyNumber: 'WYSS910014010',
+      effectivePolicyStatus: 'active',
+      policyStatus: 'Active',
+      policyType: 'AU',
+      prodTypeCode: 'PA',
+      productCode: 'SIG',
+      riskState: null,
+      ubiFlag: null,
+      roleList: [
+        {
+          roleType: 'INSURED',
+          sourceId: 'tQ-hLPZ4imp-Im33U1hHSQ',
+          roleStatus: 'ACTIVE',
+        },
+        {
+          roleType: 'LISTED DRIVER',
+          sourceId: 'vYTLReB7Dgr6DMrdd4VAAQ',
+          roleStatus: 'ACTIVE',
+        },
+      ],
+      clubCode: '',
+    },
+    {
+      sourceSystem: 'PAS',
+      termExpirationDate: '2021-07-22',
+      policyNumber: 'WYH6910014012',
+      effectivePolicyStatus: 'active',
+      policyStatus: 'Active',
+      policyType: 'HO',
+      prodTypeCode: 'HO',
+      productCode: 'HO6',
+      riskState: null,
+      ubiFlag: null,
+      roleList: [
+        {
+          roleType: 'INSURED',
+          sourceId: 'md4wcjB3kjI6zvRDTBVHJg',
+          roleStatus: 'ACTIVE',
+        },
+      ],
+      clubCode: '',
+    },
+    {
+      sourceSystem: 'PAS',
+      termExpirationDate: '2021-07-22',
+      policyNumber: 'WYPU910014013',
+      effectivePolicyStatus: 'active',
+      policyStatus: 'Active',
+      policyType: 'unknown',
+      prodTypeCode: 'PU',
+      productCode: 'PUP',
+      riskState: null,
+      ubiFlag: null,
+      roleList: [
+        {
+          roleType: 'INSURED',
+          sourceId: 'nSge-IXdeSA3CmNGa5pB2A',
+          roleStatus: 'ACTIVE',
+        },
+      ],
+      clubCode: '',
+    },
+  ],
+  hash: '',
+  phoneType: 'homephonenumber',
+  telephoneNumber: '3075771423',
+  emailType: 'EMAIL1',
+  email: 'A532@TESTUSER.EXAMPLE.COM',
+  smsTnc: false,
+};
+
+export const getHomePageOnErrorFixtures = () => ({
+  customer: deepCopy(CUSTOMER),
+  policies: null,
+  claims: null,
+});

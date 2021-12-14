@@ -1,0 +1,84 @@
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <csaa-back-button (back)="onClickBackBtn()" text="Cancel"></csaa-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="pay()" [disabled]="payBtnDisabled">Pay</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Make a Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="['csaa', currentTheme]">
+  <csaa-skeleton-card
+    *ngIf="!policy"
+    [showHeader]="false"
+    [showButton]="false"
+    [hideCardBorder]="true"
+  ></csaa-skeleton-card>
+  <ion-grid class="ion-no-padding" *ngIf="!!policy">
+    <ion-row class="ion-padding-top ion-padding-bottom">
+      <ion-col>
+        <ion-item lines="none">
+          <div class="policy-meta-content">
+            <h3>{{ policy?.number }}</h3>
+            <csaa-policy-subtitles [policySubtitle]="policy?.subtitle"></csaa-policy-subtitles>
+          </div>
+          <div slot="end" class="policy-meta-icon">
+            <csaa-theme-icon slot="end" [type]="policy?.type" [size]="40"></csaa-theme-icon>
+          </div>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <ng-container *ngIf="upcomingPayment">
+      <ion-item lines="full" detail (click)="selectPaymentMethod()"
+        >Payment Method
+        <span slot="end">
+          <ion-text color="medium">{{ paymentMethodLabelText }}</ion-text>
+        </span>
+      </ion-item>
+      <ion-item lines="full" detail (click)="selectAmount()"
+        >Amount
+        <span slot="end">
+          <ion-text>
+            {{ upcomingPayment.otherAmount || upcomingPayment.amount | currency:
+            'USD':'symbol':'1.2-2' }}
+          </ion-text>
+        </span>
+      </ion-item>
+      <ion-item lines="full" class="ion-margin-bottom">
+        Due Date <span slot="end">{{ upcomingPayment.dueDate | date: 'MM/dd/yyyy' }}</span>
+      </ion-item>
+      <ng-container *ngIf="!upcomingPayment?.autopayEnrollment">
+        <csaa-autopay-discount-card
+          [policy]="policy"
+          [payment]="upcomingPayment"
+          [paymentAccount]="selectedPaymentAccount"
+        ></csaa-autopay-discount-card>
+      </ng-container>
+    </ng-container>
+  </ion-list>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <p class="ion-padding ion-text-center">
+          By selecting Confirm you agree to the<br />
+          <span class="csaa-link" (click)="openPaymentTerms()">Payment terms and conditions</span>.
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<csaa-working-hours
+  #hoursPopup
+  [ngClass]="['csaa', currentTheme]"
+  [riskState]="upcomingPayment?.policyRiskState"
+  serviceType="CUSTOMER"
+>
+</csaa-working-hours>

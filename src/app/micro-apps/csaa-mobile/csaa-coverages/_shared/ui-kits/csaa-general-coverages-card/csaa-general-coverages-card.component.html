@@ -1,0 +1,46 @@
+<csaa-skeleton-card *ngIf="loading"></csaa-skeleton-card>
+<ion-card class="csaa-card coverage-list" *ngIf="!loading">
+  <ion-card-header>
+    <ion-item>
+      <ion-card-title>General</ion-card-title>
+
+      <ion-button
+        class="editPolicyButton"
+        *ngIf="showEditPolicy"
+        slot="end"
+        fill="clear"
+        (click)="openEditPolicy(policy.number)"
+        >Edit Policy</ion-button
+      >
+    </ion-item>
+  </ion-card-header>
+  <ion-card-content class="csaa-item-list">
+    <ng-container *ngFor="let vehicle of policy.vehicles">
+      <ng-container *ngIf="vehicle.riskFactors.waivedLiability">
+        <span class="subtitle">
+          <ng-container *ngFor="let info of vehicle.name.split(', '); last as isLast">
+            <span class="message">Coverages do not apply to {{ info }}</span
+            ><span *ngIf="!isLast">,</span> <br />
+          </ng-container>
+        </span>
+      </ng-container>
+    </ng-container>
+    <ion-list *ngIf="coverages.length > 0">
+      <ion-item *ngFor="let coverage of coverages; let ix = index; first as isFirst">
+        <csaa-coverage-card-item
+          [policyNumber]="policyNumber"
+          [policyType]="policyType"
+          [agent]="agent"
+          [coverage]="coverage"
+          (itemClick)="onItemClick(coverage, ix)"
+          [isOpen]="isItemOpen(ix)"
+          [ngClass]="{ 'no-border': isFirst }"
+        >
+        </csaa-coverage-card-item>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="full" (click)="viewDeclarationClick.emit($event)"
+      >View Declarations</ion-button
+    >
+  </ion-card-content>
+</ion-card>

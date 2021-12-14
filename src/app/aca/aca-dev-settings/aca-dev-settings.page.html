@@ -1,0 +1,24 @@
+<csaa-loading [visible]="isLoading$|async"></csaa-loading>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="mobile/aca"></ion-back-button>
+    </ion-buttons>
+    <ion-title> Dev Options </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="wrapper">
+    <div class="main ion-text-center ion-padding-horizontal">
+      <csaa-dev-options
+        [codeVersion]="codeVersion"
+        [env]="env"
+        [theme]="theme"
+        (reloadServiceLocator)="reloadServiceLocator()"
+        (goBackClubSelection)="goBackClubSelection()"
+      >
+      </csaa-dev-options>
+    </div>
+  </div>
+</ion-content>

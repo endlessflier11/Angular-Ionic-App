@@ -1,0 +1,154 @@
+<ion-header *ngIf="showHeader" [ngClass]="['csaa', 'csaa-home-header', currentTheme]">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <csaa-back-button (back)="backButtonClick()" text=""></csaa-back-button>
+    </ion-buttons>
+    <ion-title size="small">
+      <csaa-theme-icon name="header-logo" [size]="40"> </csaa-theme-icon>
+    </ion-title>
+    <ion-buttons slot="end">
+      <csaa-theme-icon name="empty" [size]="38"> </csaa-theme-icon>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar *ngIf="(username$ | async) as userName">
+    <ion-title size="small">Hello {{userName}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="['csaa', currentTheme]">
+  <ion-refresher #refresher slot="fixed" (ionRefresh)="refreshData($event.target)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ng-container *ngIf="loading || hasError() || hasActivePolicies; else noActivePolicies">
+    <section class="main-cards">
+      <!-- Paperless terms -->
+      <csaa-paperless-terms></csaa-paperless-terms>
+
+      <!-- CANCELLED POLICY -->
+      <ng-container *ngFor="let policy of cancelledPolicies$ | async">
+        <csaa-policy-cancelled-card
+          [policy]="policy"
+          (callService)="hoursPopup.show()"
+        ></csaa-policy-cancelled-card>
+      </ng-container>
+
+      <!--  PAYMENTS - WHEN DUE  -->
+      <ng-container>
+        <csaa-payments-card
+          *ngIf="!errorMap.payments && (upcomingPaymentsDue$ | async)?.length > 0"
+          [payments]="upcomingPayments$ | async"
+          [loading]="loading"
+        >
+        </csaa-payments-card>
+        <csaa-error-card
+          [cardTitle]="'Payments'"
+          *ngIf="errorMap.payments"
+          (refreshData)="refreshData(refresher)"
+          type="payments"
+        >
+        </csaa-error-card>
+      </ng-container>
+
+      <!--  PROOF OF INSURANCE  -->
+      <ng-container>
+        <csaa-insurance-card
+          *ngIf="!loading && !errorMap.policies && (policies$ | async)?.length > 0"
+          [policies]="policies$ | async"
+        >
+        </csaa-insurance-card>
+        <csaa-error-card
+          [cardTitle]="'Proof of Insurance'"
+          *ngIf="errorMap.policies"
+          (refreshData)="refreshData(refresher)"
+          type="insurance"
+        >
+        </csaa-error-card>
+      </ng-container>
+
+      <!--  COVERAGES  -->
+      <ng-container>
+        <csaa-coverages-card
+          *ngIf="!errorMap.policies && (policies$ | async)?.length > 0"
+          [policies]="policies$ | async"
+          [loading]="loading"
+        >
+        </csaa-coverages-card>
+        <csaa-error-card
+          [cardTitle]="'Coverages'"
+          *ngIf="errorMap.policies"
+          (refreshData)="refreshData(refresher)"
+          type="coverages"
+        >
+        </csaa-error-card>
+      </ng-container>
+
+      <!--  CLAIMS  -->
+      <ng-container>
+        <csaa-claims-card
+          *ngIf="!errorMap.claims"
+          [claims]="claims$ | async"
+          [policies]="policies$ | async"
+          [loading]="loading"
+        >
+        </csaa-claims-card>
+        <csaa-error-card
+          [cardTitle]="'Claims'"
+          *ngIf="errorMap.claims"
+          (refreshData)="refreshData(refresher)"
+          type="claims"
+        >
+        </csaa-error-card>
+      </ng-container>
+
+      <!--  DOCUMENTS  -->
+      <ng-container>
+        <csaa-documents-card
+          *ngIf="!errorMap.policies && (policies$ | async)?.length > 0"
+          [policies]="policies$ | async"
+          [loading]="loading"
+        >
+        </csaa-documents-card>
+      </ng-container>
+
+      <!--  PAYMENTS - WHEN NOT DUE  -->
+      <csaa-payments-card
+        *ngIf="
+                !errorMap.payments &&
+                (upcomingPaymentsDue$ | async)?.length === 0 &&
+                (upcomingPayments$ | async)?.length > 0
+              "
+        [payments]="upcomingPayments$ | async"
+        [loading]="loading"
+      >
+      </csaa-payments-card>
+    </section>
+  </ng-container>
+
+  <ng-template #noActivePolicies>
+    <csaa-no-active-policies-card (callService)="hoursPopup.show()"></csaa-no-active-policies-card>
+  </ng-template>
+
+  <csaa-get-a-quote-card [loading]="loading" (webviewDismissed)="refreshData(refresher)">
+  </csaa-get-a-quote-card>
+
+  <csaa-file-a-claim-card [loading]="loading" (webviewDismissed)="refreshData(refresher)">
+  </csaa-file-a-claim-card>
+
+  <csaa-paperless-preference-card></csaa-paperless-preference-card>
+
+  <csaa-my-policy-card
+    text="Tap to download policy & billing documents, make policy changes, and more"
+    (cardClick)="trackWebLinkClicked()"
+    (webviewDismissed)="refreshData(refresher)"
+  ></csaa-my-policy-card>
+</ion-content>
+
+<csaa-working-hours
+  #hoursPopup
+  [ngClass]="['csaa', currentTheme]"
+  serviceType="CUSTOMER"
+  title="Service Hours"
+  label="Call Service"
+  (callClicked)="call()"
+>
+</csaa-working-hours>

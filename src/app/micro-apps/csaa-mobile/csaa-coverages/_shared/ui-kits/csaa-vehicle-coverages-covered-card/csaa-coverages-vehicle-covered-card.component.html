@@ -1,0 +1,32 @@
+<csaa-skeleton-card *ngIf="loading"></csaa-skeleton-card>
+<ion-card *ngIf="!loading && coverages && coverages.length" class="csaa-card coverage-list">
+  <ion-card-header>
+    <ion-item>
+      <ion-card-title>Covered</ion-card-title>
+      <ion-button
+        class="editPolicyButton"
+        *ngIf="showEditPolicy"
+        slot="end"
+        fill="clear"
+        (click)="openEditPolicy(policy.number)"
+        >Edit Policy</ion-button
+      >
+    </ion-item>
+  </ion-card-header>
+  <ion-card-content class="csaa-item-list">
+    <ion-list>
+      <ion-item *ngFor="let coverage of coverages; let ix = index">
+        <csaa-coverage-card-item
+          [coverage]="coverage"
+          (itemClick)="onItemClick(coverage, ix)"
+          [policyType]="PolicyType.Auto"
+          [isOpen]="isItemOpen(ix)"
+        >
+        </csaa-coverage-card-item>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="full" (click)="viewDeclarationClick.emit($event)"
+      >View Declarations</ion-button
+    >
+  </ion-card-content>
+</ion-card>

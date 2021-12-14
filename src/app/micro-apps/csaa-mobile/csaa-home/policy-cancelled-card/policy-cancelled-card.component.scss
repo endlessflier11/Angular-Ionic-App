@@ -1,0 +1,8 @@
+@import '../../_scss/variables';
+:host {
+  ion-card {
+    .policy {
+      border-bottom: 1px solid $csaa-border-color;
+    }
+  }
+}

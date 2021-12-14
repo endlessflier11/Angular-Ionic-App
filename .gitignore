@@ -1,0 +1,52 @@
+## Specifies intentionally untracked files to ignore when using Git
+## http://git-scm.com/docs/gitignore
+
+*~
+*.sw[mnpcod]
+.tmp
+*.tmp
+*.tmp.*
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+UserInterfaceState.xcuserstate
+$RECYCLE.BIN/
+
+*.log
+log.txt
+npm-debug.log*
+
+/.ionic
+/.sass-cache
+/.sourcemaps
+/.versions
+/.vscode
+/coverage
+/dist
+/node_modules
+src/app/micro-apps/csaa-mobile/node_modules/
+src/assets/micro-apps/
+/platforms
+/plugins
+/www
+
+## VS Code without some interesting settings
+/.vscode/*
+!/.vscode/launch.json
+
+## InteliJ without some interesting settings
+/.idea/*
+!/.idea/runConfigurations/
+
+## Code signing
+# mypolicy-release.keystore
+# google_play.json
+# deployment_cert.der
+
+/google-services.json
+/GoogleService-Info.plist
+/android_upload_certificate.pem
+
+.env
+/src/environments/ionic-env.ts

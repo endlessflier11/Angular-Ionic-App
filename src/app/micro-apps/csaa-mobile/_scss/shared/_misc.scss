@@ -1,0 +1,85 @@
+.csaa {
+  --ion-padding: 15px;
+  --ion-margin: 15px;
+}
+
+ion-header {
+  &.csaa {
+    ion-toolbar:nth-of-type(2) {
+      --padding-bottom: 13px;
+      ion-title {
+        font-size: $csaa-toolbar-title-font-size;
+        font-weight: $csaa-bold-font-weight;
+      }
+      &.ios {
+        height: 55px;
+        ion-title {
+          text-align: left;
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+      }
+    }
+    ion-button {
+      &.in-toolbar {
+        text-transform: none;
+      }
+    }
+  }
+}
+
+.csaa {
+  ion-button:not(.in-toolbar) {
+    text-transform: none;
+    min-height: 45px;
+    font-size: 12px;
+    font-weight: $csaa-bold-font-weight;
+  }
+
+  h1 {
+    font-size: $csaa-card-header-font-size;
+    font-weight: $csaa-bolder-font-weight;
+    &.csaa-content-title {
+      margin: 30px 15px 15px;
+    }
+  }
+
+  h2 {
+    font-size: 18px;
+    white-space: normal;
+    font-weight: $csaa-bold-font-weight;
+  }
+
+  h3 {
+    font-size: 16px;
+    white-space: normal;
+    font-weight: $csaa-bold-font-weight;
+  }
+  .property-type,
+  .document-status {
+    background-color: $csaa-list-item-background-color;
+    margin: 5px 0;
+    font-family: $csaa-subtitle-font-family-ios;
+    color: $csaa-text-color;
+    font-size: 13px;
+    border-radius: 4px;
+    padding: 5px 10px;
+  }
+  .document-status {
+    font-size: 12px;
+    line-height: 12px;
+    margin: 0px;
+    padding: 5px 10px;
+  }
+
+  .csaa-link {
+    color: $csaa-link-color;
+  }
+  .card-expired {
+    color: $csaa-emergency-color;
+  }
+
+  .display-flex {
+    display: flex;
+  }
+}

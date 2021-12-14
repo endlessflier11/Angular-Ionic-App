@@ -1,0 +1,39 @@
+<ion-content class="frame">
+  <div class="modal">
+    <div class="top">
+      <div class="header-text">{{ headerText }}</div>
+      <div class="message-text">
+        <span>{{ messageText }}</span>
+        <span *ngIf="phoneMessage"
+          ><span [innerHTML]="phoneMessage"></span
+          ><button class="phone-link" (click)="onCallAAA()">800-222-4357</button></span
+        >
+      </div>
+    </div>
+    <div [ngClass]="showLoginOption?'buttons-column':'buttons-row'">
+      <ion-button
+        expand="full"
+        color="light"
+        [ngClass]="showLoginOption?'alert-option':'alert-option alert-option-separator alert-option-full-width'"
+        (click)="onCancel()"
+        >{{ buttonText }}</ion-button
+      >
+      <ion-button
+        *ngIf="phoneMessage"
+        expand="full"
+        color="light"
+        [ngClass]="showLoginOption?'alert-option':'alert-option alert-option-full-width'"
+        (click)="onCallAAA()"
+        >Call AAA</ion-button
+      >
+      <ion-button
+        *ngIf="showLoginOption"
+        expand="full"
+        color="light"
+        class="alert-option alert-option-bold"
+        (click)="onLogin()"
+        >Login</ion-button
+      >
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,119 @@
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <csaa-back-button (back)="onClickBackBtn()" [text]=""></csaa-back-button>
+    </ion-buttons>
+    <ion-title>Pay with</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="done()" [disabled]="!canSubmitForm">Done</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="['csaa', currentTheme]" class="ion-text-center">
+  <h1 class="ion-text-center">Credit or Debit Card</h1>
+  <h2 class="ion-text-center">Enter Card Information</h2>
+
+  <ion-button fill="clear" (click)="scanCard()" *ngIf="!isEditing" id="scan-card-button">
+    <b>SCAN CARD</b>
+  </ion-button>
+
+  <form [formGroup]="cardDetailsForm">
+    <div class="error-message" *ngIf="cardHolderName.invalid && cardHolderName.touched">
+      <span *ngIf="cardHolderName.errors['required']">The name is required</span>
+    </div>
+    <ion-item lines="full">
+      <ion-label position="fixed">Name</ion-label>
+      <ion-input
+        formControlName="cardHolderName"
+        type="text"
+        placeholder="Required"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <div class="error-message" *ngIf="cardNumber.invalid && cardNumber.touched">
+      <span *ngIf="cardNumber.errors['cardNumber'] && !cardNumber.errors['required']"
+        >The card number is invalid</span
+      >
+      <span *ngIf="cardNumber.errors['required']">The card number is required</span>
+    </div>
+    <ion-item lines="full">
+      <ion-label position="fixed">Card Number</ion-label>
+      <ion-input
+        formControlName="cardNumber"
+        type="text"
+        maxlength="23"
+        placeholder="Required"
+        [brmasker]="cardDetailsMaskConfig.cardNumber"
+        (ionFocus)="setMaskCardNumber(false)"
+        (ionBlur)="setMaskCardNumber(true)"
+      >
+      </ion-input>
+    </ion-item>
+
+    <div class="error-message" *ngIf="expiration.invalid && expiration.touched">
+      <span *ngIf="expiration.errors['expiration'] && !expiration.errors['required']"
+        >The expiration is invalid</span
+      >
+      <span *ngIf="expiration.errors['required']">The expiration is required</span>
+    </div>
+    <ion-item lines="full">
+      <ion-label position="fixed">Expiration</ion-label>
+      <ion-input
+        formControlName="expiration"
+        type="text"
+        maxlength="5"
+        placeholder="MM/YY"
+        [brmasker]="cardDetailsMaskConfig.expiration"
+        (ionFocus)="highlightCardExpired = false"
+        [ngClass]="{'card-expired':highlightCardExpired}"
+      >
+      </ion-input>
+    </ion-item>
+
+    <div class="error-message" *ngIf="zipCode.invalid && zipCode.touched">
+      <span *ngIf="zipCode.errors['zipCode'] && !zipCode.errors['required']"
+        >The Zip Code has invalid format</span
+      >
+      <span *ngIf="zipCode.errors['required']">The Zip Code is required</span>
+    </div>
+    <ion-item lines="full">
+      <ion-label position="fixed">Zip Code</ion-label>
+      <ion-input
+        formControlName="zipCode"
+        type="text"
+        maxlength="5"
+        placeholder="Required"
+        [brmasker]="cardDetailsMaskConfig.zip"
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item lines="full" *ngIf="(hasRegId$|async) && !isEditing" id="save-card-toggle">
+      <ion-label position="fixed">Save Card</ion-label>
+      <ion-toggle formControlName="saveCard" [checked]="false" item-end></ion-toggle>
+    </ion-item>
+
+    <div class="error-message" *ngIf="showNickname && nickname.invalid && nickname.touched">
+      <span *ngIf="nickname.errors['required']">The nickname is required</span>
+    </div>
+    <ion-item lines="full" *ngIf="showNickname">
+      <ion-label position="fixed">Nickname</ion-label>
+      <ion-input formControlName="nickname" type="text" placeholder="Name your card"></ion-input>
+    </ion-item>
+  </form>
+  <p class="ion-padding">
+    By selecting done you agree to the
+    <span class="csaa-link" (click)="openPaymentTerms()">payment terms and conditions</span>.
+  </p>
+  <ion-button
+    fill="clear"
+    color="danger"
+    *ngIf="isEditing"
+    class="delete-card"
+    [csaaDeleteConfirm]="onDeleteConfirmed"
+    [deleteConfirmTarget]="editingPaymentMethod"
+  >
+    Delete Card
+  </ion-button>
+</ion-content>

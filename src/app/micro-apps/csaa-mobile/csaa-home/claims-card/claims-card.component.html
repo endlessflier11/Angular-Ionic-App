@@ -1,0 +1,52 @@
+<csaa-skeleton-card *ngIf='loading'></csaa-skeleton-card>
+<ion-card *ngIf='!loading' class='csaa-card'>
+  <ion-card-header>
+    <ion-item>
+      <ion-card-title> Claims</ion-card-title>
+      <ion-button slot='end' fill='clear' (click)='openWhatDoIDo()'>What do I do?</ion-button>
+    </ion-item>
+  </ion-card-header>
+  <ion-card-content class='csaa-item-list'>
+    <ion-list *ngIf='sortedClaims?.length > 0'>
+      <ng-container *ngFor='let claim of sortedClaims'>
+        <ion-item detail (click)='openDetails(claim)' *ngIf='claim'>
+          <ion-label>
+            <!-- Line 1 -->
+            <h3>
+              <ng-container *ngIf='claim.type === PolicyType.PUP'> Liability Claim</ng-container>
+              <ng-container *ngIf='claim.type !== PolicyType.PUP'>
+                {{ claim.cause ? claim.cause : 'Claim #' + claim.number }}
+              </ng-container>
+            </h3>
+            <!-- Line 2 -->
+            <ng-container *ngIf='claim.type === PolicyType.PUP || claim.cause'>
+              <span class='claim-number'>Claim #{{ claim.number }}</span>
+              <br />
+            </ng-container>
+
+            <ng-container *ngIf='claim.status'>
+              <span class='status'>Status: {{ claim.status }}</span>
+              <br />
+            </ng-container>
+
+            <!-- Line 3 -->
+            <span class='subtitle'>
+            <ng-container *ngIf='claim.vehicle && claim.type === PolicyType.Auto'>
+              {{ claim.vehicle.name }}
+            </ng-container>
+            <ng-container *ngIf='claim.type === PolicyType.Home'>
+              {{ claim.address }}
+            </ng-container>
+            <ng-container *ngIf='claim.type === PolicyType.PUP'>
+              Personal Umbrella Policy
+            </ng-container>
+          </span>
+          </ion-label>
+
+          <csaa-theme-icon slot='end' [type]='claim.type' [size]='40'></csaa-theme-icon>
+        </ion-item>
+      </ng-container>
+    </ion-list>
+    <ion-button expand='full' (click)='openIHadAnAccident()'>I Had an Accident</ion-button>
+  </ion-card-content>
+</ion-card>

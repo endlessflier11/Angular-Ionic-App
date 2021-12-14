@@ -1,0 +1,26 @@
+@import '../../../_scss/variables';
+
+.csaa-item-list {
+  .subtitle {
+    display: block;
+    margin-bottom: 0;
+  }
+  csaa-accordion-item {
+    p {
+      color: #333333;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+  }
+
+  hr {
+    width: 100%;
+    height: 1px;
+    background-color: var(--ion-color-light-shade);
+    display: block;
+  }
+}
+
+.csaa-pending-enrollment {
+  color: $csaa-emergency-color !important;
+}

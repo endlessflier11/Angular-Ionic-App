@@ -1,0 +1,153 @@
+@import '../../_scss/variables';
+
+ion-card {
+  --ion-grid-padding: 0;
+  --color: $csaa-text-color;
+
+  &.csaa-card {
+    margin-inline-start: 15px;
+    margin-inline-end: 15px;
+    margin-bottom: 20px;
+    --ion-background-color: white;
+
+    ion-card-header {
+      padding-inline-start: 15px;
+      padding-inline-end: 15px;
+      margin-bottom: 10px;
+    }
+
+    ion-card-content {
+      &.card-content-ios,
+      &.card-content-md {
+        padding-inline-start: 15px;
+        padding-inline-end: 15px;
+      }
+
+      > ion-button {
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+      }
+    }
+  }
+
+  ion-card-title {
+    font-size: $csaa-card-header-font-size;
+    font-weight: $csaa-bold-font-weight;
+  }
+
+  ion-card-subtitle {
+    font-size: $csaa-subheader-font-size;
+    font-weight: $csaa-light-font-weight;
+    text-transform: none;
+    --color: $csaa-text-color;
+  }
+
+  ion-card-content {
+    &.csaa-item-list {
+      ion-list {
+        ion-item {
+          --padding-start: 0;
+          ion-label {
+            p {
+              color: $csaa-text-color;
+            }
+
+            h3 {
+              margin-bottom: 8px;
+
+              + span {
+                margin-bottom: 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    ion-list {
+      ion-item:last-child {
+        --inner-border-width: 0 0 0 0;
+      }
+      ion-item {
+        --inner-padding-end: 0;
+        ion-label {
+          white-space: normal !important;
+        }
+      }
+    }
+    ion-list:first-child {
+      padding-top: 0;
+    }
+    ion-list:last-child {
+      padding-bottom: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+  }
+
+  ion-grid {
+    ion-row {
+      ion-col:first-child {
+        padding-left: 0;
+      }
+      ion-col:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  ion-item.csaa-policy-item {
+    --inner-padding-end: 0;
+
+    p.subtitle {
+      color: $csaa-lighter-color;
+      font-size: $csaa-subtitle-font-size;
+      font-weight: $csaa-medium-font-weight;
+      margin: 0;
+    }
+
+    h3 {
+      font-size: $csaa-card-header-font-size;
+    }
+
+    csaa-theme-icon {
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $shrink-small-breakpoint) {
+  ion-card {
+    &.csaa-card {
+      margin-inline-start: 7px;
+      margin-inline-end: 7px;
+
+      ion-card-header {
+        padding-inline-start: 7px;
+        padding-inline-end: 7px;
+        padding-top: 15px;
+        padding-bottom: 7px;
+      }
+
+      ion-card-content {
+        &.card-content-ios,
+        &.card-content-md {
+          padding-inline-start: 7px;
+          padding-inline-end: 7px;
+          padding-bottom: 15px;
+        }
+      }
+    }
+
+    ion-item.csaa-policy-item {
+      h3 {
+        font-size: $csaa-card-header-font-size-sm;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import 'variables';
+
+$theme-class: '.theme-aca';
+:root[mode='ios'] {
+  .theme-aca {
+    --ion-font-family: #{$aca-font-base-ios};
+    font-family: $aca-font-base-ios !important;
+  }
+}
+:root[mode='md'] {
+  .theme-aca {
+    --ion-font-family: #{$aca-font-base-md};
+    font-family: $aca-font-base-md !important;
+  }
+}
+
+:root[mode='ios'],
+:root[mode='md'] {
+  .theme-aca {
+    --ion-color-primary: #034f9d;
+    --ion-color-primary-rgb: 3, 79, 157;
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast-rgb: 255, 255, 255;
+    --ion-color-primary-shade: #03468a;
+    --ion-color-primary-tint: #1c61a7;
+    --detail-icon-color: #034f9d;
+    font-size: $aca-font-size;
+    @import 'misc';
+    @import 'cards';
+    @import 'components';
+  }
+}
+
+.theme-aca {
+  .md {
+    --ion-font-family: #{$aca-font-base-md} !important;
+  }
+  .ios {
+    --ion-font-family: #{$aca-font-base-ios} !important;
+  }
+}

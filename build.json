@@ -1,0 +1,19 @@
+{
+  "ios": {
+    "debug": {
+      "buildFlag": ["-UseModernBuildSystem=0"],
+      "developmentTeam": "A7PMT66CH3"
+    },
+    "release": {
+      "buildFlag": ["-UseModernBuildSystem=0"],
+      "developmentTeam": "A7PMT66CH3"
+    }
+  },
+  "android": {
+    "release": {
+      "keystore": "keystore.jks",
+      "alias": "mypolicy",
+      "keystoreType": ""
+    }
+  }
+}

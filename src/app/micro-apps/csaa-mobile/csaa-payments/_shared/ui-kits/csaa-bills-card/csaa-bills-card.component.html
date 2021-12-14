@@ -1,0 +1,41 @@
+<csaa-skeleton-card *ngIf="loading"></csaa-skeleton-card>
+<ion-card *ngIf="!loading && relevantBills.length" class="csaa-card">
+  <ion-card-header>
+    <ion-card-title>Bills</ion-card-title>
+  </ion-card-header>
+  <ion-card-content class="csaa-item-list">
+    <ion-list>
+      <ion-item
+        detail
+        *ngFor="let bill of relevantBills"
+        (click)="handlePolicyClick(bill)"
+        class="ion-text-wrap"
+      >
+        <ion-label>
+          <h3>{{ bill?.policyNumber }}</h3>
+          <span class="subtitle">
+            <csaa-policy-subtitles [policySubtitle]="bill?.subtitle"></csaa-policy-subtitles>
+          </span>
+          <label class="bill-data">
+            Bill {{ bill?.amount | currency: 'USD':'symbol':'1.2-2' }}<br />
+            <ng-container *ngIf="autoPayEnrollmentStatusMap[bill?.policyNumber]; else billDate">
+              AutoPay <ion-text color="success" class="bold">ON</ion-text>
+              <br />
+              Sent
+              {{ getDocumentProcessDate(bill) | date: 'mediumDate':timezone }}
+            </ng-container>
+            <ng-template #billDate>
+              Sent
+              {{
+                bill?.transactionDate?.split('-').slice(0, 3).join('-')
+                  | date: 'mediumDate':timezone
+              }}
+            </ng-template>
+          </label>
+        </ion-label>
+
+        <csaa-theme-icon slot="end" [type]="bill?.policyType" [size]="40"> </csaa-theme-icon>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>

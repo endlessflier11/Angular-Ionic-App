@@ -1,0 +1,21 @@
+diff --git a/node_modules/cordova.plugins.diagnostic/scripts/apply-modules.js b/node_modules/cordova.plugins.diagnostic/scripts/apply-modules.js
+index 93a21eb..704885a 100644
+--- a/node_modules/cordova.plugins.diagnostic/scripts/apply-modules.js
++++ b/node_modules/cordova.plugins.diagnostic/scripts/apply-modules.js
+@@ -7,6 +7,7 @@
+ const PLUGIN_NAME = "Diagnostic plugin";
+ const PLUGIN_ID = "cordova.plugins.diagnostic";
+ const PREFERENCE_NAME = PLUGIN_ID + ".modules";
++const PREFERENCES = "LOCATION BLUETOOTH WIFI CAMERA NOTIFICATIONS EXTERNAL_STORAGE";
+ 
+ const MODULES = [
+     "LOCATION",
+@@ -99,7 +100,7 @@ var writePluginXml = function(){
+ 
+ var getSelectedModules = function(){
+     var modules = null;
+-    var preference = getConfigXml().findall("preference[@name='"+PREFERENCE_NAME+"']")[0];
++    var preference = PREFERENCES;
+     if(preference){
+         modules = preference.attrib.value.split(' ');
+     }

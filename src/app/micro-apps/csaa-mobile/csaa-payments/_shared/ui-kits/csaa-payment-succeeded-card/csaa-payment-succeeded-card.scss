@@ -1,0 +1,42 @@
+@import '../../../../_scss/variables';
+
+ion-card {
+  ion-card-header {
+    text-align: center;
+    > img {
+      margin-bottom: 14px;
+    }
+  }
+
+  ion-card-content {
+    h2 {
+      font-size: 24px;
+      margin-top: 30px;
+      margin-bottom: 5px;
+    }
+    .policy-meta-content {
+      h3 {
+        color: var(--csaa-color-success);
+        font-weight: $csaa-active-font-weight;
+      }
+    }
+    ion-list {
+      ion-item {
+        font-size: 16px;
+        > span {
+          color: $csaa-lighter-color;
+        }
+        &:first-child {
+          color: var(--csaa-color-success);
+          > span {
+            color: var(--csaa-color-success);
+          }
+        }
+
+        &.csaa-payment-method-list-item {
+          border-bottom: $csaa-list-item-border;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<csaa-skeleton-card *ngIf="loading"></csaa-skeleton-card>
+<ion-card *ngIf="!loading" class="csaa-card">
+  <ion-card-header class="policy-number-container" *ngIf="policy?.number">
+    <ion-item [lines]="headerLine" class="ion-text-wrap ion-no-padding csaa-policy-item">
+      <ion-label>
+        <h3>{{ policy?.number }}</h3>
+        <p class="subtitle">
+          <csaa-policy-subtitles [policySubtitle]="policy.subtitle"></csaa-policy-subtitles>
+        </p>
+      </ion-label>
+      <csaa-theme-icon slot="end" [type]="policy.type" [size]="40"></csaa-theme-icon>
+    </ion-item>
+  </ion-card-header>
+  <ion-card-content class="csaa-item-list">
+    <ion-list>
+      <ion-item
+        *ngFor="let payment of paymentHistory"
+        [class.failed]="getPaymentStatus(payment.status) === status.FAILED"
+      >
+        <ion-label>
+          <p class="payment-date ion-text-left">
+            {{
+              payment.transactionDate.split('-').slice(0, 3).join('-') | date: 'mediumDate':timezone
+            }}
+          </p>
+          <p class="status ion-text-left">
+            {{ getPaymentStatus(payment.status) }}
+          </p>
+          <p class="status ion-text-left">
+            {{ getPaymentMethod(payment.paymentMethod) }}
+          </p>
+        </ion-label>
+        <span slot="end" class="amount ion-text-right">
+          {{ payment.amount | currency: 'USD':'symbol':'1.2-2' }}
+        </span>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>

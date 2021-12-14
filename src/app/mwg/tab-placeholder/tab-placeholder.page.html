@@ -1,0 +1,38 @@
+<csaa-loading [visible]="isLoading$|async"></csaa-loading>
+<ion-content>
+  <div class="wrapper">
+    <div class="main ion-text-center ion-padding-horizontal">
+      <ng-container *ngIf="!showDevMenu">
+        <h1>{{ title }}</h1>
+        <hr />
+        <ng-container *ngIf="isAuthenticated; then auth else guest"></ng-container>
+      </ng-container>
+      <ng-container *ngIf="showDevMenu">
+        <csaa-dev-options
+          [codeVersion]="codeVersion"
+          [env]="env"
+          [theme]="theme"
+          (reloadServiceLocator)="reloadServiceLocator()"
+          (goBackClubSelection)="goBackClubSelection()"
+        >
+        </csaa-dev-options>
+      </ng-container>
+    </div>
+  </div>
+</ion-content>
+
+<ng-template #auth>
+  <h2>You're in!</h2>
+  <p>
+    Click to
+    <a href="#" (click)="$event.preventDefault();logout()">Log Out</a>
+  </p>
+</ng-template>
+
+<ng-template #guest>
+  <h2>Welcome back!</h2>
+  <p>
+    Click to
+    <a href="#" [routerLink]="route('csaa.parent.auth')+'/sso'">Log in</a>
+  </p>
+</ng-template>

@@ -1,0 +1,34 @@
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <csaa-back-button (click)="onClickBack()" text="Back"></csaa-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="hoursPopup.show()">Call Service</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [ngClass]="['csaa', currentTheme]" class="csaa-item-list">
+  <ion-card class="csaa-card coverage-list csaa-item-list">
+    <ion-card-header>
+      <ion-card-title>{{ coverage?.shortName }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="csaa-item-list">
+      <ion-list>
+        <ion-item *ngFor="let item of coverage?.coverages">
+          <csaa-coverage-card-item
+            [policyNumber]="policyNumber"
+            [policyType]="policyType"
+            [agent]="agent"
+            [coverage]="item"
+          >
+          </csaa-coverage-card-item>
+        </ion-item>
+      </ion-list>
+      <ion-button expand="full" (click)="viewDeclaration()">View Declarations</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<csaa-working-hours #hoursPopup [ngClass]="['csaa', currentTheme]" serviceType="CUSTOMER">
+</csaa-working-hours>

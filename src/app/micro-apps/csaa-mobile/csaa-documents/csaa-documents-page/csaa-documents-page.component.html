@@ -1,0 +1,73 @@
+<csaa-loading [visible]="refreshingUri$ | async"></csaa-loading>
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <csaa-back-button (back)="backButtonClick()"></csaa-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Documents</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="['csaa', currentTheme]">
+  <csaa-skeleton-card *ngIf="loading"></csaa-skeleton-card>
+  <ion-refresher (ionRefresh)="documentsRefresh($event)" slot="fixed">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-card class="csaa-card coverage-list" *ngIf="!loading">
+    <ion-card-content class="csaa-item-list">
+      <ion-list>
+        <ion-item *ngIf="policy$ | async as policy" lines="none">
+          <ion-label>
+            <h3>{{ policy.number }}</h3>
+            <span class="subtitle">
+              <csaa-policy-subtitles [policySubtitle]="policy.subtitle"></csaa-policy-subtitles>
+            </span>
+          </ion-label>
+          <csaa-theme-icon slot="end" [type]="policy.type" [size]="40"> </csaa-theme-icon>
+        </ion-item>
+
+        <ion-item detail class="filter-by">
+          <ion-label>
+            <ion-text> Filter by </ion-text>
+          </ion-label>
+          <span (click)="openModal()">{{ getFilterLabel(activeFilter$ | async) }}</span>
+        </ion-item>
+        <ion-item lines="none" class="filter-by-current">
+          <ion-label [ngClass]="{ 'view-archive': (viewArchive$ | async) }"
+            ><ion-text>Current</ion-text>
+            <ion-toggle (ionChange)="viewArchiveChanged($event)"></ion-toggle>
+            <ion-text>Archive</ion-text></ion-label
+          >
+        </ion-item>
+
+        <ion-item
+          detail
+          *ngFor="let document of limitedDocuments$ | async"
+          (click)="clickDocumentsForPdf(document)"
+        >
+          <ion-label>
+            <ion-text class="document-title" color="primary">
+              <span class="title">{{ document.docName }}</span>
+            </ion-text>
+
+            <span class="subtitle">
+              Effective Date {{ document.agreementEffectiveDate | date: 'MM/dd/yyyy' }}
+            </span>
+            <span class="subtitle">
+              Process Date {{ document.processDate | date: 'MM/dd/yyyy' }}
+            </span>
+          </ion-label>
+          <span slot="end" class="document-status" *ngIf="document.isNew">New</span>
+        </ion-item>
+        <ion-button
+          expand="full"
+          fill="clear"
+          (click)="showMore()"
+          *ngIf="(currentLimit$ | async) < (documents$ | async)?.length"
+          >MORE</ion-button
+        >
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

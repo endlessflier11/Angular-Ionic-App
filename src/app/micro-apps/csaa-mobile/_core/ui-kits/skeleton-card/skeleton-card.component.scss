@@ -1,0 +1,19 @@
+ion-skeleton-text {
+  margin-bottom: 10px;
+  &.button-only {
+    margin-top: 16px;
+  }
+}
+
+ion-card {
+  border-bottom: none;
+  &.hide-card-border {
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
+ion-item {
+  --ion-item-border-color: #ececec;
+}

@@ -1,0 +1,46 @@
+{
+  "images": [
+    {
+      "filename": "splash-2732x2732-2.png",
+      "idiom": "universal",
+      "scale": "1x"
+    },
+    {
+      "filename": "splash-2732x2732-1.png",
+      "idiom": "universal",
+      "scale": "2x"
+    },
+    {
+      "filename": "splash-2732x2732.png",
+      "idiom": "universal",
+      "scale": "3x"
+    },
+    {
+      "idiom": "iphone",
+      "scale": "1x"
+    },
+    {
+      "filename": "Default@2x~iphone~anyany.png",
+      "idiom": "iphone",
+      "scale": "2x"
+    },
+    {
+      "filename": "Default@3x~iphone~anyany.png",
+      "idiom": "iphone",
+      "scale": "3x"
+    },
+    {
+      "idiom": "ipad",
+      "scale": "1x"
+    },
+    {
+      "filename": "Default@2x~ipad~anyany.png",
+      "idiom": "ipad",
+      "scale": "2x"
+    }
+  ],
+  "info": {
+    "author": "xcode",
+    "version": 1
+  }
+}

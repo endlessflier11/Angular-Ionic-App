@@ -1,0 +1,26 @@
+{
+  "/api/v1": {
+    "target": "http://localhost:9000/ent/okta-qa/da/api/v1",
+    "changeOrigin": true,
+    "secure": false,
+    "pathRewrite": {
+      "^/api/v1": ""
+    }
+  },
+  "/translator": {
+    "target": "http://localhost:8080",
+    "changeOrigin": true,
+    "secure": false,
+    "pathRewrite": {
+      "^/translator": ""
+    }
+  },
+  "/SERVICE_LOCATOR": {
+    "target": "http://localhost:4000/v1",
+    "changeOrigin": true,
+    "secure": false,
+    "pathRewrite": {
+      "^/SERVICE_LOCATOR": ""
+    }
+  }
+}

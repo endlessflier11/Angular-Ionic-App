@@ -1,0 +1,26 @@
+{
+  "/api/v1": {
+    "target": "https://mobile.api.digital.csaa-insurance.aaa.com/ent/da/api/v1",
+    "changeOrigin": true,
+    "secure": false,
+    "pathRewrite": {
+      "^/api/v1": ""
+    }
+  },
+  "/translator": {
+    "target": "https://csaa-insurance.aaa.com/mobile-translator-service",
+    "changeOrigin": true,
+    "secure": false,
+    "pathRewrite": {
+      "^/translator": ""
+    }
+  },
+  "/SERVICE_LOCATOR": {
+    "target": "https://www.mobile-mypolicy.digital.p01.csaa-insurance.aaa.com/servicelocator/v1",
+    "changeOrigin": true,
+    "secure": false,
+    "pathRewrite": {
+      "^/SERVICE_LOCATOR": ""
+    }
+  }
+}

@@ -1,0 +1,89 @@
+diff --git a/node_modules/cordova-plugin-secure-storage-echo/src/android/SecureStorage.java b/node_modules/cordova-plugin-secure-storage-echo/src/android/SecureStorage.java
+index 70d2e3a..112a893 100755
+--- a/node_modules/cordova-plugin-secure-storage-echo/src/android/SecureStorage.java
++++ b/node_modules/cordova-plugin-secure-storage-echo/src/android/SecureStorage.java
+@@ -1,5 +1,6 @@
+ package com.crypho.plugins;
+ 
++import android.annotation.SuppressLint;
+ import android.annotation.TargetApi;
+ import android.app.KeyguardManager;
+ import android.content.Context;
+@@ -18,8 +19,8 @@ import org.json.JSONObject;
+ 
+ import java.lang.reflect.Method;
+ import java.util.Hashtable;
+-import java.util.Map;
+ 
++@SuppressLint("LogNotTimber")
+ public class SecureStorage extends CordovaPlugin {
+     private static final String TAG = "SecureStorage";
+ 
+@@ -33,7 +34,7 @@ public class SecureStorage extends CordovaPlugin {
+     private Hashtable<String, SharedPreferencesHandler> SERVICE_STORAGE = new Hashtable<String, SharedPreferencesHandler>();
+     private String INIT_SERVICE;
+     private String INIT_PACKAGENAME;
+-    private volatile CallbackContext secureDeviceContext, generateKeysContext, unlockCredentialsContext;
++    private volatile CallbackContext secureDeviceContext, unlockCredentialsContext;
+     private volatile boolean generateKeysContextRunning = false;
+ 
+     private AbstractRSA rsa = RSAFactory.getRSA();
+@@ -106,8 +107,7 @@ public class SecureStorage extends CordovaPlugin {
+             } else if (!rsa.encryptionKeysAvailable(alias)) {
+                 // Encryption Keys aren't available, proceed to generate them
+                 Integer userAuthenticationValidityDuration = options.optInt("userAuthenticationValidityDuration", DEFAULT_AUTHENTICATION_VALIDITY_TIME);
+-                generateKeysContext = callbackContext;
+-                generateEncryptionKeys(userAuthenticationValidityDuration);
++                generateEncryptionKeys(callbackContext, userAuthenticationValidityDuration);
+                 if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.KITKAT) {
+                     unlockCredentialsLegacy();
+                 }
+@@ -266,29 +266,25 @@ public class SecureStorage extends CordovaPlugin {
+      *
+      * @param userAuthenticationValidityDuration User authentication validity duration in seconds
+      */
+-    private void generateEncryptionKeys(Integer userAuthenticationValidityDuration) {
+-        if (generateKeysContext != null && !generateKeysContextRunning) {
+-            cordova.getThreadPool().execute(new Runnable() {
+-                public void run() {
+-                    generateKeysContextRunning = true;
+-                    try {
+-                        String alias = service2alias(INIT_SERVICE);
+-                        SharedPreferencesHandler storage = getStorage(INIT_SERVICE);
+-                        if (storage.isEmpty()) {
+-                            //Solves Issue #96. The RSA key may have been deleted by changing the lock type.
+-                            getStorage(INIT_SERVICE).clear();
+-                            rsa.createKeyPair(getContext(), alias, userAuthenticationValidityDuration);
+-                        }
+-                        generateKeysContext.success();
+-                    } catch (Exception e) {
+-                        Log.e(TAG, MSG_KEYS_FAILED, e);
+-                        generateKeysContext.error(MSG_KEYS_FAILED + e.getMessage());
+-                    } finally {
+-                        generateKeysContext = null;
+-                        generateKeysContextRunning = false;
+-                    }
+-                }
+-            });
++    private void generateEncryptionKeys(final CallbackContext callbackContext, final Integer userAuthenticationValidityDuration) {
++        cordova.getThreadPool().execute(() -> generateEncryptionKeySync(callbackContext, userAuthenticationValidityDuration));
++    }
++
++    private synchronized void generateEncryptionKeySync(final CallbackContext callbackContext, final Integer userAuthenticationValidityDuration) {
++        try {
++            String alias = service2alias(INIT_SERVICE);
++            SharedPreferencesHandler storage = getStorage(INIT_SERVICE);
++            if (storage.isEmpty()) {
++                //Solves Issue #96. The RSA key may have been deleted by changing the lock type.
++                getStorage(INIT_SERVICE).clear();
++                rsa.createKeyPair(getContext(), alias, userAuthenticationValidityDuration);
++            }
++            callbackContext.success();
++        } catch (Exception e) {
++            Log.e(TAG, MSG_KEYS_FAILED, e);
++            callbackContext.error(MSG_KEYS_FAILED + e.getMessage());
++        } finally {
++            generateKeysContextRunning = false;
+         }
+     }
+ 
