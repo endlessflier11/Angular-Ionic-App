@@ -39,17 +39,20 @@ export class PaymentHistoryListPage implements OnInit, OnDestroy {
   currentTheme: string;
   loading = false;
 
-  private refresher: IonRefresher;
-  private readonly subsink = new SubSink();
-  private readonly pdfDisplayService: PdfDisplayService;
-  private readonly analyticsService: AnalyticsService;
-
   // Special props for displaying bills
   autoPayEnrollmentStatusMap: { [policyNumber: string]: AutoPayEnrollmentResponse | null } = {};
   isPaidInFullStatusMap: { [policyNumber: string]: boolean } = {};
   availableDocumentsMap: { [policyNumber: string]: PolicyDocument[] } = {};
 
-  constructor(private readonly store: Store, private readonly routerService: RouterService) {
+  private refresher: IonRefresher;
+  private readonly subsink = new SubSink();
+
+  constructor(
+    private readonly store: Store,
+    private readonly routerService: RouterService,
+    private readonly analyticsService: AnalyticsService,
+    private readonly pdfDisplayService: PdfDisplayService
+  ) {
     this.currentTheme = this.store.selectSnapshot(ConfigState.theme);
 
     this.subsink.add(
@@ -63,7 +66,7 @@ export class PaymentHistoryListPage implements OnInit, OnDestroy {
         );
         // @ts-ignore
         this.isPaidInFullStatusMap = Object.fromEntries(
-          payments.map((p) => [p.policyNumber, p.remainingPremium <= 0])
+          payments.map((p) => [p.policyNumber, this.invalidDateAndnoRemainder(p)])
         );
       })
     );
@@ -76,6 +79,17 @@ export class PaymentHistoryListPage implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subsink.unsubscribe();
+  }
+
+  invalidDateAndnoRemainder(payment: UpcomingPayment) {
+    const today = new Date(Date.now());
+    const dueDate = new Date(payment.dueDate);
+    const diffDays = Math.floor((today.getTime() - dueDate.getTime()) / 1000 / 3600 / 24);
+
+    const month = dueDate.getMonth() + 1;
+    const year = dueDate.getFullYear();
+    const daysInMonth = new Date(year, month, 0).getDate();
+    return payment.remainingPremium <= 0 && diffDays >= daysInMonth;
   }
 
   onClickBackBtn() {
@@ -96,56 +110,6 @@ export class PaymentHistoryListPage implements OnInit, OnDestroy {
     this.loading = true;
     this.refresher = refresher;
     this.dispatchReloadActions();
-  }
-
-  private completeLoading() {
-    this.loading = false;
-    if (this.refresher) {
-      this.refresher.complete().then(noop);
-    }
-  }
-
-  private dispatchLoadActions() {
-    this.store
-      .dispatch(new CustomerAction.LoadCustomer())
-      .pipe(
-        switchMap(() => this.store.dispatch(new PolicyAction.LoadPolicies())),
-        switchMap(() => this.store.dispatch(new PaymentAction.LoadPayments())),
-        switchMap(() => this.store.dispatch(new PaymentAction.LoadHistory())),
-        switchMap(() => {
-          const sources: Observable<any>[] = [];
-
-          // Fetch the available documents for all policies
-          Object.entries(this.autoPayEnrollmentStatusMap).forEach(([policyNumber]) => {
-            sources.push(
-              this.store.dispatch(new PolicyAction.LoadPolicyDocuments(policyNumber)).pipe(
-                tap((_) => {
-                  this.availableDocumentsMap[policyNumber] = this.store.selectSnapshot(
-                    PolicyState.documentsForPolicy(policyNumber)
-                  );
-                })
-              )
-            );
-          });
-
-          return concat(...sources);
-        }),
-        
-        finalize(() => this.completeLoading())
-      )
-      .subscribe(withErrorReporter(noop));
-  }
-
-  private dispatchReloadActions() {
-    this.store
-      .dispatch(new CustomerAction.LoadCustomer())
-      .pipe(
-        switchMap(() => this.store.dispatch(new PolicyAction.ReloadPolicies())),
-        switchMap(() => this.store.dispatch(new PaymentAction.ReloadPayments())),
-        switchMap(() => this.store.dispatch(new PaymentAction.ReloadHistory())),
-        finalize(() => this.completeLoading())
-      )
-      .subscribe(withErrorReporter(noop));
   }
 
   openBill(bill: Bill) {
@@ -186,5 +150,55 @@ export class PaymentHistoryListPage implements OnInit, OnDestroy {
           this.pdfDisplayService.showDocumentErrorAlert();
         }
       });
+  }
+
+  private completeLoading() {
+    this.loading = false;
+    if (this.refresher) {
+      this.refresher.complete().then(noop);
+    }
+  }
+
+  private dispatchLoadActions() {
+    this.store
+      .dispatch(new CustomerAction.LoadCustomer())
+      .pipe(
+        switchMap(() => this.store.dispatch(new PolicyAction.LoadPolicies())),
+        switchMap(() => this.store.dispatch(new PaymentAction.LoadPayments())),
+        switchMap(() => this.store.dispatch(new PaymentAction.LoadHistory())),
+        switchMap(() => {
+          const sources: Observable<any>[] = [];
+
+          // Fetch the available documents for all policies
+          Object.entries(this.autoPayEnrollmentStatusMap).forEach(([policyNumber]) => {
+            sources.push(
+              this.store.dispatch(new PolicyAction.LoadPolicyDocuments(policyNumber)).pipe(
+                tap((_) => {
+                  this.availableDocumentsMap[policyNumber] = this.store.selectSnapshot(
+                    PolicyState.documentsForPolicy(policyNumber)
+                  );
+                })
+              )
+            );
+          });
+
+          return concat(...sources);
+        }),
+
+        finalize(() => this.completeLoading())
+      )
+      .subscribe(withErrorReporter(noop));
+  }
+
+  private dispatchReloadActions() {
+    this.store
+      .dispatch(new CustomerAction.LoadCustomer())
+      .pipe(
+        switchMap(() => this.store.dispatch(new PolicyAction.ReloadPolicies())),
+        switchMap(() => this.store.dispatch(new PaymentAction.ReloadPayments())),
+        switchMap(() => this.store.dispatch(new PaymentAction.ReloadHistory())),
+        finalize(() => this.completeLoading())
+      )
+      .subscribe(withErrorReporter(noop));
   }
 }

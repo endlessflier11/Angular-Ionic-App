@@ -38,7 +38,7 @@
 
   <!-- Bills section -->
   <csaa-csaa-bills-card
-    *ngIf="true"
+    *ngIf="(latestBills$ | async)?.length"
     [loading]="loading || (isPaymentsLoading$ | async)"
     [bills]="latestBills$ | async"
     [autoPayEnrollmentStatusMap]="autoPayEnrollmentStatusMap"
