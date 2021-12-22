@@ -12,6 +12,13 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [ngClass]="['csaa', currentTheme]">
+  <ion-grid class="ion-no-padding" *ngIf="!!policy">
+    <ion-row class="ion-padding-top ion-padding-bottom">
+      <ion-col class="ion-text-center">
+        <b>(This page will be redesigned by MM-3165)</b>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
   <csaa-skeleton-card
     *ngIf="!policy"
     [showHeader]="false"

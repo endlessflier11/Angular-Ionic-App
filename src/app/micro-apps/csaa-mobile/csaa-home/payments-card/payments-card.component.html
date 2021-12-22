@@ -1,41 +1,38 @@
 <csaa-skeleton-card *ngIf="loading"></csaa-skeleton-card>
-<ion-card *ngIf="!loading" class="csaa-card">
+<ion-card *ngIf="!loading" class="csaa-card payments-card-component">
   <ion-card-header>
     <ion-card-title> Payments </ion-card-title>
   </ion-card-header>
   <ion-card-content class="csaa-item-list">
     <ion-list *ngIf="payments && payments.length">
-      <ion-item *ngFor="let payment of payments">
-        <ion-label>
-          <ion-grid>
-            <ion-row [class.overdue]="isOverdue(payment)" *ngIf="payment.isPaymentDue">
-              <ion-col class="due-date">
-                <h3>
-                  <ng-container *ngIf="isOverdue(payment)">Past</ng-container>
-                  Due {{ payment.dueDate | date: 'mediumDate':timezone }}
-                </h3>
-              </ion-col>
-              <ion-col size="auto">
-                <h3>{{ payment.amount | currency: 'USD':'symbol':'1.2-2' }}</h3>
-              </ion-col>
-            </ion-row>
-            <ion-row *ngIf="!payment.isPaymentDue">
-              <h3>No Payment Due</h3>
-            </ion-row>
-            <ion-row class="subtitle">
-              <ion-col>{{ payment.policyNumber }}</ion-col>
-              <ion-col *ngIf="payment.autoPay" size="auto" class="payment-type">Autopay</ion-col>
-            </ion-row>
-            <ion-row class="subtitle">
-              <ion-col class="payment-subtitle">
-                <csaa-policy-subtitles [policySubtitle]="payment.subtitle"></csaa-policy-subtitles>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-label>
-      </ion-item>
+      <ng-container *ngFor="let payment of payments">
+        <csaa-make-payment-item
+          *ngIf="!isPaymentSuccess(payment)"
+          [loading]="loading"
+          [payment]="payment"
+          [paymentMethod]="getSelectedPaymentMethod()"
+          [customerSearch]="customerSearch$ | async"
+          [otherAmount]="payment?.otherAmount"
+          [autopayEnrollment]="payment?.autopayEnrollment"
+          (payNowClick)="goToPayNow($event)"
+          (autoPayClick)="goToAutopaySettings($event)"
+        >
+        </csaa-make-payment-item>
+      </ng-container>
     </ion-list>
 
+    <ion-button expand="block" fill="outline" (click)="openTransactionHistoryPage()">
+      Billing & Transaction History
+    </ion-button>
+    <ion-button expand="full" (click)="openPayAllPolicies()"> Pay All Policies </ion-button>
+  </ion-card-content>
+</ion-card>
+
+<!-- TODO : REMOVE
+<ion-card class="csaa-card payments-card-component">
+  <label>Temporary access to previous Payment Screen. To be removed.</label>
+  <ion-card-content class="csaa-item-list">
     <ion-button expand="full" (click)="openPaymentsPage()"> Payments </ion-button>
   </ion-card-content>
 </ion-card>
+-->

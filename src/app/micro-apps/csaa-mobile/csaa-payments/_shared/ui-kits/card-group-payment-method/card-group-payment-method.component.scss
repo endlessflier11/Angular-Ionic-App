@@ -1,0 +1,15 @@
+@import '../../../../_scss/_variables.scss';
+
+ion-item {
+  &::part(native) {
+    min-height: 64px;
+  }
+}
+
+.card-expired {
+  color: $csaa-emergency-color;
+}
+
+.payment-edit {
+  color: var(--ion-color-primary);
+}

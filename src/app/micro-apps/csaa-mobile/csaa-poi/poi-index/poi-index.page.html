@@ -18,14 +18,14 @@
 
   <csaa-skeleton-card *ngIf="loading"></csaa-skeleton-card>
   <ng-container *ngIf="!loading && (policy$ | async) as policy">
-    <ion-card class="csaa-card policy-detail">
+    <ion-card class="csaa-card policy-detail" data-test="poi-detail-card">
       <ion-card-content>
         <ion-grid class="ion-no-padding">
           <ion-row>
             <ion-col>
               <ion-item lines="none">
                 <div class="policy-meta-content">
-                  <h2 class="ion-color-dark">{{ policy.number }}</h2>
+                  <h2 class="ion-color-dark" data-test="policy-number">{{ policy.number }}</h2>
                 </div>
                 <div slot="end" class="policy-meta-icon">
                   <csaa-theme-icon slot="end" [type]="policy.type" [size]="40"></csaa-theme-icon>
@@ -49,6 +49,7 @@
               <ion-col>
                 <ng-container>
                   <ion-item
+                    data-test="vehicle-row"
                     (click)="toggleIdCard(idx)"
                     [lines]="isLast ? 'none' : undefined"
                     detail
@@ -60,7 +61,11 @@
                   </ion-item>
                 </ng-container>
                 <ng-container *ngIf="selectedIdCardIndex === idx">
-                  <ion-item [lines]="isLast ? 'none' : undefined" class="id-card-item">
+                  <ion-item
+                    [lines]="isLast ? 'none' : undefined"
+                    class="id-card-item"
+                    data-test="vehicle-row-opened"
+                  >
                     <div class="id-card-wrapper">
                       <csaa-auto-id-card
                         [policyNumber]="policy.number"
@@ -94,6 +99,7 @@
 
   <csaa-drivers-coverages-card
     [loading]="loading"
+    [policy]="policy$ | async"
     [drivers]="(policy$ | async)?.drivers"
     [version]="2"
   >

@@ -1,0 +1,23 @@
+@import '../../_scss/variables';
+
+ion-content {
+  --background: white;
+  --ion-background-color: white;
+}
+
+.payments-list {
+  margin-top: 20px;
+}
+h2 {
+  margin: 40px 20px 20px 20px;
+}
+
+//ion-header.csaa ion-toolbar:nth-of-type(2) {
+//  &.ios {
+//    height: auto;
+//  }
+//  ion-title {
+//    font-size: 16px;
+//    text-align: center;
+//  }
+//}

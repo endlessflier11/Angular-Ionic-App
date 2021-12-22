@@ -38,7 +38,11 @@
       [showDeclarations]="(policy$ | async)?.coverages?.length < 1"
     >
     </csaa-vehicles-coverages-card>
-    <csaa-drivers-coverages-card [loading]="loading" [drivers]="(policy$ | async)?.drivers">
+    <csaa-drivers-coverages-card
+      [loading]="loading"
+      [policy]="policy$ | async"
+      [drivers]="(policy$ | async)?.drivers"
+    >
     </csaa-drivers-coverages-card>
   </ng-container>
   <ng-container *ngIf="policyType === PolicyTypes.PUP">

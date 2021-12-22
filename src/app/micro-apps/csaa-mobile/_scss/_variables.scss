@@ -39,7 +39,7 @@ $csaa-card-margin: 12px;
 
 $csaa-subtitle-small-font-size: 10px;
 $csaa-subtitle-font-size: 12px;
-$csaa-subheader-font-size: 17px;
+$csaa-subheader-font-size: 16px;
 $csaa-card-header-font-size-sm: 21px;
 $csaa-card-header-font-size: 24px;
 $csaa-toolbar-title-font-size: 32px;
@@ -47,7 +47,7 @@ $csaa-toolbar-title-padding: 0 14px 14px;
 
 $csaa-list-item-card-content-padding: 0;
 $csaa-list-item-background-color: #ebebeb;
-$csaa-list-item-border: 1px solid var(--border-color);
+$csaa-list-item-border: 1px solid var(--border-color, $csaa-border-color);
 $csaa-list-item-padding: 2px 20px;
 
 $csaa-list-item-button-height: 2.8em;

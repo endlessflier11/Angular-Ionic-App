@@ -21,11 +21,17 @@
     [policy]="policy$ | async"
     [showEditPolicy]="isPbeEligible$ | async"
     [coverages]="coverages"
+    [vehicle]="vehicle"
     (viewDeclarationClick)="viewDeclaration()"
     (webviewDismissed)="doRefresh()"
   >
   </csaa-vehicle-coverages-covered-card>
-  <csaa-vehicle-coverages-not-covered-card [loading]="loading" [coverages]="notCoverages">
+  <csaa-vehicle-coverages-not-covered-card
+    [loading]="loading"
+    [coverages]="notCoverages"
+    [vehicle]="vehicle"
+    [policy]="policy$ | async"
+  >
   </csaa-vehicle-coverages-not-covered-card>
 </ion-content>
 <csaa-working-hours

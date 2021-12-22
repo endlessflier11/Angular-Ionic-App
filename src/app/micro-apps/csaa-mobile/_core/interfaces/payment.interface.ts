@@ -190,6 +190,7 @@ export interface PaymentAccount {
       routingNumber: string;
     };
     accountNumber: string;
+    number?: string; // deprecated
     holderName: string;
     type: string;
     bankAccountType?: string; // deprecated

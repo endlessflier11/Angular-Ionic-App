@@ -1,5 +1,10 @@
 @import '../../_scss/variables';
 
+.payments-card-component {
+  ion-card-header {
+    margin-bottom: 0;
+  }
+}
 ion-row {
   padding: 2px 0;
 }
@@ -16,4 +21,12 @@ h3 {
 
 .payment-type {
   text-transform: uppercase;
+}
+
+csaa-make-payment-item {
+  border-bottom: 1px solid $csaa-border-color;
+  display: block;
+  &:last-child {
+    border-bottom: none;
+  }
 }

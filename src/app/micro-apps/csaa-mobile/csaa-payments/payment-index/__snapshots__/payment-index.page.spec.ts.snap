@@ -967,15 +967,10 @@ exports[`PaymentIndexPage Multiple Policies : Autopay, Payment due, Remaining pr
         </ion-card-content>
       </ion-card>
     </csaa-make-payment-card>
-    <csaa-select-policy-card>
+    <csaa-payment-history-select-card>
       <ion-card
         class="csaa-card"
       >
-        <ion-card-header>
-          <ion-card-title>
-            History
-          </ion-card-title>
-        </ion-card-header>
         <ion-card-content
           class="csaa-item-list"
         >
@@ -1112,7 +1107,7 @@ exports[`PaymentIndexPage Multiple Policies : Autopay, Payment due, Remaining pr
           </ion-list>
         </ion-card-content>
       </ion-card>
-    </csaa-select-policy-card>
+    </csaa-payment-history-select-card>
     <csaa-csaa-bills-card>
     </csaa-csaa-bills-card>
   </ion-content><csaa-working-hours
@@ -1705,15 +1700,10 @@ exports[`PaymentIndexPage Multiple Policies : Autopay, Payment due, Remaining pr
         </ion-card-content>
       </ion-card>
     </csaa-make-payment-card>
-    <csaa-select-policy-card>
+    <csaa-payment-history-select-card>
       <ion-card
         class="csaa-card"
       >
-        <ion-card-header>
-          <ion-card-title>
-            History
-          </ion-card-title>
-        </ion-card-header>
         <ion-card-content
           class="csaa-item-list"
         >
@@ -1850,7 +1840,7 @@ exports[`PaymentIndexPage Multiple Policies : Autopay, Payment due, Remaining pr
           </ion-list>
         </ion-card-content>
       </ion-card>
-    </csaa-select-policy-card>
+    </csaa-payment-history-select-card>
     <csaa-csaa-bills-card>
     </csaa-csaa-bills-card>
   </ion-content><csaa-working-hours
@@ -2639,15 +2629,10 @@ exports[`PaymentIndexPage Multiple Policies : Autopay, Payment due, Remaining pr
         </ion-card-content>
       </ion-card>
     </csaa-make-payment-card>
-    <csaa-select-policy-card>
+    <csaa-payment-history-select-card>
       <ion-card
         class="csaa-card"
       >
-        <ion-card-header>
-          <ion-card-title>
-            History
-          </ion-card-title>
-        </ion-card-header>
         <ion-card-content
           class="csaa-item-list"
         >
@@ -2784,7 +2769,7 @@ exports[`PaymentIndexPage Multiple Policies : Autopay, Payment due, Remaining pr
           </ion-list>
         </ion-card-content>
       </ion-card>
-    </csaa-select-policy-card>
+    </csaa-payment-history-select-card>
     <csaa-csaa-bills-card>
     </csaa-csaa-bills-card>
   </ion-content><csaa-working-hours

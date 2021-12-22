@@ -74,6 +74,13 @@ describe('CsaaVehiclesCoveragesCardComponent', () => {
         event_type: 'Link Accessed',
         link: 'Vehicle Coverage',
         type: vehicle.name,
+        policies: [
+          {
+            policy_number: '1234',
+            policy_state: 'AZ',
+            policy_type: 'Auto',
+          },
+        ],
       }
     );
   });

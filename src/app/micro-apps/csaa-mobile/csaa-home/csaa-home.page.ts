@@ -74,15 +74,15 @@ export class CsaaHomePage implements OnDestroy, OnInit {
   };
 
   constructor(
-    private storage: StorageService,
-    private errorHandler: CustomErrorHandler,
-    private platform: Platform,
-    private analyticsService: AnalyticsService,
     private alertCtrl: AlertController,
-    private callService: CallService,
-    private globalStateService: GlobalStateService,
-    private routerService: RouterService,
+    private analyticsService: AnalyticsService,
     private authService: AuthService,
+    private callService: CallService,
+    private errorHandler: CustomErrorHandler,
+    private globalStateService: GlobalStateService,
+    private platform: Platform,
+    private routerService: RouterService,
+    private storage: StorageService,
     private store: Store
   ) {
     this.loading$ = fetchIsLoadingFor(
@@ -227,9 +227,10 @@ export class CsaaHomePage implements OnDestroy, OnInit {
       .dispatch(new CustomerAction.ReloadCustomer())
       .pipe(
         switchMap(() => this.store.dispatch(new PolicyAction.ReloadPolicies())),
-        switchMap(() =>
-          this.store.dispatch([new PaymentAction.ReloadPayments(), new ClaimAction.ReloadClaims()])
-        ),
+        switchMap(() => this.store.dispatch(new PaymentAction.ReloadPayments())),
+        switchMap(() => this.store.dispatch(new PaymentAction.ReloadHistory())),
+        switchMap(() => this.store.dispatch(new PaymentAction.ReloadWallet())),
+        switchMap(() => this.store.dispatch(new ClaimAction.ReloadClaims())),
         catchError((e) => {
           console.log('ERROR LOADING HOME', e);
           return of(null);
@@ -245,9 +246,10 @@ export class CsaaHomePage implements OnDestroy, OnInit {
       .dispatch(new CustomerAction.LoadCustomer())
       .pipe(
         switchMap(() => this.store.dispatch(new PolicyAction.LoadPolicies())),
-        switchMap(() =>
-          this.store.dispatch([new PaymentAction.LoadPayments(), new ClaimAction.LoadClaims()])
-        ),
+        switchMap(() => this.store.dispatch(new PaymentAction.LoadPayments())),
+        switchMap(() => this.store.dispatch(new PaymentAction.LoadHistory())),
+        switchMap(() => this.store.dispatch(new PaymentAction.LoadWallet())),
+        switchMap(() => this.store.dispatch(new ClaimAction.LoadClaims())),
         catchError((e) => {
           console.log('ERROR LOADING HOME', e);
           return of(null);

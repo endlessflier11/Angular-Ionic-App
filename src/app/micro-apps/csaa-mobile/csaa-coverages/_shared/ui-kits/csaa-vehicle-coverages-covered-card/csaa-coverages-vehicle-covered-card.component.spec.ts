@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CsaaCoverageCardItemComponent } from '../csaa-coverage-card-item/csaa-coverage-card-item.component';
 import { CsaaCoveragesVehicleCoveredCardComponent } from './csaa-coverages-vehicle-covered-card.component';
 
-import { By, PageTestingModule } from '@app/testing';
+import { By, generatePolicy, PageTestingModule } from '@app/testing';
 import { IonicModule } from '@ionic/angular';
 import { UiKitsModule } from '../../../../_core/ui-kits/ui-kits.module';
 import { CommonModule } from '@angular/common';
@@ -12,11 +12,10 @@ describe('CsaaCoveragesVehicleCoveredCardComponent', () => {
   let component: CsaaCoveragesVehicleCoveredCardComponent;
   let fixture: ComponentFixture<CsaaCoveragesVehicleCoveredCardComponent>;
 
-  beforeEach(async(async () => {
+  beforeEach(async () => {
     try {
       TestBed.configureTestingModule({
         declarations: [CsaaCoveragesVehicleCoveredCardComponent, CsaaCoverageCardItemComponent],
-
         imports: [
           CommonModule,
           IonicModule,
@@ -28,15 +27,15 @@ describe('CsaaCoveragesVehicleCoveredCardComponent', () => {
       fixture = TestBed.createComponent(CsaaCoveragesVehicleCoveredCardComponent);
       component = fixture.componentInstance;
       component.showEditPolicy = true;
-
       component.coverages = VEHICLE_COVERAGES_FIXTURE;
+      component.policy = generatePolicy({});
 
       fixture.detectChanges();
       await fixture.whenStable();
     } catch (error) {
       console.log(error);
     }
-  }));
+  });
   it('should create', () => {
     expect(component).toBeTruthy();
   });

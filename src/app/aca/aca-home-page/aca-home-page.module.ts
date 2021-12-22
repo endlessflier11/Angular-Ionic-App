@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
-import { IonicModule } from '@ionic/angular';
-
 import { AcaHomePagePageRoutingModule } from './aca-home-page-routing.module';
-
+import { FormsModule } from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
 import { AcaHomePagePage } from './aca-home-page.page';
 
 @NgModule({

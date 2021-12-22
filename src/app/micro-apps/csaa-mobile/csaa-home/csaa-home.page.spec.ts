@@ -7,6 +7,8 @@ import {
   AlertControllerMock,
   AUTH_STATE_FIXTURE_MOCK,
   AuthMockService,
+  AUTOPAY_ENROLLMENT_MOCKUP_DATA,
+  BillingHistoryResponseMock,
   BillingSummaryResponseMock,
   By,
   ClaimsResponseMock,
@@ -20,6 +22,7 @@ import {
   mockDateNow,
   PageTestingModule,
   PoliciesResponseMock,
+  WalletResponseMock,
 } from '@app/testing';
 import { UiKitsModule } from '../_core/ui-kits/ui-kits.module';
 import { InsuranceCardComponent } from './insurance-card/insurance-card.component';
@@ -46,28 +49,49 @@ import { CsaaPaymentsUiKitsModule } from '../csaa-payments/_shared/ui-kits/csaa-
 import { Store } from '@ngxs/store';
 import { DocumentsCardComponent } from './documents-card/documents-card.component';
 import { PaperlessPreferenceCardComponent } from './paperless-preference-card/paperless-preference-card.component';
+import { PolicyHelper } from '../_core/shared/policy.helper';
+
+const mockAutopayEnrollmentForPolicy = ({ policyNumber, policyType }, httpTestingController) => {
+  const typeCd = PolicyHelper.typeCodeFromEnum(PolicyHelper.typeToEnum(policyType), true);
+  const url = `${
+    AppEndpointsEnum[AppEndpointsEnum.billingAutopay]
+  }?policyNumber=${policyNumber}&typeCd=${typeCd}&sourceSystem=PAS`;
+  httpTestingController
+    .match(url)
+    .forEach((req) => req.flush(AUTOPAY_ENROLLMENT_MOCKUP_DATA[policyNumber]));
+};
 
 const flushMockResponses = (
   httpTestingController: HttpTestingController,
-  MOCK: { customer: any; policies: any; claims: any; summary: any } & { [k: string]: any }
+  MOCK: {
+    customer: any;
+    policies: any;
+    claims: any;
+    summary: any;
+    billingHistory?: any;
+    wallet?: any;
+  } & { [k: string]: any }
 ) => {
   httpTestingController
     .match(AppEndpointsEnum[AppEndpointsEnum.customerSearch])
-    .forEach((req) => req.flush(MOCK.customer.toJson()));
+    .forEach((req) => req.flush(MOCK.customer));
 
   httpTestingController
     .match(AppEndpointsEnum[AppEndpointsEnum.policies])
-    .forEach((req) => req.flush(MOCK.policies.toJson()));
+    .forEach((req) => req.flush(MOCK.policies));
 
   httpTestingController
     .match(AppEndpointsEnum[AppEndpointsEnum.billingSummary])
-    .pop()
-    .flush(MOCK.summary.toJson());
+    .forEach((req) => req.flush(MOCK.summary));
 
-  httpTestingController
-    .match(AppEndpointsEnum[AppEndpointsEnum.claims])
-    .pop()
-    .flush(MOCK.claims.toJson());
+  // Autopay mockup
+  MOCK.policies
+    .filter(
+      (p) =>
+        MOCK.summary.billingSummaries.find(({ policyNumber }) => policyNumber === p.policyNumber)
+          .autoPay === 'true'
+    )
+    .forEach((p) => mockAutopayEnrollmentForPolicy(p, httpTestingController));
 
   httpTestingController
     .match((r) =>
@@ -75,7 +99,7 @@ const flushMockResponses = (
         r.urlWithParams
       )
     )
-    .forEach((req) => req.flush(MOCK.contactInformation.toJson()));
+    .forEach((req) => req.flush(MOCK.contactInformation));
 
   const INSTALLMENT_FEES = {
     autoPayFees: { eft: 3, pciCreditCard: 3, pciDebitCard: 3 },
@@ -88,6 +112,22 @@ const flushMockResponses = (
     .forEach((r) => {
       r.flush(INSTALLMENT_FEES);
     });
+
+  httpTestingController
+    .match(AppEndpointsEnum[AppEndpointsEnum.billingHistory])
+    .pop()
+    .flush(MOCK.billingHistory);
+
+  httpTestingController
+    .match((r) => {
+      return r.url.indexOf(AppEndpointsEnum[AppEndpointsEnum.billingWallet]) >= 0;
+    })
+    .pop()
+    .flush(MOCK.wallet);
+
+  httpTestingController
+    .match(AppEndpointsEnum[AppEndpointsEnum.claims])
+    .forEach((req) => req.flush(MOCK.claims));
 };
 
 describe('CsaaHomePage', () => {
@@ -98,12 +138,29 @@ describe('CsaaHomePage', () => {
   let authService: AuthMockService;
   let analyticsService;
   let store: Store;
-  let MOCK: { customer: any; policies: any; claims: any; summary: any } & { [k: string]: any };
+  let MOCK: {
+    customer: any;
+    policies: any;
+    claims: any;
+    summary: any;
+    billingHistory?: any;
+    wallet?: any;
+  } & { [k: string]: any };
   const realDateNow = Date.now.bind(global.Date);
 
   beforeEach(() => {
-    MOCK = { customer: null, policies: null, claims: null, summary: null };
-    MOCK.contactInformation = ContactInfoResponseMock.create();
+    MOCK = {
+      customer: null,
+      policies: null,
+      claims: null,
+      summary: null,
+      billingHistory: null,
+      wallet: null,
+    };
+    MOCK.contactInformation = ContactInfoResponseMock.create().toJson();
+    MOCK.policies = PoliciesResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.POLICIES).toJson();
+    MOCK.billingHistory = BillingHistoryResponseMock.createForPolicies(MOCK.policies).toJson();
+    MOCK.wallet = WalletResponseMock.create().toJson();
 
     TestBed.configureTestingModule({
       declarations: [
@@ -181,6 +238,10 @@ describe('CsaaHomePage', () => {
 
   afterEach(() => {
     global.Date.now = realDateNow;
+    httpTestingController
+      .match(AppEndpointsEnum[AppEndpointsEnum.billingWallet])
+      .forEach((req) => req.flush(MOCK.wallet));
+
     httpTestingController.verify();
   });
 
@@ -197,10 +258,11 @@ describe('CsaaHomePage', () => {
   });
 
   it('should match snapshot after load', fakeAsync(async () => {
-    MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER);
-    MOCK.claims = ClaimsResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CLAIMS);
-    MOCK.policies = PoliciesResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.POLICIES);
-    MOCK.summary = BillingSummaryResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.BILLING_SUMMARY);
+    MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER).toJson();
+    MOCK.claims = ClaimsResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CLAIMS).toJson();
+    MOCK.summary = BillingSummaryResponseMock.create(
+      HOME_PAGE_ALL_POLICIES_MOCKS.BILLING_SUMMARY
+    ).toJson();
 
     component.ionViewWillEnter();
     flushMockResponses(httpTestingController, MOCK);
@@ -210,10 +272,12 @@ describe('CsaaHomePage', () => {
   }));
 
   it('should match snapshot after load with header', fakeAsync(async () => {
-    MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER);
-    MOCK.claims = ClaimsResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CLAIMS);
-    MOCK.policies = PoliciesResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.POLICIES);
-    MOCK.summary = BillingSummaryResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.BILLING_SUMMARY);
+    MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER).toJson();
+    MOCK.claims = ClaimsResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CLAIMS).toJson();
+    MOCK.policies = PoliciesResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.POLICIES).toJson();
+    MOCK.summary = BillingSummaryResponseMock.create(
+      HOME_PAGE_ALL_POLICIES_MOCKS.BILLING_SUMMARY
+    ).toJson();
 
     store.reset({
       csaa_app: {
@@ -263,12 +327,12 @@ describe('CsaaHomePage', () => {
 
   it('should show proof of insurance, coverages, claims and payments', () => {
     try {
-      MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER);
-      MOCK.claims = ClaimsResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CLAIMS);
-      MOCK.policies = PoliciesResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.POLICIES);
+      MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER).toJson();
+      MOCK.claims = ClaimsResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CLAIMS).toJson();
+      MOCK.policies = PoliciesResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.POLICIES).toJson();
       MOCK.summary = BillingSummaryResponseMock.create(
         HOME_PAGE_ALL_POLICIES_MOCKS.BILLING_SUMMARY
-      );
+      ).toJson();
       component.ngOnInit();
       component.ionViewWillEnter();
       flushMockResponses(httpTestingController, MOCK);
@@ -288,12 +352,13 @@ describe('CsaaHomePage', () => {
       component.ngOnInit();
       component.ionViewWillEnter();
 
-      MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER);
-      MOCK.claims = ClaimsResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CLAIMS);
-      MOCK.policies = PoliciesResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.POLICIES);
+      MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER).toJson();
+      MOCK.claims = ClaimsResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CLAIMS).toJson();
+      MOCK.policies = PoliciesResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.POLICIES).toJson();
       MOCK.summary = BillingSummaryResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.BILLING_SUMMARY)
         .withPaymentDue()
-        .withPaymentPastDue();
+        .withPaymentPastDue()
+        .toJson();
       component.loadData();
 
       flushMockResponses(httpTestingController, MOCK);
@@ -310,83 +375,68 @@ describe('CsaaHomePage', () => {
 
   describe('cancelled policies', () => {
     it('Should only show the cancelled cards if all policies are cancelled', () => {
-      const dateStub = mockDateNow('2020-10-27');
-      MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER);
-      MOCK.claims = ClaimsResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CLAIMS);
+      mockDateNow('2020-10-27');
+      MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER).toJson();
+      MOCK.claims = ClaimsResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CLAIMS).toJson();
       MOCK.policies = PoliciesResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.POLICIES)
         .cancelPolicy(0)
         .cancelPolicy(1)
-        .cancelPolicy(2);
+        .cancelPolicy(2)
+        .toJson();
       MOCK.summary = BillingSummaryResponseMock.create(
         HOME_PAGE_ALL_POLICIES_MOCKS.BILLING_SUMMARY
-      );
+      ).toJson();
       component.ngOnInit();
       component.ionViewWillEnter();
       flushMockResponses(httpTestingController, MOCK);
       fixture.detectChanges();
-
-      expect(dateStub).toHaveBeenCalledTimes(3);
       expect(fixture).toMatchSnapshot();
     });
 
     it('Should show no active policies card if all policies are cancelled after grace period', () => {
-      const dateStub = mockDateNow('2020-11-15');
+      mockDateNow('2020-10-27');
 
-      MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER);
-      MOCK.claims = ClaimsResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CLAIMS);
+      MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER).toJson();
+      MOCK.claims = ClaimsResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CLAIMS).toJson();
       MOCK.policies = PoliciesResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.POLICIES)
         .cancelPolicy(0)
         .cancelPolicy(1)
-        .cancelPolicy(2);
+        .cancelPolicy(2)
+        .toJson();
       MOCK.summary = BillingSummaryResponseMock.create(
         HOME_PAGE_ALL_POLICIES_MOCKS.BILLING_SUMMARY
-      );
+      ).toJson();
       component.ngOnInit();
       component.ionViewWillEnter();
-      httpTestingController
-        .match(AppEndpointsEnum[AppEndpointsEnum.customerSearch])
-        .forEach((req) => req.flush(MOCK.customer.toJson()));
-      httpTestingController
-        .match(AppEndpointsEnum[AppEndpointsEnum.policies])
-        .forEach((req) => req.flush(MOCK.policies.toJson()));
-      httpTestingController
-        .match((r) =>
-          new RegExp(`^${AppEndpointsEnum[AppEndpointsEnum.contactInformation]}\\?state=`).test(
-            r.urlWithParams
-          )
-        )
-        .forEach((req) => req.flush(MOCK.contactInformation.toJson()));
+      flushMockResponses(httpTestingController, MOCK);
 
       fixture.detectChanges();
-
-      expect(dateStub).toHaveBeenCalledTimes(3);
       expect(fixture).toMatchSnapshot();
     });
 
     it('Should show the cancelled card with the other cards if only one policy cancelled', () => {
-      const dateStub = mockDateNow('2020-10-27');
-      MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER);
-      MOCK.claims = ClaimsResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CLAIMS);
-      MOCK.policies = PoliciesResponseMock.create(
-        HOME_PAGE_ALL_POLICIES_MOCKS.POLICIES
-      ).cancelPolicy(0);
+      mockDateNow('2020-10-27');
+
+      MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER).toJson();
+      MOCK.claims = ClaimsResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CLAIMS).toJson();
+      MOCK.policies = PoliciesResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.POLICIES)
+        .cancelPolicy(0)
+        .toJson();
       MOCK.summary = BillingSummaryResponseMock.create(
         HOME_PAGE_ALL_POLICIES_MOCKS.BILLING_SUMMARY
-      );
-
+      ).toJson();
       component.ngOnInit();
       component.ionViewWillEnter();
       flushMockResponses(httpTestingController, MOCK);
-      fixture.detectChanges();
 
-      expect(dateStub).toHaveBeenCalledTimes(1);
+      fixture.detectChanges();
       expect(fixture).toMatchSnapshot();
     });
   });
 
   describe('pull to refresh', () => {
     it('should refresh data in all services', async () => {
-      MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER);
+      MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER).toJson();
       try {
         const refresher = fixture.debugElement.query(By.css('ion-refresher'));
 
@@ -397,7 +447,7 @@ describe('CsaaHomePage', () => {
 
         httpTestingController
           .match(AppEndpointsEnum[AppEndpointsEnum.customerSearch])
-          .forEach((req) => req.flush(MOCK.customer.toJson()));
+          .forEach((req) => req.flush(MOCK.customer));
 
         httpTestingController.match((request) => {
           console.log(request);
@@ -420,17 +470,18 @@ describe('CsaaHomePage', () => {
     });
 
     it('should call analytics identify with proper information', async () => {
-      MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER);
-      MOCK.claims = ClaimsResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CLAIMS);
-      MOCK.policies = PoliciesResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.POLICIES);
+      MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER).toJson();
+      MOCK.claims = ClaimsResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CLAIMS).toJson();
+      MOCK.policies = PoliciesResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.POLICIES).toJson();
       MOCK.summary = BillingSummaryResponseMock.create(
         HOME_PAGE_ALL_POLICIES_MOCKS.BILLING_SUMMARY
-      );
+      ).toJson();
+
       component.ngOnInit();
       component.ionViewWillEnter();
       flushMockResponses(httpTestingController, MOCK);
       const { clubCode, policies, deviceUuid, email } = METADATA_STATE_FIXTURE_MOCK;
-      const { firstName, lastName, email: mdmEmail, mdmId } = MOCK.customer.model;
+      const { firstName, lastName, email: mdmEmail, mdmId } = MOCK.customer;
       const state = policies.map((p) => p.riskState);
       const { codeVersion } = CONFIG_STATE_FIXTURE_MOCK.activeConfigData;
       const { custKey } = AUTH_STATE_FIXTURE_MOCK;
@@ -449,6 +500,10 @@ describe('CsaaHomePage', () => {
         app_version: codeVersion,
         uuid: deviceUuid,
       });
+
+      httpTestingController
+        .match(`${AppEndpointsEnum[AppEndpointsEnum.billingWallet]}`)
+        .forEach((req) => req.flush(MOCK.wallet));
     });
 
     it('should show payment is past due alert and log to analytics', async () => {
@@ -488,16 +543,18 @@ describe('CsaaHomePage', () => {
   describe('paperless preference', () => {
     beforeEach(() => {
       mockDateNow('2020-11-15');
-      MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER);
-      MOCK.claims = ClaimsResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CLAIMS);
-      MOCK.policies = PoliciesResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.POLICIES);
+      MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER).toJson();
+      MOCK.claims = ClaimsResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CLAIMS).toJson();
+      MOCK.policies = PoliciesResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.POLICIES).toJson();
       MOCK.summary = BillingSummaryResponseMock.create(
         HOME_PAGE_ALL_POLICIES_MOCKS.BILLING_SUMMARY
-      );
+      ).toJson();
     });
 
     it('should display enrollment card when not enrolled', async () => {
-      MOCK.customer.patch({ isPaperlessEnrollmentPending: true });
+      MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER)
+        .patch({ isPaperlessEnrollmentPending: true })
+        .toJson();
       component.ngOnInit();
       component.ionViewWillEnter();
       flushMockResponses(httpTestingController, MOCK);
@@ -507,7 +564,9 @@ describe('CsaaHomePage', () => {
     });
 
     it('should not display enrollment card when enrolled', async () => {
-      MOCK.customer.patch({ isPaperlessEnrollmentPending: false });
+      MOCK.customer = CustomerResponseMock.create(HOME_PAGE_ALL_POLICIES_MOCKS.CUSTOMER)
+        .patch({ isPaperlessEnrollmentPending: false })
+        .toJson();
 
       component.ngOnInit();
       component.ionViewWillEnter();

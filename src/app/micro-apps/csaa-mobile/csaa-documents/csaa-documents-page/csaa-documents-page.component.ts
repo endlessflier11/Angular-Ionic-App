@@ -164,16 +164,10 @@ export class CsaaDocumentsPageComponent implements OnInit {
           .subscribe(
             withErrorReporter(
               (result) => {
-                this.pdfDisplayService.onAccessPdfDocumentSuccess(
-                  policy,
-                  policyDocument,
-                  selection,
-                  result
-                );
+                this.pdfDisplayService.onActionSuccess(policy, policyDocument, selection, result);
               },
               (error) => {
-                this.pdfDisplayService.showDocumentErrorAlert();
-                error.report();
+                this.pdfDisplayService.onActionFailed(policy, policyDocument, error);
               }
             )
           );

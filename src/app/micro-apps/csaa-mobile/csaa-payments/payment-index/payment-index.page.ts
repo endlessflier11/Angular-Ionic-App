@@ -146,7 +146,7 @@ export class PaymentIndexPage implements OnInit, OnDestroy, IonViewWillEnter {
 
   openPaymentHistory(policy) {
     this.routerService
-      .navigateForward('csaa.payment.history', { policyNumber: policy.number })
+      .navigateForward('csaa.payment.history.policy', { policyNumber: policy.number })
       .then(noop);
   }
 

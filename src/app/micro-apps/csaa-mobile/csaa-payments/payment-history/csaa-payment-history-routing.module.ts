@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AppRoutes } from '../../_core/interfaces';
-import { PaymentHistoryPage } from './payment-history.page';
 
 const routes: AppRoutes = [
   {
     isGroupIndex: true,
     path: '',
-    component: PaymentHistoryPage,
+    loadChildren: () => import('./list/list.module').then((m) => m.CsaaPaymentHistoryListModule),
+  },
+  {
+    name: 'csaa.payment.history.policy',
+    path: ':policyNumber',
+    loadChildren: () =>
+      import('./detail/detail.module').then((m) => m.CsaaPaymentHistoryDetailModule),
   },
 ];
 

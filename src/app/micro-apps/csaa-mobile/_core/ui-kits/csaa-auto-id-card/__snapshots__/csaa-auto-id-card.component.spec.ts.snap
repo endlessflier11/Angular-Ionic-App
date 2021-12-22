@@ -63,7 +63,9 @@ exports[`CsaaAutoIdCardComponent should create a snapshot 1`] = `
             <span>
               NAMED INSURED
             </span>
-            <span>
+            <span
+              data-test="named-insured"
+            >
                Jean Brandos 
             </span>
           </p>
@@ -75,7 +77,9 @@ exports[`CsaaAutoIdCardComponent should create a snapshot 1`] = `
             <span>
               POLICY #
             </span>
-            <span>
+            <span
+              data-test="policy-card-number"
+            >
                WYSS910014303 
             </span>
           </p>
@@ -91,7 +95,9 @@ exports[`CsaaAutoIdCardComponent should create a snapshot 1`] = `
             <span>
               VEHICLE YEAR / MAKE / MODEL
             </span>
-            <span>
+            <span
+              data-test="vehicle-title"
+            >
                Lamborghini Gallardo 
             </span>
           </p>
@@ -103,7 +109,9 @@ exports[`CsaaAutoIdCardComponent should create a snapshot 1`] = `
             <span>
               EFFECTIVE DATE
             </span>
-            <span>
+            <span
+              data-test="effective-date"
+            >
                May 17, 2021 
             </span>
           </p>
@@ -119,7 +127,9 @@ exports[`CsaaAutoIdCardComponent should create a snapshot 1`] = `
             <span>
               VEHICLE ID#
             </span>
-            <span>
+            <span
+              data-test="vehicle-Id"
+            >
                WAUKJAFM8AA061319 
             </span>
           </p>
@@ -131,7 +141,9 @@ exports[`CsaaAutoIdCardComponent should create a snapshot 1`] = `
             <span>
               EXPIRATION DATE
             </span>
-            <span>
+            <span
+              data-test="expiration-date"
+            >
                Nov 17, 2021 
             </span>
           </p>
@@ -205,7 +217,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for CA 1`] = `
             <span>
               NAMED INSURED
             </span>
-            <span>
+            <span
+              data-test="named-insured"
+            >
                Jean Brandos 
             </span>
           </p>
@@ -217,7 +231,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for CA 1`] = `
             <span>
               POLICY #
             </span>
-            <span>
+            <span
+              data-test="policy-card-number"
+            >
                WYSS910014303 
             </span>
           </p>
@@ -233,7 +249,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for CA 1`] = `
             <span>
               VEHICLE YEAR / MAKE / MODEL
             </span>
-            <span>
+            <span
+              data-test="vehicle-title"
+            >
                Lamborghini Gallardo 
             </span>
           </p>
@@ -245,7 +263,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for CA 1`] = `
             <span>
               EFFECTIVE DATE
             </span>
-            <span>
+            <span
+              data-test="effective-date"
+            >
                May 17, 2021 
             </span>
           </p>
@@ -261,7 +281,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for CA 1`] = `
             <span>
               VEHICLE ID#
             </span>
-            <span>
+            <span
+              data-test="vehicle-Id"
+            >
                WAUKJAFM8AA061319 
             </span>
           </p>
@@ -273,7 +295,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for CA 1`] = `
             <span>
               EXPIRATION DATE
             </span>
-            <span>
+            <span
+              data-test="expiration-date"
+            >
                Nov 17, 2021 
             </span>
           </p>
@@ -286,7 +310,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for CA 1`] = `
           size="8"
         >
           <p>
-            <span>
+            <span
+              data-test="compliance"
+            >
                This insurance complies with CVC §16056 or §16500.5 
             </span>
           </p>
@@ -365,7 +391,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for KY 1`] = `
             <span>
               NAMED INSURED
             </span>
-            <span>
+            <span
+              data-test="named-insured"
+            >
                Jean Brandos 
             </span>
           </p>
@@ -377,7 +405,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for KY 1`] = `
             <span>
               POLICY #
             </span>
-            <span>
+            <span
+              data-test="policy-card-number"
+            >
                WYSS910014303 
             </span>
           </p>
@@ -393,7 +423,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for KY 1`] = `
             <span>
               VEHICLE YEAR / MAKE / MODEL
             </span>
-            <span>
+            <span
+              data-test="vehicle-title"
+            >
                Lamborghini Gallardo 
             </span>
           </p>
@@ -405,7 +437,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for KY 1`] = `
             <span>
               EFFECTIVE DATE
             </span>
-            <span>
+            <span
+              data-test="effective-date"
+            >
                May 17, 2021 
             </span>
           </p>
@@ -421,7 +455,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for KY 1`] = `
             <span>
               VEHICLE ID#
             </span>
-            <span>
+            <span
+              data-test="vehicle-Id"
+            >
                WAUKJAFM8AA061319 
             </span>
           </p>
@@ -433,7 +469,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for KY 1`] = `
             <span>
               EXPIRATION DATE
             </span>
-            <span>
+            <span
+              data-test="expiration-date"
+            >
                Nov 17, 2021 
             </span>
           </p>
@@ -508,7 +546,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for NJ 1`] = `
             <span>
               NAMED INSURED
             </span>
-            <span>
+            <span
+              data-test="named-insured"
+            >
                Jean Brandos 
             </span>
           </p>
@@ -520,7 +560,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for NJ 1`] = `
             <span>
               POLICY #
             </span>
-            <span>
+            <span
+              data-test="policy-card-number"
+            >
                WYSS910014303 
             </span>
           </p>
@@ -536,7 +578,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for NJ 1`] = `
             <span>
               VEHICLE YEAR / MAKE / MODEL
             </span>
-            <span>
+            <span
+              data-test="vehicle-title"
+            >
                Lamborghini Gallardo 
             </span>
           </p>
@@ -548,7 +592,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for NJ 1`] = `
             <span>
               EFFECTIVE DATE
             </span>
-            <span>
+            <span
+              data-test="effective-date"
+            >
                May 17, 2021 
             </span>
           </p>
@@ -564,7 +610,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for NJ 1`] = `
             <span>
               VEHICLE ID#
             </span>
-            <span>
+            <span
+              data-test="vehicle-Id"
+            >
                WAUKJAFM8AA061319 
             </span>
           </p>
@@ -576,7 +624,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for NJ 1`] = `
             <span>
               EXPIRATION DATE
             </span>
-            <span>
+            <span
+              data-test="expiration-date"
+            >
                Nov 17, 2021 
             </span>
           </p>
@@ -594,16 +644,22 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for NJ 1`] = `
             </span>
           </p>
           <ion-row>
-            <span>
+            <span
+              data-test="customer-address-1"
+            >
                30 N Piney Rd 
             </span>
           </ion-row>
           <ion-row>
-            <span>
+            <span
+              data-test="customer-address-2"
+            >
             </span>
           </ion-row>
           <ion-row>
-            <span>
+            <span
+              data-test="customer-city"
+            >
                Story, NJ 82832 
             </span>
           </ion-row>
@@ -677,7 +733,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for NV 1`] = `
             <span>
               NAMED INSURED
             </span>
-            <span>
+            <span
+              data-test="named-insured"
+            >
                Jean Brandos 
             </span>
           </p>
@@ -689,7 +747,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for NV 1`] = `
             <span>
               POLICY #
             </span>
-            <span>
+            <span
+              data-test="policy-card-number"
+            >
                WYSS910014303 
             </span>
           </p>
@@ -705,7 +765,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for NV 1`] = `
             <span>
               VEHICLE YEAR / MAKE / MODEL
             </span>
-            <span>
+            <span
+              data-test="vehicle-title"
+            >
                Lamborghini Gallardo 
             </span>
           </p>
@@ -717,7 +779,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for NV 1`] = `
             <span>
               EFFECTIVE DATE
             </span>
-            <span>
+            <span
+              data-test="effective-date"
+            >
                May 17, 2021 
             </span>
           </p>
@@ -733,7 +797,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for NV 1`] = `
             <span>
               VEHICLE ID#
             </span>
-            <span>
+            <span
+              data-test="vehicle-Id"
+            >
                WAUKJAFM8AA061319 
             </span>
           </p>
@@ -745,7 +811,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for NV 1`] = `
             <span>
               EXPIRATION DATE
             </span>
-            <span>
+            <span
+              data-test="expiration-date"
+            >
                Nov 17, 2021 
             </span>
           </p>
@@ -763,16 +831,22 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for NV 1`] = `
             </span>
           </p>
           <ion-row>
-            <span>
+            <span
+              data-test="customer-address-1"
+            >
                30 N Piney Rd 
             </span>
           </ion-row>
           <ion-row>
-            <span>
+            <span
+              data-test="customer-address-2"
+            >
             </span>
           </ion-row>
           <ion-row>
-            <span>
+            <span
+              data-test="customer-city"
+            >
                Story, NV 82832 
             </span>
           </ion-row>
@@ -846,7 +920,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for OK 1`] = `
             <span>
               NAMED INSURED
             </span>
-            <span>
+            <span
+              data-test="named-insured"
+            >
                Jean Brandos 
             </span>
           </p>
@@ -858,7 +934,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for OK 1`] = `
             <span>
               POLICY #
             </span>
-            <span>
+            <span
+              data-test="policy-card-number"
+            >
                WYSS910014303 
             </span>
           </p>
@@ -874,7 +952,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for OK 1`] = `
             <span>
               VEHICLE YEAR / MAKE / MODEL
             </span>
-            <span>
+            <span
+              data-test="vehicle-title"
+            >
                Lamborghini Gallardo 
             </span>
           </p>
@@ -886,7 +966,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for OK 1`] = `
             <span>
               EFFECTIVE DATE
             </span>
-            <span>
+            <span
+              data-test="effective-date"
+            >
                May 17, 2021 
             </span>
           </p>
@@ -902,7 +984,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for OK 1`] = `
             <span>
               VEHICLE ID#
             </span>
-            <span>
+            <span
+              data-test="vehicle-Id"
+            >
                WAUKJAFM8AA061319 
             </span>
           </p>
@@ -914,7 +998,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for OK 1`] = `
             <span>
               EXPIRATION DATE
             </span>
-            <span>
+            <span
+              data-test="expiration-date"
+            >
                Nov 17, 2021 
             </span>
           </p>
@@ -930,7 +1016,9 @@ exports[`CsaaAutoIdCardComponent should match a snapshot for OK 1`] = `
             <span>
               EXCLUDED DRIVERS
             </span>
-            <span>
+            <span
+              data-test="excluded-drivers"
+            >
                Judy Quinn 
             </span>
           </p>

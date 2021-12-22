@@ -22,7 +22,7 @@
       <ion-col size="8">
         <p>
           <span>NAMED INSURED</span>
-          <span *ngFor="let name of cardContent.namedInsureds">
+          <span *ngFor="let name of cardContent.namedInsureds" data-test="named-insured">
             {{ name }}
           </span>
         </p>
@@ -30,7 +30,7 @@
       <ion-col size="4">
         <p>
           <span>POLICY #</span>
-          <span>
+          <span data-test="policy-card-number">
             {{ cardContent.policyNumber }}
           </span>
         </p>
@@ -40,7 +40,7 @@
       <ion-col size="8">
         <p>
           <span>VEHICLE YEAR / MAKE / MODEL</span>
-          <span>
+          <span data-test="vehicle-title">
             {{ cardContent.vehicleTitle }}
           </span>
         </p>
@@ -48,7 +48,7 @@
       <ion-col size="4">
         <p>
           <span>EFFECTIVE DATE</span>
-          <span>
+          <span data-test="effective-date">
             {{ cardContent.effectiveDate }}
           </span>
         </p>
@@ -58,7 +58,7 @@
       <ion-col size="8">
         <p>
           <span>VEHICLE ID#</span>
-          <span>
+          <span data-test="vehicle-Id">
             {{ cardContent.vehicleId }}
           </span>
         </p>
@@ -66,7 +66,7 @@
       <ion-col size="4">
         <p>
           <span>EXPIRATION DATE</span>
-          <span>
+          <span data-test="expiration-date">
             {{ cardContent.expirationDate }}
           </span>
         </p>
@@ -75,7 +75,7 @@
     <ion-row *ngIf="cardContent.showCompliance" class="row--content">
       <ion-col size="8">
         <p>
-          <span>
+          <span data-test="compliance">
             {{ cardContent.compliance }}
           </span>
         </p>
@@ -85,7 +85,7 @@
       <ion-col size="8">
         <p>
           <span>EXCLUDED DRIVERS</span>
-          <span>
+          <span data-test="excluded-drivers">
             {{ cardContent.excludedDrivers }}
           </span>
         </p>
@@ -97,17 +97,17 @@
           <span>ADDRESS</span>
         </p>
         <ion-row>
-          <span>
+          <span data-test="customer-address-1">
             {{ cardContent.addressForCustomer1 }}
           </span>
         </ion-row>
         <ion-row>
-          <span>
+          <span data-test="customer-address-2">
             {{ cardContent.addressForCustomer2 }}
           </span>
         </ion-row>
         <ion-row>
-          <span>
+          <span data-test="customer-city">
             {{ cardContent.addressForCustomerCity }}, {{ riskState }}
             {{ cardContent.addressForCustomerZip }}
           </span>

@@ -1,5 +1,5 @@
 module.exports = {
   name: 'MyPolicy',
-  version: '5.9.0',
+  version: '5.8.3',
   rollbarDebugBuildNumber: '0',
 };

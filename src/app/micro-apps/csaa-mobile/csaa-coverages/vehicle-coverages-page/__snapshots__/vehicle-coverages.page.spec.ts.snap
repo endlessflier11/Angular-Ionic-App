@@ -20,6 +20,7 @@ exports[`CsaaVehicleCoveragesPage should match snapshot 1`] = `
   store={[Function Store]}
   subsink={[Function SubSink]}
   title={[Function String]}
+  vehicle={[Function Object]}
   vehicleId={[Function String]}
 >
   <ion-header

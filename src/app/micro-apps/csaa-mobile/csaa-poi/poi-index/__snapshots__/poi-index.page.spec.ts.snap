@@ -59,6 +59,7 @@ exports[`CsaaPoiIndexPage should match snapshot 1`] = `
     </ion-refresher>
     <ion-card
       class="csaa-card policy-detail"
+      data-test="poi-detail-card"
     >
       <ion-card-content>
         <ion-grid
@@ -74,6 +75,7 @@ exports[`CsaaPoiIndexPage should match snapshot 1`] = `
                 >
                   <h2
                     class="ion-color-dark"
+                    data-test="policy-number"
                   >
                     CAAC910026006
                   </h2>
@@ -136,6 +138,7 @@ exports[`CsaaPoiIndexPage should match snapshot 1`] = `
           <ion-row>
             <ion-col>
               <ion-item
+                data-test="vehicle-row"
                 detail=""
               >
                 <ion-text
@@ -151,6 +154,7 @@ exports[`CsaaPoiIndexPage should match snapshot 1`] = `
           <ion-row>
             <ion-col>
               <ion-item
+                data-test="vehicle-row"
                 detail=""
               >
                 <ion-text
@@ -166,6 +170,7 @@ exports[`CsaaPoiIndexPage should match snapshot 1`] = `
           <ion-row>
             <ion-col>
               <ion-item
+                data-test="vehicle-row"
                 detail=""
               >
                 <ion-text
@@ -181,6 +186,7 @@ exports[`CsaaPoiIndexPage should match snapshot 1`] = `
           <ion-row>
             <ion-col>
               <ion-item
+                data-test="vehicle-row"
                 detail=""
               >
                 <ion-text
@@ -383,6 +389,7 @@ exports[`CsaaPoiIndexPage should match snapshot with selected vehicle id card 1`
     </ion-refresher>
     <ion-card
       class="csaa-card policy-detail"
+      data-test="poi-detail-card"
     >
       <ion-card-content>
         <ion-grid
@@ -398,6 +405,7 @@ exports[`CsaaPoiIndexPage should match snapshot with selected vehicle id card 1`
                 >
                   <h2
                     class="ion-color-dark"
+                    data-test="policy-number"
                   >
                     CAAC910026006
                   </h2>
@@ -460,6 +468,7 @@ exports[`CsaaPoiIndexPage should match snapshot with selected vehicle id card 1`
           <ion-row>
             <ion-col>
               <ion-item
+                data-test="vehicle-row"
                 detail=""
               >
                 <ion-text
@@ -472,6 +481,7 @@ exports[`CsaaPoiIndexPage should match snapshot with selected vehicle id card 1`
               </ion-item>
               <ion-item
                 class="id-card-item"
+                data-test="vehicle-row-opened"
               >
                 <div
                   class="id-card-wrapper"
@@ -525,16 +535,24 @@ exports[`CsaaPoiIndexPage should match snapshot with selected vehicle id card 1`
                               <span>
                                 NAMED INSURED
                               </span>
-                              <span>
+                              <span
+                                data-test="named-insured"
+                              >
                                  Haithm Alabdi 
                               </span>
-                              <span>
+                              <span
+                                data-test="named-insured"
+                              >
                                  Neesa Alabdi 
                               </span>
-                              <span>
+                              <span
+                                data-test="named-insured"
+                              >
                                  Nana Alabdi 
                               </span>
-                              <span>
+                              <span
+                                data-test="named-insured"
+                              >
                                  Nisa Alabdi 
                               </span>
                             </p>
@@ -546,7 +564,9 @@ exports[`CsaaPoiIndexPage should match snapshot with selected vehicle id card 1`
                               <span>
                                 POLICY #
                               </span>
-                              <span>
+                              <span
+                                data-test="policy-card-number"
+                              >
                                  CAAC910026006 
                               </span>
                             </p>
@@ -562,7 +582,9 @@ exports[`CsaaPoiIndexPage should match snapshot with selected vehicle id card 1`
                               <span>
                                 VEHICLE YEAR / MAKE / MODEL
                               </span>
-                              <span>
+                              <span
+                                data-test="vehicle-title"
+                              >
                                  2009 Acura Tsx 
                               </span>
                             </p>
@@ -574,7 +596,9 @@ exports[`CsaaPoiIndexPage should match snapshot with selected vehicle id card 1`
                               <span>
                                 EFFECTIVE DATE
                               </span>
-                              <span>
+                              <span
+                                data-test="effective-date"
+                              >
                                  Jan 11, 2021 
                               </span>
                             </p>
@@ -590,7 +614,9 @@ exports[`CsaaPoiIndexPage should match snapshot with selected vehicle id card 1`
                               <span>
                                 VEHICLE ID#
                               </span>
-                              <span>
+                              <span
+                                data-test="vehicle-Id"
+                              >
                                  JH4CU26669C015699 
                               </span>
                             </p>
@@ -602,7 +628,9 @@ exports[`CsaaPoiIndexPage should match snapshot with selected vehicle id card 1`
                               <span>
                                 EXPIRATION DATE
                               </span>
-                              <span>
+                              <span
+                                data-test="expiration-date"
+                              >
                                  Jul 11, 2021 
                               </span>
                             </p>
@@ -615,7 +643,9 @@ exports[`CsaaPoiIndexPage should match snapshot with selected vehicle id card 1`
                             size="8"
                           >
                             <p>
-                              <span>
+                              <span
+                                data-test="compliance"
+                              >
                                  This insurance complies with CVC §16056 or §16500.5 
                               </span>
                             </p>
@@ -631,6 +661,7 @@ exports[`CsaaPoiIndexPage should match snapshot with selected vehicle id card 1`
           <ion-row>
             <ion-col>
               <ion-item
+                data-test="vehicle-row"
                 detail=""
               >
                 <ion-text
@@ -646,6 +677,7 @@ exports[`CsaaPoiIndexPage should match snapshot with selected vehicle id card 1`
           <ion-row>
             <ion-col>
               <ion-item
+                data-test="vehicle-row"
                 detail=""
               >
                 <ion-text
@@ -661,6 +693,7 @@ exports[`CsaaPoiIndexPage should match snapshot with selected vehicle id card 1`
           <ion-row>
             <ion-col>
               <ion-item
+                data-test="vehicle-row"
                 detail=""
               >
                 <ion-text

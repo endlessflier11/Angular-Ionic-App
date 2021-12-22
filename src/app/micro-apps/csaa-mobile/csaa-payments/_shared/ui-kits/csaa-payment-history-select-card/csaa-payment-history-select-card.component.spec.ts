@@ -66,7 +66,7 @@ describe('CsaaPaymentHistoryCardComponent', () => {
   it('should track the handle policy click', () => {
     component.handlePolicyClick(policy);
     expect(analyticService.trackEvent).toHaveBeenCalledWith(
-      EventName.PAYMENT_HISTORY_ACCESSED,
+      EventName.TRANSACTION_HISTORY_ACCESSED,
       Category.payments,
       {
         policies: [

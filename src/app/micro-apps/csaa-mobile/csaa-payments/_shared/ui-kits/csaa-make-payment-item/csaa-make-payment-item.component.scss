@@ -1,0 +1,48 @@
+@import '../../../../_scss/variables';
+.csaa-make-payment-item {
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+span {
+  &.payment-due {
+    font-size: $csaa-subheader-font-size;
+    font-weight: $csaa-bolder-font-weight !important;
+
+    &.overdue {
+      color: $csaa-emergency-color !important;
+    }
+  }
+
+  &.policy-number {
+    color: $csaa-auto-id-card-bg-primary;
+    font-weight: bold;
+  }
+}
+
+ion-list {
+  margin-top: 8px;
+  ion-item {
+    font-size: $csaa-subheader-font-size !important;
+    --inner-border-width: 0 0 0 0;
+
+    &.csaa-payment-autopay-item {
+      ion-label {
+        display: flex !important;
+        flex-flow: column nowrap;
+        small {
+          margin-top: 3px;
+          color: $csaa-lighter-color;
+        }
+      }
+
+      span[slot='end'] {
+        color: $csaa-lighter-color;
+      }
+    }
+  }
+}
+
+.policy-meta-content {
+  margin-top: 5px;
+}

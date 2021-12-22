@@ -10,6 +10,15 @@ export class BillingHistoryResponseMock {
     return new BillingHistoryResponseMock(fixture);
   }
 
+  public static createForPolicies(policies: any[]) {
+    const MULTIPLE = deepCopy(BILLING_HISTORY_RESPONSE_SINGLE_POLICY);
+    const MODEL = MULTIPLE.billingHistoryPoliciesResponse[0];
+    MULTIPLE.billingHistoryPoliciesResponse = policies.map((p) => {
+      return { ...MODEL, policyNumber: p.policyNumber };
+    });
+    return new BillingHistoryResponseMock(MULTIPLE);
+  }
+
   constructor(fixture) {
     this.model = deepCopy(fixture);
   }

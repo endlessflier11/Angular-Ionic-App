@@ -1,24 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { Select, Store } from '@ngxs/store';
+import { ConfigState } from '../../../_core/store/states/config.state';
+import { RouterService } from '../../../_core/services';
+import { PaymentHistory, Policy } from '../../../_core/interfaces';
+import { PaymentState } from '../../../_core/store/states/payment.state';
 import { noop, Observable } from 'rxjs';
-import { PaymentHistory } from '../../_core/interfaces/payment.interface';
+import { PolicyState } from '../../../_core/store/states/policy.state';
+import { CustomerAction, PaymentAction, PolicyAction } from '../../../_core/store/actions';
 import { finalize, switchMap } from 'rxjs/operators';
+import { withErrorReporter } from '../../../_core/helpers';
 import { IonRefresher } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
-import { withErrorReporter } from '../../_core/helpers';
-import { Policy } from '../../_core/interfaces';
-import { RouterService } from '../../_core/services';
-import { Select, Store } from '@ngxs/store';
-import { ConfigState } from '../../_core/store/states/config.state';
-import { PaymentState } from '../../_core/store/states/payment.state';
-import { CustomerAction, PaymentAction, PolicyAction } from '../../_core/store/actions';
-import { PolicyState } from '../../_core/store/states/policy.state';
 
 @Component({
-  selector: 'app-csaa-payment-history',
-  templateUrl: './payment-history.page.html',
-  styleUrls: ['./payment-history.page.scss'],
+  selector: 'app-csaa-payment-history-detail',
+  templateUrl: './detail.page.html',
+  styleUrls: ['./detail.page.scss'],
 })
-export class PaymentHistoryPage implements OnInit {
+export class PaymentHistoryDetailPage implements OnInit {
   currentTheme: string;
   loading = false;
   private refresher: IonRefresher;

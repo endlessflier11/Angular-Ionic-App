@@ -19,6 +19,15 @@ ion-header {
           padding-right: 16px;
         }
       }
+
+      &.secondary-toolbar-title-small {
+        height: 50px;
+
+        ion-title {
+          font-size: 16px;
+          text-align: center;
+        }
+      }
     }
     ion-button {
       &.in-toolbar {

@@ -258,7 +258,7 @@ export class AutopaySettingsPage
 
   onClickBackBtn() {
     this.canceling = true;
-    this.routerService.navigateBack('csaa.payment.index').then(noop);
+    this.routerService.navigateBack('csaa.home').then(noop);
   }
 
   save() {

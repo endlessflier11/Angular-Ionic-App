@@ -98,7 +98,7 @@ export class PolicyService {
   public loadData(customer: CustomerSearchResponse): Observable<Policy[]> {
     const { policies: customerPolicies, firstName } = customer;
     const body = {
-      policies: customerPolicies.map(({ policyNumber, prodTypeCode }) => ({
+      policies: customerPolicies?.map(({ policyNumber, prodTypeCode }) => ({
         policyNumber,
         prodTypeCode,
         sourceSystem: 'PAS',
@@ -109,6 +109,7 @@ export class PolicyService {
       .pipe(
         map((res) => {
           const policies = res.body;
+          // Todo: fix O^2 time complexity: create {policyNumber -> details} dictionary instead
           const getPolicyDetails = (p) => policies.find((s) => s.policyNumber === p.policyNumber);
           return {
             policies: customerPolicies

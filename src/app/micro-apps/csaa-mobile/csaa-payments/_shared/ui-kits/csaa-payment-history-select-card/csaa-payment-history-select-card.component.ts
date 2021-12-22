@@ -3,7 +3,7 @@ import { Policy, PolicyType, EventName, Category, EventType } from '../../../../
 import { AnalyticsService } from '../../../../_core/services';
 
 @Component({
-  selector: 'csaa-select-policy-card',
+  selector: 'csaa-payment-history-select-card',
   templateUrl: 'csaa-payment-history-select-card.component.html',
 })
 export class CsaaPaymentHistorySelectCardComponent {
@@ -17,7 +17,7 @@ export class CsaaPaymentHistorySelectCardComponent {
   constructor(private analyticsService: AnalyticsService) {}
 
   handlePolicyClick(policy: Policy) {
-    this.analyticsService.trackEvent(EventName.PAYMENT_HISTORY_ACCESSED, Category.payments, {
+    this.analyticsService.trackEvent(EventName.TRANSACTION_HISTORY_ACCESSED, Category.payments, {
       event_type: EventType.LINK_ACCESSED,
       link: 'Payment History',
       ...AnalyticsService.mapPolicy(policy),

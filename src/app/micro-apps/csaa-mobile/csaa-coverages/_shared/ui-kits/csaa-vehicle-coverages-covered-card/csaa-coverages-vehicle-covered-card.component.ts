@@ -1,7 +1,14 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { SsoService } from '../../../../_core/services/sso/sso.service';
 import { WebviewService } from '../../../../_core/services/webview/webview.service';
-import { Category, EventName, PolicyType, Policy, EventType } from '../../../../_core/interfaces';
+import {
+  Category,
+  EventName,
+  PolicyType,
+  Policy,
+  EventType,
+  VehicleWithCoverage,
+} from '../../../../_core/interfaces';
 import { AnalyticsService } from '../../../../_core/services';
 import { WebDeeplinkLocation } from '../../../../_core/interfaces/auth.interface';
 import { interactWithLoader } from '../../../../_core/operators/loader.operator';
@@ -17,6 +24,7 @@ import { noop } from '../../../../_core/helpers';
 export class CsaaCoveragesVehicleCoveredCardComponent extends CsaaCoverageListCardBaseComponent {
   @Input() showEditPolicy: boolean;
   @Input() policy: Policy;
+  @Input() vehicle: VehicleWithCoverage;
   @Output() viewDeclarationClick: EventEmitter<any> = new EventEmitter<any>();
   @Output() webviewDismissed = new EventEmitter<void>();
   // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -54,7 +62,11 @@ export class CsaaCoveragesVehicleCoveredCardComponent extends CsaaCoverageListCa
   onItemClick(coverage, index) {
     if (!this.isItemOpen(index)) {
       this.analyticsService.trackEvent(EventName.VEHICLE_COVERAGE_SELECTED, Category.coverages, {
+        event_type: EventType.LINK_ACCESSED,
+        link: 'Vehicle Coverage',
+        type: this.vehicle?.name,
         name: coverage.shortName,
+        ...AnalyticsService.mapPolicy(this.policy),
       });
     }
     this.toggleItemDetails(index);

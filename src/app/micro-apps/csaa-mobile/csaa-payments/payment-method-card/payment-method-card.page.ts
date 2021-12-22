@@ -8,21 +8,21 @@ import { filter, switchMap, take, takeUntil } from 'rxjs/operators';
 import { PAYMENTS_SERVICE_NUMBER } from '../../constants';
 import { withErrorReporter } from '../../_core/helpers';
 import {
-  UpcomingPayment,
-  WalletDetails,
-  PaymentAccount,
+  Category,
+  EventName,
+  EventType,
   NewPaymentMethodCardData,
+  PaymentAccount,
   RegisterCardPaymentAccountPayload,
   RegisterPaymentAccountOptions,
-  EventName,
-  Category,
-  EventType,
+  UpcomingPayment,
+  WalletDetails,
 } from '../../_core/interfaces';
 import { interactWithLoader } from '../../_core/operators';
 import {
   AnalyticsService,
-  PaymentService,
   ConfigService,
+  PaymentService,
   RouterService,
 } from '../../_core/services';
 import { CallService } from '../../_core/services/call.service';
@@ -451,7 +451,9 @@ export class PaymentMethodCardPage implements OnInit, OnDestroy {
   }
 
   onClickBackBtn() {
-    this.handleNavigation('csaa.payment.method');
+    // this.handleNavigation('csaa.payment.method');
+    const { path, params } = this.makePaymentService.getReturnPathFromAmountMethodPages();
+    this.routerService.navigateBack(path, params).then(noop);
   }
 
   private cleanUpAndReturn() {

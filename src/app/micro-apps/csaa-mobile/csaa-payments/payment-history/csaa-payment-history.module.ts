@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PaymentHistoryPage } from './payment-history.page';
 import { CsaaPaymentHistoryRoutingModule } from './csaa-payment-history-routing.module';
 import { IonicModule } from '@ionic/angular';
 import { UiKitsModule } from '../../_core/ui-kits/ui-kits.module';
 import { CsaaPaymentsUiKitsModule } from '../_shared/ui-kits/csaa-payments-ui-kits.module';
 
 @NgModule({
-  declarations: [PaymentHistoryPage],
   imports: [
     CommonModule,
     CsaaPaymentHistoryRoutingModule,

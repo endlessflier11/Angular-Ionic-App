@@ -1,0 +1,665 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CsaaMakePaymentItemComponent should emit autoPayClick event when AutoPay button clicked 1`] = `
+<csaa-make-payment-item
+  __ngContext__={[Function LRootView]}
+  autoPayClick={[Function Object]}
+  customerSearch={[Function Object]}
+  loading="false"
+  payNowClick={[Function EventEmitter_]}
+  payment={[Function Object]}
+  paymentMethod={[Function Object]}
+  paymentSucceeded="false"
+  timezone="undefined"
+>
+  <div
+    class="csaa-make-payment-item"
+  >
+    <ion-grid>
+      <ion-row
+        class="item"
+      >
+        <ion-col>
+          <span
+            class="payment-due"
+            data-test="payment-due"
+          >
+             Due August 19, 2040 
+          </span>
+        </ion-col>
+        <ion-col
+          size="auto"
+        >
+          <span
+            class="payment-due"
+            data-test="payment-amount"
+          >
+            $148.10
+          </span>
+        </ion-col>
+      </ion-row>
+      <ion-row
+        class="item"
+      >
+        <ion-col>
+          <div
+            class="policy-meta-content"
+          >
+            <span
+              class="subtitle policy-number"
+              data-test="policy-number"
+            >
+               AZSS294857564 
+            </span>
+            <span
+              class="subtitle"
+            >
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  test
+                </span>
+              </csaa-policy-subtitles>
+            </span>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-list>
+      <ion-item
+        class="ion-no-padding"
+        data-test="button-pay-now"
+        detail=""
+      >
+        <ion-label>
+          Pay now
+        </ion-label>
+      </ion-item>
+      <ion-item
+        class="csaa-payment-autopay-item ion-no-padding"
+        data-test="button-autopay"
+        detail=""
+      >
+        <ion-label>
+          <label>
+            AutoPay
+          </label>
+          <small>
+          </small>
+        </ion-label>
+        <span
+          slot="end"
+        >
+           On
+        </span>
+      </ion-item>
+    </ion-list>
+  </div>
+</csaa-make-payment-item>
+`;
+
+exports[`CsaaMakePaymentItemComponent should emit payNowClick event when Pay Now button clicked 1`] = `
+<csaa-make-payment-item
+  __ngContext__={[Function LRootView]}
+  autoPayClick={[Function EventEmitter_]}
+  customerSearch={[Function Object]}
+  loading="false"
+  payNowClick={[Function Object]}
+  payment={[Function Object]}
+  paymentMethod={[Function Object]}
+  paymentSucceeded="false"
+  timezone="undefined"
+>
+  <div
+    class="csaa-make-payment-item"
+  >
+    <ion-grid>
+      <ion-row
+        class="item"
+      >
+        <ion-col>
+          <span
+            class="payment-due"
+            data-test="payment-due"
+          >
+             Due August 19, 2040 
+          </span>
+        </ion-col>
+        <ion-col
+          size="auto"
+        >
+          <span
+            class="payment-due"
+            data-test="payment-amount"
+          >
+            $148.10
+          </span>
+        </ion-col>
+      </ion-row>
+      <ion-row
+        class="item"
+      >
+        <ion-col>
+          <div
+            class="policy-meta-content"
+          >
+            <span
+              class="subtitle policy-number"
+              data-test="policy-number"
+            >
+               AZSS294857564 
+            </span>
+            <span
+              class="subtitle"
+            >
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  test
+                </span>
+              </csaa-policy-subtitles>
+            </span>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-list>
+      <ion-item
+        class="ion-no-padding"
+        data-test="button-pay-now"
+        detail=""
+      >
+        <ion-label>
+          Pay now
+        </ion-label>
+      </ion-item>
+      <ion-item
+        class="csaa-payment-autopay-item ion-no-padding"
+        data-test="button-autopay"
+        detail=""
+      >
+        <ion-label>
+          <label>
+            AutoPay
+          </label>
+          <small>
+          </small>
+        </ion-label>
+        <span
+          slot="end"
+        >
+           On
+        </span>
+      </ion-item>
+    </ion-list>
+  </div>
+</csaa-make-payment-item>
+`;
+
+exports[`CsaaMakePaymentItemComponent should have a Pay Now button 1`] = `
+<csaa-make-payment-item
+  __ngContext__={[Function LRootView]}
+  autoPayClick={[Function EventEmitter_]}
+  customerSearch={[Function Object]}
+  loading="false"
+  payNowClick={[Function EventEmitter_]}
+  payment={[Function Object]}
+  paymentMethod={[Function Object]}
+  paymentSucceeded="false"
+  timezone="undefined"
+>
+  <div
+    class="csaa-make-payment-item"
+  >
+    <ion-grid>
+      <ion-row
+        class="item"
+      >
+        <ion-col>
+          <span
+            class="payment-due"
+            data-test="payment-due"
+          >
+             Due August 19, 2040 
+          </span>
+        </ion-col>
+        <ion-col
+          size="auto"
+        >
+          <span
+            class="payment-due"
+            data-test="payment-amount"
+          >
+            $148.10
+          </span>
+        </ion-col>
+      </ion-row>
+      <ion-row
+        class="item"
+      >
+        <ion-col>
+          <div
+            class="policy-meta-content"
+          >
+            <span
+              class="subtitle policy-number"
+              data-test="policy-number"
+            >
+               AZSS294857564 
+            </span>
+            <span
+              class="subtitle"
+            >
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  test
+                </span>
+              </csaa-policy-subtitles>
+            </span>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-list>
+      <ion-item
+        class="ion-no-padding"
+        data-test="button-pay-now"
+        detail=""
+      >
+        <ion-label>
+          Pay now
+        </ion-label>
+      </ion-item>
+      <ion-item
+        class="csaa-payment-autopay-item ion-no-padding"
+        data-test="button-autopay"
+        detail=""
+      >
+        <ion-label>
+          <label>
+            AutoPay
+          </label>
+          <small>
+          </small>
+        </ion-label>
+        <span
+          slot="end"
+        >
+           On
+        </span>
+      </ion-item>
+    </ion-list>
+  </div>
+</csaa-make-payment-item>
+`;
+
+exports[`CsaaMakePaymentItemComponent should have an Auto Pay button 1`] = `
+<csaa-make-payment-item
+  __ngContext__={[Function LRootView]}
+  autoPayClick={[Function EventEmitter_]}
+  customerSearch={[Function Object]}
+  loading="false"
+  payNowClick={[Function EventEmitter_]}
+  payment={[Function Object]}
+  paymentMethod={[Function Object]}
+  paymentSucceeded="false"
+  timezone="undefined"
+>
+  <div
+    class="csaa-make-payment-item"
+  >
+    <ion-grid>
+      <ion-row
+        class="item"
+      >
+        <ion-col>
+          <span
+            class="payment-due"
+            data-test="payment-due"
+          >
+             No Payment Due 
+          </span>
+        </ion-col>
+      </ion-row>
+      <ion-row
+        class="item"
+      >
+        <ion-col>
+          <div
+            class="policy-meta-content"
+          >
+            <span
+              class="subtitle policy-number"
+              data-test="policy-number"
+            >
+               AZSS294857564 
+            </span>
+            <span
+              class="subtitle"
+            >
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  test
+                </span>
+              </csaa-policy-subtitles>
+            </span>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-list>
+      <ion-item
+        class="ion-no-padding"
+        data-test="button-pay-now"
+        detail=""
+      >
+        <ion-label>
+          Pay now
+        </ion-label>
+      </ion-item>
+      <ion-item
+        class="csaa-payment-autopay-item ion-no-padding"
+        data-test="button-autopay"
+        detail=""
+      >
+        <ion-label>
+          <label>
+            AutoPay
+          </label>
+          <small>
+          </small>
+        </ion-label>
+        <span
+          slot="end"
+        >
+           On
+        </span>
+      </ion-item>
+    </ion-list>
+  </div>
+</csaa-make-payment-item>
+`;
+
+exports[`CsaaMakePaymentItemComponent should match snapshots when autopay is off 1`] = `
+<csaa-make-payment-item
+  __ngContext__={[Function LRootView]}
+  autoPayClick={[Function EventEmitter_]}
+  customerSearch={[Function Object]}
+  loading="false"
+  payNowClick={[Function EventEmitter_]}
+  payment={[Function Object]}
+  paymentMethod={[Function Object]}
+  paymentSucceeded="false"
+  timezone="undefined"
+>
+  <div
+    class="csaa-make-payment-item"
+  >
+    <ion-grid>
+      <ion-row
+        class="item"
+      >
+        <ion-col>
+          <span
+            class="payment-due"
+            data-test="payment-due"
+          >
+             No Payment Due 
+          </span>
+        </ion-col>
+      </ion-row>
+      <ion-row
+        class="item"
+      >
+        <ion-col>
+          <div
+            class="policy-meta-content"
+          >
+            <span
+              class="subtitle policy-number"
+              data-test="policy-number"
+            >
+               AZSS294857564 
+            </span>
+            <span
+              class="subtitle"
+            >
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  test
+                </span>
+              </csaa-policy-subtitles>
+            </span>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-list>
+      <ion-item
+        class="ion-no-padding"
+        data-test="button-pay-now"
+        detail=""
+      >
+        <ion-label>
+          Pay now
+        </ion-label>
+      </ion-item>
+      <ion-item
+        class="csaa-payment-autopay-item ion-no-padding"
+        data-test="button-autopay"
+        detail=""
+      >
+        <ion-label>
+          <label>
+            AutoPay
+          </label>
+        </ion-label>
+        <span
+          slot="end"
+        >
+           Off
+        </span>
+      </ion-item>
+    </ion-list>
+  </div>
+</csaa-make-payment-item>
+`;
+
+exports[`CsaaMakePaymentItemComponent should match snapshots when payment is due 1`] = `
+<csaa-make-payment-item
+  __ngContext__={[Function LRootView]}
+  autoPayClick={[Function EventEmitter_]}
+  customerSearch={[Function Object]}
+  loading="false"
+  payNowClick={[Function EventEmitter_]}
+  payment={[Function Object]}
+  paymentMethod={[Function Object]}
+  paymentSucceeded="false"
+  timezone="undefined"
+>
+  <div
+    class="csaa-make-payment-item"
+  >
+    <ion-grid>
+      <ion-row
+        class="item"
+      >
+        <ion-col>
+          <span
+            class="payment-due"
+            data-test="payment-due"
+          >
+             No Payment Due 
+          </span>
+        </ion-col>
+      </ion-row>
+      <ion-row
+        class="item"
+      >
+        <ion-col>
+          <div
+            class="policy-meta-content"
+          >
+            <span
+              class="subtitle policy-number"
+              data-test="policy-number"
+            >
+               AZSS294857564 
+            </span>
+            <span
+              class="subtitle"
+            >
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  test
+                </span>
+              </csaa-policy-subtitles>
+            </span>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-list>
+      <ion-item
+        class="ion-no-padding"
+        data-test="button-pay-now"
+        detail=""
+      >
+        <ion-label>
+          Pay now
+        </ion-label>
+      </ion-item>
+      <ion-item
+        class="csaa-payment-autopay-item ion-no-padding"
+        data-test="button-autopay"
+        detail=""
+      >
+        <ion-label>
+          <label>
+            AutoPay
+          </label>
+          <small>
+          </small>
+        </ion-label>
+        <span
+          slot="end"
+        >
+           On
+        </span>
+      </ion-item>
+    </ion-list>
+  </div>
+</csaa-make-payment-item>
+`;
+
+exports[`CsaaMakePaymentItemComponent should match snapshots when payment is overdue 1`] = `
+<csaa-make-payment-item
+  __ngContext__={[Function LRootView]}
+  autoPayClick={[Function EventEmitter_]}
+  customerSearch={[Function Object]}
+  loading="false"
+  payNowClick={[Function EventEmitter_]}
+  payment={[Function Object]}
+  paymentMethod={[Function Object]}
+  paymentSucceeded="false"
+  timezone="undefined"
+>
+  <div
+    class="csaa-make-payment-item"
+  >
+    <ion-grid>
+      <ion-row
+        class="item"
+      >
+        <ion-col>
+          <span
+            class="payment-due overdue"
+            data-test="payment-due"
+          >
+            Past
+             Due August 19, 2040 
+          </span>
+        </ion-col>
+        <ion-col
+          size="auto"
+        >
+          <span
+            class="payment-due overdue"
+            data-test="payment-amount"
+          >
+            $148.10
+          </span>
+        </ion-col>
+      </ion-row>
+      <ion-row
+        class="item"
+      >
+        <ion-col>
+          <div
+            class="policy-meta-content"
+          >
+            <span
+              class="subtitle policy-number"
+              data-test="policy-number"
+            >
+               AZSS294857564 
+            </span>
+            <span
+              class="subtitle"
+            >
+              <csaa-policy-subtitles>
+                <span
+                  class="subtitle"
+                >
+                  test
+                </span>
+              </csaa-policy-subtitles>
+            </span>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-list
+      class="overdue"
+    >
+      <ion-item
+        class="ion-no-padding"
+        data-test="button-pay-now"
+        detail=""
+      >
+        <ion-label>
+          Pay now
+        </ion-label>
+      </ion-item>
+      <ion-item
+        class="csaa-payment-autopay-item ion-no-padding"
+        data-test="button-autopay"
+        detail=""
+      >
+        <ion-label>
+          <label>
+            AutoPay
+          </label>
+          <small>
+          </small>
+        </ion-label>
+        <span
+          slot="end"
+        >
+           On
+        </span>
+      </ion-item>
+    </ion-list>
+  </div>
+</csaa-make-payment-item>
+`;

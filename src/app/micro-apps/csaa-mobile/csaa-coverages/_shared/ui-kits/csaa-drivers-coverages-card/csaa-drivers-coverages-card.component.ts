@@ -3,6 +3,7 @@ import { Category, EventName, EventType } from '../../../../_core/interfaces/ana
 import { DriverCoverage, DriverCoverageType } from '../../../../_core/interfaces/driver.interface';
 import { AnalyticsService } from '../../../../_core/services/analytics.service';
 import { CsaaExpandableItemCardComponent } from '../csaa-coverage-list-card-base/csaa-coverage-list-card-base.component';
+import { Policy } from '../../../../_core/interfaces';
 
 @Component({
   selector: 'csaa-drivers-coverages-card',
@@ -10,6 +11,7 @@ import { CsaaExpandableItemCardComponent } from '../csaa-coverage-list-card-base
   styleUrls: ['./csaa-drivers-coverages-card.component.scss'],
 })
 export class CsaaDriversCoveragesCardComponent extends CsaaExpandableItemCardComponent {
+  @Input() policy: Policy;
   @Input() drivers: DriverCoverage[] = [];
   @Input() loading = false;
   @Input() version: 1 | 2 = 1;
@@ -31,7 +33,11 @@ export class CsaaDriversCoveragesCardComponent extends CsaaExpandableItemCardCom
       event_type: EventType.LINK_ACCESSED,
       link: 'Driver Coverage',
       name: driverCoverage.fullName,
-      coverages: driverCoverage,
+      coverages: {
+        ...driverCoverage,
+        coverageType: DriverCoverageType[driverCoverage.coverageType],
+      },
+      ...AnalyticsService.mapPolicy(this.policy),
     });
   }
 }

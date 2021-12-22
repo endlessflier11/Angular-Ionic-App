@@ -25,7 +25,7 @@
   <h2>You're in!</h2>
   <p>
     Click to
-    <a href="#" (click)="$event.preventDefault();logout()">Log Out</a>
+    <a href="#" (click)="$event.preventDefault();logout()" data-test="logout-button">Log Out</a>
   </p>
 </ng-template>
 
@@ -33,6 +33,6 @@
   <h2>Welcome back!</h2>
   <p>
     Click to
-    <a href="#" [routerLink]="route('csaa.parent.auth')+'/sso'">Log in</a>
+    <a href="#" [routerLink]="route('csaa.parent.auth')+'/sso'" data-test="login-button">Log in</a>
   </p>
 </ng-template>

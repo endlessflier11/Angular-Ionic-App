@@ -8,20 +8,22 @@
     </ion-buttons>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-title>Payment History</ion-title>
+    <ion-title>Transaction History</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content [ngClass]="['csaa', currentTheme]">
-  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event.target)">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event.target)" #refresher>
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
-  <csaa-payment-history-card
-    [history]="(history$ | async)"
-    [policy]="(policy$ | async)"
-    [loading]="loading"
-    headerLine="none"
-  >
-  </csaa-payment-history-card>
+
+  <ng-container *ngIf="1">
+    <csaa-payment-history-card
+      [history]="(history$ | async)"
+      [policy]="(policy$ | async)"
+      [loading]="loading"
+    >
+    </csaa-payment-history-card>
+  </ng-container>
 </ion-content>
 <csaa-working-hours
   #hoursPopup

@@ -1,9 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Agent } from '../../../../_core/interfaces/agent.interface';
-import { Category, EventName } from '../../../../_core/interfaces/analytics.interface';
 import { Coverage, PolicyType } from '../../../../_core/interfaces/policy.interface';
 import { GlobalStateService, RouterService } from '../../../../_core/services';
-import { AnalyticsService } from '../../../../_core/services/analytics.service';
 
 export interface CoverageItemClickEvent {
   data: Coverage;
@@ -27,7 +25,7 @@ export class CsaaCoverageCardItemComponent {
   PolicyType = PolicyType;
 
   constructor(
-    private readonly analyticsService: AnalyticsService,
+    // private readonly analyticsService: AnalyticsService,
     private readonly routerService: RouterService,
     private readonly globalStateService: GlobalStateService
   ) {}
@@ -49,9 +47,9 @@ export class CsaaCoverageCardItemComponent {
     event.stopPropagation();
     event.preventDefault();
 
-    this.analyticsService.trackEvent(EventName.INDENTED_COVERAGES_VIEWED, Category.coverages, {
-      policy_number: this.policyNumber,
-    });
+    // this.analyticsService.trackEvent(EventName.INDENTED_COVERAGES_VIEWED, Category.coverages, {
+    //   policy_number: this.policyNumber,
+    // });
 
     this.globalStateService.setIndentedCoverageDetailsState({
       coverage: this.coverage,

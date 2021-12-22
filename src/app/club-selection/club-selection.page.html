@@ -1,8 +1,10 @@
 <ion-content>
   <div class="main ion-text-center ion-padding-horizontal">
     <h1>Please select a Club</h1>
-    <ion-button (click)="select('mwg')" size="large" expand="block"> Mount West Group </ion-button>
-    <ion-button (click)="select('aca')" size="large" expand="block" fill="outline">
+    <ion-button (click)="select('mwg')" size="large" expand="block" data-test="mwg">
+      Mount West Group
+    </ion-button>
+    <ion-button (click)="select('aca')" size="large" expand="block" fill="outline" data-test="aca">
       ACA
     </ion-button>
   </div>

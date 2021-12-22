@@ -1,0 +1,332 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaymentHistoryListPage user with multiple policies should match snapshot when content loaded 1`] = `
+<app-csaa-payment-history-list
+  __history$__selector={[Function Observable]}
+  __ngContext__={[Function LRootView]}
+  __policies$__selector={[Function Observable]}
+  currentTheme=""
+  loading="false"
+  routerService={[Function RouterService]}
+  store={[Function Store]}
+  subsink={[Function SubSink]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Call Service
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Transaction History
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <csaa-payment-history-select-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+            <ion-item
+              class="ion-text-wrap"
+              detail=""
+            >
+              <ion-label>
+                <h3>
+                  CAAC910026006
+                </h3>
+                <span
+                  class="subtitle"
+                >
+                  <csaa-policy-subtitles>
+                    <span
+                      class="subtitle"
+                    >
+                      2009 Acura Tsx,
+                    </span>
+                    <span
+                      class="subtitle"
+                    >
+                      2007 Jeep Grand Cherokee
+                    </span>
+                    <a
+                      class="csaa-link"
+                      href="#"
+                    >
+                      <small>
+                        Show more
+                      </small>
+                    </a>
+                  </csaa-policy-subtitles>
+                </span>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <ion-item
+              class="ion-text-wrap"
+              detail=""
+            >
+              <ion-label>
+                <h3>
+                  CAH3910026008
+                </h3>
+                <span
+                  class="subtitle"
+                >
+                  <csaa-policy-subtitles>
+                    <span
+                      class="subtitle"
+                    >
+                      518 25th St
+                    </span>
+                  </csaa-policy-subtitles>
+                </span>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-Home.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+            <ion-item
+              class="ion-text-wrap"
+              detail=""
+            >
+              <ion-label>
+                <h3>
+                  CAPU910026011
+                </h3>
+                <span
+                  class="subtitle"
+                >
+                  <csaa-policy-subtitles>
+                    <span
+                      class="subtitle"
+                    >
+                      Personal Umbrella Policy
+                    </span>
+                  </csaa-policy-subtitles>
+                </span>
+              </ion-label>
+              <csaa-theme-icon
+                slot="end"
+              >
+                <img
+                  src="/assets/csaa-mobile/vectors/icn-PUP.svg"
+                  style="width: 40px; height: 40px;"
+                />
+              </csaa-theme-icon>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </csaa-payment-history-select-card>
+  </ion-content><csaa-working-hours
+    class="csaa"
+    servicetype="CUSTOMER"
+  >
+    <div
+      class="csaa-working-hours hidden"
+    >
+      <ion-card
+        class="card card-md"
+      >
+        <ion-card-header>
+          Service Hours
+        </ion-card-header>
+        <ion-card-content
+          class="card-content card-content-md"
+        >
+          <ion-list>
+            <ion-item>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+             Call Service 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </csaa-working-hours>
+</app-csaa-payment-history-list>
+`;
+
+exports[`PaymentHistoryListPage user with one policy should match snapshot when content loaded 1`] = `
+<app-csaa-payment-history-list
+  __history$__selector={[Function Observable]}
+  __ngContext__={[Function LRootView]}
+  __policies$__selector={[Function Observable]}
+  currentTheme=""
+  loading="false"
+  routerService={[Function RouterService]}
+  store={[Function Store]}
+  subsink={[Function SubSink]}
+>
+  <ion-header
+    class="csaa"
+  >
+    <ion-toolbar>
+      <ion-buttons
+        slot="start"
+      >
+        <csaa-back-button>
+          <ion-button>
+            <ion-icon
+              name="chevron-back-outline"
+              slot="start"
+            />
+             Back
+          </ion-button>
+        </csaa-back-button>
+      </ion-buttons>
+      <ion-buttons
+        slot="end"
+      >
+        <ion-button>
+          Call Service
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>
+        Transaction History
+      </ion-title>
+    </ion-toolbar>
+  </ion-header><ion-content
+    class="csaa"
+  >
+    <ion-refresher
+      slot="fixed"
+    >
+      <ion-refresher-content />
+    </ion-refresher>
+    <csaa-payment-history-card>
+      <ion-card
+        class="csaa-card"
+      >
+        <ion-card-header
+          class="policy-number-container"
+        >
+          <ion-item
+            class="ion-text-wrap ion-no-padding csaa-policy-item"
+          >
+            <ion-label>
+              <h3>
+                CAAC910026006
+              </h3>
+              <p
+                class="subtitle"
+              >
+                <csaa-policy-subtitles>
+                  <span
+                    class="subtitle"
+                  >
+                    2009 Acura Tsx,
+                  </span>
+                  <span
+                    class="subtitle"
+                  >
+                    2007 Jeep Grand Cherokee
+                  </span>
+                  <a
+                    class="csaa-link"
+                    href="#"
+                  >
+                    <small>
+                      Show more
+                    </small>
+                  </a>
+                </csaa-policy-subtitles>
+              </p>
+            </ion-label>
+            <csaa-theme-icon
+              slot="end"
+            >
+              <img
+                src="/assets/csaa-mobile/vectors/icn-Auto.svg"
+                style="width: 40px; height: 40px;"
+              />
+            </csaa-theme-icon>
+          </ion-item>
+        </ion-card-header>
+        <ion-card-content
+          class="csaa-item-list"
+        >
+          <ion-list>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </csaa-payment-history-card>
+  </ion-content><csaa-working-hours
+    class="csaa"
+    servicetype="CUSTOMER"
+  >
+    <div
+      class="csaa-working-hours hidden"
+    >
+      <ion-card
+        class="card card-md"
+      >
+        <ion-card-header>
+          Service Hours
+        </ion-card-header>
+        <ion-card-content
+          class="card-content card-content-md"
+        >
+          <ion-list>
+            <ion-item>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            expand="full"
+          >
+             Call Service 
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </csaa-working-hours>
+</app-csaa-payment-history-list>
+`;

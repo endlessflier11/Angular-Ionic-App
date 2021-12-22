@@ -692,13 +692,17 @@ export class PaymentService {
         w.paymentAccounts = w.paymentAccounts.map((account) => {
           if (account.card) {
             account.card.type = this.cleanType(account.card.type);
+            account.shortName = account.shortName.replace(account.card.last4digits, '');
             if (account.card.expirationDate) {
               const [year, month] = account.card.expirationDate.split('-');
               account.card.expired = isCardExpired(+year, +month);
             }
           }
-          if (account.account && !account.account.bankAccountType) {
-            account.account.bankAccountType = account.account.type;
+          if (account.account) {
+            account.account.accountNumber = account.account.number;
+            if (!account.account.bankAccountType) {
+              account.account.bankAccountType = account.account.type;
+            }
           }
           return account;
         });

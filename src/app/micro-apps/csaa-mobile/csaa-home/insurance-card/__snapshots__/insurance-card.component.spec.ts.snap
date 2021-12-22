@@ -15,6 +15,7 @@ exports[`InsuranceCardComponent should match snapshot 1`] = `
 >
   <ion-card
     class="csaa-card"
+    data-test="Proof-of-Insurance"
   >
     <ion-card-header>
       <ion-card-title>

@@ -14,7 +14,11 @@ describe('DocumentModalComponent', () => {
     TestBed.configureTestingModule({
       declarations: [DocumentModalComponent],
       imports: [
-        PageTestingModule.withConfig({ providesConfig: true, providesModal: true }),
+        PageTestingModule.withConfig({
+          providesConfig: true,
+          providesModal: true,
+          providesAnalytics: true,
+        }),
         IonicModule,
         UiKitsModule,
       ],

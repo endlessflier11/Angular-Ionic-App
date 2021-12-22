@@ -75,7 +75,7 @@ const routes: AppRoutes = [
   },
   {
     name: 'csaa.payment.history',
-    path: ':policyNumber/history',
+    path: 'history',
     loadChildren: () =>
       import('./payment-history/csaa-payment-history.module').then(
         (m) => m.CsaaPaymentHistoryModule
@@ -97,6 +97,20 @@ const routes: AppRoutes = [
         (m) => m.CsaaAutopaySelectMethodModule
       ),
   },
+  {
+    name: 'csaa.payment.payall',
+    path: 'payall',
+    loadChildren: () => import('./payall/payall.module').then((m) => m.PayallPageModule),
+  },
+  {
+    name: 'csaa.payment.add-payment-method',
+    path: 'add-payment-method',
+    loadChildren: () =>
+      import('./add-payment-method/add-payment-method.module').then(
+        (m) => m.CsaaAddPaymentMethodPageModule
+      ),
+  },
+
   {
     name: 'csaa.payment.make.payment',
     path: ':policyNumber/make-payment',

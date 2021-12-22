@@ -94,7 +94,7 @@ export class PageTestingModule {
         provide: RollbarReporterService,
         useClass: RollbarReporterMockService,
       },
-      config.providesWebviewService && { provide: WebviewService, useValue: WebviewMockService },
+      config.providesWebviewService && { provide: WebviewService, useClass: WebviewMockService },
       config.providesAnalytics && {
         provide: AnalyticsService,
         useClass: AnalyticsMockService,

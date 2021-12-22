@@ -143,7 +143,7 @@ export class MakeOneTimePaymentPage implements OnInit, OnDestroy {
   }
 
   onClickBackBtn() {
-    this.routerService.navigateBack('csaa.payment.index').then(noop);
+    this.routerService.navigateBack('csaa.home').then(noop);
   }
 
   getSelectedPaymentMethod(): PaymentAccount {

@@ -379,7 +379,9 @@ export class PaymentMethodAccountPage implements OnInit, IonViewWillEnter, OnDes
   }
 
   onClickBackBtn() {
-    this.handleNavigation('csaa.payment.method');
+    const { path, params } = this.makePaymentService.getReturnPathFromAmountMethodPages();
+    this.routerService.navigateBack(path, params).then(noop);
+    // this.handleNavigation('csaa.payment.method');
   }
 
   private handleNavigation(normalFlowRoute: string = null) {

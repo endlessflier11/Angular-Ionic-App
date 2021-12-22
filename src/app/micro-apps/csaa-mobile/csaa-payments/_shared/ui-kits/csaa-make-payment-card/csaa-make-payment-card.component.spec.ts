@@ -41,7 +41,6 @@ describe('CsaaMakePaymentCardComponent', () => {
       (tzOffset > 0 ? '-' : '+') + tzOffset.toString().padStart(2, '0').padEnd(4, '0');
 
     component.paymentMethod = MAKE_PAYMENT_METHOD;
-
     component.customerSearch = EMPLOYEE_SEARCH;
     fixture.detectChanges();
   });

@@ -24,9 +24,10 @@
             (click)="selectPaymentAccount(paymentAccount)"
             [lines]="isLast ? 'full' : undefined"
           >
-            <ion-avatar slot="start">
-              <span><img [src]="generateIconSrc(paymentAccount)" [alt]="undefined" /></span>
-            </ion-avatar>
+            <csaa-icon-payment-method
+              slot="start"
+              [paymentAccount]="paymentAccount"
+            ></csaa-icon-payment-method>
             <ion-label>
               <h3>{{ paymentAccount.shortName }}</h3>
               <ng-container *ngIf="paymentAccount.card">

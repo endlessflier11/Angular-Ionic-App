@@ -9,7 +9,7 @@ exports[`PaperlessTermsModalComponent should match snapshot 1`] = `
   loading="false"
   modalCtrl={[Function ModalController]}
   store={[Function Store]}
-  webviewService={[Function Function]}
+  webviewService={[Function WebviewMockService]}
 >
   <ion-header
     class="csaa"

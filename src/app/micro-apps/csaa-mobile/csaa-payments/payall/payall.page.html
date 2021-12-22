@@ -1,0 +1,59 @@
+<ion-header [ngClass]="['csaa', currentTheme]">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <csaa-back-button (back)="onClickBackBtn()" text="Cancel"></csaa-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="onPayClicked()">Pay</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar class="secondary-toolbar-title-small">
+    <ion-title>Pay All Policies</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="['csaa', currentTheme]">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event.target)" #refresher>
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <csaa-skeleton-card *ngIf="loading || !combinedPayment"></csaa-skeleton-card>
+  <ng-container *ngIf="!loading && combinedPayment">
+    <ion-list data-test="payments-list" class="payments-list">
+      <ion-item *ngFor="let payment of payments$ | async" lines="none">
+        <ion-label>
+          <span class="payment-due" data-test="payment-due" [class.overdue]="payment?.isPastDue">
+            <ng-container *ngIf="payment?.isPastDue || payment.minimumAmount > 0"
+              >Due Date: {{ payment?.dueDate | date: 'MM/dd/yyyy' }}</ng-container
+            >
+            <ng-container *ngIf="!payment?.isPastDue && payment.minimumAmount === 0"
+              >No Payment Due</ng-container
+            >
+          </span>
+          <h3>{{ payment.policyNumber }}</h3>
+        </ion-label>
+        <csaa-theme-icon slot="end" [type]="payment.policyType" [size]="40"> </csaa-theme-icon>
+      </ion-item>
+    </ion-list>
+
+    <h2>Select an amount</h2>
+    <csaa-card-select-amount
+      [(amountSelected)]="amountSelected"
+      (selectionChange)="onAmountSelectionChange($event)"
+      [payment]="combinedPayment"
+      [allowOtherAmount]="false"
+    ></csaa-card-select-amount>
+
+    <h2>Select an payment method</h2>
+    <csaa-card-group-payment-method
+      [wallet]="wallet$|async"
+      [(methodSelected)]="methodSelected"
+      (edit)="onClickEditPaymentAccount($event)"
+      (addNew)="onAddNewPaymentMethod()"
+    ></csaa-card-group-payment-method>
+
+    <p class="ion-padding ion-text-center">
+      By selecting Pay, you agree to the
+      <span class="csaa-link" (click)="openPaymentTerms()">Payment Terms and Conditions</span>.
+    </p>
+  </ng-container>
+</ion-content>

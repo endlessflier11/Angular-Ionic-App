@@ -7,6 +7,7 @@ exports[`CsaaCoveragesVehicleNotCoveredCardComponent it should collapse the card
   coverages={[Function Array]}
   loading="false"
   openCard="undefined"
+  policy={[Function Object]}
   policyNumber=""
 >
   <ion-card
@@ -159,6 +160,7 @@ exports[`CsaaCoveragesVehicleNotCoveredCardComponent it should expand coverage c
   coverages={[Function Array]}
   loading="false"
   openCard="0"
+  policy={[Function Object]}
   policyNumber=""
 >
   <ion-card
@@ -300,6 +302,7 @@ exports[`CsaaCoveragesVehicleNotCoveredCardComponent should match snapshots when
   coverages={[Function Array]}
   loading="false"
   openCard="undefined"
+  policy={[Function Object]}
   policyNumber=""
 >
 </csaa-vehicle-coverages-not-covered-card>
@@ -312,6 +315,7 @@ exports[`CsaaCoveragesVehicleNotCoveredCardComponent should match snapshots when
   coverages={[Function Array]}
   loading="false"
   openCard="undefined"
+  policy={[Function Object]}
   policyNumber=""
 >
   <ion-card

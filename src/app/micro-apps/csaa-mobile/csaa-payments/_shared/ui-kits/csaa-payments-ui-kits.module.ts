@@ -11,6 +11,12 @@ import { PaymentTermsConditionsComponent } from './payment-terms-conditions/paym
 import { AutopayTermsConditionsComponent } from './autopay-terms-conditions/autopay-terms-conditions.component';
 import { CsaaBillsCardComponent } from './csaa-bills-card/csaa-bills-card.component';
 import { AutopayDiscountCardComponent } from './autopay-discount-card/autopay-discount-card.component';
+import { CsaaMakePaymentItemComponent } from './csaa-make-payment-item/csaa-make-payment-item.component';
+import { IconPaymentMethodComponent } from './icon-payment-method/icon-payment-method.component';
+import { CardSelectAmountComponent } from './card-select-amount/card-select-amount.component';
+import { BrMaskerModule } from 'br-mask';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CardGroupPaymentMethodComponent } from './card-group-payment-method/card-group-payment-method.component';
 
 const SHARED_COMPONENTS = [
   CsaaPaymentHistoryCardComponent,
@@ -22,11 +28,29 @@ const SHARED_COMPONENTS = [
   AutopayTermsConditionsComponent,
   CsaaBillsCardComponent,
   AutopayDiscountCardComponent,
+  CsaaMakePaymentItemComponent,
 ];
 
 @NgModule({
-  declarations: [...SHARED_COMPONENTS],
-  imports: [CommonModule, IonicModule, UiKitsModule, IonicModule],
-  exports: [...SHARED_COMPONENTS],
+  declarations: [
+    ...SHARED_COMPONENTS,
+    IconPaymentMethodComponent,
+    CardSelectAmountComponent,
+    CardGroupPaymentMethodComponent,
+  ],
+  imports: [
+    CommonModule,
+    IonicModule,
+    UiKitsModule,
+    IonicModule,
+    BrMaskerModule,
+    ReactiveFormsModule,
+  ],
+  exports: [
+    ...SHARED_COMPONENTS,
+    IconPaymentMethodComponent,
+    CardSelectAmountComponent,
+    CardGroupPaymentMethodComponent,
+  ],
 })
 export class CsaaPaymentsUiKitsModule {}

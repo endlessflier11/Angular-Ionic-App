@@ -1,0 +1,60 @@
+<div class="csaa-make-payment-item">
+  <ion-grid>
+    <ion-row class="item" *ngIf="payment?.isPaymentDue">
+      <ion-col>
+        <span class="payment-due" data-test="payment-due" [class.overdue]="payment?.isPastDue">
+          <ng-container *ngIf="payment?.isPastDue">Past</ng-container> Due
+          {{ payment?.dueDate | date: 'longDate':timezone }}
+        </span>
+      </ion-col>
+      <ion-col size="auto">
+        <span class="payment-due" data-test="payment-amount" [class.overdue]="payment?.isPastDue">{{
+          payment?.amount | currency: 'USD':'symbol':'1.2-2'
+        }}</span>
+      </ion-col>
+    </ion-row>
+    <ion-row class="item" *ngIf="!payment?.isPaymentDue">
+      <ion-col>
+        <span class="payment-due" data-test="payment-due"> No Payment Due </span>
+      </ion-col>
+    </ion-row>
+    <ion-row class="item">
+      <ion-col>
+        <div class="policy-meta-content">
+          <span class="subtitle policy-number" data-test="policy-number">
+            {{ payment?.policyNumber }}
+          </span>
+          <span class="subtitle">
+            <csaa-policy-subtitles [policySubtitle]="payment?.subtitle"></csaa-policy-subtitles>
+          </span>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list [class.overdue]="isOverdue()">
+    <ion-item
+      detail
+      class="ion-no-padding"
+      data-test="button-pay-now"
+      (click)="payNowClick.emit(payment)"
+    >
+      <ion-label>Pay now</ion-label>
+    </ion-item>
+    <ion-item
+      detail
+      class="csaa-payment-autopay-item ion-no-padding"
+      *ngIf="hasRegId()"
+      data-test="button-autopay"
+      (click)="autoPayClick.emit(payment)"
+    >
+      <ion-label>
+        <label>AutoPay</label>
+        <small *ngIf="payment?.autoPay">
+          {{ getAutopayInfo() }}
+        </small>
+      </ion-label>
+      <span slot="end"> {{ payment?.autoPay ? 'On' : 'Off' }}</span>
+    </ion-item>
+  </ion-list>
+</div>

@@ -61,9 +61,11 @@ export class AlertMock {
 export class AlertControllerMock {
   private alerts: AlertMock[] = [];
 
-  public create = jest
-    .fn()
-    .mockImplementation((options: any) => Promise.resolve(new AlertMock(this, options)));
+  public create = jest.fn().mockImplementation((options: any) => {
+    const alert = new AlertMock(this, options);
+    this.alerts.push(alert);
+    return Promise.resolve(alert);
+  });
 
   public dismiss = jest.fn().mockReturnValue(Promise.resolve(true));
 

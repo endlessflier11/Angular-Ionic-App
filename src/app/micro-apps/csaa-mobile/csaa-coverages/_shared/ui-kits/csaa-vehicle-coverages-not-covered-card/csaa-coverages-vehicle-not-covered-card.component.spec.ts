@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CsaaCoverageCardItemComponent } from '../csaa-coverage-card-item/csaa-coverage-card-item.component';
 import { CsaaCoveragesVehicleNotCoveredCardComponent } from './csaa-coverages-vehicle-not-covered-card.component';
 
-import { By, PageTestingModule } from '@app/testing';
+import { By, generatePolicy, PageTestingModule } from '@app/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { UiKitsModule } from '../../../../_core/ui-kits/ui-kits.module';
@@ -30,6 +30,7 @@ describe('CsaaCoveragesVehicleNotCoveredCardComponent', () => {
       component = fixture.componentInstance;
 
       component.coverages = VEHICLE_COVERAGES_FIXTURE;
+      component.policy = generatePolicy({});
 
       fixture.detectChanges();
       await fixture.whenStable();

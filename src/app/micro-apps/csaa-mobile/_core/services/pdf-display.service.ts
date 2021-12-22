@@ -20,7 +20,7 @@ import { PolicyDocument, PolicyDocumentType } from '../interfaces/document.inter
 import { PolicyState } from '../store/states/policy.state';
 import { PolicyAction } from '../store/actions';
 import { interactWithLoader } from '../operators';
-import { withErrorReporter } from '../helpers';
+import { ErrorWithReporter, withErrorReporter } from '../helpers';
 import { Store } from '@ngxs/store';
 import { AppEndpointsEnum, Category, EventName, EventType, Policy } from '../interfaces';
 import { AnalyticsService } from './analytics.service';
@@ -48,10 +48,6 @@ export class PdfDisplayService {
     this.isIos = this.platform.is('ios');
   }
 
-  public showDocumentActionPrompt(documentTitle?: string): Observable<CallbackData> {
-    return this.showModal(documentTitle);
-  }
-
   public accessPdfDocument(
     url: string,
     mode: keyof typeof CallbackDataSelection,
@@ -65,13 +61,6 @@ export class PdfDisplayService {
       case 'view':
         return this.viewPdfHandler(url);
     }
-  }
-
-  /*
-   * @deprecated
-   * */
-  viewPdf(url: string) {
-    this.viewPdfHandler(url);
   }
 
   openPdf(url: string) {
@@ -112,29 +101,9 @@ export class PdfDisplayService {
         .subscribe(
           withErrorReporter(
             (result) => {
-              this.onAccessPdfDocumentSuccess(policy, policyDocument, selection, result);
+              this.onActionSuccess(policy, policyDocument, selection, result);
             },
-            (error) => {
-              console.log('#'.repeat(50), 'error ', error);
-              let isNetworkError: boolean;
-              if (error.getOriginalError() instanceof UniHttpErrorResponse) {
-                const originalError: UniHttpErrorResponse = error.getOriginalError();
-                isNetworkError = originalError.isNetworkError;
-              }
-              const options: AlertOptions = {
-                header: 'Connection Failed',
-                message:
-                  'We were unable to load the requested document at this time. Please check your connection and try again.',
-              };
-              this.showDocumentErrorAlert(isNetworkError ? options : undefined);
-              this.trackEvent(
-                EventName.ERROR_NOTIFICATION,
-                EventType.MESSAGED,
-                policyDocument,
-                policy
-              );
-              error.report();
-            }
+            (error) => this.onActionFailed(policy, policyDocument, error)
           )
         );
     });
@@ -148,7 +117,7 @@ export class PdfDisplayService {
    * @param selection
    * @param result
    */
-  public onAccessPdfDocumentSuccess(
+  public onActionSuccess(
     policy: Policy,
     policyDocument: PolicyDocument,
     selection: CallbackDataSelection,
@@ -176,7 +145,44 @@ export class PdfDisplayService {
     }
   }
 
-  private showModal(documentTitle: string): Observable<CallbackData> {
+  /**
+   * Handle message and events on action failed
+   *
+   * @param policy
+   * @param policyDocument
+   * @param error
+   */
+  public onActionFailed(policy: Policy, policyDocument: PolicyDocument, error: ErrorWithReporter) {
+    let options: AlertOptions = {};
+    console.log('[CSAA:Error] Sharing document', { error });
+    const cause = error.getOriginalError();
+    if (cause instanceof UniHttpErrorResponse) {
+      const originalError: UniHttpErrorResponse = error.getOriginalError();
+      if (originalError.isNetworkError) {
+        options = {
+          header: 'Connection Failed',
+          message:
+            'We were unable to load the requested document at this time. Please check your connection and try again.',
+        };
+      }
+    }
+    if (cause?.selection === CallbackDataSelection.share && !cause?.completed) {
+      const errorMessage = cause?.error?.errorMessage || cause?.error?.message;
+      if (errorMessage === 'Share canceled') {
+        return;
+      }
+      options = {
+        header: 'Sharing failed',
+        message: errorMessage || 'Sharing did not complete',
+      };
+    }
+
+    this.showDocumentErrorAlert(options);
+    this.trackEvent(EventName.ERROR_NOTIFICATION, EventType.MESSAGED, policyDocument, policy);
+    error.report();
+  }
+
+  public showDocumentActionPrompt(documentTitle?: string): Observable<CallbackData> {
     return new Observable<any>((subscriber) => {
       (async () => {
         const modal = await this.modalController.create({
@@ -266,7 +272,7 @@ export class PdfDisplayService {
           {
             text: 'Open',
             handler: () => {
-              this.openPdf(filePath);
+              this.openPdf(filePath).then(noop);
             },
           },
         ],

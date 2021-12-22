@@ -58,13 +58,13 @@
   </ng-container>
 
   <!--  If user has multiple policy, select history to view -->
-  <csaa-select-policy-card
+  <csaa-payment-history-select-card
     *ngIf="(policies$ | async)?.length > 1"
     [loading]="loading || (isPaymentsLoading$ | async)"
     [policies]="policies$ | async"
     (policyClick)="openPaymentHistory($event)"
   >
-  </csaa-select-policy-card>
+  </csaa-payment-history-select-card>
 
   <csaa-csaa-bills-card
     *ngIf="(latestBills$ | async)?.length"

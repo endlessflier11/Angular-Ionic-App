@@ -6,6 +6,8 @@ import {
   DOCUMENTS_FIXTURE,
   PageTestingModule,
   PoliciesResponseMock,
+  setCustomerPolicies,
+  setPolicyDocuments,
   StoreTestBuilder,
 } from '@app/testing';
 import { CsaaCoreModule } from '../../../csaa-core/csaa-core.module';
@@ -26,20 +28,6 @@ const flushMockDocuments = (httpTestingController: HttpTestingController, policy
   httpTestingController
     .match(AppEndpointsEnum[AppEndpointsEnum.policyDocuments])
     .forEach((req) => req.flush(policyDocuments));
-};
-
-const setCustomerPolicies = (customer, policies) => {
-  const CUSTOMER_POLICY = customer.data.policies[0];
-  customer.data.policies = policies.map(({ policyNumber }) => ({
-    ...CUSTOMER_POLICY,
-    policyNumber,
-  }));
-  return customer;
-};
-
-const setPolicyDocuments = (customer, policyDocuments, policyNumber) => {
-  customer.csaa_policies.documents[policyNumber] = policyDocuments;
-  return customer;
 };
 
 describe('CsaaPolicyState', function () {

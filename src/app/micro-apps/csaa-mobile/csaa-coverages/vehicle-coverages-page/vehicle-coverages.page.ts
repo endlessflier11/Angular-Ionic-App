@@ -37,6 +37,7 @@ export class CsaaVehicleCoveragesPage implements IonViewWillEnter, IonViewWillLe
   currentTheme: string;
   backButtonSubscription: Subscription;
   isPbeEligible$: Observable<boolean>;
+  vehicle: VehicleWithCoverage;
 
   private readonly subsink = new SubSink();
 
@@ -90,18 +91,16 @@ export class CsaaVehicleCoveragesPage implements IonViewWillEnter, IonViewWillLe
       this.policy$.subscribe(
         withErrorReporter(
           (policy) => {
-            const [vehicle]: VehicleWithCoverage[] = policy.vehicles.filter(
-              (v) => v.id === this.vehicleId
-            );
+            this.vehicle = policy.vehicles.find((v) => v.id === this.vehicleId);
 
-            if (!vehicle) {
+            if (!this.vehicle) {
               throw new Error(
                 `Vehicle [${this.vehicleId}] not found, for policy ${this.policyNumber}`
               );
             }
 
-            const coverages = vehicle.coverages;
-            this.title = vehicle.name;
+            const coverages = this.vehicle.coverages;
+            this.title = this.vehicle.name;
             this.coverages = coverages.filter((c) => c.covered);
             this.notCoverages = coverages.filter((c) => !c.covered);
           },

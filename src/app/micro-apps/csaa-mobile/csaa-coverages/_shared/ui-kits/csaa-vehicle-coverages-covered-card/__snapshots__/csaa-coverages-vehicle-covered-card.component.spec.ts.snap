@@ -8,6 +8,7 @@ exports[`CsaaCoveragesVehicleCoveredCardComponent it should collapse the card af
   coverages={[Function Array]}
   loading="false"
   openCard="undefined"
+  policy={[Function Object]}
   policyNumber=""
   showEditPolicy={[Function Boolean]}
   ssoService={[Function SsoService]}
@@ -184,6 +185,7 @@ exports[`CsaaCoveragesVehicleCoveredCardComponent it should expand coverage card
   coverages={[Function Array]}
   loading="false"
   openCard="0"
+  policy={[Function Object]}
   policyNumber=""
   showEditPolicy={[Function Boolean]}
   ssoService={[Function SsoService]}
@@ -349,6 +351,7 @@ exports[`CsaaCoveragesVehicleCoveredCardComponent should match snapshots when no
   coverages={[Function Array]}
   loading="false"
   openCard="undefined"
+  policy={[Function Object]}
   policyNumber=""
   showEditPolicy={[Function Boolean]}
   ssoService={[Function SsoService]}
@@ -367,6 +370,7 @@ exports[`CsaaCoveragesVehicleCoveredCardComponent should match snapshots when th
   coverages={[Function Array]}
   loading="false"
   openCard="undefined"
+  policy={[Function Object]}
   policyNumber=""
   showEditPolicy={[Function Boolean]}
   ssoService={[Function SsoService]}

@@ -19,6 +19,20 @@ const STATE_KEY__METADATA = 'csaa_metadata';
 
 const { METADATA } = USER1_STATE_FIXTURES_MOCK;
 
+export const setCustomerPolicies = (customer, policies) => {
+  const CUSTOMER_POLICY = customer.data.policies[0];
+  customer.data.policies = policies.map(({ policyNumber }) => ({
+    ...CUSTOMER_POLICY,
+    policyNumber,
+  }));
+  return customer;
+};
+
+export const setPolicyDocuments = (customer, policyDocuments, policyNumber) => {
+  customer.csaa_policies.documents[policyNumber] = policyDocuments;
+  return customer;
+};
+
 export class StoreTestBuilder {
   private state;
   constructor() {
@@ -86,7 +100,7 @@ export class StoreTestBuilder {
     return this;
   }
 
-  withPolicyState(data) {
+  withPolicyState(data: any) {
     this.state[STATE_KEY__CUSTOMER].csaa_policies = data;
     return this;
   }

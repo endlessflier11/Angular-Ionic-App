@@ -29,6 +29,7 @@ export class CsaaVehiclesCoveragesCardComponent {
       event_type: EventType.LINK_ACCESSED,
       link: 'Vehicle Coverage',
       type: vehicle.name,
+      ...AnalyticsService.mapPolicy(this.policy),
     });
     this.routerService.navigateForward('csaa.coverages.vehicle', {
       policyNumber: this.policy.number,

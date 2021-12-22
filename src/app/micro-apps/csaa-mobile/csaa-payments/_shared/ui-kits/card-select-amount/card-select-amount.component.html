@@ -1,0 +1,52 @@
+<ion-list>
+  <ion-radio-group [value]="amountSelected" (ionChange)="onAmountChange($event)">
+    <ion-item lines="full">
+      <ion-label>
+        {{ this.payment?.minimumAmount | currency }}
+        <p>Minimum Due</p>
+      </ion-label>
+      <ion-radio
+        slot="end"
+        mode="md"
+        value="minimum"
+        [disabled]="!this.payment?.minimumAmount"
+      ></ion-radio>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label>
+        {{ this.payment?.remainingPremium | currency }}
+        <p>Remaining Premium</p>
+      </ion-label>
+      <ion-radio
+        slot="end"
+        mode="md"
+        value="remaining"
+        [disabled]="!this.payment?.remainingPremium"
+      ></ion-radio>
+    </ion-item>
+
+    <ion-item lines="full" *ngIf="allowOtherAmount">
+      <ion-label> Other amount </ion-label>
+      <ion-radio slot="end" mode="md" value="other"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+
+  <ion-item
+    lines="full"
+    *ngIf="allowOtherAmount && amountSelected === 'other'"
+    class="other-amount"
+  >
+    <ion-label>Other Amount</ion-label>
+    <form [formGroup]="amountForm">
+      <ion-input
+        formControlName="otherAmount"
+        type="{{ isIos ? 'text' : 'tel' }}"
+        class="ion-text-right"
+        [brmasker]="otherAmountMaskConfig"
+        placeholder="Required"
+        #otherAmountInput
+      >
+      </ion-input>
+    </form>
+  </ion-item>
+</ion-list>
