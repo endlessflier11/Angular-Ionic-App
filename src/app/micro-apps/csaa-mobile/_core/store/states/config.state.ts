@@ -216,20 +216,20 @@ export class ConfigState {
     { forceFromTheNetwork }: ConfigAction.LoadAppEndpoints
   ) {
     patchState({ endpointsLoadState: FetchStatus.FETCHING });
-    const { activeConfigData, isNative } = getState();
     this.store
       .select(ConfigState?.configLoaded)
       .pipe(
         onceTruthy(),
-        switchMap(() =>
-          dispatch(
+        switchMap(function test() {
+          const { activeConfigData, isNative } = getState();
+          return dispatch(
             new ServiceLocatorAction.LoadAppEndpoints(
               !isNative,
               activeConfigData.serviceLocatorUrl,
               forceFromTheNetwork
             )
-          )
-        ),
+          );
+        }),
         trackRequest(ConfigAction.LoadAppEndpoints)
       )
       .subscribe();

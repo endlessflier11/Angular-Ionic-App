@@ -35,6 +35,7 @@ import { Injector } from '@angular/core';
 import { HttpTestingController } from '@angular/common/http/testing';
 import { PolicyHelper } from '../../_core/shared/policy.helper';
 import { Store } from '@ngxs/store';
+import { FormsModule } from '@angular/forms';
 
 describe('MakeOneTimePaymentPage', () => {
   let component: MakeOneTimePaymentPage;
@@ -66,6 +67,7 @@ describe('MakeOneTimePaymentPage', () => {
           }),
           CsaaPaymentsUiKitsModule,
           UiKitsModule,
+          FormsModule,
         ],
         providers: [
           MakePaymentService,

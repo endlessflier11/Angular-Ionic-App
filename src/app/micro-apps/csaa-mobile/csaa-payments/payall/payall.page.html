@@ -4,7 +4,7 @@
       <csaa-back-button (back)="onClickBackBtn()" text="Cancel"></csaa-back-button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button (click)="onPayClicked()">Pay</ion-button>
+      <ion-button (click)="onPayClicked()" [disabled]="payBtnDisabled">Pay</ion-button>
     </ion-buttons>
   </ion-toolbar>
   <ion-toolbar class="secondary-toolbar-title-small">
@@ -57,3 +57,10 @@
     </p>
   </ng-container>
 </ion-content>
+<csaa-working-hours
+  #hoursPopup
+  [ngClass]="['csaa', currentTheme]"
+  [riskState]="combinedPayment?.policyRiskState"
+  serviceType="CUSTOMER"
+>
+</csaa-working-hours>

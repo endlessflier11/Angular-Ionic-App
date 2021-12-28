@@ -413,6 +413,10 @@ export interface MakePaymentResponse {
   statusDescription: string;
 }
 
+export interface PaymentWithAutopayEnrollmentResponse extends MakePaymentResponse {
+  enrollmentSucceded?: boolean;
+}
+
 export interface AutoPayEnrollmentResponse {
   enrollmentRecord: {
     receiptNumber: string; // '660756';

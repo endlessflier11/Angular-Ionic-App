@@ -547,7 +547,7 @@ exports[`CsaaHomePage cancelled policies Should only show the cancelled cards if
               expand="block"
               fill="outline"
             >
-               Transaction History 
+               Billing & Transaction History 
             </ion-button>
             <ion-button
               expand="full"
@@ -1237,7 +1237,7 @@ exports[`CsaaHomePage cancelled policies Should show no active policies card if 
               expand="block"
               fill="outline"
             >
-               Transaction History 
+               Billing & Transaction History 
             </ion-button>
             <ion-button
               expand="full"
@@ -1993,7 +1993,7 @@ exports[`CsaaHomePage cancelled policies Should show the cancelled card with the
               expand="block"
               fill="outline"
             >
-               Transaction History 
+               Billing & Transaction History 
             </ion-button>
             <ion-button
               expand="full"
@@ -2447,7 +2447,7 @@ exports[`CsaaHomePage should detect payment is past due and warn user 1`] = `
               expand="block"
               fill="outline"
             >
-               Transaction History 
+               Billing & Transaction History 
             </ion-button>
             <ion-button
               expand="full"
@@ -3830,7 +3830,7 @@ exports[`CsaaHomePage should match snapshot after load 1`] = `
               expand="block"
               fill="outline"
             >
-               Transaction History 
+               Billing & Transaction History 
             </ion-button>
             <ion-button
               expand="full"
@@ -4663,7 +4663,7 @@ exports[`CsaaHomePage should match snapshot after load with header 1`] = `
               expand="block"
               fill="outline"
             >
-               Transaction History 
+               Billing & Transaction History 
             </ion-button>
             <ion-button
               expand="full"
@@ -5793,7 +5793,7 @@ exports[`CsaaHomePage should show proof of insurance, coverages, claims and paym
               expand="block"
               fill="outline"
             >
-               Transaction History 
+               Billing & Transaction History 
             </ion-button>
             <ion-button
               expand="full"

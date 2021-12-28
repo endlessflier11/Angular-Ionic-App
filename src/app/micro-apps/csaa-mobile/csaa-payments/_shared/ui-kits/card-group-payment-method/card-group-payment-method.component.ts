@@ -20,11 +20,9 @@ export class CardGroupPaymentMethodComponent implements OnInit {
   onMethodChange(event) {
     this.methodSelected = event?.detail?.value;
     this.methodSelectedChange.emit(this.methodSelected);
-    console.log('Method Change', { value: this.methodSelected });
   }
 
   onClickEditPaymentAccount(paymentAccount) {
-    console.log('onClickEditPaymentAccount(paymentAccount)', paymentAccount);
     this.edit.emit(paymentAccount);
   }
 }

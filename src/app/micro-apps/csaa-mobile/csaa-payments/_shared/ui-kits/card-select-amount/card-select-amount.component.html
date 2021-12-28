@@ -6,6 +6,7 @@
         <p>Minimum Due</p>
       </ion-label>
       <ion-radio
+        class="csaa-radio-bigger"
         slot="end"
         mode="md"
         value="minimum"
@@ -18,6 +19,7 @@
         <p>Remaining Premium</p>
       </ion-label>
       <ion-radio
+        class="csaa-radio-bigger"
         slot="end"
         mode="md"
         value="remaining"
@@ -27,7 +29,7 @@
 
     <ion-item lines="full" *ngIf="allowOtherAmount">
       <ion-label> Other amount </ion-label>
-      <ion-radio slot="end" mode="md" value="other"></ion-radio>
+      <ion-radio class="csaa-radio-bigger" slot="end" mode="md" value="other"></ion-radio>
     </ion-item>
   </ion-radio-group>
 

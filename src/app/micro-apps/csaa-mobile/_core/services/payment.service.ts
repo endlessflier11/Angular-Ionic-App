@@ -37,7 +37,7 @@ import { GlobalStateService } from './global-state.service';
 import { HttpService } from './http/http.service';
 import { ErrorWithReporter, getErrorStatus } from '../helpers';
 import { PolicyHelper } from '../shared/policy.helper';
-import { AppEndpointsEnum } from '../interfaces';
+import { AppEndpointsEnum, User } from '../interfaces';
 import { Store } from '@ngxs/store';
 import { PaymentAction } from '../store/actions';
 import { endOfMonth, format, parse } from 'date-fns';
@@ -81,6 +81,7 @@ export class PaymentService {
   public static generateCorrelationId(): string {
     return Date.now().toString() + '.' + Math.random().toString().substr(-5);
   }
+
   private static mapUpcomingPayment(
     billingSummary: BillingSummary,
     policySummary: Policy
@@ -119,6 +120,7 @@ export class PaymentService {
     private sharedService: GlobalStateService,
     private csaaConfigService: ConfigService
   ) {}
+
   /**
    * Fetch Billing Summary
    */
@@ -442,37 +444,38 @@ export class PaymentService {
     const { deviceUuid: uuid, clubCode } = this.store.selectSnapshot(MetadataState);
     return this.auth.getUser().pipe(
       take(1),
-      switchMap((user) =>
-        this.httpService
-          .postNamedResource(AppEndpointsEnum.billingPayment, {
-            totalAmount: amountBeingPaid,
-            hash: (user && user.hash) || '',
-            testing: this.sharedService.getPaymentsTesting(), // DONT LEAVE THIS TRUE
-            lineItems,
-            paymentItem: {
-              paymentAccountToken: paymentMethod.paymentAccountToken,
-              paymentMethod: paymentMethod.card ? PaymentAccountType.CARD : PaymentAccountType.EFT,
-              ...(paymentMethod.card && {
-                card: {
-                  zipCode: paymentMethod.card.zipCode,
-                },
-              }),
-            },
-            userDeviceMetadata: {
-              uuid,
-            },
-            club: clubCode,
-          })
-          .pipe(map((res) => res.body))
-      )
+      switchMap((user: User) => {
+        const payload = {
+          totalAmount: amountBeingPaid,
+          hash: (user && user.hash) || '',
+          // testing: this.sharedService.getPaymentsTesting(), // DONT LEAVE THIS TRUE
+          lineItems,
+          paymentItem: {
+            paymentAccountToken: paymentMethod.paymentAccountToken,
+            paymentMethod: paymentMethod.card ? PaymentAccountType.CARD : PaymentAccountType.EFT,
+            ...(paymentMethod.card && {
+              card: {
+                zipCode: paymentMethod.card.zipCode,
+              },
+            }),
+          },
+          userDeviceMetadata: {
+            uuid,
+          },
+          club: clubCode,
+        };
+        return this.httpService
+          .postNamedResource<PaymentSummaryResponse>(AppEndpointsEnum.billingPayment, payload)
+          .pipe(map((res) => res.body));
+      })
     );
   }
 
   makePayment(
     paymentMethod: PaymentAccount,
-    payment: UpcomingPayment
+    payment: UpcomingPayment,
+    amountBeingPaid: number
   ): Observable<MakePaymentResponse> {
-    const amountBeingPaid = payment.otherAmount || payment.amount;
     const { deviceUuid: uuid, clubCode } = this.store.selectSnapshot(MetadataState);
     return this.auth.getUser().pipe(
       take(1),

@@ -18,8 +18,6 @@ export class PaymentsCardComponent {
   @Input() payments: UpcomingPayment[] = [];
   @Input() loading = false;
   @Input() timezone: string = undefined;
-  @Input() showButtons = true;
-  @Input() showPaymentCards = true;
 
   @Select(CustomerState.customerData) customerSearch$: Observable<CustomerSearchResponse>;
 
@@ -55,7 +53,9 @@ export class PaymentsCardComponent {
     this.routerService.navigateForward('csaa.payment.history').then(noop);
   }
 
-  openPayAllPolicies() {}
+  openPayAllPolicies() {
+    this.routerService.navigateForward('csaa.payment.payall').then(noop);
+  }
 
   isPaymentSuccess(_: UpcomingPayment) {
     return false;

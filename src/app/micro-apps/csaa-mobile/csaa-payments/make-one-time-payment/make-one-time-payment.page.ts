@@ -1,32 +1,35 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { combineLatest, noop } from 'rxjs';
+import { combineLatest, noop, Observable } from 'rxjs';
 import {
-  WalletDetails,
-  PaymentAccount,
-  UpcomingPayment,
-  Policy,
   Category,
   EventName,
-  PolicyType,
-  MakePaymentResponse,
   EventType,
+  PaymentAccount,
+  PaymentType,
+  PaymentWithAutopayEnrollmentResponse,
+  Policy,
+  PolicyType,
+  UpcomingPayment,
+  WalletDetails,
 } from '../../_core/interfaces';
 import { AnalyticsService, PaymentService, RouterService } from '../../_core/services';
 import { MakePaymentService } from '../_shared/services/make-payment.service';
 import { ActivatedRoute } from '@angular/router';
-import { filter, switchMap, tap } from 'rxjs/operators';
+import { catchError, filter, switchMap, tap } from 'rxjs/operators';
 import { fetchHasFailedFor, withErrorReporter } from '../../_core/helpers';
 import { AlertController, ModalController } from '@ionic/angular';
 import { interactWithLoader } from '../../_core/operators';
 import { WorkingHoursComponent } from '../../_core/ui-kits/working-hours/working-hours.component';
 import { PaymentTermsConditionsComponent } from '../_shared/ui-kits/payment-terms-conditions/payment-terms-conditions.component';
 import { ContactInfoState } from '../../_core/store/states/contact-info.state';
-import { Store } from '@ngxs/store';
+import { Select, Store } from '@ngxs/store';
 import { ConfigState } from '../../_core/store/states/config.state';
 import { CustomerAction, PaymentAction, PolicyAction } from '../../_core/store/actions';
 import { PaymentState } from '../../_core/store/states/payment.state';
 import { PolicyState } from '../../_core/store/states/policy.state';
 import { SubSink } from '../../_core/shared/subscription.helper';
+import { AutopayTermsConditionsComponent } from '../_shared/ui-kits/autopay-terms-conditions/autopay-terms-conditions.component';
+import { of } from 'rxjs/internal/observable/of';
 
 @Component({
   selector: 'app-make-one-time-payment-method',
@@ -34,6 +37,8 @@ import { SubSink } from '../../_core/shared/subscription.helper';
   styleUrls: ['./make-one-time-payment.page.scss'],
 })
 export class MakeOneTimePaymentPage implements OnInit, OnDestroy {
+  @Select(PaymentState.upcomingPayments) payments$: Observable<UpcomingPayment[]>;
+  @Select(PaymentState.walletDetails) wallet$: Observable<WalletDetails>;
   private subsink = new SubSink();
   public readonly currentTheme: string;
   private policyNumber: string;
@@ -42,7 +47,10 @@ export class MakeOneTimePaymentPage implements OnInit, OnDestroy {
   public walletData: WalletDetails;
   public payments: UpcomingPayment[];
   public upcomingPayment: UpcomingPayment;
+  methodSelected;
   public selectedPaymentAccount: PaymentAccount;
+  amountSelected: PaymentType;
+  public enrollInAutopay = false;
   @ViewChild('hoursPopup') private hoursPopup: WorkingHoursComponent;
 
   public get isCaPolicy(): boolean {
@@ -89,6 +97,15 @@ export class MakeOneTimePaymentPage implements OnInit, OnDestroy {
   ngOnInit() {
     this.dispatchLoadActions();
     this.subsink.add(
+      this.wallet$.subscribe((wallet) => {
+        if (!this.methodSelected) {
+          this.methodSelected = wallet.paymentAccounts.find(
+            (p) => p.isPreferred
+          )?.paymentAccountToken;
+        }
+      })
+    );
+    this.subsink.add(
       this.activatedRoute.paramMap
         .pipe(
           filter((paramMap) => {
@@ -134,7 +151,7 @@ export class MakeOneTimePaymentPage implements OnInit, OnDestroy {
             this.policy = policy;
             this.walletData = wallet;
             this.payments = payments;
-            this.upcomingPayment = payment;
+            this.upcomingPayment = Object.assign({}, payment);
             this.makePaymentService.setActivePayment(payment);
           })
         )
@@ -147,39 +164,38 @@ export class MakeOneTimePaymentPage implements OnInit, OnDestroy {
   }
 
   getSelectedPaymentMethod(): PaymentAccount {
-    if (this.selectedPaymentAccount) {
-      return this.selectedPaymentAccount;
+    let paymentMethod;
+    if (!!this.methodSelected) {
+      paymentMethod = this.store.selectSnapshot(PaymentState.paymentMethod(this.methodSelected));
     }
-    if (
-      this.walletData &&
-      this.walletData.paymentAccounts &&
-      this.walletData.paymentAccounts.length > 0
-    ) {
-      return this.walletData.paymentAccounts.find((p) => p.isPreferred);
-    }
-    return undefined;
+    return paymentMethod;
   }
 
-  selectPaymentMethod(): void {
-    this.makePaymentService.setUpcomingPayments(this.payments);
+  onAmountSelectionChange(event) {
+    this.amountSelected = event?.selection;
+    if (this.amountSelected === PaymentType.other) {
+      this.upcomingPayment.otherAmount = event.value;
+    }
+  }
+
+  onClickEditPaymentAccount(account: PaymentAccount): void {
+    const normalizeBankType = (a: PaymentAccount): string =>
+      a.account.bankAccountType.toLocaleLowerCase() === 'savings' ? 'savings' : 'checking';
+    const suffix = account.card ? 'card' : normalizeBankType(account) + '-account';
+    this.methodSelected = account?.paymentAccountToken;
+    this.makePaymentService.selectPaymentAccount(account);
     this.makePaymentService.setActivePayment(this.upcomingPayment);
-    this.makePaymentService.selectPaymentAccount(this.getSelectedPaymentMethod());
-    this.makePaymentService.setReturnPathFromAmountMethodPages('csaa.payment.make.payment', {
-      policyNumber: this.policyNumber,
-    });
+    this.makePaymentService.setReturnPathFromAmountMethodPages('csaa.payment.payall');
     this.routerService
-      .navigateForward('csaa.payment.make.payment.method', { policyNumber: this.policyNumber })
+      .navigateForward(`csaa.payment.method.${suffix}.edit`, {
+        account: account.paymentAccountToken,
+      })
       .then(noop);
   }
-  selectAmount() {
-    this.makePaymentService.setActivePayment(this.upcomingPayment);
-    this.makePaymentService.selectPaymentAccount(this.getSelectedPaymentMethod());
-    this.makePaymentService.setReturnPathFromAmountMethodPages('csaa.payment.make.payment', {
-      policyNumber: this.policyNumber,
-    });
-    this.routerService
-      .navigateForward('csaa.payment.make.payment.amount', { policyNumber: this.policyNumber })
-      .then(noop);
+
+  onAddNewPaymentMethod() {
+    this.makePaymentService.setReturnPathFromAmountMethodPages('csaa.payment.payall');
+    this.routerService.navigateForward(`csaa.payment.add-payment-method`).then(noop);
   }
 
   async pay() {
@@ -213,12 +229,25 @@ export class MakeOneTimePaymentPage implements OnInit, OnDestroy {
     const paymentAccount = this.getSelectedPaymentMethod();
     const amountBeingPaid = payment.otherAmount || payment.amount;
     this.paymentService
-      .makePayment(paymentAccount, payment)
+      .makePayment(paymentAccount, payment, amountBeingPaid)
       .pipe(
         tap(() => {
           this.store.dispatch([PaymentAction.ReloadPayments, PaymentAction.ReloadHistory]);
         }),
-        interactWithLoader<MakePaymentResponse>()
+        switchMap((paymentResponse) => {
+          if (!this.enrollInAutopay) {
+            return of(paymentResponse);
+          }
+
+          return this.paymentService.enrollPolicyForAutopay(this.policy, paymentAccount).pipe(
+            switchMap((result) => of({ ...paymentResponse, enrollmentSucceded: result })),
+            catchError((e) => {
+              console.error({ e });
+              return of({ ...paymentResponse, enrollmentSucceded: false });
+            })
+          );
+        }),
+        interactWithLoader<PaymentWithAutopayEnrollmentResponse>()
       )
       .subscribe(
         withErrorReporter(
@@ -367,5 +396,15 @@ export class MakeOneTimePaymentPage implements OnInit, OnDestroy {
         switchMap(() => this.store.dispatch(new PaymentAction.LoadWallet()))
       )
       .subscribe(withErrorReporter(noop));
+  }
+
+  async openAutoPayTerms() {
+    const modal = await this.modalCtrl.create({
+      component: AutopayTermsConditionsComponent,
+    });
+    await modal.present();
+    this.analyticsService.trackEvent(EventName.TERMS_AND_CONDITIONS_CLICKED, Category.payments, {
+      event_type: EventType.FILE_DOWNLOADED,
+    });
   }
 }

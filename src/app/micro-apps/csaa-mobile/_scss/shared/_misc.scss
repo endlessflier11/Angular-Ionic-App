@@ -21,7 +21,8 @@ ion-header {
       }
 
       &.secondary-toolbar-title-small {
-        height: 50px;
+        height: 44px;
+        --padding-bottom: 10px;
 
         ion-title {
           font-size: 16px;
@@ -90,5 +91,18 @@ ion-header {
 
   .display-flex {
     display: flex;
+  }
+}
+
+ion-radio {
+  &.csaa-radio-bigger {
+    &::part(container) {
+      width: 30px;
+      height: 30px;
+    }
+    &::part(mark) {
+      width: 20px;
+      height: 20px;
+    }
   }
 }

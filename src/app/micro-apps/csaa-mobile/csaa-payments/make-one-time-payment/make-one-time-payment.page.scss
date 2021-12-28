@@ -1,9 +1,12 @@
 @import '../../_scss/variables';
 
 ion-content {
-  --background: #fff;
-  --padding-start: 0;
-  --padding-end: 0;
+  --background: white;
+  --ion-background-color: white;
+}
+
+h2 {
+  margin: 40px 20px 20px 20px;
 }
 
 .policy-meta-content {
@@ -20,6 +23,9 @@ ion-content {
     display: block;
     text-decoration: none;
   }
+  b {
+    font-size: 12px;
+  }
 }
 
 .policy-meta-icon {
@@ -33,7 +39,39 @@ ion-list {
       margin-right: 5px;
     }
     span[slot='end'] {
-      font-weight: 300;
+      font-weight: $csaa-light-font-weight;
     }
   }
+}
+
+.enrollment-title {
+  font-size: $csaa-subheader-font-size;
+  font-weight: $csaa-medium-font-weight;
+  color: $csaa-text-black;
+}
+.enrollment-message {
+  font-size: $csaa-default-font-size;
+  color: $csaa-lighter-color;
+}
+.enrollment-terms {
+  font-size: $csaa-default-font-size;
+  margin-top: 6px;
+  margin-bottom: 22px;
+}
+.enrollment-warning {
+  font-size: $csaa-subtitle-font-size;
+  font-weight: $csaa-medium-font-weight;
+  color: $csaa-emergency-color;
+  margin-bottom: 18px;
+}
+.payment-terms {
+  margin-top: 12px;
+  padding-top: 0px;
+}
+csaa-autopay-discount-card {
+  display: block;
+  margin-top: 10px;
+}
+csaa-theme-icon {
+  margin: 2px 12px 2px 0px;
 }

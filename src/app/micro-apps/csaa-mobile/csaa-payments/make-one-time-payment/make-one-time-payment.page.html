@@ -7,18 +7,11 @@
       <ion-button (click)="pay()" [disabled]="payBtnDisabled">Pay</ion-button>
     </ion-buttons>
   </ion-toolbar>
-  <ion-toolbar>
+  <ion-toolbar class="secondary-toolbar-title-small">
     <ion-title>Make a Payment</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content [ngClass]="['csaa', currentTheme]">
-  <ion-grid class="ion-no-padding" *ngIf="!!policy">
-    <ion-row class="ion-padding-top ion-padding-bottom">
-      <ion-col class="ion-text-center">
-        <b>(This page will be redesigned by MM-3165)</b>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
   <csaa-skeleton-card
     *ngIf="!policy"
     [showHeader]="false"
@@ -30,6 +23,9 @@
       <ion-col>
         <ion-item lines="none">
           <div class="policy-meta-content">
+            <b lines="full" class="ion-margin-bottom">
+              Due Date: <span slot="end">{{ upcomingPayment.dueDate | date: 'MM/dd/yyyy' }}</span>
+            </b>
             <h3>{{ policy?.number }}</h3>
             <csaa-policy-subtitles [policySubtitle]="policy?.subtitle"></csaa-policy-subtitles>
           </div>
@@ -41,41 +37,65 @@
     </ion-row>
   </ion-grid>
 
-  <ion-list>
-    <ng-container *ngIf="upcomingPayment">
-      <ion-item lines="full" detail (click)="selectPaymentMethod()"
-        >Payment Method
-        <span slot="end">
-          <ion-text color="medium">{{ paymentMethodLabelText }}</ion-text>
-        </span>
-      </ion-item>
-      <ion-item lines="full" detail (click)="selectAmount()"
-        >Amount
-        <span slot="end">
-          <ion-text>
-            {{ upcomingPayment.otherAmount || upcomingPayment.amount | currency:
-            'USD':'symbol':'1.2-2' }}
-          </ion-text>
-        </span>
-      </ion-item>
-      <ion-item lines="full" class="ion-margin-bottom">
-        Due Date <span slot="end">{{ upcomingPayment.dueDate | date: 'MM/dd/yyyy' }}</span>
-      </ion-item>
-      <ng-container *ngIf="!upcomingPayment?.autopayEnrollment">
-        <csaa-autopay-discount-card
-          [policy]="policy"
-          [payment]="upcomingPayment"
-          [paymentAccount]="selectedPaymentAccount"
-        ></csaa-autopay-discount-card>
-      </ng-container>
-    </ng-container>
-  </ion-list>
+  <h2>Select an amount</h2>
+  <csaa-card-select-amount
+    [(amountSelected)]="amountSelected"
+    (selectionChange)="onAmountSelectionChange($event)"
+    [payment]="upcomingPayment"
+  >
+  </csaa-card-select-amount>
 
+  <h2>Select an payment method</h2>
+  <csaa-card-group-payment-method
+    [wallet]="wallet$|async"
+    [(methodSelected)]="methodSelected"
+    (edit)="onClickEditPaymentAccount($event)"
+    (addNew)="onAddNewPaymentMethod()"
+  >
+  </csaa-card-group-payment-method>
+
+  <ng-container *ngIf="!upcomingPayment?.autopayEnrollment">
+    <h2>AutoPay</h2>
+    <ion-list>
+      <ion-item lines="none">
+        <ion-label>
+          <p class="ion-text-wrap enrollment-title">Enroll in AutoPay with this payment method?</p>
+          <p class="ion-text-wrap enrollment-message">
+            Future payments will be automatically withdrawn on the due date.
+          </p>
+        </ion-label>
+        <ion-toggle slot="end" mode="ios" [(ngModel)]="enrollInAutopay"></ion-toggle>
+      </ion-item>
+      <ion-item lines="full">
+        <p class="ion-text-wrap ion-text-center enrollment-terms" *ngIf="enrollInAutopay">
+          By selecting Pay, you agree to the
+          <span class="csaa-link" (click)="openAutoPayTerms()">AutoPay terms and conditions</span>.
+        </p>
+        <csaa-theme-icon
+          [size]="20"
+          svgFileName="round-danger-exclamation"
+          slot="start"
+          *ngIf="!enrollInAutopay && upcomingPayment?.isPaymentDue"
+        ></csaa-theme-icon>
+        <p
+          class="ion-text-wrap enrollment-warning"
+          *ngIf="!enrollInAutopay && upcomingPayment?.isPaymentDue"
+        >
+          The past due amount must b paid before the AutoPay enrollment can be completed.
+        </p>
+      </ion-item>
+      <csaa-autopay-discount-card
+        [policy]="policy"
+        [payment]="upcomingPayment"
+        [paymentAccount]="selectedPaymentAccount"
+      ></csaa-autopay-discount-card>
+    </ion-list>
+  </ng-container>
   <ion-grid>
     <ion-row>
       <ion-col>
-        <p class="ion-padding ion-text-center">
-          By selecting Confirm you agree to the<br />
+        <p class="ion-padding ion-text-center payment-terms">
+          By selecting Pay, you agree to the<br />
           <span class="csaa-link" (click)="openPaymentTerms()">Payment terms and conditions</span>.
         </p>
       </ion-col>

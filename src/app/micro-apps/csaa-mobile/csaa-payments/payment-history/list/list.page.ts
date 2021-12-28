@@ -54,11 +54,16 @@ export class PaymentHistoryListPage implements OnInit, OnDestroy {
     private readonly pdfDisplayService: PdfDisplayService
   ) {
     this.currentTheme = this.store.selectSnapshot(ConfigState.theme);
+  }
 
+  ngOnInit(): void {
+    this.loading = true;
     this.subsink.add(
-      fetchHasFailedFor(store, CustomerAction.LoadCustomer, PolicyAction.LoadPolicies).subscribe(
-        () => this.routerService.navigateRoot()
-      ),
+      fetchHasFailedFor(
+        this.store,
+        CustomerAction.LoadCustomer,
+        PolicyAction.LoadPolicies
+      ).subscribe(() => this.routerService.navigateRoot()),
       this.payments$.subscribe((payments) => {
         // @ts-ignore
         this.autoPayEnrollmentStatusMap = Object.fromEntries(
@@ -66,14 +71,10 @@ export class PaymentHistoryListPage implements OnInit, OnDestroy {
         );
         // @ts-ignore
         this.isPaidInFullStatusMap = Object.fromEntries(
-          payments.map((p) => [p.policyNumber, this.invalidDateAndnoRemainder(p)])
+          payments.map((p) => [p.policyNumber, p.remainingPremium <= 0])
         );
       })
     );
-  }
-
-  ngOnInit(): void {
-    this.loading = true;
     this.dispatchLoadActions();
   }
 
@@ -168,7 +169,6 @@ export class PaymentHistoryListPage implements OnInit, OnDestroy {
         switchMap(() => this.store.dispatch(new PaymentAction.LoadHistory())),
         switchMap(() => {
           const sources: Observable<any>[] = [];
-
           // Fetch the available documents for all policies
           Object.entries(this.autoPayEnrollmentStatusMap).forEach(([policyNumber]) => {
             sources.push(

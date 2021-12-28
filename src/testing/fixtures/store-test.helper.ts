@@ -105,6 +105,11 @@ export class StoreTestBuilder {
     return this;
   }
 
+  withPaymentState(data: any) {
+    this.state[STATE_KEY__CUSTOMER][STATE_KEY__CUSTOMER_PAYMENT] = data;
+    return this;
+  }
+
   resetStateOf(store: Store) {
     const newState = this.getState();
     const state = store.snapshot();

@@ -5,6 +5,7 @@ import { MakeOneTimePaymentPage } from './make-one-time-payment.page';
 import { IonicModule } from '@ionic/angular';
 import { UiKitsModule } from '../../_core/ui-kits/ui-kits.module';
 import { CsaaPaymentsUiKitsModule } from '../_shared/ui-kits/csaa-payments-ui-kits.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [MakeOneTimePaymentPage],
@@ -14,6 +15,7 @@ import { CsaaPaymentsUiKitsModule } from '../_shared/ui-kits/csaa-payments-ui-ki
     IonicModule,
     UiKitsModule,
     CsaaPaymentsUiKitsModule,
+    FormsModule,
   ],
 })
 export class CsaaMakeOneTimePaymentModule {}

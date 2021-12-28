@@ -27,105 +27,16 @@ This repository contains code for implementing a mobile application that provide
 ### Basic Ionic setup
 
 - Setup both Android and iOS dev environments (Android Studio & Xcode)
-- Install Node.js v12.18.3 (recommended: use [nvm](https://github.com/creationix/nvm) to install)
+- Install Node.js (recommended: use [nvm](https://github.com/creationix/nvm) to install)
 - Install the Ionic CLI, Cordova CLI, and iOS controls (`npm install -g @ionic/cli cordova ios-sim ios-deploy native-run cordova-res`)
-- Create a `.npmrc` file in the project root containing the following:
-  ```
-  //registry.npmjs.org/:_authToken=\${AAA_MOBILE_v5_NPM_TOKEN}
-  ```
-  - This is necessary because we will be installing the micro app via npm from AAA's private npm repository and an access token is required for us to install from it.
-  - contact a project maintainer to get access to the token and set it as the environment variable `AAA_MOBILE_V5_NPM_TOKEN` on your system.
 - Initialize an Ionic v5 app
 - Configure `~/_core/services/config/config.ts` file as needed. This is where we set all API Keys and other env variables. You may ask a developer to get dev/QA env keys and variables.
 - Install this micro app via npm `npm i @csaadigital/mobile-mypolicy -S`
-- Run `ionic cordova prepare` from the project root to prepare all cordova dependencies
 - If no error occurs, you are good to go with the commands below
 
 ## Micro app setup
 
-Import and register `CsaaCoreModule`
-
-```typescript
-import { CsaaCoreModule } from '@csaadigital/mobile-mypolicy';
-
-@NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  imports: [
-    ...
-    CsaaCoreModule.forRoot(),
-    ...
-  ],
-  ...
-})
-export class AppModule {}
-```
-
-Update route configuration to include micro app
-
-```typescript
-  {
-    path: 'mobile/mwg/csaa', // - - - - - (1)
-    loadChildren: () =>
-      import('@csaadigital/mobile-mypolicy').then((m) => m.CsaaAppModule),
-  },
-```
-
-> Depending on route structure, (1) could simply be 'csaa' or any other path. The most important thing to note is that this must match the absolute path to our module which is communicated during setup in (2) below.
-
-Initialize the micro app
-
-```typescript
-import { ConfigService, CsaaConfigEnv, CsaaTheme } from '@csaadigital/mobile-mypolicy';
-import { environment } from 'src/environments/environment';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss'],
-})
-export class AppComponent {
-  constructor(private platform: Platform, private configService: ConfigService) {
-    this.initializeApp();
-  }
-
-  initializeApp() {
-    this.platform.ready().then(() => {
-      this.configService
-        .setup(environment.production ? CsaaConfigEnv.PROD : CsaaConfigEnv.QA, CsaaTheme.MWG, {
-          moduleRootPath: '/mobile/mwg/csaa', // - - - - - (2): must match (1)
-          nonInsuredRedirectTo: '/auth',
-          versions: '12345',
-          other: 'potentially interesting env data',
-        })
-        .subscribe();
-    });
-  }
-}
-```
-
-Communicating auth state
-
-```typescript
-// Assuming this is the main app's AuthService.
-
-// Inject micro app's auth service
-import { AuthService as CsaaAuthService } from '@csaadigital/mobile-mypolicy';
-constructor(private readonly csaaAuthService: CsaaAuthService) {}
-
-// When authenticated
-this.csaaAuthService
-      .setAccessToken(
-        { accessToken },
-        {
-          email: 'user@testuser.example.com',
-          ANY_OTHER: 'relevant user data',
-        }
-      )
-
-// When not authenticated
-this.csaaAuthService.logout()
-```
+Please refer to the [integration documentation](./INTEGRATE.md).
 
 ## Rollbar error logging
 

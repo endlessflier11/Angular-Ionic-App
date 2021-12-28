@@ -93,6 +93,14 @@ export class PaymentState {
     return null;
   }
 
+  static paymentMethod(paymentAccountToken: string) {
+    return createSelector(
+      [PaymentState],
+      ({ wallet }: PaymentStateModel): PaymentAccount =>
+        wallet?.paymentAccounts?.find((a) => a.paymentAccountToken === paymentAccountToken)
+    );
+  }
+
   constructor(private readonly paymentService: PaymentService, private readonly store: Store) {}
 
   @Action(PaymentAction.Reset)

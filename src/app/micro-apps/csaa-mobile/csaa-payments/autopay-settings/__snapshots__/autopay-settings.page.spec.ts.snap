@@ -53,7 +53,9 @@ exports[`Autopay Settings page Show eValue Discount Alert when activating Autopa
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
-    <ion-toolbar>
+    <ion-toolbar
+      class="secondary-toolbar-title-small"
+    >
       <ion-title>
         Manage AutoPay
       </ion-title>
@@ -247,7 +249,9 @@ exports[`Autopay Settings page Show eValue Discount Alert when activating Autopa
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
-    <ion-toolbar>
+    <ion-toolbar
+      class="secondary-toolbar-title-small"
+    >
       <ion-title>
         Manage AutoPay
       </ion-title>
@@ -441,7 +445,9 @@ exports[`Autopay Settings page Show eValue Discount Alert when activating Autopa
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
-    <ion-toolbar>
+    <ion-toolbar
+      class="secondary-toolbar-title-small"
+    >
       <ion-title>
         Manage AutoPay
       </ion-title>
@@ -635,7 +641,9 @@ exports[`Autopay Settings page Show eValue Discount Alert when activating Autopa
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
-    <ion-toolbar>
+    <ion-toolbar
+      class="secondary-toolbar-title-small"
+    >
       <ion-title>
         Manage AutoPay
       </ion-title>
@@ -828,7 +836,9 @@ exports[`Autopay Settings page Show eValue Discount Alert when deactivating Auto
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
-    <ion-toolbar>
+    <ion-toolbar
+      class="secondary-toolbar-title-small"
+    >
       <ion-title>
         Manage AutoPay
       </ion-title>
@@ -1021,7 +1031,9 @@ exports[`Autopay Settings page Show eValue Discount Alert when deactivating Auto
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
-    <ion-toolbar>
+    <ion-toolbar
+      class="secondary-toolbar-title-small"
+    >
       <ion-title>
         Manage AutoPay
       </ion-title>
@@ -1214,7 +1226,9 @@ exports[`Autopay Settings page Show eValue Discount Alert when deactivating Auto
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
-    <ion-toolbar>
+    <ion-toolbar
+      class="secondary-toolbar-title-small"
+    >
       <ion-title>
         Manage AutoPay
       </ion-title>
@@ -1407,7 +1421,9 @@ exports[`Autopay Settings page should match snapshot with Autopay off 1`] = `
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
-    <ion-toolbar>
+    <ion-toolbar
+      class="secondary-toolbar-title-small"
+    >
       <ion-title>
         Manage AutoPay
       </ion-title>
@@ -1662,7 +1678,9 @@ exports[`Autopay Settings page should match snapshot with Autopay on 1`] = `
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
-    <ion-toolbar>
+    <ion-toolbar
+      class="secondary-toolbar-title-small"
+    >
       <ion-title>
         Manage AutoPay
       </ion-title>

@@ -3,3 +3,8 @@
     white-space: normal;
   }
 }
+ion-item {
+  &::part(native) {
+    min-height: 64px;
+  }
+}

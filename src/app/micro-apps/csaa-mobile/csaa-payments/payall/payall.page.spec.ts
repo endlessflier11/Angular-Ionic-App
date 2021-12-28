@@ -27,6 +27,7 @@ describe('PayallPage', () => {
             providesRouter: true,
             providesAnalytics: true,
             providesModal: true,
+            providesAlert: true,
             providesRollbar: true,
             providesHttp: true,
             providesAuth: true,

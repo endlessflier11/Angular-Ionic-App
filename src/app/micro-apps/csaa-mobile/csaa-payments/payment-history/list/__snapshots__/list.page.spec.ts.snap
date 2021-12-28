@@ -3,10 +3,17 @@
 exports[`PaymentHistoryListPage user with multiple policies should match snapshot when content loaded 1`] = `
 <app-csaa-payment-history-list
   __history$__selector={[Function Observable]}
+  __latestBills$__selector={[Function Observable]}
   __ngContext__={[Function LRootView]}
+  __payments$__selector={[Function Observable]}
   __policies$__selector={[Function Observable]}
+  analyticsService={[Function AnalyticsMockService]}
+  autoPayEnrollmentStatusMap={[Function Object]}
+  availableDocumentsMap={[Function Object]}
   currentTheme=""
+  isPaidInFullStatusMap={[Function Object]}
   loading="false"
+  pdfDisplayService={[Function PdfDisplayService]}
   routerService={[Function RouterService]}
   store={[Function Store]}
   subsink={[Function SubSink]}
@@ -196,10 +203,17 @@ exports[`PaymentHistoryListPage user with multiple policies should match snapsho
 exports[`PaymentHistoryListPage user with one policy should match snapshot when content loaded 1`] = `
 <app-csaa-payment-history-list
   __history$__selector={[Function Observable]}
+  __latestBills$__selector={[Function Observable]}
   __ngContext__={[Function LRootView]}
+  __payments$__selector={[Function Observable]}
   __policies$__selector={[Function Observable]}
+  analyticsService={[Function AnalyticsMockService]}
+  autoPayEnrollmentStatusMap={[Function Object]}
+  availableDocumentsMap={[Function Object]}
   currentTheme=""
+  isPaidInFullStatusMap={[Function Object]}
   loading="false"
+  pdfDisplayService={[Function PdfDisplayService]}
   routerService={[Function RouterService]}
   store={[Function Store]}
   subsink={[Function SubSink]}

@@ -4,7 +4,7 @@
     <ion-card-title> Payments </ion-card-title>
   </ion-card-header>
   <ion-card-content class="csaa-item-list">
-    <ion-list *ngIf="payments && payments.length && showPaymentCards">
+    <ion-list *ngIf="payments && payments.length">
       <ng-container *ngFor="let payment of payments">
         <csaa-make-payment-item
           *ngIf="!isPaymentSuccess(payment)"
@@ -21,10 +21,10 @@
       </ng-container>
     </ion-list>
 
-    <ion-button expand="block" *ngIf="showButtons" fill="outline" (click)="openTransactionHistoryPage()">
+    <ion-button expand="block" fill="outline" (click)="openTransactionHistoryPage()">
       Billing & Transaction History
     </ion-button>
-    <ion-button expand="full" *ngIf="showButtons" (click)="openPayAllPolicies()"> Pay All Policies </ion-button>
+    <ion-button expand="full" (click)="openPayAllPolicies()"> Pay All Policies </ion-button>
   </ion-card-content>
 </ion-card>
 
